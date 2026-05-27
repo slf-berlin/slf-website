@@ -60,27 +60,205 @@ function extractZeitraum(html) {
   return text || null;
 }
 
-// Strips Elementor/structural wrappers, keeps semantic block + inline tags
-function extractProse(html) {
+// ─── Elementor layout parser ─────────────────────────────────────────────────
+
+// Extract the inner content of a <tag>...</tag> element at startIndex,
+// tracking nesting depth so it handles self-similar tags correctly.
+function extractElement(html, startIndex, tag) {
+  const openStr = `<${tag}`;
+  const closeStr = `</${tag}>`;
+  let pos = html.indexOf(openStr, startIndex);
+  if (pos === -1) return null;
+  const innerStart = html.indexOf('>', pos) + 1;
+  let depth = 1;
+  let i = innerStart;
+  while (i < html.length && depth > 0) {
+    const o = html.indexOf(openStr, i);
+    const c = html.indexOf(closeStr, i);
+    if (o !== -1 && (c === -1 || o < c)) { depth++; i = o + openStr.length; }
+    else if (c !== -1) {
+      depth--;
+      if (depth === 0) return { inner: html.slice(innerStart, c), end: c + closeStr.length };
+      i = c + closeStr.length;
+    } else break;
+  }
+  return null;
+}
+
+// Extract all top-level elementor-col-NN column divs from a section's inner HTML.
+// Returns array of { size: number, inner: string }.
+function extractColumns(html) {
+  const columns = [];
+  let pos = 0;
+  while (pos < html.length) {
+    const divPos = html.indexOf('<div', pos);
+    if (divPos === -1) break;
+    const tagEnd = html.indexOf('>', divPos);
+    if (tagEnd === -1) break;
+    const tag = html.slice(divPos, tagEnd + 1);
+    const colMatch = tag.match(/elementor-col-(\d+)/);
+    if (colMatch) {
+      const size = parseInt(colMatch[1], 10);
+      const innerStart = tagEnd + 1;
+      let depth = 1, i = innerStart;
+      while (i < html.length && depth > 0) {
+        const o = html.indexOf('<div', i);
+        const c = html.indexOf('</div>', i);
+        if (o !== -1 && (c === -1 || o < c)) { depth++; i = o + 4; }
+        else if (c !== -1) {
+          depth--;
+          if (depth === 0) { columns.push({ size, inner: html.slice(innerStart, c) }); pos = c + 6; break; }
+          i = c + 6;
+        } else break;
+      }
+    } else {
+      pos = tagEnd + 1;
+    }
+  }
+  return columns;
+}
+
+// Extract content strings from all elementor-widget-container divs in a column's HTML.
+// Skips spacers and dividers.
+function extractWidgetContainers(html) {
+  const widgets = [];
+  let pos = 0;
+  while (pos < html.length) {
+    const divPos = html.indexOf('<div', pos);
+    if (divPos === -1) break;
+    const tagEnd = html.indexOf('>', divPos);
+    if (tagEnd === -1) break;
+    const tag = html.slice(divPos, tagEnd + 1);
+    if (tag.includes('elementor-widget-container')) {
+      const innerStart = tagEnd + 1;
+      let depth = 1, i = innerStart;
+      while (i < html.length && depth > 0) {
+        const o = html.indexOf('<div', i);
+        const c = html.indexOf('</div>', i);
+        if (o !== -1 && (c === -1 || o < c)) { depth++; i = o + 4; }
+        else if (c !== -1) {
+          depth--;
+          if (depth === 0) {
+            const content = html.slice(innerStart, c).trim();
+            if (content && !content.includes('elementor-spacer-inner') && !content.includes('elementor-divider')) {
+              widgets.push(content);
+            }
+            pos = c + 6;
+            break;
+          }
+          i = c + 6;
+        } else break;
+      }
+    } else {
+      pos = tagEnd + 1;
+    }
+  }
+  return widgets;
+}
+
+// Strip Elementor wrapper attributes and noise from a single widget's HTML.
+function cleanWidgetContent(html) {
+  return html
+    .replace(/ (fetchpriority|decoding|loading)="[^"]*"/g, '')
+    .replace(/ class="wp-caption"/g, '')
+    .replace(/ class="widget-image-caption[^"]*"/g, '')
+    .replace(/<\/?div[^>]*>/g, '')
+    .replace(/<\/?span[^>]*>/g, '')
+    .replace(/<p[^>]*>\s*<\/p>/g, '')
+    .replace(/[ \t]{2,}/g, ' ')
+    .replace(/\n{3,}/g, '\n')
+    .trim();
+}
+
+// Parse the full Elementor HTML into a compact layout-preserving HTML string
+// using slf-row / slf-col-NN classes for multi-column sections.
+function extractLayout(html) {
   if (!html) return null;
-  return decodeHtmlEntities(
-    html
-      .replace(/<\/?(div|section|article|aside|figure|figcaption|header|footer|nav|main|span)[^>]*>/gi, ' ')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/<(p|h[1-6]|li|ul|ol)[^>]*>\s*<\/\1>/gi, '')
-      .replace(/[ \t]+/g, ' ')
-      .replace(/\n{3,}/g, '\n\n')
-      .trim()
-  );
+
+  const blocks = [];
+  let pos = 0;
+  let inProjektdaten = false;
+  let dlItems = [];
+
+  const closeProjektdaten = () => {
+    if (dlItems.length) {
+      blocks.push(`<p class="slf-daten-heading">Projektdaten</p><dl class="slf-daten">${dlItems.join('')}</dl>`);
+    }
+    inProjektdaten = false;
+    dlItems = [];
+  };
+
+  while (pos < html.length) {
+    const result = extractElement(html, pos, 'section');
+    if (!result) break;
+    pos = result.end;
+
+    const secInner = result.inner;
+    if (!secInner.includes('elementor-col-')) continue;
+
+    const columns = extractColumns(secInner);
+    if (!columns.length) continue;
+    const colSizes = columns.map(c => c.size);
+    const allHundred = colSizes.every(s => s === 100);
+
+    // ── Projektdaten cluster ──────────────────────────────────────
+    // Heading section: col-100 containing <strong>Projektdaten</strong>
+    if (allHundred) {
+      const widgets = extractWidgetContainers(secInner);
+      const flat = widgets.join('');
+      if (/<strong>\s*Projektdaten\s*<\/strong>/i.test(flat)) {
+        if (inProjektdaten) closeProjektdaten();
+        inProjektdaten = true;
+        dlItems = [];
+        continue;
+      }
+    }
+
+    // Data row: col-33 + col-66 while inside Projektdaten cluster
+    if (inProjektdaten && colSizes.length === 2 && colSizes.includes(33) && colSizes.includes(66)) {
+      const labelCol = columns.find(c => c.size === 33);
+      const valueCol = columns.find(c => c.size === 66);
+      const label = stripHtml(extractWidgetContainers(labelCol.inner).join(' ')).trim();
+      const rawValue = extractWidgetContainers(valueCol.inner)
+        .map(w => cleanWidgetContent(w)).join(' ')
+        .replace(/^<p[^>]*>([\s\S]*?)<\/p>$/, '$1').trim();
+      if (label) dlItems.push(`<dt>${label}</dt><dd>${rawValue}</dd>`);
+      continue;
+    }
+
+    // Not a Projektdaten row → close cluster if open
+    if (inProjektdaten) closeProjektdaten();
+
+    // ── Regular sections ──────────────────────────────────────────
+    if (allHundred) {
+      const widgets = extractWidgetContainers(secInner);
+      const content = widgets.map(cleanWidgetContent).filter(Boolean).join('\n');
+      if (content) blocks.push(content);
+    } else {
+      let hasContent = false;
+      const colDivs = columns.map(col => {
+        const content = extractWidgetContainers(col.inner).map(cleanWidgetContent).filter(Boolean).join('\n');
+        if (content) hasContent = true;
+        return `<div class="slf-col-${col.size}">${content}</div>`;
+      });
+      if (hasContent) blocks.push(`<div class="slf-row">${colDivs.join('')}</div>`);
+    }
+  }
+
+  if (inProjektdaten) closeProjektdaten();
+
+  return decodeHtmlEntities(blocks.filter(Boolean).join('\n'));
 }
 
 function pickImageUrl(featuredMedia) {
   if (!featuredMedia) return null;
   const sizes = featuredMedia.media_details?.sizes ?? {};
   return (
+    featuredMedia.source_url ??
+    sizes['2048x2048']?.source_url ??
+    sizes.full?.source_url ??
     sizes.large?.source_url ??
     sizes.medium_large?.source_url ??
-    featuredMedia.source_url ??
     null
   );
 }
@@ -123,7 +301,7 @@ function mapPost(post) {
     titel: decodeHtmlEntities(post.title.rendered),
     untertitel: '',
     beschreibung,
-    content: extractProse(post.content?.rendered ?? null),
+    content: extractLayout(post.content?.rendered ?? null),
     ort: null,
     jahr: extractZeitraum(post.content?.rendered ?? null),
     kategorie: CATEGORY_LABEL[primaryTerm.slug],
