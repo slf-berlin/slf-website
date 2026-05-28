@@ -5,6 +5,7 @@ import Projekte from './pages/Projekte'
 import ProjectDetail from './pages/ProjectDetail'
 import Buero from './pages/Buero'
 import Team from './pages/Team'
+import Kontakt from './pages/Kontakt'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/buero/ueber-uns" element={<Buero />} />
           <Route path="/buero/leistungen" element={<Buero />} />
           <Route path="/buero/team" element={<Team />} />
+          <Route path="/kontakt" element={<Kontakt />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
