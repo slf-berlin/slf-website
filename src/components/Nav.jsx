@@ -17,7 +17,7 @@ const navItems = [
     to: '/buero',
     children: [
       { label: 'Über Uns', to: '/buero/ueber-uns' },
-      { label: 'Leistungen', to: '/buero/leistungen' },
+      { label: 'Leistungen', to: '/buero#leistungen' },
       { label: 'Team', to: '/buero/team' },
     ],
   },
@@ -283,7 +283,7 @@ export default function Nav() {
               style={{
                 flex: 1,
                 border: 'none', outline: 'none',
-                fontSize: isMobile ? 17 : 19,
+                fontSize: isMobile ? 18 : 19,
                 color: A.ink,
                 background: 'transparent',
                 fontFamily: 'inherit',
@@ -310,7 +310,7 @@ export default function Nav() {
           }}>
             {searchQuery.trim().length > 1 && searchResults.length === 0 && (
               <p style={{
-                color: A.mute, fontSize: 14,
+                color: A.mute, fontSize: 15,
                 letterSpacing: '0.05em', textTransform: 'uppercase',
                 marginTop: 32,
               }}>
@@ -320,7 +320,7 @@ export default function Nav() {
 
             {searchQuery.trim().length <= 1 && (
               <p style={{
-                color: A.mute, fontSize: 13,
+                color: A.mute, fontSize: 14,
                 letterSpacing: '0.05em', textTransform: 'uppercase',
                 marginTop: 32,
               }}>
@@ -383,17 +383,17 @@ function SearchResult({ project, isLast, onSelect }) {
       }}
     >
       <div style={{
-        fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase',
+        fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase',
         color: A.accentDeep, marginBottom: 5, fontWeight: 500,
       }}>
         {project.kategorie}
       </div>
-      <div style={{ fontSize: 17, color: A.ink, fontWeight: 400, letterSpacing: '-0.01em', lineHeight: 1.3 }}>
+      <div style={{ fontSize: 18, color: A.ink, fontWeight: 400, letterSpacing: '-0.01em', lineHeight: 1.3 }}>
         {project.titel}
       </div>
       {project.beschreibung && (
         <div style={{
-          fontSize: 13, color: A.mute, marginTop: 5,
+          fontSize: 14, color: A.mute, marginTop: 5,
           lineHeight: 1.6, letterSpacing: '0.01em',
           display: '-webkit-box', WebkitLineClamp: 2,
           WebkitBoxOrient: 'vertical', overflow: 'hidden',
@@ -407,8 +407,8 @@ function SearchResult({ project, isLast, onSelect }) {
 
 function DropdownItem({ child, isLast, onClose }) {
   const [hovered, setHovered] = useState(false)
-  const { pathname, search } = useLocation()
-  const active = pathname + search === child.to
+  const { pathname, search, hash } = useLocation()
+  const active = pathname + search + hash === child.to
 
   return (
     <Link
@@ -419,7 +419,7 @@ function DropdownItem({ child, isLast, onClose }) {
       style={{
         display: 'block',
         padding: '11px 20px',
-        fontSize: 14,
+        fontSize: 15,
         letterSpacing: '0.02em',
         color: active ? A.ink : hovered ? A.ink : A.mute,
         background: hovered ? A.accentSoft : 'transparent',

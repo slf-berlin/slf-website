@@ -8,7 +8,15 @@ import projects from '../data/projects'
 import heroBild from '../assets/deckblatt-homepage-v3.jpg'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 
-const featured = projects.slice(0, 6)
+const FEATURED_IDS = [
+  'wettbewerb-hafenareal-kassel',
+  'innenentwicklungskonzepte-iek-berlin',
+  'wettbewerbs-koordination-blankenburger-sueden-teilflaeche-sued',
+  'wettbewerb-leipzig',
+  'forkenbeckstr',
+  'seehafen-teichland-2',
+]
+const featured = FEATURED_IDS.map(id => projects.find(p => p.id === id)).filter(Boolean)
 
 const LEISTUNGEN = [
   {
@@ -77,14 +85,14 @@ export default function Home() {
               }}>
                 <div style={{ width: 28, height: 3, background: A.accent, marginBottom: 14 }} />
                 <div style={{
-                  fontSize: isMobile ? 16 : 22,
+                  fontSize: isMobile ? 17 : 22,
                   fontWeight: 400, color: '#fff',
                   letterSpacing: '-0.01em', textAlign: 'center',
                 }}>
                   {LEISTUNGEN[seg.li].titel}
                 </div>
                 <div style={{
-                  fontSize: isMobile ? 12 : 13,
+                  fontSize: isMobile ? 13 : 14,
                   color: 'rgba(255,255,255,0.65)',
                   marginTop: 10, lineHeight: 1.5,
                   textAlign: 'center', maxWidth: 200,
@@ -105,7 +113,7 @@ export default function Home() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 13, color: A.accentDeep,
+          fontSize: 14, color: A.accentDeep,
           letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500,
         }}>
           01 /<br />Das Büro
@@ -145,7 +153,7 @@ export default function Home() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 13, color: A.accentDeep,
+          fontSize: 14, color: A.accentDeep,
           letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500,
         }}>
           02 / Aktuell
@@ -155,7 +163,7 @@ export default function Home() {
             Ausgewählte Projekte
           </div>
           <Link to="/projekte" style={{
-            fontSize: 14,
+            fontSize: 15,
             borderBottom: `2px solid ${A.accent}`,
             color: A.ink, paddingBottom: 2,
           }}>
@@ -182,13 +190,13 @@ export default function Home() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 13, color: A.accentDeep,
+          fontSize: 14, color: A.accentDeep,
           letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500,
         }}>
           03 / Notiz
         </div>
         <div style={{ gridColumn: contentCol }}>
-          <p style={{ fontSize: 16, lineHeight: 1.5, color: A.ink, margin: 0, maxWidth: 680 }}>
+          <p style={{ fontSize: 17, lineHeight: 1.5, color: A.ink, margin: 0, maxWidth: 680 }}>
             Nach mehr als 30 Jahren hat <em>J. Miller Stevens</em> das Büro an
             Georg Börsch-Supan, Samir Hamzeh und Barbara Horst übergeben.
             J. Miller Stevens wird uns weiterhin mit seinem umfangreichen

@@ -222,7 +222,7 @@ function extractLayout(html) {
       const rawValue = extractWidgetContainers(valueCol.inner)
         .map(w => cleanWidgetContent(w)).join(' ')
         .replace(/^<p[^>]*>([\s\S]*?)<\/p>$/, '$1').trim();
-      if (label) dlItems.push(`<dt>${label}</dt><dd>${rawValue}</dd>`);
+      if (label && rawValue) dlItems.push(`<dt>${label}</dt><dd>${rawValue}</dd>`);
       continue;
     }
 
@@ -289,8 +289,8 @@ async function fetchAllPosts() {
 
 function mapPost(post) {
   const terms = post._embedded?.['wp:term']?.[0] ?? [];
-  const primaryTerm = terms.find(t => KNOWN_SLUGS.has(t.slug));
-  if (!primaryTerm) return null; // skip uncategorized / non-project posts
+  const matchedTerms = terms.filter(t => KNOWN_SLUGS.has(t.slug));
+  if (matchedTerms.length === 0) return null; // skip uncategorized / non-project posts
 
   const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
   const imageUrl = pickImageUrl(featuredMedia);
@@ -304,7 +304,7 @@ function mapPost(post) {
     content: extractLayout(post.content?.rendered ?? null),
     ort: null,
     jahr: extractZeitraum(post.content?.rendered ?? null),
-    kategorie: CATEGORY_LABEL[primaryTerm.slug],
+    kategorie: matchedTerms.map(t => CATEGORY_LABEL[t.slug]),
     flaeche: null,
     auftraggeber: null,
     tone: imageUrl ? 'photo' : 'plan',

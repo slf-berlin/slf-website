@@ -31,10 +31,9 @@ const PROSE_STYLES = `
 .slf-prose .slf-daten dd { font-size: 13px; color: #0e0e10; padding: 0 0 8px; margin: 0; line-height: 1.5; overflow-wrap: break-word; }
 `
 
-// Content comes pre-processed from the sync script (slf-row/slf-col layout,
-// figure/figcaption captions, slf-daten Projektdaten block). No transforms needed.
+// Remove dt/dd pairs where the dd value is empty or whitespace-only.
 function processContent(html) {
-  return html;
+  return html.replace(/<dt>[^<]*<\/dt><dd>\s*<\/dd>/g, '');
 }
 
 export default function ProjectDetail() {
@@ -53,7 +52,7 @@ export default function ProjectDetail() {
   const hPad = isMobile ? 20 : 56
 
   const metaRows = [
-    { label: 'Kategorie', value: project.kategorie },
+    { label: 'Kategorie', value: [].concat(project.kategorie).join(' / ') },
     { label: 'Zeitraum', value: year },
     { label: 'Ort', value: project.ort },
     { label: 'Auftraggeber', value: project.auftraggeber },
@@ -66,7 +65,7 @@ export default function ProjectDetail() {
     <Link
       to="/projekte"
       style={{
-        fontSize: 11,
+        fontSize: 12,
         letterSpacing: '0.1em',
         textTransform: 'uppercase',
         color: A.accentDeep,
@@ -136,7 +135,7 @@ export default function ProjectDetail() {
         {!isMobile && (
           <div style={{ gridColumn: '1 / span 1', gridRow: '1', paddingTop: 4 }}>
             <span style={{
-              fontSize: 11,
+              fontSize: 12,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
               color: A.accentDeep,
@@ -165,7 +164,7 @@ export default function ProjectDetail() {
           {/* Subtitle */}
           {project.untertitel && (
             <p style={{
-              fontSize: isMobile ? 15 : 17,
+              fontSize: isMobile ? 16 : 18,
               color: A.mute,
               margin: '0 0 0',
               lineHeight: 1.5,
@@ -191,7 +190,7 @@ export default function ProjectDetail() {
                 >
                   <span style={{
                     minWidth: 110,
-                    fontSize: 10,
+                    fontSize: 12,
                     letterSpacing: '0.12em',
                     textTransform: 'uppercase',
                     color: A.mute,
@@ -199,7 +198,7 @@ export default function ProjectDetail() {
                   }}>
                     {row.label}
                   </span>
-                  <span style={{ fontSize: 13, color: A.ink }}>
+                  <span style={{ fontSize: 14, color: A.ink }}>
                     {row.value}
                   </span>
                 </div>
@@ -212,7 +211,7 @@ export default function ProjectDetail() {
             <div
               className="slf-prose"
               style={{
-                fontSize: isMobile ? 15 : 16,
+                fontSize: isMobile ? 16 : 17,
                 color: A.ink,
                 lineHeight: 1.65,
                 marginTop: metaRows.length > 0 ? 0 : 24,
@@ -220,7 +219,7 @@ export default function ProjectDetail() {
               dangerouslySetInnerHTML={{ __html: processContent(project.content) }}
             />
           ) : (
-            <p style={{ fontSize: 16, color: A.ink, lineHeight: 1.65, marginTop: 24 }}>
+            <p style={{ fontSize: 17, color: A.ink, lineHeight: 1.65, marginTop: 24 }}>
               {project.beschreibung}
             </p>
           )}
@@ -233,7 +232,7 @@ export default function ProjectDetail() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  fontSize: 12,
+                  fontSize: 13,
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   color: A.accentDeep,
@@ -251,12 +250,11 @@ export default function ProjectDetail() {
 
       {/* Prev / Next navigation */}
       <div style={{
-        padding: isMobile ? '48px 20px 0' : '72px 56px 0',
+        padding: isMobile ? '32px 20px 72px' : '56px 56px 120px',
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: 24,
-        borderTop: `1px solid ${A.rule}`,
-        marginTop: isMobile ? 48 : 72,
+        marginTop: 0,
       }}>
         <div>
           {prev && (
@@ -264,10 +262,10 @@ export default function ProjectDetail() {
               to={`/projekte/${prev.id}`}
               style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
-              <div style={{ fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: A.mute, marginBottom: 8 }}>
+              <div style={{ fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', color: A.mute, marginBottom: 8 }}>
                 ← Vorheriges Projekt
               </div>
-              <div style={{ fontSize: isMobile ? 14 : 15, color: A.ink, fontWeight: 400, letterSpacing: '-0.01em' }}>
+              <div style={{ fontSize: isMobile ? 15 : 16, color: A.ink, fontWeight: 400, letterSpacing: '-0.01em' }}>
                 {prev.titel}
               </div>
             </Link>
@@ -279,10 +277,10 @@ export default function ProjectDetail() {
               to={`/projekte/${next.id}`}
               style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
-              <div style={{ fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: A.mute, marginBottom: 8 }}>
+              <div style={{ fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', color: A.mute, marginBottom: 8 }}>
                 Nächstes Projekt →
               </div>
-              <div style={{ fontSize: isMobile ? 14 : 15, color: A.ink, fontWeight: 400, letterSpacing: '-0.01em' }}>
+              <div style={{ fontSize: isMobile ? 15 : 16, color: A.ink, fontWeight: 400, letterSpacing: '-0.01em' }}>
                 {next.titel}
               </div>
             </Link>

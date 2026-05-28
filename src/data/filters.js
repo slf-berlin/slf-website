@@ -1,5 +1,5 @@
 export const PROJEKTE_NAV = [
-  { label: '(Gesamt-) Übersicht', key: null },
+  { label: 'Alle', key: null },
   { label: 'Entwicklungskonzepte', key: 'entwicklungskonzepte' },
   { label: 'Wettbewerbe', key: 'wettbewerbe' },
   { label: 'Bauleitplanung', key: 'bauleitplanung' },
@@ -8,10 +8,10 @@ export const PROJEKTE_NAV = [
 ]
 
 export const FILTER_FN = {
-  entwicklungskonzepte: (p) => p.kategorie === 'Entwicklungskonzepte',
-  wettbewerbe: (p) => p.kategorie === 'Wettbewerbe',
-  bauleitplanung: (p) => p.kategorie === 'Bauleitplanung',
-  verfahrensbetreuung: (p) => p.kategorie === 'Verfahrensbetreuung',
+  entwicklungskonzepte: (p) => [].concat(p.kategorie).includes('Entwicklungskonzepte'),
+  wettbewerbe: (p) => [].concat(p.kategorie).includes('Wettbewerbe'),
+  bauleitplanung: (p) => [].concat(p.kategorie).includes('Bauleitplanung'),
+  verfahrensbetreuung: (p) => [].concat(p.kategorie).includes('Verfahrensbetreuung'),
   projektliste: () => true,
 }
 
