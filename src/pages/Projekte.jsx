@@ -55,7 +55,7 @@ function ColHeader({ label, colKey, sortKey, sortDir, onSort }) {
       onClick={() => onSort(colKey)}
       style={{
         cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4,
-        fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase',
+        fontSize: 13, fontWeight: active ? 600 : 400,
         color: active ? A.ink : A.mute, userSelect: 'none',
       }}
     >
@@ -113,7 +113,6 @@ export default function Projekte() {
         display: 'flex', flexWrap: 'wrap', gap: isMobile ? 12 : 28, alignItems: 'center',
         fontSize: 14, color: A.mute,
       }}>
-        <span style={{ fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Filter</span>
         {PROJEKTE_NAV.map((f) => {
           const isActive = f.key === activeKey || (!f.key && !activeKey)
           return (
@@ -122,10 +121,10 @@ export default function Projekte() {
               to={filterHref(f.key)}
               style={{
                 padding: '0 0 3px',
-                fontSize: 14,
+                fontSize: 15,
                 color: isActive ? A.ink : A.mute,
                 borderBottom: isActive ? `2px solid ${A.accent}` : '2px solid transparent',
-                fontWeight: isActive ? 500 : 400,
+                fontWeight: isActive ? 600 : 500,
               }}
             >
               {f.label}
@@ -181,9 +180,23 @@ export default function Projekte() {
                   onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
                 >
                   <div style={{ marginBottom: isMobile ? 6 : 0 }}>
-                    <div style={{ fontWeight: 500, fontSize: 15, lineHeight: 1.35 }}>{p.titel}</div>
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
+                      <div style={{ fontWeight: 500, fontSize: 15, lineHeight: 1.35 }}>{p.titel}</div>
+                      {p.ergebnis && (
+                        <span style={{
+                          fontSize: 12,
+                          color: A.mute,
+                          background: A.ruleSoft,
+                          padding: '2px 6px',
+                          borderRadius: 2,
+                          whiteSpace: 'nowrap',
+                        }}>
+                          {p.ergebnis}
+                        </span>
+                      )}
+                    </div>
                     {p.beschreibung && (
-                      <div style={{ fontSize: 13, color: A.mute, marginTop: 3, lineHeight: 1.4 }}>
+                      <div style={{ fontSize: 14, color: A.mute, marginTop: 3, lineHeight: 1.4 }}>
                         {p.beschreibung.length > 100 ? p.beschreibung.slice(0, 100) + '…' : p.beschreibung}
                       </div>
                     )}
@@ -209,7 +222,7 @@ export default function Projekte() {
                     </div>
                   )}
                   {isMobile && (
-                    <div style={{ fontSize: 12, color: A.mute, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                    <div style={{ fontSize: 13, color: A.mute }}>
                       {[].concat(p.kategorie).join(' / ')} · {p.jahr ?? ''}
                     </div>
                   )}
@@ -232,17 +245,14 @@ export default function Projekte() {
               to={`/projekte/${p.id}`}
               style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
-              <ProjectImage proj={p} ratio="4/3" title={p.titel} />
+              <ProjectImage proj={p} ratio="4/3" title={p.titel} subtitle={p.untertitel} ergebnis={p.ergebnis} />
               <div style={{
                 marginTop: 12, display: 'flex', justifyContent: 'space-between',
-                fontSize: 12, color: A.mute, letterSpacing: '0.08em', textTransform: 'uppercase',
+                fontSize: 13, color: A.mute,
               }}>
                 <span>{[].concat(p.kategorie).join(' / ')}</span>
                 <span>{p.jahr ?? (p.wpDate ? new Date(p.wpDate).getFullYear() : null)}</span>
               </div>
-              {p.untertitel && (
-                <div style={{ fontSize: 14, color: A.mute, marginTop: 4 }}>{p.untertitel}</div>
-              )}
             </Link>
           ))}
         </div>

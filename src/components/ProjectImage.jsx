@@ -8,7 +8,7 @@ const RATIO_MAP = {
   '1/1': '100%',
 }
 
-export default function ProjectImage({ proj, ratio = '4/3', title, style = {} }) {
+export default function ProjectImage({ proj, ratio = '4/3', title, subtitle, ergebnis, style = {} }) {
   const [hovered, setHovered] = useState(false)
   const paddingTop = RATIO_MAP[ratio] ?? '75%'
   const isPhoto = proj?.tone !== 'plan'
@@ -34,27 +34,42 @@ export default function ProjectImage({ proj, ratio = '4/3', title, style = {} })
           }}
         />
       )}
-      {/* gradient overlay */}
+      {/* accent overlay */}
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'linear-gradient(to top, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)',
+        background: 'rgba(204, 200, 166, 0.72)',
         opacity: hovered ? 1 : 0,
         transition: 'opacity 0.3s ease',
         pointerEvents: 'none',
       }} />
-      {/* title on hover */}
-      {title && (
+      {/* hover content */}
+      {(title || subtitle || ergebnis) && (
         <div style={{
-          position: 'absolute', left: 0, right: 0, bottom: 0,
-          padding: '18px 16px',
-          fontSize: 20, fontWeight: 700, lineHeight: 1.2,
-          color: '#fff',
+          position: 'absolute', inset: 0,
+          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+          padding: '16px',
+          textAlign: 'center',
+          gap: 4,
           opacity: hovered ? 1 : 0,
-          transform: hovered ? 'translateY(0)' : 'translateY(8px)',
+          transform: hovered ? 'translateY(0)' : 'translateY(6px)',
           transition: 'opacity 0.3s ease, transform 0.3s ease',
           pointerEvents: 'none',
         }}>
-          {title}
+          {title && (
+            <div style={{ fontSize: 16, fontWeight: 700, lineHeight: 1.3, letterSpacing: '-0.01em', color: A.ink }}>
+              {title}
+            </div>
+          )}
+          {subtitle && (
+            <div style={{ fontSize: 14, fontWeight: 400, lineHeight: 1.3, color: A.ink }}>
+              {subtitle}
+            </div>
+          )}
+          {ergebnis && (
+            <div style={{ fontSize: 14, fontWeight: 400, lineHeight: 1.3, color: A.ink }}>
+              {ergebnis}
+            </div>
+          )}
         </div>
       )}
     </div>

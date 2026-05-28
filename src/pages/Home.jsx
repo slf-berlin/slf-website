@@ -113,14 +113,13 @@ export default function Home() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 14, color: A.accentDeep,
-          letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500,
+          fontSize: 13, color: A.mute,
         }}>
           01 /<br />Das Büro
         </div>
         <div style={{ gridColumn: contentCol }}>
           <h1 style={{
-            fontWeight: 400, lineHeight: 1.2,
+            fontWeight: 500, lineHeight: 1.2,
             letterSpacing: '-0.015em', margin: 0,
             fontSize: isMobile ? 20 : 28,
           }}>
@@ -153,17 +152,17 @@ export default function Home() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 14, color: A.accentDeep,
-          letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500,
+          fontSize: 13, color: A.mute,
         }}>
           02 / Aktuell
         </div>
         <div style={{ gridColumn: contentColWide, display: 'flex', alignItems: 'baseline', gap: 20 }}>
-          <div style={{ fontSize: isMobile ? 20 : 28, fontWeight: 400, letterSpacing: '-0.01em' }}>
+          <div style={{ fontSize: isMobile ? 20 : 28, fontWeight: 500, letterSpacing: '-0.01em' }}>
             Ausgewählte Projekte
           </div>
           <Link to="/projekte" style={{
             fontSize: 15,
+            fontWeight: 500,
             borderBottom: `2px solid ${A.accent}`,
             color: A.ink, paddingBottom: 2,
           }}>
@@ -190,8 +189,7 @@ export default function Home() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 14, color: A.accentDeep,
-          letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500,
+          fontSize: 13, color: A.mute,
         }}>
           03 / Notiz
         </div>

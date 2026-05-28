@@ -156,11 +156,8 @@ export default function Buero() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 12,
-          color: A.accentDeep,
-          letterSpacing: '0.12em',
-          textTransform: 'uppercase',
-          fontWeight: 500,
+          fontSize: 13,
+          color: A.mute,
         }}>
           01 /<br />Büro
         </div>
@@ -226,10 +223,9 @@ export default function Buero() {
                 }}
               />
               <figcaption style={{
-                fontSize: 13,
+                fontSize: 14,
                 color: A.mute,
                 marginTop: 8,
-                letterSpacing: '0.04em',
                 fontStyle: 'italic',
               }}>
                 {caption}
@@ -253,16 +249,14 @@ export default function Buero() {
           <div style={{
             gridColumn: labelCol,
             fontSize: 12,
-            color: A.accentDeep,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            fontWeight: 500,
+            color: A.mute,
           }}>
             02 /<br />Leistungen
           </div>
           <div style={{ gridColumn: contentCol }}>
             <h2 style={{
               fontWeight: 400,
+              fontWeight: 500,
               fontSize: isMobile ? 20 : 26,
               letterSpacing: '-0.015em',
               margin: 0,
@@ -290,7 +284,7 @@ export default function Buero() {
                 padding: `${isMobile ? 20 : 28}px 0`,
               }}>
                 <div style={{
-                  color: A.accentDeep,
+                  color: A.mute,
                   marginBottom: 12,
                   lineHeight: 0,
                 }}>
@@ -328,11 +322,8 @@ export default function Buero() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 12,
-          color: A.accentDeep,
-          letterSpacing: '0.12em',
-          textTransform: 'uppercase',
-          fontWeight: 500,
+          fontSize: 13,
+          color: A.mute,
         }}>
           03 /<br />Team
         </div>
@@ -353,12 +344,10 @@ export default function Buero() {
               alignItems: 'center',
               gap: 10,
               fontSize: 14,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
               color: A.ink,
               borderBottom: `1px solid ${A.ink}`,
               paddingBottom: 3,
-              fontWeight: 500,
+              fontWeight: 600,
             }}
           >
             Unser Team kennenlernen

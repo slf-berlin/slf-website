@@ -18,16 +18,16 @@ const PROSE_STYLES = `
 .slf-prose img { max-width: 100%; height: auto; display: block; }
 .slf-prose figure { margin: 0; }
 .slf-prose figure img { margin: 0; }
-.slf-prose figcaption { font-size: 11px; letter-spacing: 0.06em; color: #6b6b6e; margin-top: 6px; line-height: 1.4; }
+.slf-prose figcaption { font-size: 13px; color: #6b6b6e; margin-top: 6px; line-height: 1.4; }
 .slf-prose .slf-row { display: flex; gap: 24px; align-items: flex-start; margin: 1.6em 0; }
 .slf-prose .slf-col-50 { flex: 1 1 0; min-width: 0; }
 .slf-prose .slf-col-33 { flex: 1 1 0; min-width: 0; }
 .slf-prose .slf-col-66 { flex: 2 1 0; min-width: 0; }
 .slf-prose .slf-col-100 { flex: 1 0 100%; }
 @media (max-width: 640px) { .slf-prose .slf-row { flex-direction: column; } .slf-prose .slf-row > * { width: 100% !important; } }
-.slf-prose .slf-daten-heading { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8765; font-weight: 500; margin: 2em 0 0.5em; line-height: 1; }
+.slf-prose .slf-daten-heading { font-size: 13px; font-weight: 600; color: #0e0e10; margin: 2em 0 0.5em; line-height: 1; }
 .slf-prose .slf-daten { margin: 0; border-bottom: 1px solid #e6e5e2; }
-.slf-prose .slf-daten dt { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6b6b6e; border-top: 1px solid #e6e5e2; padding: 8px 0 2px; margin: 0; }
+.slf-prose .slf-daten dt { font-size: 12px; font-weight: 600; color: #6b6b6e; border-top: 1px solid #e6e5e2; padding: 8px 0 2px; margin: 0; }
 .slf-prose .slf-daten dd { font-size: 13px; color: #0e0e10; padding: 0 0 8px; margin: 0; line-height: 1.5; overflow-wrap: break-word; }
 `
 
@@ -65,11 +65,8 @@ export default function ProjectDetail() {
     <Link
       to="/projekte"
       style={{
-        fontSize: 12,
-        letterSpacing: '0.1em',
-        textTransform: 'uppercase',
-        color: A.accentDeep,
-        fontWeight: 500,
+        fontSize: 13,
+        color: A.mute,
         textDecoration: 'none',
       }}
     >
@@ -135,11 +132,8 @@ export default function ProjectDetail() {
         {!isMobile && (
           <div style={{ gridColumn: '1 / span 1', gridRow: '1', paddingTop: 4 }}>
             <span style={{
-              fontSize: 12,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: A.accentDeep,
-              fontWeight: 500,
+              fontSize: 13,
+              color: A.mute,
             }}>
               Projekt
             </span>
@@ -152,7 +146,7 @@ export default function ProjectDetail() {
           {/* Title */}
           <h1 style={{
             fontSize: isMobile ? 22 : 32,
-            fontWeight: 400,
+            fontWeight: 500,
             letterSpacing: '-0.02em',
             lineHeight: 1.2,
             margin: '0 0 8px',
@@ -160,6 +154,20 @@ export default function ProjectDetail() {
           }}>
             {project.titel}
           </h1>
+
+          {project.ergebnis && (
+            <div style={{
+              display: 'inline-block',
+              marginBottom: 8,
+              fontSize: 12,
+              color: A.mute,
+              background: A.ruleSoft,
+              padding: '3px 8px',
+              borderRadius: 2,
+            }}>
+              {project.ergebnis}
+            </div>
+          )}
 
           {/* Subtitle */}
           {project.untertitel && (
@@ -190,15 +198,14 @@ export default function ProjectDetail() {
                 >
                   <span style={{
                     minWidth: 110,
-                    fontSize: 12,
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
+                    fontSize: 13,
+                    fontWeight: 600,
                     color: A.mute,
                     flexShrink: 0,
                   }}>
                     {row.label}
                   </span>
-                  <span style={{ fontSize: 14, color: A.ink }}>
+                  <span style={{ fontSize: 15, color: A.ink }}>
                     {row.value}
                   </span>
                 </div>
@@ -232,12 +239,10 @@ export default function ProjectDetail() {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  fontSize: 13,
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  color: A.accentDeep,
+                  fontSize: 14,
+                  color: A.mute,
                   textDecoration: 'none',
-                  borderBottom: `1px solid ${A.accent}`,
+                  borderBottom: `1px solid ${A.rule}`,
                   paddingBottom: 2,
                 }}
               >
@@ -262,10 +267,10 @@ export default function ProjectDetail() {
               to={`/projekte/${prev.id}`}
               style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
-              <div style={{ fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', color: A.mute, marginBottom: 8 }}>
+              <div style={{ fontSize: 13, color: A.mute, marginBottom: 8 }}>
                 ← Vorheriges Projekt
               </div>
-              <div style={{ fontSize: isMobile ? 15 : 16, color: A.ink, fontWeight: 400, letterSpacing: '-0.01em' }}>
+              <div style={{ fontSize: isMobile ? 16 : 17, color: A.ink, fontWeight: 500, letterSpacing: '-0.01em' }}>
                 {prev.titel}
               </div>
             </Link>
@@ -277,10 +282,10 @@ export default function ProjectDetail() {
               to={`/projekte/${next.id}`}
               style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
-              <div style={{ fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', color: A.mute, marginBottom: 8 }}>
+              <div style={{ fontSize: 13, color: A.mute, marginBottom: 8 }}>
                 Nächstes Projekt →
               </div>
-              <div style={{ fontSize: isMobile ? 15 : 16, color: A.ink, fontWeight: 400, letterSpacing: '-0.01em' }}>
+              <div style={{ fontSize: isMobile ? 16 : 17, color: A.ink, fontWeight: 500, letterSpacing: '-0.01em' }}>
                 {next.titel}
               </div>
             </Link>

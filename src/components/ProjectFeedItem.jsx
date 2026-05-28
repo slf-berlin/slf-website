@@ -22,24 +22,41 @@ export default function ProjectFeedItem({ proj, align = 'L', large = false }) {
       paddingBottom: 6,
     }}>
       <div style={{
-        fontSize: 12, color: A.mute,
-        letterSpacing: '0.1em', textTransform: 'uppercase',
-        display: 'flex', gap: 12, alignItems: 'center',
+        fontSize: 13, color: A.mute,
+        display: 'flex', gap: 12, alignItems: 'baseline', flexWrap: 'wrap',
       }}>
-        <span>{proj.kategorie}</span>
-        <span style={{ width: 18, height: 3, background: A.accent }} />
-        <span>{proj.jahr}</span>
+        <span style={{ flexShrink: 1 }}>
+          {Array.isArray(proj.kategorie) ? proj.kategorie.join(' · ') : proj.kategorie}
+        </span>
+        {!proj.untertitel && proj.jahr && <>
+          <span style={{ width: 18, height: 3, background: A.accent, flexShrink: 0, alignSelf: 'center' }} />
+          <span style={{ whiteSpace: 'nowrap' }}>{proj.jahr}</span>
+        </>}
       </div>
 
       <h3 style={{
-        fontSize: isMobile ? 18 : 22, fontWeight: 400, lineHeight: 1.15,
+        fontSize: isMobile ? 18 : 22, fontWeight: 500, lineHeight: 1.15,
         letterSpacing: '-0.01em',
         margin: '12px 0 0',
-        color: hovered ? A.accentDeep : A.ink,
+        color: A.ink,
         transition: 'color 0.18s ease',
       }}>
         {proj.titel}
       </h3>
+
+      {proj.ergebnis && (
+        <div style={{
+          display: 'inline-block',
+          marginTop: 8,
+          fontSize: 12,
+          color: A.mute,
+          background: A.ruleSoft,
+          padding: '3px 8px',
+          borderRadius: 2,
+        }}>
+          {proj.ergebnis}
+        </div>
+      )}
 
       {proj.untertitel && (
         <div style={{ fontSize: 15, color: A.mute, marginTop: 6 }}>{proj.untertitel}</div>
@@ -47,8 +64,7 @@ export default function ProjectFeedItem({ proj, align = 'L', large = false }) {
 
       <div style={{
         marginTop: 10,
-        fontSize: 12, color: A.accentDeep,
-        letterSpacing: '0.08em', textTransform: 'uppercase',
+        fontSize: 13, color: A.mute,
       }}>
         {proj.ort}
       </div>

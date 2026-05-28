@@ -79,21 +79,21 @@ function Modal({ member, onClose }) {
 
           <div style={{ flex: 1, paddingTop: isMobile ? 0 : 2 }}>
             <div style={{
-              fontSize: 12, color: A.accentDeep,
-              letterSpacing: '0.12em', textTransform: 'uppercase',
-              marginBottom: 6, fontWeight: 500,
+              fontSize: 13, color: A.mute,
+              fontWeight: 600,
+              marginBottom: 6,
             }}>
               {member.rolle}
             </div>
 
             {member.email ? (
               <a href={`mailto:${member.email}`} style={{ color: A.ink, textDecoration: 'none' }}>
-                <div style={{ fontSize: 22, fontWeight: 400, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
+                <div style={{ fontSize: 22, fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
                   {member.name}
                 </div>
               </a>
             ) : (
-              <div style={{ fontSize: 22, fontWeight: 400, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
+              <div style={{ fontSize: 22, fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
                 {member.name}
               </div>
             )}
@@ -113,7 +113,7 @@ function Modal({ member, onClose }) {
                 }}>
                   <span style={{
                     minWidth: 84, flexShrink: 0,
-                    color: A.accentDeep, fontSize: 13, letterSpacing: '0.03em',
+                    color: A.mute, fontSize: 13,
                   }}>
                     {jahre}
                   </span>
@@ -167,15 +167,14 @@ function TeamCard({ member, onClick }) {
 
       <div style={{ paddingTop: 10 }}>
         <div style={{
-          fontSize: 16, fontWeight: 400,
+          fontSize: 16, fontWeight: 500,
           letterSpacing: '-0.005em', color: A.ink,
           lineHeight: 1.3,
         }}>
           {member.name}
         </div>
         <div style={{
-          fontSize: 12, color: A.accentDeep,
-          letterSpacing: '0.08em', textTransform: 'uppercase',
+          fontSize: 13, color: A.mute,
           marginTop: 4,
         }}>
           {member.rolle}
@@ -207,14 +206,13 @@ export default function Team() {
         }}>
           <div style={{
             gridColumn: isMobile ? 'auto' : '1 / span 1',
-            fontSize: 12, color: A.accentDeep,
-            letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 500,
+            fontSize: 13, color: A.mute,
           }}>
             03 /<br />Team
           </div>
           <div style={{ gridColumn: isMobile ? 'auto' : '3 / span 8' }}>
             <h1 style={{
-              fontWeight: 400, fontSize: isMobile ? 20 : 28,
+              fontWeight: 500, fontSize: isMobile ? 20 : 28,
               letterSpacing: '-0.015em', margin: 0,
             }}>
               Das Team

@@ -26,11 +26,8 @@ export default function Kontakt() {
       }}>
         <div style={{
           gridColumn: labelCol,
-          fontSize: 12,
-          color: A.accentDeep,
-          letterSpacing: '0.12em',
-          textTransform: 'uppercase',
-          fontWeight: 500,
+          fontSize: 13,
+          color: A.mute,
           paddingTop: 4,
         }}>
           Kontakt
@@ -56,11 +53,9 @@ export default function Kontakt() {
             {/* Adresse */}
             <div>
               <div style={{
-                fontSize: 11,
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                color: A.accentDeep,
-                fontWeight: 500,
+                fontSize: 13,
+                color: A.ink,
+                fontWeight: 600,
                 marginBottom: 14,
               }}>
                 Adresse
@@ -76,11 +71,9 @@ export default function Kontakt() {
             {/* Kontakt */}
             <div>
               <div style={{
-                fontSize: 11,
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                color: A.accentDeep,
-                fontWeight: 500,
+                fontSize: 13,
+                color: A.ink,
+                fontWeight: 600,
                 marginBottom: 14,
               }}>
                 Erreichbarkeit
@@ -119,10 +112,7 @@ export default function Kontakt() {
           <div style={{
             gridColumn: labelCol,
             fontSize: 12,
-            color: A.accentDeep,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            fontWeight: 500,
+            color: A.mute,
             paddingTop: 4,
           }}>
             Anfahrt

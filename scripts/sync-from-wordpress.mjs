@@ -60,6 +60,54 @@ function extractZeitraum(html) {
   return text || null;
 }
 
+// Extracts competition result (1. Preis / 2. Preis / 3. Preis / Ankauf / Anerkennung)
+// from the Verfahren field in the already-processed content's <dl class="slf-daten">.
+function extractVerfahrenResult(processedContent) {
+  if (!processedContent) return null;
+  const m = processedContent.match(/<dt>Verfahren<\/dt><dd>([\s\S]*?)<\/dd>/);
+  if (!m) return null;
+  const verfahren = m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  const result = verfahren.match(/\b(\d+\.?\s*Preis|Ankauf|Anerkennung)\b/i);
+  return result ? normalizeErgebnis(result[1]) : null;
+}
+
+function normalizeErgebnis(raw) {
+  return raw.replace(/(\d+)\.(Preis)/i, '$1. $2').replace(/\s+/g, ' ').trim();
+}
+
+const PRIZE_SUFFIX_RE = /\s*[–\-]\s*(\d+\.?\s*Preis|Ankauf|Anerkennung)\s*$/i;
+
+// Fetches the WP theme-rendered page and extracts the display title (h3) and
+// subtitle (div.info). The theme shows these from custom WP fields not exposed
+// in the REST API. Returns { titel, untertitel, ergebnis } or null on failure.
+async function fetchWpPageData(url) {
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const m = html.match(/<h3>(.*?)<\/h3>\s*<div class="info">(.*?)<\/div>/s);
+    if (!m) return null;
+
+    const h3Raw = m[1].replace(/<[^>]+>/g, '').trim();
+    const infoRaw = m[2].replace(/<[^>]+>/g, '').trim();
+
+    const prizeH3 = h3Raw.match(PRIZE_SUFFIX_RE);
+    const prizeInfo = infoRaw.match(PRIZE_SUFFIX_RE);
+
+    return {
+      titel: decodeHtmlEntities(prizeH3 ? h3Raw.slice(0, prizeH3.index).trim() : h3Raw),
+      untertitel: decodeHtmlEntities(prizeInfo ? infoRaw.slice(0, prizeInfo.index).trim() : infoRaw),
+      ergebnis: prizeH3
+        ? normalizeErgebnis(prizeH3[1])
+        : prizeInfo
+          ? normalizeErgebnis(prizeInfo[1])
+          : null,
+    };
+  } catch {
+    return null;
+  }
+}
+
 // ─── Elementor layout parser ─────────────────────────────────────────────────
 
 // Extract the inner content of a <tag>...</tag> element at startIndex,
@@ -287,7 +335,7 @@ async function fetchAllPosts() {
   return posts;
 }
 
-function mapPost(post) {
+function mapPost(post, pageData = null) {
   const terms = post._embedded?.['wp:term']?.[0] ?? [];
   const matchedTerms = terms.filter(t => KNOWN_SLUGS.has(t.slug));
   if (matchedTerms.length === 0) return null; // skip uncategorized / non-project posts
@@ -295,13 +343,15 @@ function mapPost(post) {
   const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
   const imageUrl = pickImageUrl(featuredMedia);
   const beschreibung = stripHtml(post.excerpt?.rendered ?? post.content?.rendered ?? '');
+  const content = extractLayout(post.content?.rendered ?? null);
 
   return {
     id: post.slug,
-    titel: decodeHtmlEntities(post.title.rendered),
-    untertitel: '',
+    titel: pageData?.titel || decodeHtmlEntities(post.title.rendered),
+    untertitel: pageData?.untertitel ?? '',
     beschreibung,
-    content: extractLayout(post.content?.rendered ?? null),
+    content,
+    ergebnis: pageData?.ergebnis || extractVerfahrenResult(content),
     ort: null,
     jahr: extractZeitraum(post.content?.rendered ?? null),
     kategorie: matchedTerms.map(t => CATEGORY_LABEL[t.slug]),
@@ -334,8 +384,13 @@ async function main() {
 
   console.log(`    Fetched ${posts.length} published posts`);
 
+  // Fetch WP page HTML for all posts in parallel to get display titles and prizes
+  // that are stored in theme custom fields not exposed by the REST API.
+  console.log('    Fetching page display data…');
+  const pageDataArr = await Promise.all(posts.map(p => fetchWpPageData(p.link)));
+
   const projects = posts
-    .map(mapPost)
+    .map((post, i) => mapPost(post, pageDataArr[i]))
     .filter(Boolean)
     .sort((a, b) => new Date(b.wpDate) - new Date(a.wpDate)); // newest first
 

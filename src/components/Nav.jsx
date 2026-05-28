@@ -173,7 +173,7 @@ export default function Nav() {
                         fontSize: 19, letterSpacing: '0.01em',
                         color: pathname === to || pathname.startsWith(to + '/') ? A.ink : A.mute,
                         borderBottom: i < navItems.length - 1 ? `1px solid ${A.ruleSoft}` : 'none',
-                        fontWeight: pathname === to || pathname.startsWith(to + '/') ? 500 : 400,
+                        fontWeight: pathname === to || pathname.startsWith(to + '/') ? 600 : 500,
                       }}
                     >
                       {label}
@@ -207,7 +207,7 @@ export default function Nav() {
                         color: (active || isHovered) ? A.ink : A.mute,
                         borderBottom: (active || isHovered) ? `3px solid ${A.accent}` : '3px solid transparent',
                         paddingBottom: 4,
-                        fontWeight: active ? 500 : 400,
+                        fontWeight: active ? 600 : 500,
                         letterSpacing: '0.01em',
                         display: 'block',
                         transition: 'border-color 0.15s ease, color 0.15s ease',
@@ -311,7 +311,6 @@ export default function Nav() {
             {searchQuery.trim().length > 1 && searchResults.length === 0 && (
               <p style={{
                 color: A.mute, fontSize: 15,
-                letterSpacing: '0.05em', textTransform: 'uppercase',
                 marginTop: 32,
               }}>
                 Keine Projekte gefunden.
@@ -321,7 +320,6 @@ export default function Nav() {
             {searchQuery.trim().length <= 1 && (
               <p style={{
                 color: A.mute, fontSize: 14,
-                letterSpacing: '0.05em', textTransform: 'uppercase',
                 marginTop: 32,
               }}>
                 Projekttitel, Kategorie oder Beschreibung eingeben
@@ -383,8 +381,7 @@ function SearchResult({ project, isLast, onSelect }) {
       }}
     >
       <div style={{
-        fontSize: 12, letterSpacing: '0.12em', textTransform: 'uppercase',
-        color: A.accentDeep, marginBottom: 5, fontWeight: 500,
+        fontSize: 13, color: A.mute, fontWeight: 600, marginBottom: 5,
       }}>
         {project.kategorie}
       </div>
@@ -393,7 +390,7 @@ function SearchResult({ project, isLast, onSelect }) {
       </div>
       {project.beschreibung && (
         <div style={{
-          fontSize: 14, color: A.mute, marginTop: 5,
+          fontSize: 15, color: A.mute, marginTop: 5,
           lineHeight: 1.6, letterSpacing: '0.01em',
           display: '-webkit-box', WebkitLineClamp: 2,
           WebkitBoxOrient: 'vertical', overflow: 'hidden',
@@ -425,7 +422,7 @@ function DropdownItem({ child, isLast, onClose }) {
         background: hovered ? A.accentSoft : 'transparent',
         borderBottom: isLast ? 'none' : `1px solid ${A.ruleSoft}`,
         transition: 'color 0.1s ease, background 0.1s ease',
-        fontWeight: active ? 500 : 400,
+        fontWeight: active ? 600 : 500,
       }}
     >
       {child.label}

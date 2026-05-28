@@ -14,7 +14,7 @@ export default function Footer() {
       display: 'grid',
       gridTemplateColumns: isMobile ? '1fr' : isTablet ? '1fr 1fr' : '2fr 1fr 1fr 1fr',
       gap: 32,
-      fontSize: 14, lineHeight: 1.55, color: A.ink,
+      fontSize: 15, lineHeight: 1.55, color: A.ink,
     }}>
       <div>
         <img src={logo} alt="Stadt Land Fluss" style={{ height: 56, width: 'auto', display: 'block', marginBottom: 16 }} />
@@ -25,7 +25,7 @@ export default function Footer() {
       </div>
 
       <div>
-        <div style={{ color: A.mute, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 10 }}>
+        <div style={{ color: A.ink, fontSize: 13, fontWeight: 600, marginBottom: 10 }}>
           Kontakt
         </div>
         Mahlower Straße 24<br />
@@ -35,18 +35,18 @@ export default function Footer() {
       </div>
 
       <div>
-        <div style={{ color: A.mute, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 10 }}>
+        <div style={{ color: A.ink, fontSize: 13, fontWeight: 600, marginBottom: 10 }}>
           Navigation
         </div>
         Projekte<br />Büro<br />Kontakt<br />competitionline
       </div>
 
       <div>
-        <div style={{ color: A.mute, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 10 }}>
+        <div style={{ color: A.ink, fontSize: 13, fontWeight: 600, marginBottom: 10 }}>
           Rechtliches
         </div>
         Impressum<br />Datenschutzerklärung
-        <div style={{ marginTop: 22, color: A.mute, fontSize: 12 }}>© 2026</div>
+        <div style={{ marginTop: 22, color: A.mute, fontSize: 13 }}>© 2026</div>
       </div>
     </div>
   )
