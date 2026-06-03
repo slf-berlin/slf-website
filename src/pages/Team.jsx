@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import BackToTop from '../components/BackToTop'
 import { tokens as A, base } from '../tokens'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 import { TEAM } from '../data/team'
@@ -237,6 +238,7 @@ export default function Team() {
 
       {selected && <Modal member={selected} onClose={() => setSelected(null)} />}
 
+      <BackToTop />
       <Footer />
     </div>
   )

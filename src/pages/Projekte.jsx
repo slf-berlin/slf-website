@@ -4,6 +4,7 @@ import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import ProjectImage from '../components/ProjectImage'
+import BackToTop from '../components/BackToTop'
 import projects from '../data/projects'
 import { PROJEKTE_NAV, FILTER_FN, filterHref } from '../data/filters'
 import { useWindowWidth } from '../hooks/useWindowWidth'
@@ -86,6 +87,7 @@ export default function Projekte() {
 
   const [sortKey, setSortKey] = useState('titel')
   const [sortDir, setSortDir] = useState('asc')
+  const [hoveredKey, setHoveredKey] = useState(null)
 
   const filtered = activeKey && FILTER_FN[activeKey]
     ? projects.filter(FILTER_FN[activeKey])
@@ -115,19 +117,32 @@ export default function Projekte() {
       }}>
         {PROJEKTE_NAV.map((f) => {
           const isActive = f.key === activeKey || (!f.key && !activeKey)
+          const isHovered = hoveredKey === (f.key ?? 'all')
+          const barVisible = isActive || isHovered
           return (
             <Link
               key={f.key ?? 'all'}
               to={filterHref(f.key)}
+              onMouseEnter={() => setHoveredKey(f.key ?? 'all')}
+              onMouseLeave={() => setHoveredKey(null)}
               style={{
-                padding: '0 0 3px',
+                position: 'relative',
+                padding: '0 0 5px',
                 fontSize: 15,
                 color: isActive ? A.ink : A.mute,
-                borderBottom: isActive ? `2px solid ${A.accent}` : '2px solid transparent',
                 fontWeight: isActive ? 600 : 500,
               }}
             >
               {f.label}
+              <span style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                height: 2,
+                background: A.accent,
+                width: barVisible ? '100%' : '0%',
+                transition: isActive ? 'none' : 'width 0.25s ease',
+              }} />
             </Link>
           )
         })}
@@ -258,6 +273,7 @@ export default function Projekte() {
         </div>
       )}
 
+      <BackToTop />
       <Footer />
     </div>
   )

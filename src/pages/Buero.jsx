@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import BackToTop from '../components/BackToTop'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 
 const LEISTUNGEN = [
@@ -355,6 +356,22 @@ export default function Buero() {
         </div>
       </div>
 
+      {/* Abschlussbild */}
+      <div style={{ paddingLeft: isMobile ? 12 : 36, paddingRight: isMobile ? 12 : 36, paddingBottom: vPad }}>
+        <img
+          src="https://www.slf-berlin.de/wordpress/wp-content/uploads/2024/07/tempimageyyqfie-scaled-e1720599639686-1536x983.jpg"
+          alt="Stadt Land Fluss — Büro"
+          style={{
+            display: 'block',
+            width: '100%',
+            height: isMobile ? 220 : 500,
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+        />
+      </div>
+
+      <BackToTop />
       <Footer />
     </div>
   )

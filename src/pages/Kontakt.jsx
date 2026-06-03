@@ -118,7 +118,7 @@ export default function Kontakt() {
           </div>
           <div style={{ gridColumn: isMobile ? 'auto' : '3 / span 10' }}>
             <img
-              src="https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/09/anfahrt_karte_slf_berlin_rz_0.svg"
+              src={import.meta.env.BASE_URL + 'anfahrt_karte.svg'}
               alt="Anfahrtskarte — Mahlower Straße 24, Berlin Neukölln"
               style={{
                 display: 'block',

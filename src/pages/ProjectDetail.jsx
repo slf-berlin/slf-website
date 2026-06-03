@@ -2,6 +2,7 @@ import { useParams, Navigate, Link } from 'react-router-dom'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import BackToTop from '../components/BackToTop'
 import projects from '../data/projects'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 
@@ -300,6 +301,7 @@ export default function ProjectDetail() {
         </div>
       </div>
 
+      <BackToTop />
       <Footer />
     </div>
   )

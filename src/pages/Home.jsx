@@ -46,6 +46,14 @@ export default function Home() {
   const contentCol = isMobile ? 'auto' : '3 / span 8'
   const contentColWide = isMobile ? 'auto' : '3 / span 9'
 
+  // Compute overlay title font size to fit "Quartiersentwicklung" (20 chars) on one line
+  const heroPad = isMobile ? 24 : 72
+  const overlayPad = isMobile ? 16 : 48
+  const segContentWidth = (width - heroPad) * 0.3164 - overlayPad
+  // D-DIN char width ≈ 0.52em for this condensed font
+  const titleFontSize = Math.min(isMobile ? 15 : 28, Math.max(9, Math.floor(segContentWidth / (20 * 0.52))))
+  const showDesc = width >= 1000
+
   return (
     <div style={base}>
       <Nav />
@@ -72,7 +80,7 @@ export default function Home() {
               key={i}
               onMouseEnter={() => setHoveredLeistung(seg.li)}
               onMouseLeave={() => setHoveredLeistung(null)}
-              style={{ flex: seg.flex, position: 'relative', cursor: 'default' }}
+              style={{ flex: seg.flex, position: 'relative', cursor: 'default', overflow: 'hidden' }}
             >
               <div style={{
                 position: 'absolute', inset: 0,
@@ -81,25 +89,27 @@ export default function Home() {
                 transition: 'opacity 0.28s ease',
                 display: 'flex', flexDirection: 'column',
                 alignItems: 'center', justifyContent: 'center',
-                padding: 24,
+                padding: isMobile ? 8 : 24,
               }}>
-                <div style={{ width: 32, height: 3, background: A.accent, marginBottom: 18 }} />
+                <div style={{ width: 32, height: 3, background: A.accent, marginBottom: isMobile ? 10 : 18 }} />
                 <div style={{
-                  fontSize: isMobile ? 20 : 34,
+                  fontSize: titleFontSize,
                   fontWeight: 600, color: '#fff',
                   letterSpacing: '-0.02em', textAlign: 'center',
-                  lineHeight: 1.15,
+                  lineHeight: 1.2, whiteSpace: 'nowrap',
                 }}>
                   {LEISTUNGEN[seg.li].titel}
                 </div>
-                <div style={{
-                  fontSize: isMobile ? 14 : 16,
-                  color: 'rgba(255,255,255,0.82)',
-                  marginTop: 14, lineHeight: 1.55,
-                  textAlign: 'center', maxWidth: 240,
-                }}>
-                  {LEISTUNGEN[seg.li].beschreibung}
-                </div>
+                {showDesc && (
+                  <div style={{
+                    fontSize: 18,
+                    color: 'rgba(255,255,255,0.82)',
+                    marginTop: 14, lineHeight: 1.55,
+                    textAlign: 'center', maxWidth: 240,
+                  }}>
+                    {LEISTUNGEN[seg.li].beschreibung}
+                  </div>
+                )}
               </div>
             </div>
           ))}
