@@ -37,6 +37,8 @@ export default function Home() {
   const width = useWindowWidth()
   const isMobile = width < 768
   const [hoveredLeistung, setHoveredLeistung] = useState(null)
+  const [hoverMehr, setHoverMehr] = useState(false)
+  const [hoverAlle, setHoverAlle] = useState(false)
 
   const hPad = isMobile ? 20 : 56
   const vPad = isMobile ? 56 : 112
@@ -163,6 +165,32 @@ export default function Home() {
           <p style={{ marginTop: 20, fontSize: isMobile ? 17 : 21, color: A.ink, lineHeight: 1.75, maxWidth: 640 }}>
             Wir freuen uns auf spannende Projekte und weiterhin gute Zusammenarbeit in alten und neuen Konstellationen!
           </p>
+          <Link
+            to="/buero"
+            onMouseEnter={() => setHoverMehr(true)}
+            onMouseLeave={() => setHoverMehr(false)}
+            style={{
+              position: 'relative',
+              display: 'inline-block',
+              marginTop: 32,
+              fontSize: isMobile ? 15 : 17,
+              fontWeight: 500,
+              color: A.ink,
+              paddingBottom: 4,
+              textDecoration: 'none',
+              overflow: 'hidden',
+            }}
+          >
+            <span style={{
+              position: 'absolute',
+              bottom: 0, left: 0, right: 0,
+              height: hoverMehr ? '100%' : '2px',
+              background: A.accent,
+              transition: 'height 0.25s ease',
+              zIndex: 0,
+            }} />
+            <span style={{ position: 'relative', zIndex: 1 }}>Mehr erfahren →</span>
+          </Link>
         </div>
       </div>
 
@@ -181,13 +209,30 @@ export default function Home() {
           <div style={{ fontSize: isMobile ? 20 : 30, fontWeight: 600, letterSpacing: '-0.01em' }}>
             Ausgewählte Projekte
           </div>
-          <Link to="/projekte" style={{
-            fontSize: 15,
-            fontWeight: 500,
-            borderBottom: `2px solid ${A.accent}`,
-            color: A.ink, paddingBottom: 2,
-          }}>
-            Alle Projekte ansehen →
+          <Link
+            to="/projekte"
+            onMouseEnter={() => setHoverAlle(true)}
+            onMouseLeave={() => setHoverAlle(false)}
+            style={{
+              position: 'relative',
+              display: 'inline-block',
+              fontSize: 15,
+              fontWeight: 500,
+              color: A.ink,
+              paddingBottom: 4,
+              textDecoration: 'none',
+              overflow: 'hidden',
+            }}
+          >
+            <span style={{
+              position: 'absolute',
+              bottom: 0, left: 0, right: 0,
+              height: hoverAlle ? '100%' : '2px',
+              background: A.accent,
+              transition: 'height 0.25s ease',
+              zIndex: 0,
+            }} />
+            <span style={{ position: 'relative', zIndex: 1 }}>Alle Projekte ansehen →</span>
           </Link>
         </div>
       </div>

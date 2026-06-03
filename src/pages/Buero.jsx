@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
@@ -122,6 +123,7 @@ const LEISTUNGEN = [
 export default function Buero() {
   const width = useWindowWidth()
   const isMobile = width < 768
+  const [hoverTeam, setHoverTeam] = useState(false)
 
   const hPad = isMobile ? 20 : 56
   const vPad = isMobile ? 56 : 112
@@ -336,22 +338,36 @@ export default function Buero() {
           </p>
           <Link
             to="/buero/team"
+            onMouseEnter={() => setHoverTeam(true)}
+            onMouseLeave={() => setHoverTeam(false)}
             style={{
+              position: 'relative',
               display: 'inline-flex',
               alignItems: 'center',
               gap: 12,
               fontSize: isMobile ? 17 : 20,
               color: A.ink,
-              borderBottom: `1px solid ${A.ink}`,
               paddingBottom: 4,
               fontWeight: 600,
+              textDecoration: 'none',
+              overflow: 'hidden',
             }}
           >
-            Unser Team kennenlernen
-            <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="2" y1="7" x2="12" y2="7"/>
-              <polyline points="8,3 12,7 8,11"/>
-            </svg>
+            <span style={{
+              position: 'absolute',
+              bottom: 0, left: 0, right: 0,
+              height: hoverTeam ? '100%' : '2px',
+              background: A.accent,
+              transition: 'height 0.25s ease',
+              zIndex: 0,
+            }} />
+            <span style={{ position: 'relative', zIndex: 1, display: 'inline-flex', alignItems: 'center', gap: 12 }}>
+              Unser Team kennenlernen
+              <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="2" y1="7" x2="12" y2="7"/>
+                <polyline points="8,3 12,7 8,11"/>
+              </svg>
+            </span>
           </Link>
         </div>
       </div>
