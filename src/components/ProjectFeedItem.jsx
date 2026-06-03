@@ -28,14 +28,10 @@ export default function ProjectFeedItem({ proj, align = 'L', large = false }) {
         <span style={{ flexShrink: 1 }}>
           {Array.isArray(proj.kategorie) ? proj.kategorie.join(' · ') : proj.kategorie}
         </span>
-        {!proj.untertitel && proj.jahr && <>
-          <span style={{ width: 18, height: 3, background: A.accent, flexShrink: 0, alignSelf: 'center' }} />
-          <span style={{ whiteSpace: 'nowrap' }}>{proj.jahr}</span>
-        </>}
       </div>
 
       <h3 style={{
-        fontSize: isMobile ? 18 : 22, fontWeight: 500, lineHeight: 1.15,
+        fontSize: isMobile ? 20 : 25, fontWeight: 600, lineHeight: 1.2,
         letterSpacing: '-0.01em',
         margin: '12px 0 0',
         color: A.ink,

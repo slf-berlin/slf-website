@@ -6,6 +6,8 @@ import ProjectDetail from './pages/ProjectDetail'
 import Buero from './pages/Buero'
 import Team from './pages/Team'
 import Kontakt from './pages/Kontakt'
+import Impressum from './pages/Impressum'
+import Datenschutz from './pages/Datenschutz'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -40,6 +42,8 @@ export default function App() {
           <Route path="/buero/leistungen" element={<Buero />} />
           <Route path="/buero/team" element={<Team />} />
           <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

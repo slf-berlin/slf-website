@@ -11,7 +11,7 @@ export default function Kontakt() {
   const vPad = isMobile ? 56 : 88
   const gridCols = isMobile ? '1fr' : 'repeat(12, 1fr)'
   const labelCol = isMobile ? 'auto' : '1 / span 1'
-  const contentCol = isMobile ? 'auto' : '3 / span 4'
+  const contentCol = isMobile ? 'auto' : '3 / span 6'
 
   return (
     <div style={base}>
@@ -36,7 +36,7 @@ export default function Kontakt() {
         <div style={{ gridColumn: contentCol }}>
           <p style={{
             fontSize: isMobile ? 16 : 17,
-            lineHeight: 1.7,
+            lineHeight: 1.9,
             color: A.mute,
             margin: '0 0 40px',
           }}>
@@ -60,7 +60,7 @@ export default function Kontakt() {
               }}>
                 Adresse
               </div>
-              <div style={{ fontSize: isMobile ? 16 : 17, lineHeight: 1.8, color: A.ink }}>
+              <div style={{ fontSize: isMobile ? 16 : 17, lineHeight: 1.9, color: A.ink }}>
                 Stadt Land Fluss<br />
                 Städtebau und Stadtplanung PartG mbB<br />
                 Mahlower Straße 24<br />
@@ -78,7 +78,7 @@ export default function Kontakt() {
               }}>
                 Erreichbarkeit
               </div>
-              <div style={{ fontSize: isMobile ? 16 : 17, lineHeight: 1.8, color: A.ink }}>
+              <div style={{ fontSize: isMobile ? 16 : 17, lineHeight: 1.9, color: A.ink }}>
                 <a
                   href="tel:+493061280848"
                   style={{ color: 'inherit', textDecoration: 'none' }}
@@ -101,7 +101,6 @@ export default function Kontakt() {
       {/* Anfahrt-Karte */}
       <div style={{
         padding: `0 ${hPad}px ${vPad}px`,
-        borderTop: `1px solid ${A.rule}`,
         paddingTop: isMobile ? 40 : 56,
       }}>
         <div style={{

@@ -6,7 +6,7 @@ import projects from '../data/projects'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 
 const PROSE_STYLES = `
-.slf-prose p { margin: 0 0 1.2em; line-height: 1.65; }
+.slf-prose p { margin: 0 0 1.2em; line-height: 1.8; }
 .slf-prose p:last-child { margin-bottom: 0; }
 .slf-prose h2 { font-size: 1.1em; font-weight: 500; margin: 1.6em 0 0.5em; letter-spacing: -0.01em; }
 .slf-prose h3 { font-size: 1em; font-weight: 500; margin: 1.4em 0 0.4em; }
@@ -154,10 +154,10 @@ export default function ProjectDetail() {
 
           {/* Title */}
           <h1 style={{
-            fontSize: isMobile ? 22 : 32,
-            fontWeight: 500,
+            fontSize: isMobile ? 26 : 38,
+            fontWeight: 700,
             letterSpacing: '-0.02em',
-            lineHeight: 1.2,
+            lineHeight: 1.15,
             margin: '0 0 8px',
             color: A.ink,
           }}>
@@ -199,9 +199,7 @@ export default function ProjectDetail() {
                   style={{
                     display: 'flex',
                     alignItems: 'baseline',
-                    borderTop: `1px solid ${A.rule}`,
-                    ...(i === metaRows.length - 1 ? { borderBottom: `1px solid ${A.rule}` } : {}),
-                    padding: '8px 0',
+                    padding: '16px 0',
                     gap: 24,
                   }}
                 >
@@ -214,7 +212,7 @@ export default function ProjectDetail() {
                   }}>
                     {row.label}
                   </span>
-                  <span style={{ fontSize: 15, color: A.ink }}>
+                  <span style={{ fontSize: 16, color: A.ink }}>
                     {row.value}
                   </span>
                 </div>
@@ -229,13 +227,13 @@ export default function ProjectDetail() {
               style={{
                 fontSize: isMobile ? 16 : 17,
                 color: A.ink,
-                lineHeight: 1.65,
+                lineHeight: 1.8,
                 marginTop: metaRows.length > 0 ? 0 : 24,
               }}
               dangerouslySetInnerHTML={{ __html: processContent(project.content) }}
             />
           ) : (
-            <p style={{ fontSize: 17, color: A.ink, lineHeight: 1.65, marginTop: 24 }}>
+            <p style={{ fontSize: 17, color: A.ink, lineHeight: 1.8, marginTop: 24 }}>
               {project.beschreibung}
             </p>
           )}

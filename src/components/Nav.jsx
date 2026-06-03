@@ -107,7 +107,7 @@ export default function Nav() {
           <img
             src={logo}
             alt="Stadt Land Fluss — Städtebau und Stadtplanung PartG mbB"
-            style={{ height: isMobile ? 16 : 20, width: 'auto', display: 'block' }}
+            style={{ height: isMobile ? 18 : 24, width: 'auto', display: 'block' }}
           />
         </Link>
 
@@ -153,7 +153,7 @@ export default function Nav() {
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
                     <Link to="/" onClick={() => setMobileOpen(false)} style={{ display: 'inline-flex', alignItems: 'center' }}>
-                      <img src={logo} alt="Stadt Land Fluss" style={{ height: 16, width: 'auto', display: 'block' }} />
+                      <img src={logo} alt="Stadt Land Fluss" style={{ height: 18, width: 'auto', display: 'block' }} />
                     </Link>
                     <button
                       onClick={() => setMobileOpen(false)}
@@ -172,8 +172,8 @@ export default function Nav() {
                         display: 'block', padding: '14px 0',
                         fontSize: 19, letterSpacing: '0.01em',
                         color: pathname === to || pathname.startsWith(to + '/') ? A.ink : A.mute,
-                        borderBottom: i < navItems.length - 1 ? `1px solid ${A.ruleSoft}` : 'none',
-                        fontWeight: pathname === to || pathname.startsWith(to + '/') ? 600 : 500,
+                        borderBottom: 'none',
+                        fontWeight: 600,
                       }}
                     >
                       {label}
@@ -206,7 +206,7 @@ export default function Nav() {
                       style={{
                         color: (active || isHovered) ? A.ink : A.mute,
                         paddingBottom: 4,
-                        fontWeight: active ? 600 : 500,
+                        fontWeight: 600,
                         letterSpacing: '0.01em',
                         display: 'block',
                         position: 'relative',
@@ -429,7 +429,7 @@ function DropdownItem({ child, isLast, onClose }) {
         letterSpacing: '0.02em',
         color: active ? A.ink : hovered ? A.ink : A.mute,
         background: hovered ? A.accentSoft : 'transparent',
-        borderBottom: isLast ? 'none' : `1px solid ${A.ruleSoft}`,
+        borderBottom: 'none',
         transition: 'color 0.1s ease, background 0.1s ease',
         fontWeight: active ? 600 : 500,
       }}

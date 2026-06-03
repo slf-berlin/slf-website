@@ -123,7 +123,7 @@ export default function Buero() {
   const isMobile = width < 768
 
   const hPad = isMobile ? 20 : 56
-  const vPad = isMobile ? 56 : 88
+  const vPad = isMobile ? 56 : 112
   const gridCols = isMobile ? '1fr' : 'repeat(12, 1fr)'
   const labelCol = isMobile ? 'auto' : '1 / span 1'
   const contentCol = isMobile ? 'auto' : '3 / span 8'
@@ -164,7 +164,7 @@ export default function Buero() {
         <div style={{ gridColumn: contentCol }}>
           <p style={{
             fontSize: isMobile ? 17 : 18,
-            lineHeight: 1.65,
+            lineHeight: 1.8,
             color: A.mute,
             margin: '0 0 20px',
             maxWidth: 620,
@@ -175,7 +175,7 @@ export default function Buero() {
           </p>
           <p style={{
             fontSize: isMobile ? 17 : 18,
-            lineHeight: 1.65,
+            lineHeight: 1.8,
             color: A.mute,
             margin: 0,
             maxWidth: 620,
@@ -190,7 +190,6 @@ export default function Buero() {
       {/* 3-image gallery */}
       <div style={{
         padding: `0 ${hPad}px ${vPad}px`,
-        borderBottom: `1px solid ${A.rule}`,
       }}>
         <div style={{
           display: 'grid',
@@ -238,7 +237,6 @@ export default function Buero() {
       {/* 02 / Leistungen */}
       <div id="leistungen" style={{
         padding: `${vPad}px ${hPad}px`,
-        borderBottom: `1px solid ${A.rule}`,
       }}>
         <div style={{
           display: 'grid',
@@ -255,8 +253,8 @@ export default function Buero() {
           </div>
           <div style={{ gridColumn: contentCol }}>
             <h2 style={{
-              fontWeight: 500,
-              fontSize: isMobile ? 20 : 26,
+              fontWeight: 600,
+              fontSize: isMobile ? 20 : 30,
               letterSpacing: '-0.015em',
               margin: 0,
             }}>
@@ -279,8 +277,7 @@ export default function Buero() {
           }}>
             {LEISTUNGEN.map((l) => (
               <div key={l.key} style={{
-                borderTop: `1px solid ${A.ruleSoft}`,
-                padding: `${isMobile ? 20 : 28}px 0`,
+                padding: `${isMobile ? 20 : 40}px 0`,
               }}>
                 <div style={{
                   color: A.mute,
@@ -290,8 +287,8 @@ export default function Buero() {
                   {l.icon}
                 </div>
                 <div style={{
-                  fontSize: isMobile ? 17 : 18,
-                  fontWeight: 500,
+                  fontSize: isMobile ? 17 : 20,
+                  fontWeight: 600,
                   letterSpacing: '-0.01em',
                   lineHeight: 1.3,
                   marginBottom: 10,
@@ -329,7 +326,7 @@ export default function Buero() {
         <div style={{ gridColumn: contentCol }}>
           <p style={{
             fontSize: isMobile ? 17 : 18,
-            lineHeight: 1.65,
+            lineHeight: 1.8,
             color: A.mute,
             margin: '0 0 28px',
             maxWidth: 540,
