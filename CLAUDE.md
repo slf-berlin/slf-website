@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Website for **Stadt Land Fluss PartG mbB**, a Berlin urban-planning practice founded 1992. Partners: Georg Börsch-Supan, Samir Hamzeh, Barbara Horst. J. Miller Stevens (founder) remains a consultant.
 
-Design direction: **A — "Editorial Index"**. Reference source: `_design/direction-a.jsx` and `_design/screenshots/`.
+Design direction: **Bold Editorial** (merged from `style/bold-archi`). Reference source: `_design/direction-a.jsx` and `_design/screenshots/`.
 
 ## Commands
 
@@ -58,6 +58,10 @@ Primary font: **D-DIN** loaded via CDN in `index.html`. Fallback chain: `"DIN Ne
 
 - **No uppercase text** — do not use `textTransform: 'uppercase'`. Labels keep their natural casing.
 - **No khaki text** — do not use `accent` / `accentDeep` (`#ccc8a6` / `#8a8765`) as a text color. Use `ink` for primary and `mute` for secondary text. The khaki tokens are reserved for non-text accents only.
+- **No border-radius** — all interactive elements (buttons, BackToTop, overlays) use `borderRadius: 0`. Flat geometry only.
+- **Hover inversion** — interactive buttons invert ink↔bg on hover (`background: A.ink, color: A.bg`) with a 0.15s transition. Use for BackToTop and similar standalone action buttons.
+- **Animated underlines on nav/filter tabs** — use an absolutely-positioned `<span>` with `width: 0% → 100%` transition (`0.25s ease`) rather than `borderBottom`. Active state: no transition (instant). Hovered non-active state: animated slide-in.
+- **Font weight for active states** — active filter/nav links use `fontWeight: 600`; inactive use `fontWeight: 500`.
 
 ### Layout conventions
 
@@ -88,6 +92,8 @@ All components use the `useWindowWidth()` hook (`src/hooks/useWindowWidth.js`) �
 | `/buero/leistungen` | `src/pages/Buero.jsx` |
 | `/buero/team` | `src/pages/Team.jsx` |
 | `/kontakt` | `src/pages/Kontakt.jsx` |
+| `/impressum` | `src/pages/Impressum.jsx` |
+| `/datenschutz` | `src/pages/Datenschutz.jsx` |
 | `*` | Redirect → `/` |
 
 `ScrollToTop` in `App.jsx` scrolls to top on route change, or smooth-scrolls to hash anchors with an 80px offset (nav height).
@@ -109,6 +115,8 @@ All components use the `useWindowWidth()` hook (`src/hooks/useWindowWidth.js`) �
 
 **`src/components/ProjectFeedItem.jsx`** — single project row for the Projekte list view.
 
+**`src/components/BackToTop.jsx`** — fixed scroll-to-top button. Appears after 500px scroll (`window.scrollY > 500`). Positioned `bottom: 40, right: 40, zIndex: 200`. Inverts ink↔bg on hover. Used on Buero, Projekte, Team, and ProjectDetail pages. Add it to any new long-scroll page.
+
 ### Pages
 
 **`src/pages/Team.jsx`** — dedicated team page at `/buero/team`. Renders `TEAM` from `src/data/team.js` as a responsive photo grid (`<TeamCard>`). Clicking a card opens a `<Modal>` overlay with full bio (photo + CV timeline + Aufgabenfelder). Modal closes on Esc, outside click, or × button. Grid columns: 2 (< 640px) / 3 (640–1023px) / 4 (≥ 1024px).
@@ -117,8 +125,13 @@ All components use the `useWindowWidth()` hook (`src/hooks/useWindowWidth.js`) �
 - **01 / Büro** — intro text (from WP page ID 18) + 3-image gallery (Stadt / Land / Wasser, WP CDN URLs)
 - **02 / Leistungen** — `LEISTUNGEN` array (8 services), rendered as a 2-column grid spanning cols 3–11
 - **03 / Team** — inline preview of partners; links to `/buero/team` for the full team page.
+- **Closing image** — full-width office photo at the bottom (WP CDN), followed by `<BackToTop />` then `<Footer />`.
 
-**`src/pages/Kontakt.jsx`** — contact info (address + phone/email) in cols 3–6, then a full-width `<Anfahrt>` section with a SVG map loaded from the WP CDN.
+**`src/pages/Kontakt.jsx`** — contact info (address + phone/email) in cols 3–6, then a full-width `<Anfahrt>` section with a local SVG map (`public/anfahrt_karte.svg`, served via `import.meta.env.BASE_URL`).
+
+**`src/pages/Impressum.jsx`** — static Impressum legal page.
+
+**`src/pages/Datenschutz.jsx`** — static Datenschutz (privacy policy) page.
 
 ### Data
 
@@ -189,6 +202,8 @@ Flex proportions (measured at 1400px width):
 
 If the hero image is replaced, re-measure gaps and update the segment array in `Home.jsx`.
 
+Hero overlay text sizing is computed dynamically: `titleFontSize = Math.min(max, Math.floor(segWidth / (charCount * 0.52)))` where 0.52 is the D-DIN character width ratio. This prevents "Quartiersentwicklung" (20 chars) from wrapping. Description text is hidden below `width < 1000` (`showDesc` flag).
+
 ### Project detail page (`src/pages/ProjectDetail.jsx`)
 
 Route: `/projekte/:id`. Layout:
@@ -219,8 +234,18 @@ API:
 
 Exports: `window.{DesignCanvas, DCSection, DCArtboard, DCPostIt}`.
 
+## Static assets (`public/`)
+
+| File | Role |
+|---|---|
+| `public/favicon.svg` | Site favicon, referenced in `index.html` |
+| `public/anfahrt_karte.svg` | Anfahrt map on Kontakt page (local copy, not WP CDN) |
+| `public/SLF_Logo_notext.svg` | Logo without text (light version) |
+| `public/SLF_Logo_notext_b.svg` | Logo without text (dark/bold version) |
+
+Always serve static assets via `import.meta.env.BASE_URL + 'filename'` so the path resolves correctly when deployed to a subdirectory (GitHub Pages).
+
 ## Suggested next steps
 
 1. **SEO** — per-page `<title>` / `<meta>` (react-helmet or Vite plugin)
 2. **Responsive** — currently optimized for ≥ 768px desktop; sub-768 needs further work
-3. **Impressum / Datenschutz** — Footer links to these pages but they are not yet routed
