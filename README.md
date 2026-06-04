@@ -1,22 +1,116 @@
-# CODING AGENTS: READ THIS FIRST
+# Stadt Land Fluss – Website
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Diese Anleitung richtet sich an alle, die Inhalte auf der Website pflegen möchten – auch ohne Programmierkenntnisse.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+---
 
-## What you should do — IMPORTANT
+## Wie funktioniert das System?
 
-**Read `slf/project/SLF Redesign.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+Die Website besteht aus **zwei getrennten Teilen**, die zusammenarbeiten:
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+```
+WordPress (slf-berlin.de)          →  Website (slf-website)
+Hier schreibt ihr eure Projekte       Hier werden sie angezeigt
+```
 
-## About the design files
+**WordPress** ist euer gewohntes Redaktionssystem. Projekte werden dort genau wie bisher gepflegt: Text, Fotos, Kategorien.
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+**Die Website** liest diese Projekte automatisch aus WordPress aus und zeigt sie in dem neuen Design an.
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+Die Verbindung zwischen beiden erfolgt über einen **Sync-Vorgang** (s. unten).
 
-## Bundle contents
+---
 
-- `slf/README.md` — this file
-- `slf/project/` — the `SLF` project files (HTML prototypes, assets, components)
+## Was passiert wo?
+
+| Aufgabe | Wo? |
+|---|---|
+| Projekt anlegen oder bearbeiten | WordPress |
+| Fotos hochladen | WordPress |
+| Projekttext schreiben | WordPress |
+| Kategorie / Ergebnis festlegen | WordPress |
+| Büro-Text, Impressum, Datenschutz | Entwickler kontaktieren |
+| Team-Seite aktualisieren | Entwickler kontaktieren |
+
+---
+
+## Projekte synchronisieren
+
+Wenn ihr in WordPress ein Projekt **neu angelegt, geändert oder veröffentlicht** habt und die Änderung auf der Website erscheinen soll, muss ein Sync durchgeführt werden.
+
+### Wer kann das machen?
+
+Jede Person, die Zugang zum Projektordner auf dem Computer hat und einmal die technische Einrichtung abgeschlossen hat (einmalig, s. unten).
+
+### So funktioniert der Sync
+
+1. Terminal (macOS: `Cmd + Leertaste` → „Terminal" eingeben) öffnen
+2. In den Website-Ordner navigieren:
+   ```
+   cd ~/Desktop/SLF\ WEBSITE/Website
+   ```
+3. Diesen Befehl eingeben und Enter drücken:
+   ```
+   npm run sync
+   ```
+4. Warten, bis „Fertig" (oder „Done") erscheint – dauert wenige Sekunden
+5. Dann die Änderungen veröffentlichen:
+   ```
+   npm run deploy
+   ```
+
+Nach einigen Minuten sind die Änderungen live auf der Website sichtbar.
+
+---
+
+## Website lokal ansehen (Vorschau)
+
+Ihr könnt die Website auf eurem eigenen Computer ansehen, ohne sie zu veröffentlichen:
+
+```
+npm run dev
+```
+
+Dann im Browser öffnen: **http://localhost:5173/slf-website/**
+
+Mit `Ctrl + C` im Terminal stoppt ihr den Server wieder.
+
+---
+
+## Technische Einrichtung (einmalig)
+
+Diese Schritte sind nur einmalig notwendig, wenn jemand neu am Projekt arbeitet.
+
+**Voraussetzungen:**
+- [Node.js](https://nodejs.org/) installiert (empfohlen: aktuelle LTS-Version)
+- Zugang zum GitHub-Repository
+
+**Einrichtung:**
+```
+cd ~/Desktop/SLF\ WEBSITE/Website
+npm install
+```
+
+---
+
+## Häufige Fragen
+
+**Ein neues Projekt erscheint nicht auf der Website.**  
+→ Prüfen, ob das Projekt in WordPress **veröffentlicht** (nicht nur Entwurf) ist.  
+→ Dann `npm run sync` und `npm run deploy` ausführen.
+
+**Ein Projekt ist auf WordPress gelöscht, aber noch auf der Website.**  
+→ `npm run sync` und `npm run deploy` ausführen.
+
+**Die Fotos eines Projekts werden nicht angezeigt.**  
+→ Prüfen, ob in WordPress ein **Beitragsbild** (Featured Image) gesetzt ist.
+
+**Ich habe etwas geändert, aber auf der Website hat sich nichts getan.**  
+→ Browser-Cache leeren (`Cmd + Shift + R`) und kurz warten (bis zu 5 Minuten nach dem Deploy).
+
+---
+
+## Kontakt bei technischen Fragen
+
+Bei Problemen oder Änderungswünschen (Design, Texte, Team-Seite etc.) bitte an den Entwickler wenden:  
+**Jan – janhamza917@gmail.com**
