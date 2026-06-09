@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
@@ -16,7 +17,12 @@ const PROSE_STYLES = `
 .slf-prose strong { font-weight: 500; }
 .slf-prose a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .slf-prose blockquote { margin: 1.4em 0; padding-left: 1.2em; border-left: 2px solid #e6e5e2; color: #6b6b6e; font-style: italic; }
-.slf-prose img { max-width: 100%; height: auto; display: block; }
+.slf-prose img { max-width: 100%; height: auto; display: block; cursor: zoom-in; transition: opacity 0.18s; }
+.slf-prose img:hover { opacity: 0.8; }
+.slf-zoom-img { cursor: zoom-in; transition: opacity 0.18s; }
+.slf-zoom-img:hover { opacity: 0.8; }
+@keyframes slf-lb-in { from { opacity: 0; transform: scale(0.97) } to { opacity: 1; transform: scale(1) } }
+.slf-lightbox-img { animation: slf-lb-in 0.18s ease; }
 .slf-prose figure { margin: 0; }
 .slf-prose figure img { margin: 0; }
 .slf-prose figcaption { font-size: 13px; color: #6b6b6e; margin-top: 6px; line-height: 1.4; }
@@ -32,6 +38,12 @@ const PROSE_STYLES = `
 .slf-prose .slf-daten dd { font-size: 16px; color: #0e0e10; padding: 14px 0; margin: 0; line-height: 1.4; overflow-wrap: break-word; }
 @media (max-width: 640px) { .slf-prose .slf-daten { grid-template-columns: 1fr; } .slf-prose .slf-daten dt { padding: 14px 0 2px; } .slf-prose .slf-daten dd { font-size: 17px; padding: 0 0 14px; } }
 `
+
+// WordPress CDN images often embed a size suffix (e.g. -1024x683.jpg).
+// Strip it to load the full-resolution original in the lightbox.
+function wpFullSize(src) {
+  return src.replace(/-\d+x\d+(\.[a-zA-Z]+)$/, '$1')
+}
 
 // Remove dt/dd pairs where the dd value is empty or whitespace-only.
 // Merge "Mehr Informationen" slf-rows into the preceding Projektdaten <dl>, auto-linking bare URLs.
@@ -82,6 +94,15 @@ export default function ProjectDetail() {
   const width = useWindowWidth()
   const isMobile = width < 768
 
+  const [lightbox, setLightbox] = useState(null)
+
+  useEffect(() => {
+    if (!lightbox) return
+    const onKey = (e) => { if (e.key === 'Escape') setLightbox(null) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightbox])
+
   const idx = projects.findIndex(p => p.id === id)
   if (idx === -1) return <Navigate to="/projekte" replace />
 
@@ -129,6 +150,8 @@ export default function ProjectDetail() {
             <img
               src={project.image}
               alt={project.titel}
+              className="slf-zoom-img"
+              onClick={() => setLightbox({ src: project.image, caption: null })}
               style={{ width: '100%', display: 'block' }}
             />
           ) : (
@@ -141,6 +164,8 @@ export default function ProjectDetail() {
                 <img
                   src={project.image}
                   alt={project.titel}
+                  className="slf-zoom-img"
+                  onClick={() => setLightbox({ src: project.image, caption: null })}
                   style={{ width: '100%', display: 'block' }}
                 />
               </div>
@@ -265,6 +290,12 @@ export default function ProjectDetail() {
                 lineHeight: 1.8,
                 marginTop: metaRows.length > 0 ? 0 : 24,
               }}
+              onClick={(e) => {
+                if (e.target.tagName === 'IMG') {
+                  const caption = e.target.closest('figure')?.querySelector('figcaption')?.textContent || null
+                  setLightbox({ src: wpFullSize(e.target.src), caption })
+                }
+              }}
               dangerouslySetInnerHTML={{ __html: processContent(project.content) }}
             />
           ) : (
@@ -318,6 +349,69 @@ export default function ProjectDetail() {
 
       <BackToTop />
       <Footer />
+
+      {lightbox && (
+        <div
+          onClick={() => setLightbox(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(14, 14, 16, 0.93)',
+            zIndex: 500,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            gap: 14,
+            cursor: 'zoom-out',
+          }}
+        >
+          <button
+            onClick={() => setLightbox(null)}
+            style={{
+              position: 'absolute',
+              top: 20,
+              right: 24,
+              background: 'none',
+              border: 'none',
+              color: '#fff',
+              fontSize: 30,
+              cursor: 'pointer',
+              lineHeight: 1,
+              opacity: 0.65,
+              padding: '4px 8px',
+              borderRadius: 0,
+            }}
+            aria-label="Schließen"
+          >
+            ×
+          </button>
+          <img
+            src={lightbox.src}
+            alt=""
+            className="slf-lightbox-img"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: '90vw',
+              maxHeight: '85vh',
+              objectFit: 'contain',
+              display: 'block',
+              cursor: 'default',
+            }}
+          />
+          {lightbox.caption && (
+            <div style={{
+              color: 'rgba(255,255,255,0.55)',
+              fontSize: 13,
+              maxWidth: '60vw',
+              textAlign: 'center',
+              lineHeight: 1.5,
+            }}>
+              {lightbox.caption}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }

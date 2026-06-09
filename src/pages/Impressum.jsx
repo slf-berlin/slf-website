@@ -54,7 +54,7 @@ export default function Impressum() {
         <div style={{ gridColumn: contentCol }}>
 
           <div style={textStyle}>
-            STADT LAND FLUSS<br />
+            Stadt Land Fluss<br />
             Städtebau und Stadtplanung PartG mbB<br />
             Georg Börsch-Supan · Samir Hamzeh · Barbara Horst
           </div>
@@ -67,7 +67,7 @@ export default function Impressum() {
           </div>
 
           <div style={{ ...textStyle, marginTop: 20 }}>
-            STADT LAND FLUSS Städtebau und Stadtplanung wird durch Georg Börsch-Supan, Samir Hamzeh, Barbara Horst vertreten.
+            Stadt Land Fluss Städtebau und Stadtplanung wird durch Georg Börsch-Supan, Samir Hamzeh, Barbara Horst vertreten.
           </div>
 
           <div style={{ height: 1, background: A.rule, margin: '36px 0' }} />

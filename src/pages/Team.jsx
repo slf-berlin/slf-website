@@ -205,12 +205,6 @@ export default function Team() {
           gap: 24,
           marginBottom: isMobile ? 40 : 60,
         }}>
-          <div style={{
-            gridColumn: isMobile ? 'auto' : '1 / span 1',
-            fontSize: 13, color: A.mute,
-          }}>
-            03 /<br />Team
-          </div>
           <div style={{ gridColumn: isMobile ? 'auto' : '3 / span 8' }}>
             <h1 style={{
               fontWeight: 600, fontSize: isMobile ? 26 : 36,

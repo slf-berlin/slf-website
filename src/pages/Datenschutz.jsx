@@ -63,7 +63,7 @@ export default function Datenschutz() {
             Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:
           </div>
           <div style={{ ...textStyle, marginTop: 16 }}>
-            STADT LAND FLUSS<br />
+            Stadt Land Fluss<br />
             Städtebau und Stadtplanung PartG mbB<br />
             Georg Börsch-Supan · Samir Hamzeh · Barbara Horst<br />
             Mahlower Straße 24<br />

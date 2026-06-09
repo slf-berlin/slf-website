@@ -129,19 +129,13 @@ export default function Home() {
         padding: `${isMobile ? 32 : vPad}px ${hPad}px ${isMobile ? 40 : 56}px`,
         display: 'grid', gridTemplateColumns: gridCols, gap: 24,
       }}>
-        <div style={{
-          gridColumn: labelCol,
-          fontSize: 14, color: A.mute,
-        }}>
-          01 /<br />Über uns
-        </div>
         <div style={{ gridColumn: contentCol }}>
           <div style={{
             fontWeight: 600, lineHeight: 1.2,
             letterSpacing: '-0.015em', margin: 0,
             fontSize: isMobile ? 24 : 38,
           }}>
-            Willkommen bei STADT LAND FLUSS
+            Willkommen bei Stadt Land Fluss
           </div>
           <div style={{
             fontWeight: 400, lineHeight: 1.2,
@@ -200,12 +194,6 @@ export default function Home() {
         padding: `${isMobile ? 32 : 48}px ${hPad}px 24px`,
         display: 'grid', gridTemplateColumns: gridCols, gap: 24,
       }}>
-        <div style={{
-          gridColumn: labelCol,
-          fontSize: 14, color: A.mute,
-        }}>
-          02 / Aktuell
-        </div>
         <div style={{ gridColumn: contentColWide, display: 'flex', alignItems: 'baseline', gap: 20 }}>
           <div style={{ fontSize: isMobile ? 20 : 30, fontWeight: 600, letterSpacing: '-0.01em' }}>
             Ausgewählte Projekte
@@ -253,13 +241,10 @@ export default function Home() {
         padding: `${vPad}px ${hPad}px`,
         display: 'grid', gridTemplateColumns: gridCols, gap: 24,
       }}>
-        <div style={{
-          gridColumn: labelCol,
-          fontSize: 14, color: A.mute,
-        }}>
-          03 / Notiz
-        </div>
         <div style={{ gridColumn: contentCol }}>
+          <div style={{ fontSize: isMobile ? 20 : 28, fontWeight: 600, letterSpacing: '-0.01em', marginBottom: 16 }}>
+            Notiz
+          </div>
           <p style={{ fontSize: 17, lineHeight: 1.5, color: A.ink, margin: 0, maxWidth: 680 }}>
             Nach mehr als 30 Jahren hat <em>J. Miller Stevens</em> das Büro an
             Georg Börsch-Supan, Samir Hamzeh und Barbara Horst übergeben.

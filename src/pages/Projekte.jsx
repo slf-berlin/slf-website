@@ -17,18 +17,27 @@ function extractDaten(content, key) {
   return m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() || null
 }
 
-function avgYear(jahr) {
+function lastYear(jahr) {
   if (!jahr) return 0
   const years = [...jahr.matchAll(/\d{4}/g)].map(m => parseInt(m[0]))
-  return years.length ? years.reduce((s, y) => s + y, 0) / years.length : 0
+  return years.length ? Math.max(...years) : 0
+}
+
+function uploadTime(p) {
+  return p.wpDate ? new Date(p.wpDate).getTime() : 0
 }
 
 function sortedProjects(list, key, dir) {
   return [...list].sort((a, b) => {
     let va, vb
     if (key === 'jahr') {
-      va = avgYear(a.jahr)
-      vb = avgYear(b.jahr)
+      va = lastYear(a.jahr)
+      vb = lastYear(b.jahr)
+      // À année (dernière du Zeitraum) égale, l'ordre d'upload WordPress fait foi.
+      if (va === vb) {
+        const ta = uploadTime(a), tb = uploadTime(b)
+        return dir === 'asc' ? ta - tb : tb - ta
+      }
       return dir === 'asc' ? va - vb : vb - va
     }
     if (key === 'auftraggeber') {
@@ -93,7 +102,15 @@ export default function Projekte() {
     ? projects.filter(FILTER_FN[activeKey])
     : projects
 
-  const displayed = isListView ? sortedProjects(filtered, sortKey, sortDir) : filtered
+  // Vue liste : tri par colonne. Vue grille : ordre par défaut = dernière année du
+  // Zeitraum décroissante, puis upload WordPress (le plus récent d'abord) à année égale.
+  const displayed = isListView
+    ? sortedProjects(filtered, sortKey, sortDir)
+    : [...filtered].sort((a, b) => {
+        const ya = lastYear(a.jahr), yb = lastYear(b.jahr)
+        if (ya !== yb) return yb - ya
+        return uploadTime(b) - uploadTime(a)
+      })
 
   function handleSort(key) {
     if (sortKey === key) {
@@ -254,7 +271,7 @@ export default function Projekte() {
           gridTemplateColumns: width < 640 ? '1fr' : width < 1024 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
           gap: width < 640 ? '36px 0' : '44px 40px',
         }}>
-          {filtered.map((p) => (
+          {displayed.map((p) => (
             <Link
               key={p.id}
               to={`/projekte/${p.id}`}

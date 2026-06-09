@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
 import { useWindowWidth } from '../hooks/useWindowWidth'
+import { TEAM } from '../data/team'
 
 const prefersReducedMotion =
   typeof window !== 'undefined' &&
@@ -222,10 +222,167 @@ const LEISTUNGEN = [
 ]
 
 
+function Modal({ member, onClose }) {
+  const width = useWindowWidth()
+  const isMobile = width < 640
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+        background: 'rgba(14, 14, 16, 0.55)',
+        zIndex: 500,
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        padding: isMobile ? 16 : 40,
+      }}
+    >
+      <div
+        onClick={e => e.stopPropagation()}
+        style={{
+          background: A.bg,
+          width: '100%',
+          maxWidth: 680,
+          maxHeight: '90vh',
+          overflowY: 'auto',
+          position: 'relative',
+          padding: isMobile ? 24 : 40,
+        }}
+      >
+        <button
+          onClick={onClose}
+          aria-label="Schließen"
+          style={{
+            position: 'absolute', top: 14, right: 14,
+            background: 'none', border: 'none', cursor: 'pointer',
+            padding: 6, lineHeight: 1,
+          }}
+        >
+          <svg width={16} height={16} viewBox="0 0 16 16" fill="none">
+            <line x1="1" y1="1" x2="15" y2="15" stroke={A.mute} strokeWidth="1.5" strokeLinecap="round" />
+            <line x1="15" y1="1" x2="1" y2="15" stroke={A.mute} strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        </button>
+
+        <div style={{
+          display: 'flex',
+          gap: isMobile ? 20 : 32,
+          flexDirection: isMobile ? 'column' : 'row',
+          alignItems: 'flex-start',
+        }}>
+          <div style={{ flexShrink: 0, width: isMobile ? '50%' : 160 }}>
+            <img
+              src={member.photo}
+              alt={member.name}
+              style={{
+                display: 'block',
+                width: '100%',
+                aspectRatio: '3 / 4',
+                objectFit: 'cover',
+                objectPosition: 'top',
+              }}
+            />
+          </div>
+
+          <div style={{ flex: 1, paddingTop: isMobile ? 0 : 2 }}>
+            <div style={{ fontSize: 13, color: A.mute, fontWeight: 600, marginBottom: 6 }}>
+              {member.rolle}
+            </div>
+
+            {member.email ? (
+              <a href={`mailto:${member.email}`} style={{ color: A.ink, textDecoration: 'none' }}>
+                <div style={{ fontSize: 26, fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
+                  {member.name}
+                </div>
+              </a>
+            ) : (
+              <div style={{ fontSize: 26, fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
+                {member.name}
+              </div>
+            )}
+
+            <div style={{ fontSize: 15, color: A.mute, marginTop: 6, lineHeight: 1.5, marginBottom: 20 }}>
+              {member.ausbildung}
+            </div>
+
+            <div style={{ marginBottom: 18 }}>
+              {member.cv.map(([jahre, text]) => (
+                <div key={jahre} style={{ display: 'flex', gap: 14, fontSize: 15, lineHeight: 1.65, color: A.mute }}>
+                  <span style={{ minWidth: 84, flexShrink: 0, color: A.mute, fontSize: 14 }}>{jahre}</span>
+                  <span>{text}</span>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ fontSize: 15, color: A.mute, lineHeight: 1.65 }}>
+              <span style={{ color: A.ink }}>Aufgabenfelder — </span>
+              {member.aufgaben}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function TeamCard({ member, onClick }) {
+  const [hovered, setHovered] = useState(false)
+
+  return (
+    <div
+      onClick={onClick}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{ cursor: 'pointer' }}
+    >
+      <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <img
+          src={member.photo}
+          alt={member.name}
+          style={{
+            display: 'block',
+            width: '100%',
+            aspectRatio: '3 / 4',
+            objectFit: 'cover',
+            objectPosition: 'top',
+            transition: 'transform 0.4s ease',
+            transform: hovered ? 'scale(1.04)' : 'scale(1)',
+          }}
+        />
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'rgba(14, 14, 16, 0.08)',
+          opacity: hovered ? 1 : 0,
+          transition: 'opacity 0.25s ease',
+        }} />
+      </div>
+
+      <div style={{ paddingTop: 10 }}>
+        <div style={{ fontSize: 20, fontWeight: 600, letterSpacing: '-0.005em', color: A.ink, lineHeight: 1.3 }}>
+          {member.name}
+        </div>
+        <div style={{ fontSize: 14, color: A.mute, marginTop: 5 }}>
+          {member.rolle}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Buero() {
   const width = useWindowWidth()
   const isMobile = width < 768
-  const [hoverTeam, setHoverTeam] = useState(false)
+  const [selected, setSelected] = useState(null)
 
   const hPad = isMobile ? 20 : 56
   const vPad = isMobile ? 56 : 112
@@ -259,13 +416,6 @@ export default function Buero() {
         gridTemplateColumns: gridCols,
         gap: 24,
       }}>
-        <div style={{
-          gridColumn: labelCol,
-          fontSize: 14,
-          color: A.mute,
-        }}>
-          01 /<br />Büro
-        </div>
         <div style={{ gridColumn: contentCol }}>
           <p style={{
             fontSize: isMobile ? 17 : 18,
@@ -274,7 +424,7 @@ export default function Buero() {
             margin: '0 0 20px',
             maxWidth: 620,
           }}>
-            STADT LAND FLUSS wurde 1993 in Berlin gegründet und verfügt über
+            Stadt Land Fluss wurde 1993 in Berlin gegründet und verfügt über
             umfassende Erfahrung in der praxisorientierten Stadtplanung und im
             kontextuellen Städtebau.
           </p>
@@ -333,13 +483,6 @@ export default function Buero() {
           gap: 24,
           marginBottom: isMobile ? 36 : 52,
         }}>
-          <div style={{
-            gridColumn: labelCol,
-            fontSize: 13,
-            color: A.mute,
-          }}>
-            02 /<br />Leistungen
-          </div>
           <div style={{ gridColumn: contentCol }}>
             <h2 style={{
               fontWeight: 600,
@@ -399,81 +542,43 @@ export default function Buero() {
       </div>
 
       {/* 03 / Team */}
-      <div style={{
-        padding: `${vPad}px ${hPad}px`,
-        display: 'grid',
-        gridTemplateColumns: gridCols,
-        gap: 24,
-      }}>
+      <div id="team" style={{ padding: `${vPad}px ${hPad}px` }}>
         <div style={{
-          gridColumn: labelCol,
-          fontSize: 14,
-          color: A.mute,
+          display: 'grid',
+          gridTemplateColumns: gridCols,
+          gap: 24,
+          marginBottom: isMobile ? 36 : 52,
         }}>
-          03 /<br />Team
-        </div>
-        <div style={{ gridColumn: contentCol }}>
-          <p style={{
-            fontSize: isMobile ? 17 : 18,
-            lineHeight: 1.8,
-            color: A.mute,
-            margin: '0 0 28px',
-            maxWidth: 540,
-          }}>
-            Hinter STADT LAND FLUSS stehen drei Partner und ein engagiertes Team aus Stadtplaner*innen mit jahrzehntelanger Berliner Erfahrung.
-          </p>
-          <Link
-            to="/buero/team"
-            onMouseEnter={() => setHoverTeam(true)}
-            onMouseLeave={() => setHoverTeam(false)}
-            style={{
-              position: 'relative',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 12,
-              fontSize: isMobile ? 17 : 20,
-              color: A.ink,
-              paddingBottom: 4,
+          <div style={{ gridColumn: contentCol }}>
+            <h2 style={{
               fontWeight: 600,
-              textDecoration: 'none',
-              overflow: 'hidden',
-            }}
-          >
-            <span style={{
-              position: 'absolute',
-              bottom: 0, left: 0, right: 0,
-              height: hoverTeam ? '100%' : '2px',
-              background: A.accent,
-              transition: 'height 0.25s ease',
-              zIndex: 0,
-            }} />
-            <span style={{ position: 'relative', zIndex: 1, display: 'inline-flex', alignItems: 'center', gap: 12 }}>
-              Unser Team kennenlernen
-              <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="2" y1="7" x2="12" y2="7"/>
-                <polyline points="8,3 12,7 8,11"/>
-              </svg>
-            </span>
-          </Link>
+              fontSize: isMobile ? 20 : 30,
+              letterSpacing: '-0.015em',
+              margin: 0,
+            }}>
+              Das Team
+            </h2>
+          </div>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: `repeat(${width < 640 ? 2 : width < 1024 ? 3 : 4}, 1fr)`,
+          gap: isMobile ? '24px 16px' : '40px 24px',
+        }}>
+          {TEAM.map(member => (
+            <TeamCard
+              key={member.name}
+              member={member}
+              onClick={() => setSelected(member)}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Abschlussbild */}
-      <div style={{ paddingLeft: isMobile ? 12 : 36, paddingRight: isMobile ? 12 : 36, paddingBottom: vPad }}>
-        <img
-          src="https://www.slf-berlin.de/wordpress/wp-content/uploads/2024/07/tempimageyyqfie-scaled-e1720599639686-1536x983.jpg"
-          alt="Stadt Land Fluss — Büro"
-          style={{
-            display: 'block',
-            width: '100%',
-            height: isMobile ? 220 : 500,
-            objectFit: 'cover',
-            objectPosition: 'center',
-          }}
-        />
-      </div>
+      {selected && <Modal member={selected} onClose={() => setSelected(null)} />}
 
-      <BackToTop />
+<BackToTop />
       <Footer />
     </div>
   )
