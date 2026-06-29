@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
@@ -241,6 +241,42 @@ const LEISTUNGEN = [
     text: 'Einbeziehung von Fachplanungen (Umwelt, Naturschutz, Immissionsschutz, Verkehr). Kooperation mit Kolleg*innen aus Landschaftsplanung, Architektur und Verkehrsplanung.',
   },
 ]
+
+// Bureaux partenaires récurrents (≥ 2 projets), extraits & normalisés depuis src/data/projects.js
+const NETZWERK = [
+  { name: 'bgmr Landschaftsarchitekten, Berlin', url: 'https://www.bgmr.de/' },
+  { name: 'Franz Reschke Landschaftsarchitektur, Berlin', url: 'https://www.franzreschke.de/' },
+  { name: 'Fugmann Janotta Partner, Berlin', url: 'https://www.fjp.berlin/' },
+  { name: 'hochC Landschaftsarchitekten, Berlin', url: 'https://www.hochc.de/' },
+  { name: 'Hoffmann-Leichter Ingenieurgesellschaft, Berlin', url: 'https://hoffmann-leichter.de/' },
+  { name: 'L.I.S.T. Stadtentwicklungsgesellschaft, Berlin', url: 'https://www.list-gmbh.de/' },
+  { name: 'POLA Landschaftsarchitekten, Berlin', url: 'https://www.pola-berlin.de/' },
+  { name: 'SHP Ingenieure, Hannover', url: 'https://shp-verkehrsplanung.de/' },
+  { name: 'Stefan Wallmann Landschaftsarchitekten, Berlin', url: 'https://www.buero-wallmann.de/' },
+  { name: 'ums Stadtstrategien, Leipzig', url: 'https://www.um-systems.de/' },
+]
+
+function NetLink({ entry, isMobile }) {
+  const [hover, setHover] = useState(false)
+  return (
+    <a
+      href={entry.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        fontSize: isMobile ? 14 : 18, fontWeight: 400,
+        letterSpacing: '-0.01em', color: A.ink, lineHeight: 1.3,
+        textDecoration: 'none',
+        borderBottom: `1px solid ${hover ? A.ink : 'transparent'}`,
+        transition: 'border-color 0.2s ease',
+      }}
+    >
+      {entry.name.split(',')[0]}
+    </a>
+  )
+}
 
 
 function Modal({ member, onClose }) {
@@ -605,6 +641,39 @@ export default function Buero() {
       </div>
 
       {selected && <Modal member={selected} onClose={() => setSelected(null)} />}
+
+      {/* Netzwerk & Kooperationen */}
+      <div id="netzwerk" style={{ padding: `${vPad}px ${hPad}px`, borderTop: `1px solid ${A.rule}` }}>
+        <div style={{ display: 'grid', gridTemplateColumns: gridCols, gap: 24 }}>
+          <div style={{ gridColumn: contentCol }}>
+            <h2 style={{ fontWeight: 600, fontSize: isMobile ? 20 : 30, letterSpacing: '-0.015em', margin: 0 }}>
+              Netzwerk & Kooperationen
+            </h2>
+            <p style={{ fontSize: isMobile ? 14 : 16, color: A.mute, lineHeight: 1.6, margin: '16px 0 0', maxWidth: 640 }}>
+              Wir arbeiten projektbezogen mit Landschaftsarchitektur-, Architektur- und
+              Stadtentwicklungsbüros zusammen. Eine Auswahl unserer regelmäßigen Partner:
+            </p>
+            <div style={{
+              display: 'flex', flexWrap: 'wrap', alignItems: 'center',
+              gap: isMobile ? '6px 14px' : '10px 24px',
+              margin: isMobile ? '32px 0 0' : '44px 0 0',
+            }}>
+              {NETZWERK.map((entry) => (
+                <span key={entry.name} style={{
+                  display: 'inline-flex', alignItems: 'center',
+                  gap: isMobile ? 14 : 24,
+                }}>
+                  <NetLink entry={entry} isMobile={isMobile} />
+                  <span aria-hidden style={{
+                    width: isMobile ? 6 : 9, height: isMobile ? 6 : 9,
+                    background: A.accent, flexShrink: 0,
+                  }} />
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
 <BackToTop />
       <Footer />

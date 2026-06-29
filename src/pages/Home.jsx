@@ -130,8 +130,8 @@ export default function Home() {
           ) : (
             <div
               key={i}
-              onMouseEnter={() => setHoveredLeistung(seg.li)}
-              onMouseLeave={() => setHoveredLeistung(null)}
+              onMouseEnter={isMobile ? undefined : () => setHoveredLeistung(seg.li)}
+              onMouseLeave={isMobile ? undefined : () => setHoveredLeistung(null)}
               style={{ flex: seg.flex, position: 'relative', cursor: 'default', overflow: 'hidden' }}
             >
               {/* Nameplate — title always visible; turns khaki and grows
@@ -258,6 +258,7 @@ export default function Home() {
             style={{
               position: 'relative',
               display: 'inline-block',
+              flexShrink: 0,
               fontSize: 15,
               fontWeight: 500,
               color: A.ink,
@@ -274,7 +275,7 @@ export default function Home() {
               transition: 'height 0.25s ease',
               zIndex: 0,
             }} />
-            <span style={{ position: 'relative', zIndex: 1 }}>Alle Projekte ansehen →</span>
+            <span style={{ position: 'relative', zIndex: 1, whiteSpace: 'nowrap' }}>Alle Projekte ansehen →</span>
           </Link>
         </div>
       </div>

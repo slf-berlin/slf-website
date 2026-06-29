@@ -1,20 +1,27 @@
 import { useState } from 'react'
 
-// Shared shimmer keyframes — injected once.
+// Shared spinner keyframes — injected once.
 let stylesInjected = false
 export function ensureImageStyles() {
   if (stylesInjected || typeof document === 'undefined') return
   stylesInjected = true
   const el = document.createElement('style')
   el.textContent = `
-@keyframes slf-shimmer { 0% { background-position: -200% 0 } 100% { background-position: 200% 0 } }
+@keyframes slf-spin { 0% { transform: rotate(0deg) } 100% { transform: rotate(360deg) } }
 .slf-img-skeleton {
   position: absolute; inset: 0;
-  background: linear-gradient(100deg, #eceae4 25%, #f5f4ef 50%, #eceae4 75%);
-  background-size: 200% 100%;
-  animation: slf-shimmer 1.4s ease-in-out infinite;
+  display: flex; align-items: center; justify-content: center;
+  background: #f5f4ef;
 }
-@media (prefers-reduced-motion: reduce) { .slf-img-skeleton { animation: none; } }
+.slf-img-skeleton::after {
+  content: '';
+  width: 28px; height: 28px;
+  border: 3px solid #e6e5e2;
+  border-top-color: #ccc8a6;
+  border-radius: 50%;
+  animation: slf-spin 0.8s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) { .slf-img-skeleton::after { animation: none; } }
 `
   document.head.appendChild(el)
 }

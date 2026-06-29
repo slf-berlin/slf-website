@@ -120,6 +120,8 @@ All components use the `useWindowWidth()` hook (`src/hooks/useWindowWidth.js`) �
 - Hover: image scale(1.03) + dark gradient overlay + optional title/subtitle/ergebnis fade-in.
 - Title/subtitle font sizes are responsive via `useWindowWidth()`: 20/15px (≥ 1024px), 17/13px (640–1023px), 15/12px (< 640px).
 
+**`src/components/SmartImage.jsx`** — `<img>` wrapper with a shimmer loading skeleton that fades out on load. Props mirror `<img>` (`src`, `alt`, `style`, `onClick`, `className`, `fit`) plus `wrapperStyle` for the positioning wrapper. Shimmer keyframes are injected once via the exported `ensureImageStyles()` and respect `prefers-reduced-motion`. Use this instead of a bare `<img>` for remote/WP-CDN images so loads don't flash.
+
 **`src/components/ProjectFeedItem.jsx`** — single project row for the Projekte list view.
 
 **`src/components/BackToTop.jsx`** — fixed scroll-to-top button. Appears after 500px scroll (`window.scrollY > 500`). Positioned `bottom: 40, right: 40, zIndex: 200`. Inverts ink↔bg on hover. Used on Buero, Projekte, Team, and ProjectDetail pages. Add it to any new long-scroll page.
