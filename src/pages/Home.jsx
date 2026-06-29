@@ -24,23 +24,52 @@ const LEISTUNGEN = [
     titel: 'Stadtplanung',
     label: 'Stadtplanung',
     beschreibung: 'Strategische Planungen, Stadt- und Quartiersentwicklung sowie integrierte Entwicklungskonzepte.',
+    punkte: ['Strategische Planungen', 'Stadt- und Quartiersentwicklung', 'Integrierte Entwicklungskonzepte'],
   },
   {
     titel: 'Städtebau',
     label: 'Städtebau',
     beschreibung: 'Städtebauliche Entwürfe, Rahmen- und Masterplanungen, Machbarkeitsstudien und Gestaltungskonzepte für urbane Räume.',
+    punkte: ['Städtebauliche Entwürfe', 'Rahmen- und Masterplanungen', 'Machbarkeitsstudien', 'Gestaltungskonzepte'],
   },
   {
     titel: 'Bauleitplanung',
     label: 'Bauleitplanung',
     beschreibung: 'Flächennutzungspläne, Bebauungspläne, Satzungen und Änderungsverfahren sowie formelle Planungsverfahren nach BauGB.',
+    punkte: ['Flächennutzungspläne', 'Bebauungspläne', 'Satzungen & Änderungsverfahren', 'Verfahren nach BauGB'],
   },
   {
     titel: 'Verfahrensbetreuung, Partizipation',
     label: 'Verfahren',
     beschreibung: 'Wettbewerbsverfahren, formelle und informelle Beteiligungsverfahren sowie Kommunikation und Moderation.',
+    punkte: ['Wettbewerbsverfahren', 'Formelle & informelle Beteiligung', 'Kommunikation & Moderation'],
   },
 ]
+
+// Hero hover : liste de compétences — puces khaki (carré 4px A.accent
+// aligné sur la première ligne de chaque item).
+function renderPunkte(punkte, isMobile) {
+  const fontSize = isMobile ? 14 : 16
+  const itemStyle = { color: A.ink, fontSize, lineHeight: 1.4, fontWeight: 500 }
+
+  return (
+    <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+      {punkte.map((p, i) => (
+        <li key={i} style={{
+          ...itemStyle,
+          display: 'flex', alignItems: 'flex-start', gap: 8,
+          marginTop: i === 0 ? 0 : 6,
+        }}>
+          <span style={{
+            width: 4, height: 4, background: A.accent,
+            flexShrink: 0, marginTop: 7,
+          }} />
+          <span>{p}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export default function Home() {
   const width = useWindowWidth()
@@ -110,7 +139,7 @@ export default function Home() {
               <div style={{
                 position: 'absolute', left: 0, right: 0, bottom: 0,
                 padding: isMobile ? '8px 8px' : '14px 14px',
-                background: hoveredLeistung === seg.li ? 'rgba(243,241,227,0.92)' : 'rgba(255,255,255,0.72)',
+                background: hoveredLeistung === seg.li ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.72)',
                 transition: 'background 0.25s ease',
                 pointerEvents: 'none',
               }}>
@@ -132,15 +161,13 @@ export default function Home() {
                 </div>
                 {showDesc && (
                   <div style={{
-                    fontSize: isMobile ? 13 : 16,
-                    color: A.ink, lineHeight: 1.55,
                     overflow: 'hidden',
                     maxHeight: hoveredLeistung === seg.li ? 260 : 0,
                     opacity: hoveredLeistung === seg.li ? 1 : 0,
                     marginTop: hoveredLeistung === seg.li ? 10 : 0,
                     transition: 'max-height 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.28s ease, margin-top 0.3s ease',
                   }}>
-                    {LEISTUNGEN[seg.li].beschreibung}
+                    {renderPunkte(LEISTUNGEN[seg.li].punkte, isMobile)}
                   </div>
                 )}
               </div>
