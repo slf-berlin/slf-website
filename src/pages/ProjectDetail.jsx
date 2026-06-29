@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
@@ -26,12 +26,14 @@ const PROSE_STYLES = `
 }
 .slf-prose img {
   max-width: 100%; height: auto; display: block; cursor: zoom-in; transition: opacity 0.18s;
+}
+.slf-prose img:not(.slf-loaded) {
   background: linear-gradient(100deg, #eceae4 25%, #f5f4ef 50%, #eceae4 75%);
   background-size: 200% 100%;
   animation: slf-shimmer 1.4s ease-in-out infinite;
 }
 .slf-prose img:hover { opacity: 0.8; }
-@media (prefers-reduced-motion: reduce) { .slf-img-skeleton, .slf-prose img { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .slf-img-skeleton, .slf-prose img:not(.slf-loaded) { animation: none; } }
 .slf-zoom-img { cursor: zoom-in; transition: opacity 0.18s; }
 .slf-zoom-img:hover { opacity: 0.8; }
 @keyframes slf-lb-in { from { opacity: 0; transform: scale(0.97) } to { opacity: 1; transform: scale(1) } }
@@ -109,6 +111,7 @@ export default function ProjectDetail() {
 
   const [lightbox, setLightbox] = useState(null)
   const [heroLoaded, setHeroLoaded] = useState(false)
+  const proseRef = useRef(null)
 
   useEffect(() => {
     if (!lightbox) return
@@ -116,6 +119,29 @@ export default function ProjectDetail() {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [lightbox])
+
+  // Drop the shimmer background once each prose image has loaded — otherwise
+  // it stays visible forever behind transparent PNGs.
+  useEffect(() => {
+    const root = proseRef.current
+    if (!root) return
+    const imgs = root.querySelectorAll('img')
+    const cleanups = []
+    imgs.forEach((img) => {
+      if (img.complete && img.naturalWidth > 0) {
+        img.classList.add('slf-loaded')
+        return
+      }
+      const mark = () => img.classList.add('slf-loaded')
+      img.addEventListener('load', mark)
+      img.addEventListener('error', mark)
+      cleanups.push(() => {
+        img.removeEventListener('load', mark)
+        img.removeEventListener('error', mark)
+      })
+    })
+    return () => cleanups.forEach((fn) => fn())
+  }, [id])
 
   const idx = projects.findIndex(p => p.id === id)
   if (idx === -1) return <Navigate to="/projekte" replace />
@@ -305,6 +331,7 @@ export default function ProjectDetail() {
           {/* Prose content — Projektdaten block transformed into styled <dl> */}
           {project.content ? (
             <div
+              ref={proseRef}
               className="slf-prose"
               style={{
                 fontSize: isMobile ? 16 : 17,
@@ -419,6 +446,7 @@ export default function ProjectDetail() {
               objectFit: 'contain',
               display: 'block',
               cursor: 'default',
+              background: '#fff',
             }}
           />
           {lightbox.caption && (
