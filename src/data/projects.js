@@ -1,6 +1,6 @@
 // ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT depuis WordPress.
 // Ne pas éditer à la main — modifier dans WordPress puis lancer `npm run sync`.
-// Dernière synchro : 2026-06-09T13:47:40.356Z
+// Dernière synchro : 2026-07-02T07:11:18.026Z
 // Source : https://www.slf-berlin.de/wp-json/wp/v2/posts
 
 const projects = [
@@ -161,7 +161,7 @@ const projects = [
     "flaeche": null,
     "auftraggeber": null,
     "tone": "photo",
-    "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/niemegk-7-ortsteile-fotos-komp-2503202.jpg",
+    "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/fnp-entwurf-19012026-kom.png",
     "wpId": 4375,
     "wpDate": "2025-01-20T16:32:43",
     "wpLink": "https://www.slf-berlin.de/flaechennutzungsplan-amt-niemegk/"

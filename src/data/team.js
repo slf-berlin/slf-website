@@ -36,7 +36,7 @@ export const TEAM = [
     name: 'Samir Hamzeh',
     email: 'hamzeh@slf-berlin.de',
     photo: 'https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/08/samir.jpg',
-    ausbildung: 'Dipl.-Ing. Stadt- und Regionalplaner, TU Berlin · Mitglied der Architektenkammer Berlin',
+    ausbildung: 'Dipl.-Ing. Stadt- und Regionalplaner, TU Berlin (1992) · Mitglied der Architektenkammer Berlin',
     rolle: 'Gesellschafter',
     cv: [
       ['seit 2025', 'Gesellschafter, Stadt Land Fluss PartG mbB'],
@@ -51,7 +51,7 @@ export const TEAM = [
     name: 'Georg Börsch-Supan',
     email: 'boersch-supan@slf-berlin.de',
     photo: 'https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/0b89a9d9-ab5d-4f07-a329-ce05f3909f2a-1.jpg',
-    ausbildung: 'Dipl.-Ing. Stadt- und Regionalplaner, TU Berlin · Mitglied der Architektenkammer Berlin',
+    ausbildung: 'Dipl.-Ing. Stadt- und Regionalplaner, TU Berlin (1998) · Mitglied der Architektenkammer Berlin',
     rolle: 'Gesellschafter',
     cv: [
       ['seit 2025', 'Gesellschafter, Stadt Land Fluss PartG mbB'],
@@ -65,7 +65,7 @@ export const TEAM = [
     name: 'Mailin Reinicke',
     email: 'reinicke@slf-berlin.de',
     photo: 'https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/08/20210815-204938-scaled-e1629792887938-860x967.jpg',
-    ausbildung: 'M. Sc. Stadt- und Regionalplanung, BTU Cottbus-Senftenberg',
+    ausbildung: 'M. Sc. Stadt- und Regionalplanung, BTU Cottbus-Senftenberg (2020)',
     rolle: 'Mitarbeiterin',
     cv: [
       ['seit 2017', 'Mitarbeiterin bei Stadt Land Fluss'],
@@ -77,19 +77,19 @@ export const TEAM = [
     name: 'Jan Hamza',
     email: null,
     photo: 'https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/08/img-20220808-wa0033-860x1110.jpg',
-    ausbildung: 'M. Sc. Nachhaltige Stadt- und Raumplanung',
+    ausbildung: 'M. Sc. Nachhaltige Stadt- und Raumplanung, Université de Lausanne, Schweiz (2022)',
     rolle: 'Mitarbeiter',
     cv: [
       ['seit 2022', 'Mitarbeiter bei Stadt Land Fluss'],
     ],
-    aufgaben: 'Unterstützung in allen Bereichen, Schwerpunkte städtebauliche Planung, Datenanalyse',
+    aufgaben: 'Unterstützung in allen Bereichen, Schwerpunkte städtebauliche Planung, Datenanalyse, GIS',
     isPartner: false,
   },
   {
     name: 'Lina Yener',
     email: null,
     photo: 'https://www.slf-berlin.de/wordpress/wp-content/uploads/2024/07/img-20210820-201732-e1720618489786-860x1080.jpg',
-    ausbildung: 'M. Sc. Stadt- und Regionalplanung',
+    ausbildung: 'M. Sc. Stadt- und Regionalplanung, TU Berlin (2025)',
     rolle: 'Mitarbeiterin',
     cv: [
       ['seit 2024', 'Mitarbeiterin bei Stadt Land Fluss'],

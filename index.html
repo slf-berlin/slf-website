@@ -9,48 +9,10 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Google Fonts: Barlow (fallback) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" />
+    <!-- Fonts (D-DIN + Barlow) are self-hosted and loaded via src/fonts.css
+         (imported in src/main.jsx). No external font CDN — DSGVO compliant. -->
 
     <style>
-      /* D-DIN — open-source by Datto (SIL OFL). Fallback: Barlow */
-      @font-face {
-        font-family: 'D-DIN';
-        src: url('https://cdn.jsdelivr.net/gh/amcchord/datto-d-din@main/D-DIN.woff') format('woff'),
-             url('https://cdn.jsdelivr.net/gh/amcchord/datto-d-din@main/D-DIN.ttf') format('truetype');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'D-DIN';
-        src: url('https://cdn.jsdelivr.net/gh/amcchord/datto-d-din@main/D-DIN-Bold.woff') format('woff'),
-             url('https://cdn.jsdelivr.net/gh/amcchord/datto-d-din@main/D-DIN-Bold.ttf') format('truetype');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'D-DIN';
-        src: url('https://cdn.jsdelivr.net/gh/amcchord/datto-d-din@main/D-DIN-Italic.woff') format('woff'),
-             url('https://cdn.jsdelivr.net/gh/amcchord/datto-d-din@main/D-DIN-Italic.ttf') format('truetype');
-        font-weight: 400;
-        font-style: italic;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: 'D-DIN Condensed';
-        src: url('https://cdn.jsdelivr.net/gh/amcchord/datto-d-din@main/D-DINCondensed.woff') format('woff'),
-             url('https://cdn.jsdelivr.net/gh/amcchord/datto-d-din@main/D-DINCondensed.ttf') format('truetype');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
-
       *, *::before, *::after { box-sizing: border-box; }
       html, body { margin: 0; padding: 0; }
       body {

@@ -34,6 +34,18 @@ Die Verbindung zwischen beiden erfolgt über einen **Sync-Vorgang** (s. unten).
 
 ---
 
+## WordPress – Projekte anlegen und bearbeiten
+
+Projekte werden im WordPress-Adminbereich gepflegt. Dort einloggen:
+
+**👉 https://www.slf-berlin.de/wp-admin**
+
+Mit eurem gewohnten Benutzernamen und Passwort anmelden. Unter **Beiträge** könnt ihr Projekte neu anlegen, bearbeiten, Fotos hochladen und Kategorien festlegen.
+
+> Damit neue oder geänderte Projekte auf der Website erscheinen, muss anschließend ein **Sync** durchgeführt werden (s. unten).
+
+---
+
 ## Projekte synchronisieren
 
 Wenn ihr in WordPress ein Projekt **neu angelegt, geändert oder veröffentlicht** habt und die Änderung auf der Website erscheinen soll, muss ein Sync durchgeführt werden.
