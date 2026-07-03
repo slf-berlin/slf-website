@@ -209,7 +209,7 @@ Three sections after the hero (numbered "01 / …" labels have been removed in f
 
 ### Hero hover interaction (`src/pages/Home.jsx`)
 
-The hero image (`deckblatt-homepage-v4.jpg`, 2831×1423) is a composite JPG of **4 sub-images** with white gaps. Seven absolutely-positioned flex segments (4 hotspots + 3 gap spacers) map to `LEISTUNGEN[0–3]`. `hoveredLeistung` state drives overlay opacity.
+The hero image (`deckblatt-homepage-v4.jpg`, 2831×1423) is a composite JPG of **4 sub-images** with white gaps. Seven absolutely-positioned flex segments (4 hotspots + 3 gap spacers) map to `LEISTUNGEN[0–3]`. `hoveredLeistung` state drives overlay opacity. Each hotspot is a `<Link>` to `/projekte?filter=<filterKey>` (`filterKey` field on each `LEISTUNGEN` entry; the hover reveal ends with a "Projekte ansehen →" line). The mapping is provisional until projects are re-sorted in WordPress to match the 4 hero themes: Stadtplanung → `entwicklungskonzepte`, Städtebau → `wettbewerbe`, Bauleitplanung → `bauleitplanung`, Verfahrensbetreuung → `verfahrensbetreuung`.
 
 Flex proportions (measured against the v4 composite):
 

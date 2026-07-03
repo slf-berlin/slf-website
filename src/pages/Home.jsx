@@ -5,6 +5,7 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import ProjectFeedItem from '../components/ProjectFeedItem'
 import projects from '../data/projects'
+import { filterHref } from '../data/filters'
 import heroBild from '../assets/deckblatt-homepage-v4.jpg'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 
@@ -19,28 +20,34 @@ const FEATURED_IDS = [
 ]
 const featured = FEATURED_IDS.map(id => projects.find(p => p.id === id)).filter(Boolean)
 
+// filterKey → /projekte?filter=… ; mapping provisoire sur les catégories WP
+// actuelles, à remplacer quand les projets seront retriés selon les 4 thématiques.
 const LEISTUNGEN = [
   {
     titel: 'Stadtplanung',
     label: 'Stadtplanung',
+    filterKey: 'entwicklungskonzepte',
     beschreibung: 'Strategische Planungen, Stadt- und Quartiersentwicklung sowie integrierte Entwicklungskonzepte.',
     punkte: ['Strategische Planungen', 'Stadt- und Quartiersentwicklung', 'Integrierte Entwicklungskonzepte'],
   },
   {
     titel: 'Städtebau',
     label: 'Städtebau',
+    filterKey: 'wettbewerbe',
     beschreibung: 'Städtebauliche Entwürfe, Rahmen- und Masterplanungen, Machbarkeitsstudien und Gestaltungskonzepte für urbane Räume.',
     punkte: ['Städtebauliche Entwürfe', 'Rahmen- und Masterplanungen', 'Machbarkeitsstudien', 'Gestaltungskonzepte'],
   },
   {
     titel: 'Bauleitplanung',
     label: 'Bauleitplanung',
+    filterKey: 'bauleitplanung',
     beschreibung: 'Flächennutzungspläne, Bebauungspläne, Satzungen und Änderungsverfahren sowie formelle Planungsverfahren nach BauGB.',
     punkte: ['Flächennutzungspläne', 'Bebauungspläne', 'Satzungen & Änderungsverfahren', 'Verfahren nach BauGB'],
   },
   {
     titel: 'Verfahrensbetreuung, Partizipation',
     label: 'Verfahren',
+    filterKey: 'verfahrensbetreuung',
     beschreibung: 'Wettbewerbsverfahren, formelle und informelle Beteiligungsverfahren sowie Kommunikation und Moderation.',
     punkte: ['Wettbewerbsverfahren', 'Formelle & informelle Beteiligung', 'Kommunikation & Moderation'],
   },
@@ -128,11 +135,16 @@ export default function Home() {
           ].map((seg, i) => seg.gap ? (
             <div key={i} style={{ flex: seg.flex, pointerEvents: 'none' }} />
           ) : (
-            <div
+            <Link
               key={i}
+              to={filterHref(LEISTUNGEN[seg.li].filterKey)}
+              aria-label={`${LEISTUNGEN[seg.li].titel} — Projekte ansehen`}
               onMouseEnter={isMobile ? undefined : () => setHoveredLeistung(seg.li)}
               onMouseLeave={isMobile ? undefined : () => setHoveredLeistung(null)}
-              style={{ flex: seg.flex, position: 'relative', cursor: 'default', overflow: 'hidden' }}
+              style={{
+                flex: seg.flex, position: 'relative', cursor: 'pointer', overflow: 'hidden',
+                display: 'block', textDecoration: 'none', color: 'inherit',
+              }}
             >
               {/* Nameplate — title always visible; turns khaki and grows
                   upward on hover to reveal the description below it. */}
@@ -168,10 +180,19 @@ export default function Home() {
                     transition: 'max-height 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.28s ease, margin-top 0.3s ease',
                   }}>
                     {renderPunkte(LEISTUNGEN[seg.li].punkte, isMobile)}
+                    <div style={{
+                      marginTop: 14, fontSize: isMobile ? 13 : 15, fontWeight: 600,
+                      color: A.ink, lineHeight: 1.3,
+                    }}>
+                      <span style={{
+                        boxShadow: `inset 0 -2px 0 ${A.accent}`,
+                        paddingBottom: 2,
+                      }}>Projekte ansehen →</span>
+                    </div>
                   </div>
                 )}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         </div>

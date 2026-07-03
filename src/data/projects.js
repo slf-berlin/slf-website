@@ -1,6 +1,6 @@
 // ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT depuis WordPress.
 // Ne pas éditer à la main — modifier dans WordPress puis lancer `npm run sync`.
-// Dernière synchro : 2026-07-02T07:11:18.026Z
+// Dernière synchro : 2026-07-02T07:49:55.197Z
 // Source : https://www.slf-berlin.de/wp-json/wp/v2/posts
 
 const projects = [
