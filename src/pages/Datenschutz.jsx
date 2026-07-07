@@ -148,14 +148,6 @@ export default function Datenschutz() {
             erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
           </div>
 
-          <div style={sectionHeadStyle}>Schriftarten</div>
-          <div style={textStyle}>
-            Diese Website verwendet ausschließlich lokal auf unserem Server gespeicherte
-            Schriftarten. Beim Aufruf der Seite werden keine Schriftarten von externen Anbietern
-            (z. B. Google Fonts) nachgeladen; es findet daher keine Übermittlung Ihrer
-            IP-Adresse an Dritte zu diesem Zweck statt.
-          </div>
-
           <div style={sectionHeadStyle}>Cookies und Analyse</div>
           <div style={textStyle}>
             Diese Website setzt keine Cookies zu Analyse- oder Marketingzwecken und verwendet
