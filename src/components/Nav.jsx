@@ -50,8 +50,10 @@ const navItems = [
     to: '/buero',
     children: [
       { label: 'Über Uns', to: '/buero/ueber-uns' },
+      { label: 'Arbeitsweise', to: '/buero#arbeitsweise' },
       { label: 'Leistungen', to: '/buero#leistungen' },
       { label: 'Team', to: '/buero/team' },
+      { label: 'Netzwerk & Kooperationen', to: '/buero#netzwerk' },
     ],
   },
   { label: 'Kontakt', to: '/kontakt' },
@@ -83,10 +85,18 @@ export default function Nav() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [searchHovered, setSearchHovered] = useState(null)
+  const [scrolled, setScrolled] = useState(false)
   const closeTimer = useRef(null)
   const searchInputRef = useRef(null)
   const width = useWindowWidth()
   const isMobile = width < 768
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 4)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   // Freeze the intro decision at first mount; subsequent remounts (route changes) skip it.
   const [playIntro] = useState(() => !logoIntroDone)
@@ -138,6 +148,8 @@ export default function Nav() {
         position: 'sticky', top: 0, zIndex: 100,
         background: A.bg,
         borderBottom: 'none',
+        boxShadow: scrolled ? '0 4px 6px -6px rgba(0,0,0,0.2)' : '0 4px 6px -6px rgba(0,0,0,0)',
+        transition: 'box-shadow 0.2s ease',
         padding: isMobile ? '16px 20px' : '16px 56px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
@@ -299,22 +311,24 @@ export default function Nav() {
             <SearchButton onClick={openSearch} />
           </div>
         )}
-      </div>
 
-      {/* Search dropdown */}
-      {searchOpen && (
-        <>
-          <div
-            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 399 }}
-            onClick={closeSearch}
-          />
-          <div style={{
-            position: 'fixed',
-            top: isMobile ? 64 : 80,
-            left: isMobile ? 0 : 'auto',
-            right: isMobile ? 0 : 56,
-            width: isMobile ? 'auto' : 420,
-            zIndex: 400,
+        {/* Search dropdown — nested inside the sticky header so it anchors
+            to the header's own box, not the viewport (header is centered
+            within a max-width:1400 container, which can sit far from the
+            viewport edge on wide screens). */}
+        {searchOpen && (
+          <>
+            <div
+              style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 399 }}
+              onClick={closeSearch}
+            />
+            <div style={{
+              position: 'absolute',
+              top: '100%',
+              left: isMobile ? 0 : 'auto',
+              right: isMobile ? 0 : 56,
+              width: isMobile ? 'auto' : 420,
+              zIndex: 400,
             background: A.bg,
             border: `1px solid ${A.rule}`,
             boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
@@ -386,6 +400,7 @@ export default function Nav() {
           </div>
         </>
       )}
+      </div>
     </>
   )
 }

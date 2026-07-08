@@ -70,6 +70,35 @@ export default function Impressum() {
             Stadt Land Fluss Städtebau und Stadtplanung wird durch Georg Börsch-Supan, Samir Hamzeh, Barbara Horst vertreten.
           </div>
 
+          <div style={sectionHeadStyle}>Registereintrag</div>
+          <div style={textStyle}>
+            Partnerschaftsregister<br />
+            Registergericht: Amtsgericht Charlottenburg (Berlin)<br />
+            Registernummer: PR [Nummer bitte ergänzen]
+          </div>
+
+          <div style={sectionHeadStyle}>Umsatzsteuer-Identifikationsnummer</div>
+          <div style={textStyle}>
+            USt-IdNr. gemäß § 27a Umsatzsteuergesetz:<br />
+            [DE… bitte ergänzen, sofern vorhanden]
+          </div>
+
+          <div style={sectionHeadStyle}>Berufsrechtliche Angaben</div>
+          <div style={textStyle}>
+            Gesetzliche Berufsbezeichnung: [z. B. Stadtplaner / Architekt – bitte ergänzen]<br />
+            Verliehen in: Deutschland<br />
+            Zuständige Kammer: [z. B. Architektenkammer Berlin – bitte ergänzen]<br />
+            Es gelten die berufsrechtlichen Regelungen (u. a. Baukammergesetz Berlin, Berufsordnung),
+            einsehbar bei der zuständigen Kammer.
+          </div>
+
+          <div style={sectionHeadStyle}>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</div>
+          <div style={textStyle}>
+            [Name der verantwortlichen Person – bitte ergänzen]<br />
+            Mahlower Straße 24<br />
+            12049 Berlin
+          </div>
+
           <div style={{ height: 1, background: A.rule, margin: '36px 0' }} />
 
           <div style={sectionHeadStyle}>Gestaltung</div>
@@ -87,10 +116,6 @@ export default function Impressum() {
           </div>
 
           <div style={{ height: 1, background: A.rule, margin: '36px 0' }} />
-
-          <div style={textStyle}>
-            Für den Inhalt der Webseite verantwortlich im Sinne des § 6 des Teledienstgesetzes sind die vertretungsberechtigten Gesellschafter.
-          </div>
 
           <div style={sectionHeadStyle}>Haftungshinweis</div>
           <div style={textStyle}>

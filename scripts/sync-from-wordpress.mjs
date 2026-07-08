@@ -16,10 +16,12 @@ const KNOWN_SLUGS = new Set([
   'verfahrensbetreuung',
 ]);
 
-// Maps WP category slug → display label used by FILTER_FN in filters.js
+// Maps WP category slug → display label used by FILTER_FN in filters.js.
+// The WP slugs are historical; the site now presents Entwicklungskonzepte as
+// "Stadt- und Quartiersentwicklung" and merges Wettbewerbe into "Städtebau".
 const CATEGORY_LABEL = {
-  entwicklungskonzepte: 'Entwicklungskonzepte',
-  wettbewerbe: 'Wettbewerbe',
+  entwicklungskonzepte: 'Stadt- und Quartiersentwicklung',
+  wettbewerbe: 'Städtebau',
   bauleitplanung: 'Bauleitplanung',
   verfahrensbetreuung: 'Verfahrensbetreuung',
 };

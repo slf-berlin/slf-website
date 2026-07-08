@@ -1,6 +1,6 @@
 // ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT depuis WordPress.
 // Ne pas éditer à la main — modifier dans WordPress puis lancer `npm run sync`.
-// Dernière synchro : 2026-07-02T07:11:18.026Z
+// Dernière synchro : 2026-07-08T10:03:43.344Z
 // Source : https://www.slf-berlin.de/wp-json/wp/v2/posts
 
 const projects = [
@@ -14,7 +14,7 @@ const projects = [
     "ort": null,
     "jahr": "2026",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -34,7 +34,7 @@ const projects = [
     "ort": null,
     "jahr": "2025",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -54,7 +54,7 @@ const projects = [
     "ort": null,
     "jahr": "2025",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -74,7 +74,7 @@ const projects = [
     "ort": null,
     "jahr": "2024 – 2025",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -94,8 +94,8 @@ const projects = [
     "ort": null,
     "jahr": "2025 – 2026",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -115,7 +115,7 @@ const projects = [
     "ort": null,
     "jahr": "2024 – 2025",
     "kategorie": [
-      "Entwicklungskonzepte",
+      "Stadt- und Quartiersentwicklung",
       "Verfahrensbetreuung"
     ],
     "flaeche": null,
@@ -136,7 +136,7 @@ const projects = [
     "ort": null,
     "jahr": "2024",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -196,7 +196,7 @@ const projects = [
     "ort": null,
     "jahr": "2024",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -216,7 +216,7 @@ const projects = [
     "ort": null,
     "jahr": "2023",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -256,7 +256,7 @@ const projects = [
     "ort": null,
     "jahr": "2022 – 2023",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -276,7 +276,7 @@ const projects = [
     "ort": null,
     "jahr": "2023",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -316,7 +316,7 @@ const projects = [
     "ort": null,
     "jahr": "2021 – 2023",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -336,8 +336,8 @@ const projects = [
     "ort": null,
     "jahr": "2022-23",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -357,8 +357,8 @@ const projects = [
     "ort": null,
     "jahr": "2022",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -378,7 +378,7 @@ const projects = [
     "ort": null,
     "jahr": "2021 – 2022",
     "kategorie": [
-      "Entwicklungskonzepte",
+      "Stadt- und Quartiersentwicklung",
       "Verfahrensbetreuung"
     ],
     "flaeche": null,
@@ -399,7 +399,7 @@ const projects = [
     "ort": null,
     "jahr": "2021 – 2023",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -419,7 +419,7 @@ const projects = [
     "ort": null,
     "jahr": "2021",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -439,7 +439,7 @@ const projects = [
     "ort": null,
     "jahr": "2021",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -499,7 +499,7 @@ const projects = [
     "ort": null,
     "jahr": "2020-2021; 2023-2024; 2025-2026",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -519,7 +519,7 @@ const projects = [
     "ort": null,
     "jahr": "2020-2023",
     "kategorie": [
-      "Entwicklungskonzepte",
+      "Stadt- und Quartiersentwicklung",
       "Verfahrensbetreuung"
     ],
     "flaeche": null,
@@ -540,8 +540,8 @@ const projects = [
     "ort": null,
     "jahr": "August 2019 – Januar 2020",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -581,7 +581,7 @@ const projects = [
     "ort": null,
     "jahr": "2020 – 22",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -601,7 +601,7 @@ const projects = [
     "ort": null,
     "jahr": "2019",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -661,7 +661,7 @@ const projects = [
     "ort": null,
     "jahr": "2020 – 2021",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -681,7 +681,7 @@ const projects = [
     "ort": null,
     "jahr": "2020 – 2021",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -701,7 +701,7 @@ const projects = [
     "ort": null,
     "jahr": "2019",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -721,8 +721,8 @@ const projects = [
     "ort": null,
     "jahr": "2019",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -742,7 +742,7 @@ const projects = [
     "ort": null,
     "jahr": "2019-2021",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -762,7 +762,7 @@ const projects = [
     "ort": null,
     "jahr": "2018-2021",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -783,7 +783,7 @@ const projects = [
     "jahr": "2019 – 2021",
     "kategorie": [
       "Bauleitplanung",
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -803,7 +803,7 @@ const projects = [
     "ort": null,
     "jahr": "2018 – 2019",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -823,7 +823,7 @@ const projects = [
     "ort": null,
     "jahr": "2019 – 2020",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -843,8 +843,8 @@ const projects = [
     "ort": null,
     "jahr": "2016 – 2017, Überarbeitung 2019",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -864,7 +864,7 @@ const projects = [
     "ort": null,
     "jahr": "2017-2019",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -884,8 +884,8 @@ const projects = [
     "ort": null,
     "jahr": "Wettbewerb 2018, Überarbeitung Masterplan 2019, Bebauungsplanverfahren seit 2020",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -905,7 +905,7 @@ const projects = [
     "ort": null,
     "jahr": "2017;  2020; 2024",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -925,7 +925,7 @@ const projects = [
     "ort": null,
     "jahr": "2018",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -945,7 +945,7 @@ const projects = [
     "ort": null,
     "jahr": "2016 – 2017",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -965,7 +965,7 @@ const projects = [
     "ort": null,
     "jahr": "2017",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -985,8 +985,8 @@ const projects = [
     "ort": null,
     "jahr": "2016",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1006,7 +1006,7 @@ const projects = [
     "ort": null,
     "jahr": "2017 – 2019",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1026,7 +1026,7 @@ const projects = [
     "ort": null,
     "jahr": "2017 – 2018",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1126,7 +1126,7 @@ const projects = [
     "ort": null,
     "jahr": "2017",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1166,7 +1166,7 @@ const projects = [
     "ort": null,
     "jahr": "2016",
     "kategorie": [
-      "Wettbewerbe"
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1186,7 +1186,7 @@ const projects = [
     "ort": null,
     "jahr": "2014 – 2015 / 2016 – 2019",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1206,7 +1206,7 @@ const projects = [
     "ort": null,
     "jahr": "2015-2016",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1226,7 +1226,7 @@ const projects = [
     "ort": null,
     "jahr": "2015",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1246,7 +1246,7 @@ const projects = [
     "ort": null,
     "jahr": "2010-2011",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1266,8 +1266,8 @@ const projects = [
     "ort": null,
     "jahr": "2012 – 2014",
     "kategorie": [
-      "Entwicklungskonzepte",
-      "Wettbewerbe"
+      "Stadt- und Quartiersentwicklung",
+      "Städtebau"
     ],
     "flaeche": null,
     "auftraggeber": null,
@@ -1287,7 +1287,7 @@ const projects = [
     "ort": null,
     "jahr": "2014- 2015",
     "kategorie": [
-      "Entwicklungskonzepte"
+      "Stadt- und Quartiersentwicklung"
     ],
     "flaeche": null,
     "auftraggeber": null,

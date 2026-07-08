@@ -74,7 +74,7 @@ export default function Datenschutz() {
 
           <div style={sectionHeadStyle}>Ihre Betroffenenrechte</div>
           <div style={textStyle}>
-            Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:
+            Unter den oben angegebenen Kontaktdaten der verantwortlichen Stelle können Sie jederzeit folgende Rechte ausüben:
           </div>
           <ul style={listStyle}>
             <li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung</li>
@@ -97,6 +97,61 @@ export default function Datenschutz() {
             >
               bfdi.bund.de
             </a>.
+          </div>
+
+          <div style={sectionHeadStyle}>Hosting</div>
+          <div style={textStyle}>
+            Diese Website wird bei der IONOS SE, Elgendorfer Straße 57, 56410 Montabaur,
+            Deutschland, gehostet. Die Server befinden sich in Deutschland bzw. der
+            Europäischen Union. Der Anbieter verarbeitet in unserem Auftrag die über diese
+            Website übermittelten Daten (insbesondere Zugriffsdaten, siehe „Server-Logfiles“).
+            Grundlage ist unser berechtigtes Interesse an einer sicheren und effizienten
+            Bereitstellung unseres Angebots (Art. 6 Abs. 1 lit. f DSGVO). Mit dem Anbieter
+            wurde ein Vertrag über die Auftragsverarbeitung gemäß Art. 28 DSGVO geschlossen.
+          </div>
+
+          <div style={sectionHeadStyle}>Server-Logfiles</div>
+          <div style={textStyle}>
+            Bei jedem Aufruf dieser Website werden automatisch Informationen erfasst und in
+            sogenannten Server-Logfiles gespeichert. Erfasst werden können:
+          </div>
+          <ul style={listStyle}>
+            <li>anonymisierte bzw. gekürzte IP-Adresse des anfragenden Geräts</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Name und URL der abgerufenen Datei</li>
+            <li>verwendeter Browsertyp und ggf. das Betriebssystem</li>
+            <li>die Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+          </ul>
+          <div style={{ ...textStyle, marginTop: 16 }}>
+            Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an der
+            technischen Bereitstellung, Sicherheit und Stabilität der Website
+            (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden nach kurzer Zeit gelöscht, soweit
+            sie nicht zur Aufklärung sicherheitsrelevanter Vorfälle ausnahmsweise länger
+            aufbewahrt werden müssen.
+          </div>
+
+          <div style={sectionHeadStyle}>SSL-/TLS-Verschlüsselung</div>
+          <div style={textStyle}>
+            Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine
+            verschlüsselte Verbindung erkennen Sie an „https://“ in der Adresszeile Ihres
+            Browsers.
+          </div>
+
+          <div style={sectionHeadStyle}>Kontaktaufnahme</div>
+          <div style={textStyle}>
+            Wenn Sie uns per E-Mail oder Telefon kontaktieren, werden die von Ihnen
+            mitgeteilten Daten (z. B. Name, E-Mail-Adresse, Inhalt Ihrer Nachricht) zum Zweck
+            der Bearbeitung Ihrer Anfrage verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
+            DSGVO, sofern Ihre Anfrage mit einem Vertrag zusammenhängt, andernfalls unser
+            berechtigtes Interesse an der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+            Wir löschen die Daten, sobald sie für die Erreichung des Zweckes nicht mehr
+            erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          </div>
+
+          <div style={sectionHeadStyle}>Cookies und Analyse</div>
+          <div style={textStyle}>
+            Diese Website setzt keine Cookies zu Analyse- oder Marketingzwecken und verwendet
+            keine Tracking- oder Webanalyse-Dienste.
           </div>
 
           <div style={sectionHeadStyle}>Zwecke der Datenverarbeitung</div>

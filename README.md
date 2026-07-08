@@ -120,9 +120,3 @@ npm install
 **Ich habe etwas geändert, aber auf der Website hat sich nichts getan.**  
 → Browser-Cache leeren (`Cmd + Shift + R`) und kurz warten (bis zu 5 Minuten nach dem Deploy).
 
----
-
-## Kontakt bei technischen Fragen
-
-Bei Problemen oder Änderungswünschen (Design, Texte, Team-Seite etc.) bitte an den Entwickler wenden:  
-**Jan – janhamza917@gmail.com**

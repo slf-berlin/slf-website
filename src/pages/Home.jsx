@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import ProjectFeedItem from '../components/ProjectFeedItem'
 import projects from '../data/projects'
-import heroBild from '../assets/deckblatt-homepage-v4.jpg'
+import heroBild from '../assets/deckblatt-homepage-v3.jpg'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 
 const FEATURED_IDS = [
@@ -19,64 +19,52 @@ const FEATURED_IDS = [
 ]
 const featured = FEATURED_IDS.map(id => projects.find(p => p.id === id)).filter(Boolean)
 
-const LEISTUNGEN = [
-  {
-    titel: 'Stadtplanung',
-    label: 'Stadtplanung',
-    beschreibung: 'Strategische Planungen, Stadt- und Quartiersentwicklung sowie integrierte Entwicklungskonzepte.',
-    punkte: ['Strategische Planungen', 'Stadt- und Quartiersentwicklung', 'Integrierte Entwicklungskonzepte'],
-  },
-  {
-    titel: 'Städtebau',
-    label: 'Städtebau',
-    beschreibung: 'Städtebauliche Entwürfe, Rahmen- und Masterplanungen, Machbarkeitsstudien und Gestaltungskonzepte für urbane Räume.',
-    punkte: ['Städtebauliche Entwürfe', 'Rahmen- und Masterplanungen', 'Machbarkeitsstudien', 'Gestaltungskonzepte'],
-  },
-  {
-    titel: 'Bauleitplanung',
-    label: 'Bauleitplanung',
-    beschreibung: 'Flächennutzungspläne, Bebauungspläne, Satzungen und Änderungsverfahren sowie formelle Planungsverfahren nach BauGB.',
-    punkte: ['Flächennutzungspläne', 'Bebauungspläne', 'Satzungen & Änderungsverfahren', 'Verfahren nach BauGB'],
-  },
-  {
-    titel: 'Verfahrensbetreuung, Partizipation',
-    label: 'Verfahren',
-    beschreibung: 'Wettbewerbsverfahren, formelle und informelle Beteiligungsverfahren sowie Kommunikation und Moderation.',
-    punkte: ['Wettbewerbsverfahren', 'Formelle & informelle Beteiligung', 'Kommunikation & Moderation'],
-  },
+// Les trois fragments forment une phrase continue lue en travers du hero,
+// un fragment par bande : Idee → Konzept/Entwurf → Umsetzung.
+const HERO_PHRASEN = [
+  'Von der Idee und dem Leitbild …',
+  '… über das Konzept und den Entwurf …',
+  '… bis zur Umsetzung.',
 ]
 
-// Hero hover : liste de compétences — puces khaki (carré 4px A.accent
-// aligné sur la première ligne de chaque item).
-function renderPunkte(punkte, isMobile) {
-  const fontSize = isMobile ? 14 : 16
-  const itemStyle = { color: A.ink, fontSize, lineHeight: 1.4, fontWeight: 500 }
+// Plays the hero phrase reveal once per full page load — not on client-side
+// route changes. Same pattern as logoIntroDone in Nav.jsx: read in render
+// (pure), flipped in an effect so StrictMode's double-invoke is safe.
+let heroIntroDone = false
 
-  return (
-    <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-      {punkte.map((p, i) => (
-        <li key={i} style={{
-          ...itemStyle,
-          display: 'flex', alignItems: 'flex-start', gap: 8,
-          marginTop: i === 0 ? 0 : 6,
-        }}>
-          <span style={{
-            width: 4, height: 4, background: A.accent,
-            flexShrink: 0, marginTop: 7,
-          }} />
-          <span>{p}</span>
-        </li>
-      ))}
-    </ul>
-  )
+// Balayage kaki clair : un bloc A.accentSoft balaie la plaque de gauche à
+// droite (scaleX 0→1 origin left, puis 1→0 origin right) et « dépose » le
+// texte derrière lui. Séquentiel bande 1 → 2 → 3, la phrase se lit en travers.
+// Sans la classe --intro (navigation client, reduced motion) : texte visible,
+// bloc replié (styles inline par défaut), aucune animation.
+const HERO_STYLES = `
+@media (prefers-reduced-motion: no-preference) {
+  .slf-hero--intro .slf-hero-swipe { animation: slfHeroSwipe 0.9s cubic-bezier(0.45, 0, 0.25, 1) both; }
+  .slf-hero--intro .slf-hero-text { animation: slfHeroText 0.9s linear both; }
+  .slf-hero--intro .slf-hero-seg-1 .slf-hero-swipe, .slf-hero--intro .slf-hero-seg-1 .slf-hero-text { animation-delay: 0.3s; }
+  .slf-hero--intro .slf-hero-seg-2 .slf-hero-swipe, .slf-hero--intro .slf-hero-seg-2 .slf-hero-text { animation-delay: 0.85s; }
+  .slf-hero--intro .slf-hero-seg-3 .slf-hero-swipe, .slf-hero--intro .slf-hero-seg-3 .slf-hero-text { animation-delay: 1.4s; }
 }
+@keyframes slfHeroSwipe {
+  0%   { transform: scaleX(0); transform-origin: left center; }
+  45%  { transform: scaleX(1); transform-origin: left center; }
+  55%  { transform: scaleX(1); transform-origin: right center; }
+  100% { transform: scaleX(0); transform-origin: right center; }
+}
+@keyframes slfHeroText {
+  0%, 50%  { opacity: 0; }
+  60%, 100% { opacity: 1; }
+}
+`
 
 export default function Home() {
   const width = useWindowWidth()
   const isMobile = width < 768
-  const [hoveredLeistung, setHoveredLeistung] = useState(null)
   const [hoverMehr, setHoverMehr] = useState(false)
   const [hoverAlle, setHoverAlle] = useState(false)
+  const [hoveredSeg, setHoveredSeg] = useState(null)
+  const [playHeroIntro] = useState(() => !heroIntroDone)
+  useEffect(() => { heroIntroDone = true }, [])
 
   const hPad = isMobile ? 20 : 56
   const vPad = isMobile ? 56 : 112
@@ -88,20 +76,19 @@ export default function Home() {
 
   // The hero image keeps its natural aspect ratio (height:auto, no objectFit:cover)
   // so it is NEVER cropped — cropping would shift the visible strips out from under
-  // the fixed-percentage hover zones. The relative wrapper sizes itself to the image,
+  // the fixed-percentage overlay zones. The relative wrapper sizes itself to the image,
   // so the inset:0 overlay matches the image box exactly at any screen width.
-  // v4 composite is 2831×1423 (4 image strips + 3 white gaps).
+  // v3 composite is 2110×1423 (3 image strips + 2 white gaps).
   const contentWidth = Math.min(width, 1400)
 
-  // Hero maps 4 service zones onto the v4 composite. Each image strip ≈ 23.6% wide.
+  // Each image strip ≈ 31.7% of the v3 composite. Size the phrase so the longest
+  // fragment ("… über das Konzept und den Entwurf …") fits on ≤ 2 lines
+  // (~22 chars/line). D-DIN char width ≈ 0.52em. Wrapping is allowed, so this
+  // only sets an upper bound.
   const heroPad = hPad * 2
-  const overlayPad = isMobile ? 12 : 36
-  const segContentWidth = (contentWidth - heroPad) * 0.236 - overlayPad
-  // Persistent nameplate uses the short LEISTUNGEN.label; size to fit the longest
-  // short label ("Bauleitplanung", 14 chars). Titles are allowed to wrap, so this
-  // only sets an upper bound. D-DIN char width ≈ 0.52em for this condensed font.
-  const titleFontSize = Math.min(isMobile ? 13 : 26, Math.max(9, Math.floor(segContentWidth / (14 * 0.52))))
-  const showDesc = width >= 1000
+  const platePad = isMobile ? 8 : 14
+  const segContentWidth = (contentWidth - heroPad) * 0.3166 - platePad * 2
+  const phraseFontSize = Math.min(isMobile ? 13 : 22, Math.max(9, Math.floor(segContentWidth / (22 * 0.52))))
 
   return (
     <div style={base}>
@@ -109,67 +96,63 @@ export default function Home() {
 
       {/* Hero */}
       <div style={{ background: A.bg, paddingLeft: hPad, paddingRight: hPad }}>
+        <style>{HERO_STYLES}</style>
         <div style={{ position: 'relative' }}>
         <img
           src={heroBild}
           alt="Deckblatt — Quartiersentwicklung, Lageplan & Bebauungsplan"
           style={{ display: 'block', width: '100%', height: 'auto' }}
         />
-        <div style={{ position: 'absolute', inset: 0, display: 'flex' }}>
+        <div
+          className={'slf-hero' + (playHeroIntro ? ' slf-hero--intro' : '')}
+          style={{ position: 'absolute', inset: 0, display: 'flex' }}
+        >
           {[
-            // Measured against the v4 composite (2831px wide): 4 image strips + 3 gaps.
-            { li: 0, flex: '0 0 23.60%' },
-            { gap: true, flex: '0 0 1.80%' },
-            { li: 1, flex: '0 0 23.67%' },
-            { gap: true, flex: '0 0 1.77%' },
-            { li: 2, flex: '0 0 23.70%' },
-            { gap: true, flex: '0 0 1.80%' },
-            { li: 3, flex: '1' },
+            // Measured against the v3 composite (2110px wide): 3 image strips + 2 gaps.
+            { phrase: 0, flex: '0 0 31.66%' },
+            { gap: true, flex: '0 0 2.42%' },
+            { phrase: 1, flex: '0 0 31.75%' },
+            { gap: true, flex: '0 0 2.37%' },
+            { phrase: 2, flex: '1' },
           ].map((seg, i) => seg.gap ? (
             <div key={i} style={{ flex: seg.flex, pointerEvents: 'none' }} />
           ) : (
             <div
               key={i}
-              onMouseEnter={isMobile ? undefined : () => setHoveredLeistung(seg.li)}
-              onMouseLeave={isMobile ? undefined : () => setHoveredLeistung(null)}
-              style={{ flex: seg.flex, position: 'relative', cursor: 'default', overflow: 'hidden' }}
+              className={`slf-hero-seg-${seg.phrase + 1}`}
+              onMouseEnter={isMobile ? undefined : () => setHoveredSeg(seg.phrase)}
+              onMouseLeave={isMobile ? undefined : () => setHoveredSeg(null)}
+              style={{ flex: seg.flex, position: 'relative' }}
             >
-              {/* Nameplate — title always visible; turns khaki and grows
-                  upward on hover to reveal the description below it. */}
+              {/* Plaque — the light-khaki block sweeps across it and leaves the
+                  phrase fragment behind (see HERO_STYLES). Hover: the plate
+                  tints with the same light khaki and an accent line slides in
+                  along its bottom edge. */}
               <div style={{
                 position: 'absolute', left: 0, right: 0, bottom: 0,
-                padding: isMobile ? '8px 8px' : '14px 14px',
-                background: hoveredLeistung === seg.li ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.72)',
+                padding: platePad,
+                background: hoveredSeg === seg.phrase ? A.accentSoft : 'rgba(255,255,255,0.9)',
                 transition: 'background 0.25s ease',
-                pointerEvents: 'none',
+                overflow: 'hidden',
               }}>
-                <div style={{
-                  fontSize: Math.round(titleFontSize * 0.78),
-                  fontWeight: hoveredLeistung === seg.li ? 700 : 500, color: A.ink,
-                  letterSpacing: '-0.01em', lineHeight: 1.2,
-                  whiteSpace: hoveredLeistung === seg.li ? 'normal' : 'nowrap',
+                <div className="slf-hero-text" style={{
+                  fontSize: phraseFontSize,
+                  fontWeight: 500, color: A.ink,
+                  letterSpacing: '-0.01em', lineHeight: 1.35,
                 }}>
-                  {seg.li === 3 ? (
-                    <>
-                      Verfahrensbetreuung
-                      <span style={{
-                        opacity: hoveredLeistung === 3 ? 1 : 0,
-                        transition: 'opacity 0.25s ease',
-                      }}>, Partizipation</span>
-                    </>
-                  ) : LEISTUNGEN[seg.li].titel}
+                  {HERO_PHRASEN[seg.phrase]}
                 </div>
-                {showDesc && (
-                  <div style={{
-                    overflow: 'hidden',
-                    maxHeight: hoveredLeistung === seg.li ? 260 : 0,
-                    opacity: hoveredLeistung === seg.li ? 1 : 0,
-                    marginTop: hoveredLeistung === seg.li ? 10 : 0,
-                    transition: 'max-height 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.28s ease, margin-top 0.3s ease',
-                  }}>
-                    {renderPunkte(LEISTUNGEN[seg.li].punkte, isMobile)}
-                  </div>
-                )}
+                <div className="slf-hero-swipe" style={{
+                  position: 'absolute', inset: 0,
+                  background: A.accentSoft,
+                  transform: 'scaleX(0)',
+                }} />
+                <div style={{
+                  position: 'absolute', left: 0, bottom: 0,
+                  height: 3, background: A.accent,
+                  width: hoveredSeg === seg.phrase ? '100%' : '0%',
+                  transition: 'width 0.25s ease',
+                }} />
               </div>
             </div>
           ))}

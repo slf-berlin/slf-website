@@ -12,12 +12,13 @@ const RATIO_MAP = {
   '1/1': '100%',
 }
 
-export default function ProjectImage({ proj, ratio = '4/3', title, subtitle, ergebnis, style = {} }) {
+export default function ProjectImage({ proj, ratio = '4/3', title, subtitle, ergebnis, themen, style = {} }) {
   const [hovered, setHovered] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const width = useWindowWidth()
   const paddingTop = RATIO_MAP[ratio] ?? '75%'
   const isPhoto = proj?.tone !== 'plan'
+  const hasOverlay = Boolean(title || subtitle || ergebnis || (themen && themen.length))
 
   const titleSize = width < 640 ? 15 : width < 1024 ? 17 : 20
   const subtitleSize = width < 640 ? 12 : width < 1024 ? 13 : 15
@@ -47,16 +48,16 @@ export default function ProjectImage({ proj, ratio = '4/3', title, subtitle, erg
           }}
         />
       )}
-      {/* accent overlay */}
-      <div style={{
+      {/* accent overlay — only when there is hover text to reveal */}
+      {hasOverlay && <div style={{
         position: 'absolute', inset: 0,
         background: 'rgba(243,241,227,0.92)',
         opacity: hovered ? 1 : 0,
         transition: 'opacity 0.3s ease',
         pointerEvents: 'none',
-      }} />
+      }} />}
       {/* hover content */}
-      {(title || subtitle || ergebnis) && (
+      {hasOverlay && (
         <div style={{
           position: 'absolute', inset: 0,
           display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
@@ -81,6 +82,14 @@ export default function ProjectImage({ proj, ratio = '4/3', title, subtitle, erg
           {ergebnis && (
             <div style={{ fontSize: subtitleSize, fontWeight: 400, lineHeight: 1.3, color: A.ink }}>
               {ergebnis}
+            </div>
+          )}
+          {themen && themen.length > 0 && (
+            <div style={{
+              marginTop: 6, fontSize: width < 640 ? 11 : 12, fontWeight: 400,
+              lineHeight: 1.5, letterSpacing: '0.04em', color: A.mute,
+            }}>
+              {themen.join(' · ')}
             </div>
           )}
         </div>

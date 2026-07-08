@@ -108,16 +108,16 @@ All components use the `useWindowWidth()` hook (`src/hooks/useWindowWidth.js`) �
 - Mobile (< 768px): hamburger → full-screen overlay (links only; no dropdown children)
 - Active state: `pathname` match changes link color from `mute` → `ink`; all top-level nav links use `fontWeight: 600` regardless of active state
 - Underline accent: absolutely-positioned `<span>` slides in on hover and active (`width: 0 → 100%`, 0.2s ease, height 3px, `A.accent`)
-- Nav items and dropdown children defined in the `navItems` array at the top of `Nav.jsx`. Projekte dropdown items generated from `PROJEKTE_NAV` in `src/data/filters.js`. Büro dropdown: "Leistungen" links to `/buero#leistungen` (hash anchor, handled by `ScrollToTop`)
+- Nav items and dropdown children defined in the `navItems` array at the top of `Nav.jsx`. Projekte dropdown items generated from `PROJEKTE_NAV` in `src/data/filters.js`. Büro dropdown: "Arbeitsweise", "Leistungen", "Team", "Netzwerk & Kooperationen" link to `/buero#arbeitsweise` / `/buero#leistungen` / `/buero/team` / `/buero#netzwerk` (hash anchors handled by `ScrollToTop`, except Team which is a real route)
 - **Search** — search icon on both desktop (right of nav) and mobile (left of hamburger). Opens a compact dropdown panel (zIndex 400, anchored `top: 80` desktop / `64` mobile, `right: 56` desktop / full-width mobile, max 420px wide) backed by a transparent full-screen click-catcher (zIndex 399) for outside-click close. Input with live results as the user types (min 2 chars), up to 10 matching projects. Searches `titel`, `beschreibung`, `kategorie`. Closes on Esc, × button, or outside click. Implemented via `<SearchButton>`, `<SearchResult>` sub-components.
 - **Logo intro animation** — on first full page load (not client-side navigation), the wordmark plays a staggered Stadt → Land → Fluss reveal (`slfWordIn` keyframe, 0.55s, delays 0.08 / 0.26 / 0.44s). Controlled by the module-level `logoIntroDone` flag. Respects `prefers-reduced-motion`.
 
 **`src/components/Footer.jsx`** — 4-column grid (logo/partners | address | navigation | legal). Collapses to 2-col on tablet (< 1024px), 1-col on mobile. Navigation column includes an external link to competitionline. Logo imported from `src/assets/SLF_Logo.svg` (distinct from the public/ logos). Hover underlines via CSS class `footer-nav-link` (injected via `<style>`).
 
 **`src/components/ProjectImage.jsx`** — reusable image tile with:
-- Props: `proj`, `ratio` (`'16/10'|'4/3'|'3/2'|'1/1'`), `title`, `subtitle`, `ergebnis`, `style`
+- Props: `proj`, `ratio` (`'16/10'|'4/3'|'3/2'|'1/1'`), `title`, `subtitle`, `ergebnis`, `themen` (array of theme labels), `style`
 - Aspect ratio via padding-top percentage. Striped placeholder background while no image (diagonal for `tone:'photo'`, vertical for `tone:'plan'`).
-- Hover: image scale(1.03) + dark gradient overlay + optional title/subtitle/ergebnis fade-in.
+- Hover: image scale(1.03); if any of `title`/`subtitle`/`ergebnis`/`themen` are passed, a khaki overlay + text fade in. Without these props there is no overlay at all, just the zoom. The Projekte grid passes all four and additionally shows title + year below the tile.
 - Title/subtitle font sizes are responsive via `useWindowWidth()`: 20/15px (≥ 1024px), 17/13px (640–1023px), 15/12px (< 640px).
 
 **`src/components/SmartImage.jsx`** — `<img>` wrapper with a shimmer loading skeleton that fades out on load. Props mirror `<img>` (`src`, `alt`, `style`, `onClick`, `className`, `fit`) plus `wrapperStyle` for the positioning wrapper. Shimmer keyframes are injected once via the exported `ensureImageStyles()` and respect `prefers-reduced-motion`. Use this instead of a bare `<img>` for remote/WP-CDN images so loads don't flash.
@@ -133,8 +133,11 @@ All components use the `useWindowWidth()` hook (`src/hooks/useWindowWidth.js`) �
 **`src/pages/Buero.jsx`** — single-page layout:
 - **Hero image** — office photo (WP CDN) at the top, with side padding 36px desktop / 12px mobile (not full-width), `objectPosition: 'center 30%'`, height 500px desktop / 220px mobile.
 - **01 / Büro** — hardcoded intro text (two paragraphs) + 3-image gallery (Stadt / Land / Wasser, WP CDN URLs, aspect-ratio 4/3, `objectFit: cover`)
-- **02 / Leistungen** — `LEISTUNGEN` array (8 services), each with an inline SVG icon, rendered as a 2-column grid spanning cols 3–11 (`3 / span 9`). Section anchored at `id="leistungen"` for hash navigation.
+- **Arbeitsweise** ("Unsere Arbeitsweise", `id="arbeitsweise"`) — `ARBEITSWEISE` array (5 principles), each with title + intro paragraph + bullet list (`<BulletList>`), rendered as a 2-column grid spanning cols 3–11 (`3 / span 9`).
+- **02 / Leistungen** — `LEISTUNGEN` array (8 services), each with an inline SVG icon, title and a `punkte` array rendered via `<BulletList>` (small khaki square markers), as a 2-column grid spanning cols 3–11 (`3 / span 9`). Section anchored at `id="leistungen"` for hash navigation.
 - **Team** ("Das Team", `id="team"`) — embeds the full team grid inline: imports `TEAM` and renders `<TeamCard>` tiles (2 / 3 / 4 cols at < 640 / 640–1023 / ≥ 1024px), clicking a card opens the bio `<Modal>`. `TeamCard` and `Modal` are defined locally in `Buero.jsx` (duplicated from `Team.jsx`). The standalone `Team.jsx` page still exists and is still routed at `/buero/team` (Nav links there), so team content currently lives in two places — keep both in sync or consolidate.
+- **Netzwerk & Kooperationen** (`id="netzwerk"`) — short intro paragraph + `NETZWERK` array of partner offices (`{ name, url }`), rendered as an inline-flex wrapped list of `<NetLink>` entries separated by small khaki square dividers.
+- Sections from Leistungen onward (`#leistungen`, `#team`, `#netzwerk`) each open with a `borderTop: 1px solid A.rule` divider.
 - **Closing image** — office photo (WP CDN) with the same side padding (36px / 12px), followed by `<BackToTop />` then `<Footer />`.
 
 Note: the numbered section labels ("01 / Büro", "02 / Leistungen", …) have been removed from the page in favor of plain headings.
@@ -163,12 +166,16 @@ wpId, wpDate, wpLink
 
 `ort`, `flaeche`, `auftraggeber` are `null` — WP has no dedicated ACF fields for these. If the client wants more structured metadata, add ACF fields in WordPress and update `scripts/sync-from-wordpress.mjs`.
 
-**`src/data/filters.js`** — three exports:
-- `PROJEKTE_NAV` — array of `{ label, key }` filter tabs (key `null` = show all)
-- `FILTER_FN` — map of `key → (project) => boolean` predicate functions
-- `filterHref(key)` — returns `/projekte` or `/projekte?filter=<key>`
+**`src/data/filters.js`** — exports:
+- `PROJEKTE_NAV` — array of `{ label, key }` category filter tabs (key `null` = show all). Categories: Stadt- und Quartiersentwicklung (`stadtentwicklung`), Städtebau (`staedtebau`), Bauleitplanung, Verfahrensbetreuung, plus the special `projektliste` tab.
+- `FILTER_FN` — map of `key → (project) => boolean` predicate functions over `kategorie`
+- `THEMEN_NAV` — array of `{ label, key }` for the second, orthogonal **Themen** filter dimension (9 themes: Wohnungsbau, Gewerbeentwicklung, Klimaanpassung, Spielplätze, Nachverdichtung / Innenentwicklung, Transformation, Autoarmes Quartier, Partizipation, Wettbewerbe)
+- `projectThemen(p)` / `themaFilterFn(key)` / `themaLabel(key)` — theme lookup helpers backed by `PROJECT_THEMEN`
+- `filterHref(key, thema)` — builds `/projekte`, `/projekte?filter=<key>`, `/projekte?thema=<key>` or both combined
 
-Filtering on `/projekte` reads `?filter=` from `useSearchParams()` and applies `FILTER_FN[key]`.
+Filtering on `/projekte` reads `?filter=` and `?thema=` from `useSearchParams()` and applies both predicates (AND). The Themen bar is a second, more discreet row under the category tabs — single-select, clicking the active theme toggles it off, and the theme is preserved when switching categories (including the Projektliste table view).
+
+**`src/data/themen.js`** — hand-maintained `PROJECT_THEMEN` map (`slug → [theme keys]`) covering all projects. **Not** touched by `npm run sync`; new WP projects appear without themes until added here. A project with no themes is valid (it just matches no theme filter). Theme tags are also rendered on `ProjectDetail` as clickable links to `/projekte?thema=<key>`.
 
 The `projektliste` key is special: it passes all projects through (`() => true`) and renders a **sortable table view** instead of the tile grid. Columns are sortable by Jahr, Auftraggeber, Ort, and Kategorie. `ort` and `auftraggeber` are extracted from the `<dl class="slf-daten">` block inside `project.content` at render time.
 
@@ -176,10 +183,12 @@ The `projektliste` key is special: it passes all projects through (`() => true`)
 
 | WP slug | `kategorie` |
 |---|---|
-| `entwicklungskonzepte` | `Entwicklungskonzepte` |
-| `wettbewerbe` | `Wettbewerbe` |
+| `entwicklungskonzepte` | `Stadt- und Quartiersentwicklung` |
+| `wettbewerbe` | `Städtebau` |
 | `bauleitplanung` | `Bauleitplanung` |
 | `verfahrensbetreuung` | `Verfahrensbetreuung` |
+
+The WP slugs are historical — the site relabels them at sync time (`CATEGORY_LABEL` in the sync script). All ex-Wettbewerbe projects also carry the `wettbewerbe` **theme** (see `src/data/themen.js`) so competitions stay filterable.
 
 Posts in multiple WP categories: first matching category wins. Posts with no known category are silently skipped (with a warning log). If WP is unreachable and `projects.js` already exists, the script exits cleanly so the build succeeds with stale data.
 
@@ -207,25 +216,27 @@ Three sections after the hero (numbered "01 / …" labels have been removed in f
 - **Aktuell** — "Ausgewählte Projekte" feed: 6 hardcoded project IDs in `FEATURED_IDS`, rendered as alternating left/right `<ProjectFeedItem>` rows (first item `large={true}`)
 - **Notiz** — short note about the leadership transition to the three current partners
 
-### Hero hover interaction (`src/pages/Home.jsx`)
+### Hero phrase reveal (`src/pages/Home.jsx`)
 
-The hero image (`deckblatt-homepage-v4.jpg`, 2831×1423) is a composite JPG of **4 sub-images** with white gaps. Seven absolutely-positioned flex segments (4 hotspots + 3 gap spacers) map to `LEISTUNGEN[0–3]`. `hoveredLeistung` state drives overlay opacity.
+The hero image (`deckblatt-homepage-v3.jpg`, 2110×1423) is a composite JPG of **3 sub-images** with white gaps. Five absolutely-positioned flex segments (3 panels + 2 gap spacers) overlay one phrase fragment per panel (`HERO_PHRASEN`): "Von der Idee und dem Leitbild …" / "… über das Konzept und den Entwurf …" / "… bis zur Umsetzung." The panels are **not clickable** — no links, only a subtle hover tint (see below).
 
-Flex proportions (measured against the v4 composite):
+Flex proportions (measured against the v3 composite):
 
-| Segment | Flex | Role |
+| Segment | Flex | Phrase |
 |---|---|---|
-| `0 0 23.60%` | Image 1 | Stadtplanung |
-| `0 0 1.80%` | Gap 1 | inactive |
-| `0 0 23.67%` | Image 2 | Städtebau |
-| `0 0 1.77%` | Gap 2 | inactive |
-| `0 0 23.70%` | Image 3 | Bauleitplanung |
-| `0 0 1.80%` | Gap 3 | inactive |
-| `1` | Image 4 | Verfahrensbetreuung, Partizipation |
+| `0 0 31.66%` | Image 1 | Von der Idee und dem Leitbild … |
+| `0 0 2.42%` | Gap 1 | — |
+| `0 0 31.75%` | Image 2 | … über das Konzept und den Entwurf … |
+| `0 0 2.37%` | Gap 2 | — |
+| `1` | Image 3 | … bis zur Umsetzung. |
 
-The 4th strip (Verfahrensbetreuung) is a photo recropped to the same vertical strip format (≈670×1423) and appended to the original 3-image composite. To rebuild after swapping images: detect the white gap columns and re-paste strips with Pillow (no ImageMagick available; `sips` can't concatenate). Then update the segment percentages and the `heroHeight` aspect ratio (`1423 / 2831`) in `Home.jsx`.
+**Light-khaki swipe animation** — each panel has a white plate at the bottom (`rgba(255,255,255,0.9)`); on first full page load a solid `A.accentSoft` block sweeps across the plate (`slfHeroSwipe`: scaleX 0→1 origin left, then 1→0 origin right, 0.9s) and "deposits" the phrase behind it (`slfHeroText`: opacity 0→1 at the sweep midpoint). Panels are staggered (delays 0.3 / 0.85 / 1.4s) so the sentence reads left to right. Controlled by the module-level `heroIntroDone` flag (same pattern as `logoIntroDone` in `Nav.jsx`) — client-side navigation shows the final state without animation. Respects `prefers-reduced-motion`. Keyframes live in the `HERO_STYLES` constant, injected via a `<style>` tag.
 
-Hero overlay text sizing is computed dynamically: `titleFontSize = Math.min(max, Math.floor(segWidth / (19 * 0.52)))` where 0.52 is the D-DIN character width ratio, sized to fit the longest single word ("Verfahrensbetreuung", 19 chars). Titles are allowed to wrap (no `whiteSpace: nowrap`). Description text is hidden below `width < 1000` (`showDesc` flag).
+**Hover effect** (desktop only, `hoveredSeg` state) — hovering a panel tints its plate to `A.accentSoft` and slides a 3px `A.accent` line in along the plate's bottom edge (width 0→100%, 0.25s ease, echoing the nav underlines). The panels are still not clickable — cursor stays default.
+
+Phrase font sizing is computed dynamically: `phraseFontSize = Math.min(max, Math.floor(segWidth / (22 * 0.52)))` where 0.52 is the D-DIN character width ratio, sized so the longest fragment fits on ≤ 2 lines (~22 chars/line). Wrapping is allowed.
+
+`deckblatt-homepage-v4.jpg` (4-strip variant, 2831×1423, with a Verfahrensbetreuung photo appended) is kept in `src/assets/` as a reserve. To rebuild a composite after swapping images: detect the white gap columns and re-paste strips with Pillow (no ImageMagick available; `sips` can't concatenate), then update the segment percentages in `Home.jsx`.
 
 ### Project detail page (`src/pages/ProjectDetail.jsx`)
 
