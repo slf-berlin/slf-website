@@ -50,6 +50,7 @@ const navItems = [
     to: '/buero',
     children: [
       { label: 'Über Uns', to: '/buero/ueber-uns' },
+      { label: 'Arbeitsweise', to: '/buero#arbeitsweise' },
       { label: 'Leistungen', to: '/buero#leistungen' },
       { label: 'Team', to: '/buero/team' },
     ],

@@ -20,20 +20,19 @@ const FEATURED_IDS = [
 ]
 const featured = FEATURED_IDS.map(id => projects.find(p => p.id === id)).filter(Boolean)
 
-// filterKey → /projekte?filter=… ; mapping provisoire sur les catégories WP
-// actuelles, à remplacer quand les projets seront retriés selon les 4 thématiques.
+// filterKey → /projekte?filter=… (clés définies dans src/data/filters.js)
 const LEISTUNGEN = [
   {
     titel: 'Stadtplanung',
     label: 'Stadtplanung',
-    filterKey: 'entwicklungskonzepte',
+    filterKey: 'stadtentwicklung',
     beschreibung: 'Strategische Planungen, Stadt- und Quartiersentwicklung sowie integrierte Entwicklungskonzepte.',
     punkte: ['Strategische Planungen', 'Stadt- und Quartiersentwicklung', 'Integrierte Entwicklungskonzepte'],
   },
   {
     titel: 'Städtebau',
     label: 'Städtebau',
-    filterKey: 'wettbewerbe',
+    filterKey: 'staedtebau',
     beschreibung: 'Städtebauliche Entwürfe, Rahmen- und Masterplanungen, Machbarkeitsstudien und Gestaltungskonzepte für urbane Räume.',
     punkte: ['Städtebauliche Entwürfe', 'Rahmen- und Masterplanungen', 'Machbarkeitsstudien', 'Gestaltungskonzepte'],
   },

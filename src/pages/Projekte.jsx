@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import ProjectImage from '../components/ProjectImage'
 import BackToTop from '../components/BackToTop'
 import projects from '../data/projects'
-import { PROJEKTE_NAV, FILTER_FN, filterHref } from '../data/filters'
+import { PROJEKTE_NAV, FILTER_FN, THEMEN_NAV, themaFilterFn, filterHref, projectThemen, themaLabel } from '../data/filters'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 
 function extractDaten(content, key) {
@@ -146,15 +146,20 @@ export default function Projekte() {
   const width = useWindowWidth()
   const isMobile = width < 640
   const activeKey = searchParams.get('filter')
+  const activeThema = searchParams.get('thema')
   const isListView = activeKey === 'projektliste'
 
   const [sortKey, setSortKey] = useState('titel')
   const [sortDir, setSortDir] = useState('asc')
   const [hoveredKey, setHoveredKey] = useState(null)
+  const [hoveredThema, setHoveredThema] = useState(null)
 
-  const filtered = activeKey && FILTER_FN[activeKey]
+  const byKategorie = activeKey && FILTER_FN[activeKey]
     ? projects.filter(FILTER_FN[activeKey])
     : projects
+  const filtered = activeThema
+    ? byKategorie.filter(themaFilterFn(activeThema))
+    : byKategorie
 
   // Vue liste : tri par colonne. Vue grille : ordre par défaut = dernière année du
   // Zeitraum décroissante, puis upload WordPress (le plus récent d'abord) à année égale.
@@ -193,7 +198,7 @@ export default function Projekte() {
           return (
             <Link
               key={f.key ?? 'all'}
-              to={filterHref(f.key)}
+              to={filterHref(f.key, activeThema)}
               onMouseEnter={() => setHoveredKey(f.key ?? 'all')}
               onMouseLeave={() => setHoveredKey(null)}
               style={{
@@ -206,6 +211,47 @@ export default function Projekte() {
               }}
             >
               {f.label}
+              <span style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                height: 2,
+                background: A.accent,
+                width: barVisible ? '100%' : '0%',
+                transition: isActive ? 'none' : 'width 0.25s ease',
+              }} />
+            </Link>
+          )
+        })}
+      </div>
+
+      {/* Themen bar — second, orthogonal filter dimension (single-select, toggles off) */}
+      <div style={{
+        padding: isMobile ? '12px 20px' : '14px 56px',
+        borderBottom: `1px solid ${A.ruleSoft}`,
+        display: 'flex', flexWrap: 'wrap', gap: isMobile ? '8px 12px' : '8px 20px',
+        alignItems: 'baseline',
+        fontSize: 13, color: A.mute,
+      }}>
+        {[{ label: 'Alle Themen', key: null }, ...THEMEN_NAV].map((t) => {
+          const hoverId = t.key ?? '__alle'
+          const isActive = t.key === activeThema
+          const barVisible = isActive || hoveredThema === hoverId
+          return (
+            <Link
+              key={hoverId}
+              to={filterHref(activeKey, isActive ? null : t.key)}
+              onMouseEnter={() => setHoveredThema(hoverId)}
+              onMouseLeave={() => setHoveredThema(null)}
+              style={{
+                position: 'relative',
+                padding: '0 0 4px',
+                fontSize: 13,
+                color: isActive ? A.ink : A.mute,
+                fontWeight: isActive ? 600 : 500,
+              }}
+            >
+              {t.label}
               <span style={{
                 position: 'absolute',
                 bottom: 0,
@@ -323,7 +369,9 @@ export default function Projekte() {
         <div style={{
           padding: isMobile ? '32px 20px 56px' : '48px 56px 72px',
           display: 'grid',
-          gridTemplateColumns: width < 640 ? '1fr' : width < 1024 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
+          gridTemplateColumns: width < 640
+            ? 'minmax(0, 1fr)'
+            : width < 1024 ? 'repeat(2, minmax(0, 1fr))' : 'repeat(3, minmax(0, 1fr))',
           gap: width < 640 ? '36px 0' : '44px 40px',
         }}>
           {displayed.map((p) => (
@@ -332,13 +380,27 @@ export default function Projekte() {
               to={`/projekte/${p.id}`}
               style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
             >
-              <ProjectImage proj={p} ratio="4/3" title={p.titel} subtitle={p.untertitel} ergebnis={p.ergebnis} />
+              <ProjectImage
+                proj={p}
+                ratio="4/3"
+                title={p.titel}
+                subtitle={p.untertitel}
+                ergebnis={p.ergebnis}
+                themen={projectThemen(p).map(themaLabel)}
+              />
               <div style={{
                 marginTop: 12, display: 'flex', justifyContent: 'space-between',
-                fontSize: 14, color: A.mute,
+                alignItems: 'baseline', gap: 16,
               }}>
-                <span>{[].concat(p.kategorie).join(' / ')}</span>
-                <span>{p.jahr ?? (p.wpDate ? new Date(p.wpDate).getFullYear() : null)}</span>
+                <span style={{
+                  fontSize: 15, fontWeight: 500, color: A.ink, lineHeight: 1.35,
+                  minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+                }}>
+                  {p.titel}
+                </span>
+                <span style={{ fontSize: 14, color: A.mute, whiteSpace: 'nowrap' }}>
+                  {p.jahr ?? (p.wpDate ? new Date(p.wpDate).getFullYear() : null)}
+                </span>
               </div>
             </Link>
           ))}

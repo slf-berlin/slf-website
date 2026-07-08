@@ -142,7 +142,12 @@ const LEISTUNGEN = [
       </svg>
     ),
     titel: 'Strategische Stadtentwicklungsplanung',
-    text: 'Analysen und Planungen zu stadtentwicklungsrelevanten Themen – von der Gesamtstadt bis zum Quartier. Ermittlung von raumbezogenen Potenzialen wie Wohnungsbau-, sozialinfrastrukturellen und gewerblichen Entwicklungspotenzialen.',
+    punkte: [
+      'Analysen und Planungen zu stadtentwicklungsrelevanten Themen – von der Gesamtstadt bis zum Quartier',
+      'Ermittlung von raum- und bedarfsbezogenen Potenzialen für Wohnungsbau (Wohnbaukataster), soziale Infrastruktur und gewerbliche Entwicklung',
+      'Spielplatzentwicklungsplanung',
+      'Standortuntersuchungen',
+    ],
   },
   {
     key: 'raumanalyse',
@@ -155,7 +160,10 @@ const LEISTUNGEN = [
       </svg>
     ),
     titel: 'Raumanalyse & Konzeptentwicklung',
-    text: 'Vertiefende Raumanalysen als Grundlage für ideenreiche städtebauliche und freiraumplanerische Konzepte. Entwicklungsplanungen, städtebauliche Gutachten und Machbarkeitsstudien auf unterschiedlichen Maßstabsebenen.',
+    punkte: [
+      'Vertiefende Raumanalysen als Grundlage für ideenreiche städtebaulich-freiraumplanerisch-verkehrliche Konzepte',
+      'Städtebauliche Gutachten, Wettbewerbe und Machbarkeitsstudien auf unterschiedlichen Maßstabsebenen',
+    ],
   },
   {
     key: 'rahmenplanung',
@@ -169,7 +177,11 @@ const LEISTUNGEN = [
       </svg>
     ),
     titel: 'Rahmenplanung',
-    text: 'Integrierte Rahmenplanungen mit städtebaulichen Vertiefungsstudien und umsetzungsorientierten Maßnahmenkonzepten.',
+    punkte: [
+      'Integrierte Rahmenplanungen mit städtebaulichen Vertiefungsstudien',
+      'Variantenentwicklung und umsetzungsorientierte Maßnahmenkonzepte inkl. Finanzierungsplanung',
+      'Bedarfsberechnungen für soziale und grüne Infrastruktur im Zusammenhang mit Wohnungsneubau',
+    ],
   },
   {
     key: 'bauleitplanung',
@@ -183,7 +195,13 @@ const LEISTUNGEN = [
       </svg>
     ),
     titel: 'Bauleitplanung',
-    text: 'Umfassende Planverfahren für Flächennutzungs- und Bebauungspläne sowie Ergänzungssatzungen.',
+    punkte: [
+      'Umfassende Planverfahren für Flächennutzungs- und Bebauungspläne bis Satzungsbeschluss in den Bereichen Quartiersplanungen, Wohnungsbau, Mehrfachnutzungen sowie Solar- und Windenergie und BVG-E-Mobility',
+      'Satzungen gem. §§ 34 und 35 BauGB',
+      'Anwendung Berliner Modell der kooperativen Baulandentwicklung',
+      'Begleitung Abschluss städtebaulicher Verträge',
+      'Umsetzung Anforderungen X-Planung',
+    ],
   },
   {
     key: 'quartier',
@@ -196,7 +214,11 @@ const LEISTUNGEN = [
       </svg>
     ),
     titel: 'Quartiersentwicklung',
-    text: 'Begleitung und Steuerung von Quartiersentwicklungen. Vorbereitende Untersuchungen nach § 141 BauGB. Integrierte Stadt- und Stadtteilentwicklungskonzepte.',
+    punkte: [
+      'Begleitung und Steuerung von Quartiersentwicklungen',
+      'Integrierte Stadt- und Stadtteilentwicklungskonzepte (INSEK, IGEK, IEK)',
+      'Vorbereitende Untersuchungen nach § 141 BauGB',
+    ],
   },
   {
     key: 'qualitaet',
@@ -207,8 +229,12 @@ const LEISTUNGEN = [
         <polyline points="12,12 15,15 20,9"/>
       </svg>
     ),
-    titel: 'Qualitätssichernde Verfahren',
-    text: 'Organisation und Steuerung von Wettbewerbs- und Gutachterverfahren. Mitwirkung als Berater*innen, Fachexpert*innen, Obergutachter*innen und Fachpreisrichter*innen.',
+    titel: 'Wettbewerbskoordination',
+    punkte: [
+      'Organisation und Steuerung von qualitätssichernden Verfahren (Wettbewerbs- und Gutachterverfahren) für öffentliche und private Auftraggeber, RPW-konform',
+      'Mitwirkung als Berater*innen und Fachpreisrichter*innen',
+      'Mitglied im Fachregister für Fachpreisrichterinnen und Fachpreisrichter sowie für Vergabe- und Wettbewerbsbetreuung der Architektenkammer Berlin',
+    ],
   },
   {
     key: 'partizipation',
@@ -223,7 +249,10 @@ const LEISTUNGEN = [
       </svg>
     ),
     titel: 'Partizipationsverfahren',
-    text: 'Strukturierung und Steuerung von formellen sowie informellen Partizipationsprozessen. Anwendung unterschiedlicher Beteiligungsformate.',
+    punkte: [
+      'Strukturierung und Steuerung von formellen sowie informellen Partizipationsprozessen hinsichtlich Information, Mitwirkung und Beteiligung',
+      'Anwendung unterschiedlicher Beteiligungsformate',
+    ],
   },
   {
     key: 'koordinierung',
@@ -237,10 +266,101 @@ const LEISTUNGEN = [
         <line x1="8" y1="25" x2="24" y2="25"/>
       </svg>
     ),
-    titel: 'Koordinierung Fachgutachten',
-    text: 'Einbeziehung von Fachplanungen (Umwelt, Naturschutz, Immissionsschutz, Verkehr). Kooperation mit Kolleg*innen aus Landschaftsplanung, Architektur und Verkehrsplanung.',
+    titel: 'Koordinierung und Kommunikation',
+    punkte: [
+      'Koordinierung Fachgutachten',
+      'Einbeziehung von Fachplanungen (Umwelt, Naturschutz, Immissionsschutz, Verkehr); Kooperation mit Kolleg*innen aus Landschaftsplanung, Architektur und Verkehrsplanung',
+      'Einbindung und Abstimmung öffentlicher und privater Auftraggebender, Fachverwaltungen, Fachplaner und sonstiger Akteure',
+    ],
   },
 ]
+
+const ARBEITSWEISE = [
+  {
+    key: 'ganzheitlich',
+    titel: 'Ganzheitliches Planungsverständnis',
+    text: 'Wir betrachten Stadt und Raum in ihren vielfältigen Zusammenhängen. Unterschiedliche Anforderungen aus Gesellschaft, Umwelt, Nutzung und Gestaltung werden zu tragfähigen Konzepten verbunden.',
+    punkte: [
+      'Verknüpfung räumlicher, funktionaler und gesellschaftlicher Anforderungen',
+      'Entwicklung langfristig tragfähiger Lösungen',
+      'Betrachtung von Gesamtstadt bis Quartier',
+      'Verbindung von Planung, Umsetzung und Perspektive',
+    ],
+  },
+  {
+    key: 'ortsbezogen',
+    titel: 'Ortsbezogene Analyse und konzeptionelle Stärke',
+    text: 'Am Anfang jeder Planung steht das Verständnis des Ortes. Durch fundierte Analysen erfassen wir räumliche Zusammenhänge, Potenziale und Herausforderungen und entwickeln daraus individuelle Strategien.',
+    punkte: [
+      'tiefgehende Orts- und Raumanalysen',
+      'Erkennen von Entwicklungspotenzialen',
+      'Arbeiten mit stadträumlichen Zusammenhängen',
+      'Entwicklung ortsspezifischer Lösungsansätze',
+      'Übersetzung komplexer Zusammenhänge in klare Konzepte und räumliche Bilder',
+    ],
+  },
+  {
+    key: 'strategisch',
+    titel: 'Strategisches Denken und Maßnahmenorientierung',
+    text: 'Wir verbinden Zielbilder aus komplexen Rahmenbedingungen mit realistischen Handlungsschritten. Unsere langjährige Erfahrung ermöglicht eine verlässliche Verfahrenssicherheit von langjährigen Planungsprozessen, bei denen wir durch das Aufzeigen von Maßnahmen die Grundlagen für konkrete Entscheidungen schaffen.',
+    punkte: [
+      'Erkennen von Potenzialen und Entwicklungsspielräumen',
+      'Priorisierung von Maßnahmen',
+      'Entwicklung robuster und anpassungsfähiger Lösungen',
+      'Denken in langfristigen Prozessen',
+    ],
+  },
+  {
+    key: 'verfahrenssicherheit',
+    titel: 'Integrative Verfahrenssicherheit',
+    text: 'Wir führen komplexe Planungsprozesse zielgerichtet zusammen. Als Schnittstelle zwischen Fachdisziplinen, Auftraggebern und weiteren Beteiligten verfügen wir über Erfahrung in anspruchsvollen Verfahren mit vielen Beteiligten und vielfältigen Rahmenbedingungen.',
+    punkte: [
+      'Koordination interdisziplinärer Teams und Fachplanungen',
+      'Zusammenführung unterschiedlicher Anforderungen',
+      'Strukturierung komplexer Aufgabenstellungen',
+      'Steuerung von Planungsabläufen',
+      'Schnittstellenmanagement zwischen Verwaltung, Politik, Fachplanung und Öffentlichkeit',
+    ],
+  },
+  {
+    key: 'dialog',
+    titel: 'Qualität durch Dialog und Kooperation',
+    text: 'Gute Planung entsteht im Austausch. Wir schaffen transparente Prozesse, vermitteln zwischen unterschiedlichen Interessen und entwickeln gemeinsam tragfähige Lösungen.',
+    punkte: [
+      'kooperative Zusammenarbeit mit Verwaltung, Politik, Öffentlichkeit und Fachplanung',
+      'Übersetzung komplexer Inhalte in verständliche Kommunikation',
+      'Vermittlung zwischen unterschiedlichen Interessen',
+      'sicherer Umgang mit komplexen, langjährigen Verfahren',
+      'zuverlässige Prozessbegleitung',
+    ],
+  },
+]
+
+function BulletList({ items, isMobile }) {
+  return (
+    <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+      {items.map((item) => (
+        <li key={item} style={{
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 12,
+          fontSize: isMobile ? 15 : 16,
+          color: A.mute,
+          lineHeight: 1.65,
+          marginBottom: 6,
+        }}>
+          <span aria-hidden style={{
+            width: 6, height: 6,
+            marginTop: isMobile ? 9 : 10,
+            background: A.accent,
+            flexShrink: 0,
+          }} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 // Bureaux partenaires récurrents (≥ 2 projets), extraits & normalisés depuis src/data/projects.js
 const NETZWERK = [
@@ -537,6 +657,70 @@ export default function Buero() {
         </div>
       </div>
 
+      {/* Arbeitsweise */}
+      <div id="arbeitsweise" style={{
+        padding: `${vPad}px ${hPad}px`,
+        borderTop: `1px solid ${A.rule}`,
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: gridCols,
+          gap: 24,
+          marginBottom: isMobile ? 36 : 52,
+        }}>
+          <div style={{ gridColumn: contentCol }}>
+            <h2 style={{
+              fontWeight: 600,
+              fontSize: isMobile ? 20 : 30,
+              letterSpacing: '-0.015em',
+              margin: 0,
+            }}>
+              Unsere Arbeitsweise
+            </h2>
+          </div>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: gridCols,
+          gap: 24,
+        }}>
+          <div style={{
+            gridColumn: isMobile ? 'auto' : '3 / span 9',
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+            gap: isMobile ? 0 : 40,
+            rowGap: 0,
+          }}>
+            {ARBEITSWEISE.map((a) => (
+              <div key={a.key} style={{
+                padding: `${isMobile ? 20 : 40}px 0`,
+              }}>
+                <div style={{
+                  fontSize: isMobile ? 17 : 20,
+                  fontWeight: 600,
+                  letterSpacing: '-0.01em',
+                  lineHeight: 1.3,
+                  marginBottom: 10,
+                  color: A.ink,
+                }}>
+                  {a.titel}
+                </div>
+                <p style={{
+                  fontSize: isMobile ? 15 : 16,
+                  color: A.mute,
+                  lineHeight: 1.65,
+                  margin: '0 0 14px',
+                }}>
+                  {a.text}
+                </p>
+                <BulletList items={a.punkte} isMobile={isMobile} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* 02 / Leistungen */}
       <div id="leistungen" style={{
         padding: `${vPad}px ${hPad}px`,
@@ -592,13 +776,7 @@ export default function Buero() {
                 }}>
                   {l.titel}
                 </div>
-                <div style={{
-                  fontSize: isMobile ? 15 : 16,
-                  color: A.mute,
-                  lineHeight: 1.65,
-                }}>
-                  {l.text}
-                </div>
+                <BulletList items={l.punkte} isMobile={isMobile} />
               </div>
             ))}
           </div>

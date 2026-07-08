@@ -5,6 +5,7 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
 import projects from '../data/projects'
+import { projectThemen, themaLabel, filterHref } from '../data/filters'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 
 const PROSE_STYLES = `
@@ -283,6 +284,30 @@ export default function ProjectDetail() {
               padding: '5px 12px',
             }}>
               {project.ergebnis}
+            </div>
+          )}
+
+          {/* Themen tags — link back to the filtered project list */}
+          {projectThemen(project).length > 0 && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12 }}>
+              {projectThemen(project).map((key) => (
+                <Link
+                  key={key}
+                  to={filterHref(null, key)}
+                  style={{
+                    fontSize: 13,
+                    color: A.mute,
+                    border: `1px solid ${A.ruleSoft}`,
+                    background: A.ruleSoft,
+                    padding: '3px 10px',
+                    transition: 'background 0.15s ease, color 0.15s ease',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.background = A.ink; e.currentTarget.style.color = A.bg }}
+                  onMouseLeave={e => { e.currentTarget.style.background = A.ruleSoft; e.currentTarget.style.color = A.mute }}
+                >
+                  {themaLabel(key)}
+                </Link>
+              ))}
             </div>
           )}
 
