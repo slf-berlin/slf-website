@@ -371,7 +371,7 @@ const NETZWERK = [
   { name: 'Hoffmann-Leichter Ingenieurgesellschaft, Berlin', url: 'https://hoffmann-leichter.de/' },
   { name: 'L.I.S.T. Stadtentwicklungsgesellschaft, Berlin', url: 'https://www.list-gmbh.de/' },
   { name: 'POLA Landschaftsarchitekten, Berlin', url: 'https://www.pola-berlin.de/' },
-  { name: 'SHP Ingenieure, Hannover', url: 'https://shp-verkehrsplanung.de/' },
+  { name: 'SHP Verkehrsplanung, Hannover', url: 'https://shp-verkehrsplanung.de/' },
   { name: 'Stefan Wallmann Landschaftsarchitekten, Berlin', url: 'https://www.buero-wallmann.de/' },
   { name: 'ums Stadtstrategien, Leipzig', url: 'https://www.um-systems.de/' },
 ]
@@ -724,6 +724,7 @@ export default function Buero() {
       {/* 02 / Leistungen */}
       <div id="leistungen" style={{
         padding: `${vPad}px ${hPad}px`,
+        borderTop: `1px solid ${A.rule}`,
       }}>
         <div style={{
           display: 'grid',
@@ -784,7 +785,7 @@ export default function Buero() {
       </div>
 
       {/* 03 / Team */}
-      <div id="team" style={{ padding: `${vPad}px ${hPad}px` }}>
+      <div id="team" style={{ padding: `${vPad}px ${hPad}px`, borderTop: `1px solid ${A.rule}` }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: gridCols,

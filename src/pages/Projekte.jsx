@@ -207,7 +207,7 @@ export default function Projekte() {
                 fontSize: 15,
                 color: isActive ? A.ink : A.mute,
                 fontWeight: isActive ? 600 : 500,
-                marginLeft: f.key === 'projektliste' ? 'auto' : 0,
+                marginLeft: f.key === 'projektliste' && !isMobile ? 'auto' : 0,
               }}
             >
               {f.label}

@@ -53,6 +53,7 @@ const navItems = [
       { label: 'Arbeitsweise', to: '/buero#arbeitsweise' },
       { label: 'Leistungen', to: '/buero#leistungen' },
       { label: 'Team', to: '/buero/team' },
+      { label: 'Netzwerk & Kooperationen', to: '/buero#netzwerk' },
     ],
   },
   { label: 'Kontakt', to: '/kontakt' },
