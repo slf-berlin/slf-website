@@ -398,7 +398,10 @@ export default function Projekte() {
                 }}>
                   {p.titel}
                 </span>
-                <span style={{ fontSize: 14, color: A.mute, whiteSpace: 'nowrap' }}>
+                <span style={{
+                  fontSize: 14, color: A.mute, lineHeight: 1.35, textAlign: 'right',
+                  whiteSpace: (p.jahr && p.jahr.length > 16) ? 'normal' : 'nowrap',
+                }}>
                   {p.jahr ?? (p.wpDate ? new Date(p.wpDate).getFullYear() : null)}
                 </span>
               </div>
