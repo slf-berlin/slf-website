@@ -7,6 +7,7 @@ import ProjectFeedItem from '../components/ProjectFeedItem'
 import projects from '../data/projects'
 import heroBild from '../assets/deckblatt-homepage-v3.jpg'
 import { useWindowWidth } from '../hooks/useWindowWidth'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const FEATURED_IDS = [
   'umgestaltung-innenstadt-von-burloer-strasse-bis-rathausplatz-in-rhede',
@@ -58,6 +59,7 @@ const HERO_STYLES = `
 `
 
 export default function Home() {
+  usePageMeta() // titre + description par défaut (page d'accueil)
   const width = useWindowWidth()
   const isMobile = width < 768
   const [hoverMehr, setHoverMehr] = useState(false)

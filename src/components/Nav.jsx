@@ -16,6 +16,9 @@ let logoIntroDone = false
 
 const LOGO_INTRO_STYLES = `
 .slf-logo svg { height: 100%; width: auto; display: block; overflow: visible; }
+.slf-logo .slf-mark { transition: transform 0.25s ease; }
+.slf-logo:hover .slf-mark-stadt { transform: translateY(-4px); }
+.slf-logo:hover .slf-mark-fluss { transform: translateY(4px); }
 @media (prefers-reduced-motion: no-preference) {
   .slf-logo--intro .slf-word { opacity: 0; animation: slfWordIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
   .slf-logo--intro .slf-word-1 { animation-delay: 0.08s; }

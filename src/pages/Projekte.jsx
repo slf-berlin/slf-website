@@ -8,6 +8,7 @@ import BackToTop from '../components/BackToTop'
 import projects from '../data/projects'
 import { PROJEKTE_NAV, FILTER_FN, THEMEN_NAV, themaFilterFn, filterHref, projectThemen, themaLabel } from '../data/filters'
 import { useWindowWidth } from '../hooks/useWindowWidth'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 function extractDaten(content, key) {
   if (!content) return null
@@ -148,6 +149,17 @@ export default function Projekte() {
   const activeKey = searchParams.get('filter')
   const activeThema = searchParams.get('thema')
   const isListView = activeKey === 'projektliste'
+
+  // Titre = filtre actif (catégorie et/ou thème), sinon « Projekte »
+  const katLabel = activeKey
+    ? PROJEKTE_NAV.find(t => t.key === activeKey)?.label
+    : null
+  const metaTitle = [katLabel, activeThema ? themaLabel(activeThema) : null]
+    .filter(Boolean).join(' · ') || 'Projekte'
+  usePageMeta(
+    metaTitle,
+    'Projekte von Stadt Land Fluss — Stadt- und Quartiersentwicklung, Städtebau, Bauleitplanung und Verfahrensbetreuung in Berlin und Brandenburg.'
+  )
 
   const [sortKey, setSortKey] = useState('titel')
   const [sortDir, setSortDir] = useState('asc')

@@ -4,6 +4,7 @@ import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
 import { useWindowWidth } from '../hooks/useWindowWidth'
+import { usePageMeta } from '../hooks/usePageMeta'
 import { ensureImageStyles } from '../components/SmartImage'
 import { TEAM } from '../data/team'
 
@@ -575,6 +576,10 @@ function TeamCard({ member, onClick }) {
 }
 
 export default function Buero() {
+  usePageMeta(
+    'Büro',
+    'Arbeitsweise, Leistungen, Team und Netzwerk von Stadt Land Fluss — Büro für Stadtplanung und Städtebau in Berlin.'
+  )
   const width = useWindowWidth()
   const isMobile = width < 768
   const [selected, setSelected] = useState(null)

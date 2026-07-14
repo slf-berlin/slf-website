@@ -7,6 +7,7 @@ import BackToTop from '../components/BackToTop'
 import projects from '../data/projects'
 import { projectThemen, themaLabel, filterHref } from '../data/filters'
 import { useWindowWidth } from '../hooks/useWindowWidth'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const PROSE_STYLES = `
 .slf-prose p { margin: 0 0 1.2em; line-height: 1.8; }
@@ -145,9 +146,12 @@ export default function ProjectDetail() {
   }, [id])
 
   const idx = projects.findIndex(p => p.id === id)
-  if (idx === -1) return <Navigate to="/projekte" replace />
+  const project = idx === -1 ? null : projects[idx]
 
-  const project = projects[idx]
+  // Hook appelé inconditionnellement (avant le return) — règle des hooks.
+  usePageMeta(project?.titel, project?.beschreibung)
+
+  if (idx === -1) return <Navigate to="/projekte" replace />
   const prev = idx > 0 ? projects[idx - 1] : null
   const next = idx < projects.length - 1 ? projects[idx + 1] : null
 

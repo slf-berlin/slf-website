@@ -2,8 +2,10 @@ import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import { useWindowWidth } from '../hooks/useWindowWidth'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Kontakt() {
+  usePageMeta('Kontakt', 'Kontakt und Anfahrt — Stadt Land Fluss PartG mbB, Büro für Stadtplanung und Städtebau in Berlin.')
   const width = useWindowWidth()
   const isMobile = width < 768
 
