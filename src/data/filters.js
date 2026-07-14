@@ -23,7 +23,7 @@ export const THEMEN_NAV = [
   { label: 'Wohnungsbau', key: 'wohnungsbau' },
   { label: 'Gewerbeentwicklung', key: 'gewerbeentwicklung' },
   { label: 'Klimaanpassung', key: 'klimaanpassung' },
-  { label: 'Spielplätze', key: 'spielplaetze' },
+  { label: 'Spielplatzentwicklung', key: 'spielplaetze' },
   { label: 'Nachverdichtung / Innenentwicklung', key: 'nachverdichtung' },
   { label: 'Transformation', key: 'transformation' },
   { label: 'Autoarmes Quartier', key: 'autoarmes-quartier' },

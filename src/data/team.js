@@ -75,7 +75,7 @@ export const TEAM = [
   },
   {
     name: 'Jan Hamza',
-    email: null,
+    email: 'hamza@slf-berlin.de',
     photo: 'https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/08/img-20220808-wa0033-860x1110.jpg',
     ausbildung: 'M. Sc. Nachhaltige Stadt- und Raumplanung, Université de Lausanne, Schweiz (2022)',
     rolle: 'Mitarbeiter',
@@ -87,7 +87,7 @@ export const TEAM = [
   },
   {
     name: 'Lina Yener',
-    email: null,
+    email: 'yener@slf-berlin.de',
     photo: 'https://www.slf-berlin.de/wordpress/wp-content/uploads/2024/07/img-20210820-201732-e1720618489786-860x1080.jpg',
     ausbildung: 'M. Sc. Stadt- und Regionalplanung, TU Berlin (2025)',
     rolle: 'Mitarbeiterin',

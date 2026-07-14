@@ -488,6 +488,19 @@ function Modal({ member, onClose }) {
               </div>
             )}
 
+            {member.email && (
+              <a
+                href={`mailto:${member.email}`}
+                style={{
+                  display: 'inline-block', marginTop: 8,
+                  fontSize: 15, color: A.ink,
+                  textDecoration: 'underline', textUnderlineOffset: 3,
+                }}
+              >
+                {member.email}
+              </a>
+            )}
+
             <div style={{ fontSize: 16, color: A.mute, marginTop: 7, lineHeight: 1.5, marginBottom: 22 }}>
               {member.ausbildung}
             </div>

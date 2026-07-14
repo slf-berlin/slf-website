@@ -1,7 +1,7 @@
 // Assignation éditoriale des thèmes par projet (clé = id/slug WordPress).
 // Ce fichier est maintenu à la main — il n'est PAS écrasé par `npm run sync`.
 // Les clés de thèmes correspondent à THEMEN_NAV dans src/data/filters.js :
-//   wohnungsbau, gewerbeentwicklung, klimaanpassung, spielplaetze,
+//   wohnungsbau, gewerbeentwicklung, klimaanpassung, spielplaetze (= Spielplatzentwicklung),
 //   nachverdichtung (= Nachverdichtung / Innenentwicklung), transformation,
 //   autoarmes-quartier, partizipation, wettbewerbe
 // Un nouveau projet WP sans entrée ici n'apparaît sous aucun filtre thème.
@@ -9,7 +9,7 @@
 export const PROJECT_THEMEN = {
   'umgestaltung-innenstadt-von-burloer-strasse-bis-rathausplatz-in-rhede': ['wohnungsbau', 'nachverdichtung', 'transformation', 'wettbewerbe'],
   'quartiersentwicklung-maximilianstrasse-in-nuernberg': ['wohnungsbau', 'klimaanpassung', 'transformation', 'autoarmes-quartier', 'wettbewerbe'],
-  'wettbewerb-hafenareal-kassel': ['wohnungsbau', 'klimaanpassung', 'spielplaetze', 'transformation', 'partizipation', 'wettbewerbe'],
+  'wettbewerb-hafenareal-kassel': ['wohnungsbau', 'klimaanpassung', 'transformation', 'partizipation', 'wettbewerbe'],
   'innenentwicklungskonzepte-iek-berlin': ['wohnungsbau', 'nachverdichtung'],
   'zu-den-binnenhoefen-gransee-gutachterverfahren-neues-bahnhofsquartier-2025-26': ['wohnungsbau', 'klimaanpassung', 'autoarmes-quartier', 'wettbewerbe'],
   'wettbewerbs-koordination-blankenburger-sueden-teilflaeche-sued': ['wohnungsbau', 'gewerbeentwicklung', 'klimaanpassung', 'partizipation'],
@@ -40,13 +40,13 @@ export const PROJECT_THEMEN = {
   'wohnen-an-der-michelangelostr': ['wohnungsbau', 'nachverdichtung'],
   'geras-neue-mitte': ['nachverdichtung', 'partizipation'],
   'machbarkeitsstudie-treseburger-strasse': ['gewerbeentwicklung'],
-  'vertiefende-staedtebauliche-studie-buch-sued': ['wohnungsbau', 'gewerbeentwicklung', 'spielplaetze'],
+  'vertiefende-staedtebauliche-studie-buch-sued': ['wohnungsbau', 'gewerbeentwicklung'],
   'breitenguessbach': ['wettbewerbe'],
-  'koepenicker-allee': ['wohnungsbau', 'spielplaetze', 'transformation', 'wettbewerbe'],
+  'koepenicker-allee': ['wohnungsbau', 'transformation', 'wettbewerbe'],
   'vorbereitende-untersuchungen-mitte-boettgerstrassenviertel': ['partizipation'],
   'rahmenplan-karow-2': ['wohnungsbau', 'partizipation'],
   'wohnquartier-am-muehlenbecker-weg': ['wohnungsbau', 'transformation'],
-  'waldowplatz': ['wohnungsbau', 'spielplaetze'],
+  'waldowplatz': ['wohnungsbau'],
   'ehemaliges-strassenbahndepot': ['transformation', 'partizipation'],
   'friedhof-st-johannes-evangelist': ['wohnungsbau', 'transformation', 'wettbewerbe'],
   'explorative-studie-fuer-ein-raeumliches-leitbild-tourismus-berlin': [],

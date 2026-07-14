@@ -1,7 +1,5 @@
 # Stadt Land Fluss – Website
 
-Diese Anleitung richtet sich an alle, die Inhalte auf der Website pflegen möchten – auch ohne Programmierkenntnisse.
-
 ---
 
 ## Wie funktioniert das System?
