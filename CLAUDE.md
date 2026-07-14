@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Website for **Stadt Land Fluss PartG mbB**, a Berlin urban-planning practice founded 1992. Partners: Georg Börsch-Supan, Samir Hamzeh, Barbara Horst. J. Miller Stevens (founder) remains a consultant.
 
-Design direction: **Bold Editorial** (merged from `style/bold-archi`). Reference source: `_design/direction-a.jsx` and `_design/screenshots/`.
+Design direction: **Bold Editorial** (merged from `style/bold-archi`). Reference source: `_design/direction-a.jsx`.
 
 ## Commands
 
