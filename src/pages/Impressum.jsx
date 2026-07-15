@@ -76,45 +76,41 @@ export default function Impressum() {
           <div style={textStyle}>
             Partnerschaftsregister<br />
             Registergericht: Amtsgericht Charlottenburg (Berlin)<br />
-            Registernummer: PR [Nummer bitte ergänzen]
+            Registernummer: PR 1850B
           </div>
 
           <div style={sectionHeadStyle}>Umsatzsteuer-Identifikationsnummer</div>
           <div style={textStyle}>
             USt-IdNr. gemäß § 27a Umsatzsteuergesetz:<br />
-            [DE… bitte ergänzen, sofern vorhanden]
+            DE453383605
           </div>
 
           <div style={sectionHeadStyle}>Berufsrechtliche Angaben</div>
           <div style={textStyle}>
-            Gesetzliche Berufsbezeichnung: [z. B. Stadtplaner / Architekt – bitte ergänzen]<br />
-            Verliehen in: Deutschland<br />
-            Zuständige Kammer: [z. B. Architektenkammer Berlin – bitte ergänzen]<br />
-            Es gelten die berufsrechtlichen Regelungen (u. a. Baukammergesetz Berlin, Berufsordnung),
-            einsehbar bei der zuständigen Kammer.
+            Die berufsrechtlichen Regelungen können über die Webseite Architektenkammer Berlin{' '}
+            <a href="https://www.ak-berlin.de" target="_blank" rel="noopener noreferrer" style={linkStyle}>www.ak-berlin.de</a>
+            {' '}/ Kapitel: Recht eingesehen und abgerufen werden. Die gesetzlichen Berufsbezeichnungen „Stadtplaner" und „Architektin" wurden in Deutschland erworben von Stadt Land Fluss durch Eintragung in die Architektenliste der Berliner Architektenkammer.
+            <br /><br />
+            Partnerschaftsgesellschaft eingetragen in das Gesellschaftsverzeichnis der Berufsgesellschaften bei der Architektenkammer Berlin mit der Register-Nr. PG375
+            <br /><br />
+            Georg Börsch-Supan, Stadtplaner, Mitgliedsnr. S0419<br />
+            Samir Hamzeh, Stadtplaner, Mitgliedsnr. S0625<br />
+            Barbara Horst, Architektin, Mitgliedsnr. 09918
+            <br /><br />
+            Architektenkammer Berlin<br />
+            Alte Jakobstraße 149<br />
+            D-10969 Berlin
+            <br /><br />
+            Telefon: +49(0)30. 293307-0<br />
+            Mail: <a href="mailto:kammer@ak-berlin.de" style={linkStyle}>kammer@ak-berlin.de</a><br />
+            Web: <a href="https://www.ak-berlin.de" target="_blank" rel="noopener noreferrer" style={linkStyle}>www.ak-berlin.de</a>
           </div>
 
           <div style={sectionHeadStyle}>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</div>
           <div style={textStyle}>
-            [Name der verantwortlichen Person – bitte ergänzen]<br />
+            Georg Börsch-Supan, Samir Hamzeh, Barbara Horst<br />
             Mahlower Straße 24<br />
             12049 Berlin
-          </div>
-
-          <div style={{ height: 1, background: A.rule, margin: '36px 0' }} />
-
-          <div style={sectionHeadStyle}>Gestaltung</div>
-          <div style={textStyle}>
-            <a href="https://www.annaweis.de" target="_blank" rel="noopener noreferrer" style={linkStyle}>
-              Anna Weis
-            </a>
-          </div>
-
-          <div style={sectionHeadStyle}>Umsetzung</div>
-          <div style={textStyle}>
-            <a href="https://ron.kanzownet.de" target="_blank" rel="noopener noreferrer" style={linkStyle}>
-              Ron Warmbier
-            </a>
           </div>
 
           <div style={{ height: 1, background: A.rule, margin: '36px 0' }} />
