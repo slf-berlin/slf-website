@@ -287,14 +287,16 @@ Always serve static assets via `import.meta.env.BASE_URL + 'filename'` so the pa
 
 ## Déploiement
 
+**Tout est hébergé chez IONOS** — le site React et le WordPress source. Aucun service tiers (pas de Netlify, pas de GitHub Pages en production). La Datenschutz nomme donc IONOS SE comme hébergeur (serveurs en Allemagne / UE) — cette mention est correcte tant que l'hébergement reste chez IONOS ; à corriger si l'hébergeur change un jour.
+
 ### Architecture cible
 
 ```
-slf-berlin.de        → nouveau site React (hébergé sur Netlify)
-wp.slf-berlin.de     → WordPress existant (déplacé sur sous-domaine IONOS)
+slf-berlin.de        → nouveau site React statique (webspace IONOS)
+wp.slf-berlin.de     → WordPress existant (sous-domaine IONOS, admin + API REST)
 ```
 
-WordPress reste accessible pour l'admin et l'API REST. Le script de sync tourne toujours normalement.
+WordPress reste en ligne uniquement pour l'admin et l'API REST (source du `npm run sync`). Il n'est plus le site public.
 
 ### Étapes à suivre (hébergeur : IONOS)
 
@@ -312,19 +314,41 @@ https://www.slf-berlin.de/wp-json/wp/v2/posts
 https://wp.slf-berlin.de/wp-json/wp/v2/posts
 ```
 
-**3. Déployer le React sur Netlify**
-- Créer un compte sur [netlify.com](https://netlify.com)
-- Connecter le repo GitHub → Netlify déploie automatiquement à chaque `git push`
-- Réglages de build : `npm run build` / dossier de sortie : `dist`
-- Ajouter un fichier `public/_redirects` avec `/* /index.html 200` pour le SPA routing
+**3. Régler la base Vite sur la racine du domaine**
+Le site sera servi à la racine de `slf-berlin.de`, plus dans un sous-dossier `/slf-website/`. Dans `vite.config.js` :
+```js
+// avant (GitHub Pages)
+base: '/slf-website/',
+// après (racine IONOS)
+base: '/',
+```
+Le routeur suit automatiquement (`basename={import.meta.env.BASE_URL}` dans `App.jsx`) et tous les assets servis via `import.meta.env.BASE_URL + 'filename'` restent corrects. `BASE_URL` vaudra alors `/`.
 
-**4. Pointer le domaine `slf-berlin.de` vers Netlify**
-- Dans Netlify : Domaines > ajouter `slf-berlin.de`
-- Dans IONOS : modifier les enregistrements DNS de `slf-berlin.de` pour pointer vers Netlify (Netlify fournit les valeurs exactes)
-- Prévoir 24–48h de propagation DNS
+**4. Ajouter le fallback SPA Apache (`.htaccess`)**
+IONOS sert le webspace via **Apache**. Sans réécriture, tout rechargement d'une route profonde (ex. `/projekte/xyz`) renvoie un 404. Créer `public/.htaccess` (Vite copie tel quel le contenu de `public/` dans `dist/`) :
+```apache
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+```
+(Ne PAS créer de `public/_redirects` — c'est un format Netlify, ignoré par Apache.)
+
+**5. Build et upload du dossier `dist/`**
+- `npm run build` génère `dist/` (le `prebuild` lance le sync WP + la sitemap)
+- Uploader **le contenu** de `dist/` (pas le dossier lui-même) à la racine du webspace IONOS via SFTP/FTP, ou brancher **IONOS Deploy Now** sur le repo GitHub (build `npm run build`, dossier de sortie `dist`) pour un déploiement automatique à chaque `git push`
+- Le script `npm run deploy` (gh-pages) n'est plus utilisé en production — le laisser ou le remplacer par la commande d'upload IONOS retenue
+
+**6. Vérifier le domaine `slf-berlin.de`**
+- Le domaine étant déjà chez IONOS, il suffit de pointer `slf-berlin.de` (et `www`) vers le webspace qui contient le `dist/` uploadé — pas de changement de DNS externe ni de propagation vers un tiers
+- Vérifier le certificat SSL (Let's Encrypt IONOS) sur le domaine principal et le sous-domaine WordPress
 
 ### Notes SEO
-Le nouveau site a une structure d'URLs différente de WordPress. Les anciennes URLs WP (ex. `/2023/01/nom-projet/`) deviendront des 404. Impact limité car les projets individuels n'étaient pas mis en avant dans le référencement, mais à surveiller dans Google Search Console après le déploiement.
+Le nouveau site a une structure d'URLs différente de WordPress. Les anciennes URLs WP (ex. `/2023/01/nom-projet/`) deviendront des 404. Impact limité car les projets individuels n'étaient pas mis en avant dans le référencement, mais à surveiller dans Google Search Console après le déploiement. Penser à mettre à jour l'URL de base dans `sitemap.xml` / `robots.txt` (générés au build) si elle pointe encore vers l'ancienne structure.
 
 ## Suggested next steps
 
