@@ -1,0 +1,157 @@
+{
+  "introAbsaetze": [
+    "Stadt Land Fluss wurde 1993 in Berlin gegründet und verfügt über umfassende Erfahrung in der praxisorientierten Stadtplanung und im kontextuellen Städtebau.",
+    "Wir arbeiten integrativ, komplex, fachübergreifend sowie teamorientiert und engagieren uns für die Sicherung einer menschenwürdigen Umwelt."
+  ],
+  "arbeitsweiseTitel": "Unsere Arbeitsweise",
+  "arbeitsweise": [
+    {
+      "key": "ganzheitlich",
+      "titel": "Ganzheitliches Planungsverständnis",
+      "text": "Wir betrachten Stadt und Raum in ihren vielfältigen Zusammenhängen. Unterschiedliche Anforderungen aus Gesellschaft, Umwelt, Nutzung und Gestaltung werden zu tragfähigen Konzepten verbunden.",
+      "punkte": [
+        "Verknüpfung räumlicher, funktionaler und gesellschaftlicher Anforderungen",
+        "Entwicklung langfristig tragfähiger Lösungen",
+        "Betrachtung von Gesamtstadt bis Quartier",
+        "Verbindung von Planung, Umsetzung und Perspektive"
+      ]
+    },
+    {
+      "key": "ortsbezogen",
+      "titel": "Ortsbezogene Analyse und konzeptionelle Stärke",
+      "text": "Am Anfang jeder Planung steht das Verständnis des Ortes. Durch fundierte Analysen erfassen wir räumliche Zusammenhänge, Potenziale und Herausforderungen und entwickeln daraus individuelle Strategien.",
+      "punkte": [
+        "tiefgehende Orts- und Raumanalysen",
+        "Erkennen von Entwicklungspotenzialen",
+        "Arbeiten mit stadträumlichen Zusammenhängen",
+        "Entwicklung ortsspezifischer Lösungsansätze",
+        "Übersetzung komplexer Zusammenhänge in klare Konzepte und räumliche Bilder"
+      ]
+    },
+    {
+      "key": "strategisch",
+      "titel": "Strategisches Denken und Maßnahmenorientierung",
+      "text": "Wir verbinden Zielbilder aus komplexen Rahmenbedingungen mit realistischen Handlungsschritten. Unsere langjährige Erfahrung ermöglicht eine verlässliche Verfahrenssicherheit von langjährigen Planungsprozessen, bei denen wir durch das Aufzeigen von Maßnahmen die Grundlagen für konkrete Entscheidungen schaffen.",
+      "punkte": [
+        "Erkennen von Potenzialen und Entwicklungsspielräumen",
+        "Priorisierung von Maßnahmen",
+        "Entwicklung robuster und anpassungsfähiger Lösungen",
+        "Denken in langfristigen Prozessen"
+      ]
+    },
+    {
+      "key": "verfahrenssicherheit",
+      "titel": "Integrative Verfahrenssicherheit",
+      "text": "Wir führen komplexe Planungsprozesse zielgerichtet zusammen. Als Schnittstelle zwischen Fachdisziplinen, Auftraggebern und weiteren Beteiligten verfügen wir über Erfahrung in anspruchsvollen Verfahren mit vielen Beteiligten und vielfältigen Rahmenbedingungen.",
+      "punkte": [
+        "Koordination interdisziplinärer Teams und Fachplanungen",
+        "Zusammenführung unterschiedlicher Anforderungen",
+        "Strukturierung komplexer Aufgabenstellungen",
+        "Steuerung von Planungsabläufen",
+        "Schnittstellenmanagement zwischen Verwaltung, Politik, Fachplanung und Öffentlichkeit"
+      ]
+    },
+    {
+      "key": "dialog",
+      "titel": "Qualität durch Dialog und Kooperation",
+      "text": "Gute Planung entsteht im Austausch. Wir schaffen transparente Prozesse, vermitteln zwischen unterschiedlichen Interessen und entwickeln gemeinsam tragfähige Lösungen.",
+      "punkte": [
+        "kooperative Zusammenarbeit mit Verwaltung, Politik, Öffentlichkeit und Fachplanung",
+        "Übersetzung komplexer Inhalte in verständliche Kommunikation",
+        "Vermittlung zwischen unterschiedlichen Interessen",
+        "sicherer Umgang mit komplexen, langjährigen Verfahren",
+        "zuverlässige Prozessbegleitung"
+      ]
+    }
+  ],
+  "leistungenTitel": "Unser Leistungsspektrum",
+  "leistungen": [
+    {
+      "key": "stadtentwicklung",
+      "titel": "Strategische Stadtentwicklungsplanung",
+      "punkte": [
+        "Analysen und Planungen zu stadtentwicklungsrelevanten Themen – von der Gesamtstadt bis zum Quartier",
+        "Ermittlung von raum- und bedarfsbezogenen Potenzialen für Wohnungsbau (Wohnbaukataster), soziale Infrastruktur und gewerbliche Entwicklung",
+        "Spielplatzentwicklungsplanung",
+        "Standortuntersuchungen"
+      ]
+    },
+    {
+      "key": "raumanalyse",
+      "titel": "Raumanalyse & Konzeptentwicklung",
+      "punkte": [
+        "Vertiefende Raumanalysen als Grundlage für ideenreiche städtebaulich-freiraumplanerisch-verkehrliche Konzepte",
+        "Städtebauliche Gutachten, Wettbewerbe und Machbarkeitsstudien auf unterschiedlichen Maßstabsebenen"
+      ]
+    },
+    {
+      "key": "rahmenplanung",
+      "titel": "Rahmenplanung",
+      "punkte": [
+        "Integrierte Rahmenplanungen mit städtebaulichen Vertiefungsstudien",
+        "Variantenentwicklung und umsetzungsorientierte Maßnahmenkonzepte inkl. Finanzierungsplanung",
+        "Bedarfsberechnungen für soziale und grüne Infrastruktur im Zusammenhang mit Wohnungsneubau"
+      ]
+    },
+    {
+      "key": "bauleitplanung",
+      "titel": "Bauleitplanung",
+      "punkte": [
+        "Umfassende Planverfahren für Flächennutzungs- und Bebauungspläne bis Satzungsbeschluss in den Bereichen Quartiersplanungen, Wohnungsbau, Mehrfachnutzungen sowie Solar- und Windenergie und BVG-E-Mobility",
+        "Satzungen gem. §§ 34 und 35 BauGB",
+        "Anwendung Berliner Modell der kooperativen Baulandentwicklung",
+        "Begleitung Abschluss städtebaulicher Verträge",
+        "Umsetzung Anforderungen X-Planung"
+      ]
+    },
+    {
+      "key": "quartier",
+      "titel": "Quartiersentwicklung",
+      "punkte": [
+        "Begleitung und Steuerung von Quartiersentwicklungen",
+        "Integrierte Stadt- und Stadtteilentwicklungskonzepte (INSEK, IGEK, IEK)",
+        "Vorbereitende Untersuchungen nach § 141 BauGB"
+      ]
+    },
+    {
+      "key": "qualitaet",
+      "titel": "Wettbewerbskoordination",
+      "punkte": [
+        "Organisation und Steuerung von qualitätssichernden Verfahren (Wettbewerbs- und Gutachterverfahren) für öffentliche und private Auftraggeber, RPW-konform",
+        "Mitwirkung als Berater*innen und Fachpreisrichter*innen",
+        "Mitglied im Fachregister für Fachpreisrichterinnen und Fachpreisrichter sowie für Vergabe- und Wettbewerbsbetreuung der Architektenkammer Berlin"
+      ]
+    },
+    {
+      "key": "partizipation",
+      "titel": "Partizipationsverfahren",
+      "punkte": [
+        "Strukturierung und Steuerung von formellen sowie informellen Partizipationsprozessen hinsichtlich Information, Mitwirkung und Beteiligung",
+        "Anwendung unterschiedlicher Beteiligungsformate"
+      ]
+    },
+    {
+      "key": "koordinierung",
+      "titel": "Koordinierung und Kommunikation",
+      "punkte": [
+        "Koordinierung Fachgutachten",
+        "Einbeziehung von Fachplanungen (Umwelt, Naturschutz, Immissionsschutz, Verkehr); Kooperation mit Kolleg*innen aus Landschaftsplanung, Architektur und Verkehrsplanung",
+        "Einbindung und Abstimmung öffentlicher und privater Auftraggebender, Fachverwaltungen, Fachplaner und sonstiger Akteure"
+      ]
+    }
+  ],
+  "netzwerkTitel": "Netzwerk & Kooperationen",
+  "netzwerkIntro": "Wir arbeiten projektbezogen mit Landschaftsarchitektur-, Architektur- und Stadtentwicklungsbüros zusammen. Eine Auswahl unserer regelmäßigen Partner:",
+  "netzwerk": [
+    { "name": "bgmr Landschaftsarchitekten, Berlin", "url": "https://www.bgmr.de/" },
+    { "name": "Franz Reschke Landschaftsarchitektur, Berlin", "url": "https://www.franzreschke.de/" },
+    { "name": "Fugmann Janotta Partner, Berlin", "url": "https://www.fjp.berlin/" },
+    { "name": "hochC Landschaftsarchitekten, Berlin", "url": "https://www.hochc.de/" },
+    { "name": "Hoffmann-Leichter Ingenieurgesellschaft, Berlin", "url": "https://hoffmann-leichter.de/" },
+    { "name": "L.I.S.T. Stadtentwicklungsgesellschaft, Berlin", "url": "https://www.list-gmbh.de/" },
+    { "name": "POLA Landschaftsarchitekten, Berlin", "url": "https://www.pola-berlin.de/" },
+    { "name": "SHP Verkehrsplanung, Hannover", "url": "https://shp-verkehrsplanung.de/" },
+    { "name": "Stefan Wallmann Landschaftsarchitekten, Berlin", "url": "https://www.buero-wallmann.de/" },
+    { "name": "ums Stadtstrategien, Leipzig", "url": "https://www.um-systems.de/" }
+  ]
+}

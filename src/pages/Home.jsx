@@ -8,17 +8,10 @@ import projects from '../data/projects'
 import heroBild from '../assets/deckblatt-homepage-v3.jpg'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 import { usePageMeta } from '../hooks/usePageMeta'
+// Textes éditables via le CMS (/admin → Seitentexte → Startseite)
+import texte from '../../content/pages/home.json'
 
-const FEATURED_IDS = [
-  'umgestaltung-innenstadt-von-burloer-strasse-bis-rathausplatz-in-rhede',
-  'wettbewerb-hafenareal-kassel',
-  'innenentwicklungskonzepte-iek-berlin',
-  'wettbewerbs-koordination-blankenburger-sueden-teilflaeche-sued',
-  'wettbewerb-leipzig',
-  'forkenbeckstr',
-  'seehafen-teichland-2',
-]
-const featured = FEATURED_IDS.map(id => projects.find(p => p.id === id)).filter(Boolean)
+const featured = texte.featuredIds.map(id => projects.find(p => p.id === id)).filter(Boolean)
 
 // Les trois fragments forment une phrase continue lue en travers du hero,
 // un fragment par bande : Idee → Konzept/Entwurf → Umsetzung.
@@ -173,7 +166,7 @@ export default function Home() {
             letterSpacing: '-0.015em', margin: 0,
             fontSize: isMobile ? 24 : 38,
           }}>
-            Willkommen bei Stadt Land Fluss
+            {texte.willkommenTitel}
           </div>
           <div style={{
             fontWeight: 400, lineHeight: 1.2,
@@ -181,23 +174,16 @@ export default function Home() {
             fontSize: isMobile ? 18 : 28,
             color: A.ink,
           }}>
-            Städtebau und Stadtplanung PartG mbB
+            {texte.willkommenUntertitel}
           </div>
-          <p style={{
-            fontSize: isMobile ? 17 : 21, lineHeight: 1.75, color: A.ink,
-            maxWidth: 640, marginTop: 32,
-          }}>
-            Wir verfügen über umfassende Erfahrungen in der integrierten Stadtplanung, im kontextuellen Städtebau und in der bauleitplanerischen Umsetzung.
-          </p>
-          <p style={{
-            fontSize: isMobile ? 17 : 21, lineHeight: 1.75, color: A.ink,
-            maxWidth: 640, marginTop: 20,
-          }}>
-            Wir arbeiten integrativ, komplex, fachübergreifend sowie teamorientiert und engagieren uns für die Sicherung einer menschenwürdigen, nachhaltigen und gleichwertigen Umwelt.
-          </p>
-          <p style={{ marginTop: 20, fontSize: isMobile ? 17 : 21, color: A.ink, lineHeight: 1.75, maxWidth: 640 }}>
-            Wir freuen uns auf spannende Projekte und weiterhin gute Zusammenarbeit in alten und neuen Konstellationen!
-          </p>
+          {texte.introAbsaetze.map((absatz, i) => (
+            <p key={i} style={{
+              fontSize: isMobile ? 17 : 21, lineHeight: 1.75, color: A.ink,
+              maxWidth: 640, marginTop: i === 0 ? 32 : 20,
+            }}>
+              {absatz}
+            </p>
+          ))}
           <Link
             to="/buero"
             onMouseEnter={() => setHoverMehr(true)}

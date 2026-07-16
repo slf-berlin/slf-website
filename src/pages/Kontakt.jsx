@@ -1,8 +1,11 @@
+import { Fragment } from 'react'
 import { tokens as A, base } from '../tokens'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 import { usePageMeta } from '../hooks/usePageMeta'
+// Textes éditables via le CMS (/admin → Seitentexte → Kontakt)
+import texte from '../../content/pages/kontakt.json'
 
 export default function Kontakt() {
   usePageMeta('Kontakt', 'Kontakt und Anfahrt — Stadt Land Fluss PartG mbB, Büro für Stadtplanung und Städtebau in Berlin.')
@@ -42,9 +45,7 @@ export default function Kontakt() {
             color: A.mute,
             margin: '0 0 40px',
           }}>
-            Unser Büro finden Sie im Neuköllner Schillerkiez,
-            in der Mahlower Straße 24,
-            Zugang über den Gewerbehof, Aufgang D.
+            {texte.intro}
           </p>
 
           <div style={{
@@ -63,10 +64,12 @@ export default function Kontakt() {
                 Adresse
               </div>
               <div style={{ fontSize: isMobile ? 16 : 17, lineHeight: 1.9, color: A.ink }}>
-                Stadt Land Fluss<br />
-                Städtebau und Stadtplanung PartG mbB<br />
-                Mahlower Straße 24<br />
-                12049 Berlin
+                {texte.adresse.map((zeile, i) => (
+                  <Fragment key={i}>
+                    {zeile}
+                    {i < texte.adresse.length - 1 && <br />}
+                  </Fragment>
+                ))}
               </div>
             </div>
 
@@ -82,17 +85,17 @@ export default function Kontakt() {
               </div>
               <div style={{ fontSize: isMobile ? 16 : 17, lineHeight: 1.9, color: A.ink }}>
                 <a
-                  href="tel:+493061280848"
+                  href={texte.telefonHref}
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
-                  030 612 808 48
+                  {texte.telefon}
                 </a>
                 <br />
                 <a
-                  href="mailto:info@slf-berlin.de"
+                  href={`mailto:${texte.email}`}
                   style={{ color: 'inherit', textDecoration: 'none', borderBottom: `1px solid ${A.rule}` }}
                 >
-                  info@slf-berlin.de
+                  {texte.email}
                 </a>
               </div>
             </div>

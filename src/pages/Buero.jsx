@@ -8,6 +8,9 @@ import { usePageMeta } from '../hooks/usePageMeta'
 import { ensureImageStyles } from '../components/SmartImage'
 import { TEAM } from '../data/team'
 import { localMedia } from '../lib/wpMedia'
+// Textes éditables via le CMS (/admin → Seitentexte → Büro).
+// Les icônes SVG des Leistungen restent ici (LEISTUNGEN_ICONS, par `key`).
+import texte from '../../content/pages/buero.json'
 
 ensureImageStyles()
 
@@ -131,212 +134,83 @@ function GalleryFigure({ src, caption, shape }) {
   )
 }
 
-const LEISTUNGEN = [
-  {
-    key: 'stadtentwicklung',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="18" width="5" height="10"/>
-        <rect x="9" y="11" width="6" height="17"/>
-        <rect x="17" y="15" width="5" height="13"/>
-        <rect x="24" y="7" width="6" height="21"/>
-        <line x1="1" y1="28" x2="31" y2="28"/>
-      </svg>
-    ),
-    titel: 'Strategische Stadtentwicklungsplanung',
-    punkte: [
-      'Analysen und Planungen zu stadtentwicklungsrelevanten Themen – von der Gesamtstadt bis zum Quartier',
-      'Ermittlung von raum- und bedarfsbezogenen Potenzialen für Wohnungsbau (Wohnbaukataster), soziale Infrastruktur und gewerbliche Entwicklung',
-      'Spielplatzentwicklungsplanung',
-      'Standortuntersuchungen',
-    ],
-  },
-  {
-    key: 'raumanalyse',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="13" cy="13" r="8"/>
-        <line x1="19" y1="19" x2="28" y2="28"/>
-        <line x1="10" y1="13" x2="16" y2="13"/>
-        <line x1="13" y1="10" x2="13" y2="16"/>
-      </svg>
-    ),
-    titel: 'Raumanalyse & Konzeptentwicklung',
-    punkte: [
-      'Vertiefende Raumanalysen als Grundlage für ideenreiche städtebaulich-freiraumplanerisch-verkehrliche Konzepte',
-      'Städtebauliche Gutachten, Wettbewerbe und Machbarkeitsstudien auf unterschiedlichen Maßstabsebenen',
-    ],
-  },
-  {
-    key: 'rahmenplanung',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="26" height="26"/>
-        <line x1="12" y1="3" x2="12" y2="29"/>
-        <line x1="20" y1="3" x2="20" y2="29"/>
-        <line x1="3" y1="12" x2="29" y2="12"/>
-        <line x1="3" y1="20" x2="29" y2="20"/>
-      </svg>
-    ),
-    titel: 'Rahmenplanung',
-    punkte: [
-      'Integrierte Rahmenplanungen mit städtebaulichen Vertiefungsstudien',
-      'Variantenentwicklung und umsetzungsorientierte Maßnahmenkonzepte inkl. Finanzierungsplanung',
-      'Bedarfsberechnungen für soziale und grüne Infrastruktur im Zusammenhang mit Wohnungsneubau',
-    ],
-  },
-  {
-    key: 'bauleitplanung',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="3" width="24" height="26"/>
-        <line x1="9" y1="9" x2="23" y2="9"/>
-        <line x1="9" y1="14" x2="23" y2="14"/>
-        <line x1="9" y1="19" x2="17" y2="19"/>
-        <polyline points="17,22 20,25 27,18"/>
-      </svg>
-    ),
-    titel: 'Bauleitplanung',
-    punkte: [
-      'Umfassende Planverfahren für Flächennutzungs- und Bebauungspläne bis Satzungsbeschluss in den Bereichen Quartiersplanungen, Wohnungsbau, Mehrfachnutzungen sowie Solar- und Windenergie und BVG-E-Mobility',
-      'Satzungen gem. §§ 34 und 35 BauGB',
-      'Anwendung Berliner Modell der kooperativen Baulandentwicklung',
-      'Begleitung Abschluss städtebaulicher Verträge',
-      'Umsetzung Anforderungen X-Planung',
-    ],
-  },
-  {
-    key: 'quartier',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="10" height="10"/>
-        <rect x="19" y="3" width="10" height="10"/>
-        <rect x="3" y="19" width="10" height="10"/>
-        <rect x="19" y="19" width="10" height="10"/>
-      </svg>
-    ),
-    titel: 'Quartiersentwicklung',
-    punkte: [
-      'Begleitung und Steuerung von Quartiersentwicklungen',
-      'Integrierte Stadt- und Stadtteilentwicklungskonzepte (INSEK, IGEK, IEK)',
-      'Vorbereitende Untersuchungen nach § 141 BauGB',
-    ],
-  },
-  {
-    key: 'qualitaet',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="16" cy="12" r="8"/>
-        <polyline points="11,19 8,29 16,25 24,29 21,19"/>
-        <polyline points="12,12 15,15 20,9"/>
-      </svg>
-    ),
-    titel: 'Wettbewerbskoordination',
-    punkte: [
-      'Organisation und Steuerung von qualitätssichernden Verfahren (Wettbewerbs- und Gutachterverfahren) für öffentliche und private Auftraggeber, RPW-konform',
-      'Mitwirkung als Berater*innen und Fachpreisrichter*innen',
-      'Mitglied im Fachregister für Fachpreisrichterinnen und Fachpreisrichter sowie für Vergabe- und Wettbewerbsbetreuung der Architektenkammer Berlin',
-    ],
-  },
-  {
-    key: 'partizipation',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="16" cy="8" r="4"/>
-        <path d="M8 28c0-8 16-8 16 0"/>
-        <circle cx="6" cy="12" r="3"/>
-        <path d="M1 26c0-6 10-6 10 0"/>
-        <circle cx="26" cy="12" r="3"/>
-        <path d="M21 26c0-6 10-6 10 0"/>
-      </svg>
-    ),
-    titel: 'Partizipationsverfahren',
-    punkte: [
-      'Strukturierung und Steuerung von formellen sowie informellen Partizipationsprozessen hinsichtlich Information, Mitwirkung und Beteiligung',
-      'Anwendung unterschiedlicher Beteiligungsformate',
-    ],
-  },
-  {
-    key: 'koordinierung',
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="16" cy="5" r="3"/>
-        <circle cx="5" cy="25" r="3"/>
-        <circle cx="27" cy="25" r="3"/>
-        <line x1="14" y1="8" x2="7" y2="22"/>
-        <line x1="18" y1="8" x2="25" y2="22"/>
-        <line x1="8" y1="25" x2="24" y2="25"/>
-      </svg>
-    ),
-    titel: 'Koordinierung und Kommunikation',
-    punkte: [
-      'Koordinierung Fachgutachten',
-      'Einbeziehung von Fachplanungen (Umwelt, Naturschutz, Immissionsschutz, Verkehr); Kooperation mit Kolleg*innen aus Landschaftsplanung, Architektur und Verkehrsplanung',
-      'Einbindung und Abstimmung öffentlicher und privater Auftraggebender, Fachverwaltungen, Fachplaner und sonstiger Akteure',
-    ],
-  },
-]
+// Icônes des Leistungen — restent dans le code (SVG), associées aux entrées
+// éditables de content/pages/buero.json via leur `key`.
+const LEISTUNGEN_ICONS = {
+  stadtentwicklung: (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="18" width="5" height="10"/>
+      <rect x="9" y="11" width="6" height="17"/>
+      <rect x="17" y="15" width="5" height="13"/>
+      <rect x="24" y="7" width="6" height="21"/>
+      <line x1="1" y1="28" x2="31" y2="28"/>
+    </svg>
+  ),
+  raumanalyse: (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="13" cy="13" r="8"/>
+      <line x1="19" y1="19" x2="28" y2="28"/>
+      <line x1="10" y1="13" x2="16" y2="13"/>
+      <line x1="13" y1="10" x2="13" y2="16"/>
+    </svg>
+  ),
+  rahmenplanung: (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="26" height="26"/>
+      <line x1="12" y1="3" x2="12" y2="29"/>
+      <line x1="20" y1="3" x2="20" y2="29"/>
+      <line x1="3" y1="12" x2="29" y2="12"/>
+      <line x1="3" y1="20" x2="29" y2="20"/>
+    </svg>
+  ),
+  bauleitplanung: (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="3" width="24" height="26"/>
+      <line x1="9" y1="9" x2="23" y2="9"/>
+      <line x1="9" y1="14" x2="23" y2="14"/>
+      <line x1="9" y1="19" x2="17" y2="19"/>
+      <polyline points="17,22 20,25 27,18"/>
+    </svg>
+  ),
+  quartier: (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="10" height="10"/>
+      <rect x="19" y="3" width="10" height="10"/>
+      <rect x="3" y="19" width="10" height="10"/>
+      <rect x="19" y="19" width="10" height="10"/>
+    </svg>
+  ),
+  qualitaet: (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="16" cy="12" r="8"/>
+      <polyline points="11,19 8,29 16,25 24,29 21,19"/>
+      <polyline points="12,12 15,15 20,9"/>
+    </svg>
+  ),
+  partizipation: (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="16" cy="8" r="4"/>
+      <path d="M8 28c0-8 16-8 16 0"/>
+      <circle cx="6" cy="12" r="3"/>
+      <path d="M1 26c0-6 10-6 10 0"/>
+      <circle cx="26" cy="12" r="3"/>
+      <path d="M21 26c0-6 10-6 10 0"/>
+    </svg>
+  ),
+  koordinierung: (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="16" cy="5" r="3"/>
+      <circle cx="5" cy="25" r="3"/>
+      <circle cx="27" cy="25" r="3"/>
+      <line x1="14" y1="8" x2="7" y2="22"/>
+      <line x1="18" y1="8" x2="25" y2="22"/>
+      <line x1="8" y1="25" x2="24" y2="25"/>
+    </svg>
+  ),
+}
 
-const ARBEITSWEISE = [
-  {
-    key: 'ganzheitlich',
-    titel: 'Ganzheitliches Planungsverständnis',
-    text: 'Wir betrachten Stadt und Raum in ihren vielfältigen Zusammenhängen. Unterschiedliche Anforderungen aus Gesellschaft, Umwelt, Nutzung und Gestaltung werden zu tragfähigen Konzepten verbunden.',
-    punkte: [
-      'Verknüpfung räumlicher, funktionaler und gesellschaftlicher Anforderungen',
-      'Entwicklung langfristig tragfähiger Lösungen',
-      'Betrachtung von Gesamtstadt bis Quartier',
-      'Verbindung von Planung, Umsetzung und Perspektive',
-    ],
-  },
-  {
-    key: 'ortsbezogen',
-    titel: 'Ortsbezogene Analyse und konzeptionelle Stärke',
-    text: 'Am Anfang jeder Planung steht das Verständnis des Ortes. Durch fundierte Analysen erfassen wir räumliche Zusammenhänge, Potenziale und Herausforderungen und entwickeln daraus individuelle Strategien.',
-    punkte: [
-      'tiefgehende Orts- und Raumanalysen',
-      'Erkennen von Entwicklungspotenzialen',
-      'Arbeiten mit stadträumlichen Zusammenhängen',
-      'Entwicklung ortsspezifischer Lösungsansätze',
-      'Übersetzung komplexer Zusammenhänge in klare Konzepte und räumliche Bilder',
-    ],
-  },
-  {
-    key: 'strategisch',
-    titel: 'Strategisches Denken und Maßnahmenorientierung',
-    text: 'Wir verbinden Zielbilder aus komplexen Rahmenbedingungen mit realistischen Handlungsschritten. Unsere langjährige Erfahrung ermöglicht eine verlässliche Verfahrenssicherheit von langjährigen Planungsprozessen, bei denen wir durch das Aufzeigen von Maßnahmen die Grundlagen für konkrete Entscheidungen schaffen.',
-    punkte: [
-      'Erkennen von Potenzialen und Entwicklungsspielräumen',
-      'Priorisierung von Maßnahmen',
-      'Entwicklung robuster und anpassungsfähiger Lösungen',
-      'Denken in langfristigen Prozessen',
-    ],
-  },
-  {
-    key: 'verfahrenssicherheit',
-    titel: 'Integrative Verfahrenssicherheit',
-    text: 'Wir führen komplexe Planungsprozesse zielgerichtet zusammen. Als Schnittstelle zwischen Fachdisziplinen, Auftraggebern und weiteren Beteiligten verfügen wir über Erfahrung in anspruchsvollen Verfahren mit vielen Beteiligten und vielfältigen Rahmenbedingungen.',
-    punkte: [
-      'Koordination interdisziplinärer Teams und Fachplanungen',
-      'Zusammenführung unterschiedlicher Anforderungen',
-      'Strukturierung komplexer Aufgabenstellungen',
-      'Steuerung von Planungsabläufen',
-      'Schnittstellenmanagement zwischen Verwaltung, Politik, Fachplanung und Öffentlichkeit',
-    ],
-  },
-  {
-    key: 'dialog',
-    titel: 'Qualität durch Dialog und Kooperation',
-    text: 'Gute Planung entsteht im Austausch. Wir schaffen transparente Prozesse, vermitteln zwischen unterschiedlichen Interessen und entwickeln gemeinsam tragfähige Lösungen.',
-    punkte: [
-      'kooperative Zusammenarbeit mit Verwaltung, Politik, Öffentlichkeit und Fachplanung',
-      'Übersetzung komplexer Inhalte in verständliche Kommunikation',
-      'Vermittlung zwischen unterschiedlichen Interessen',
-      'sicherer Umgang mit komplexen, langjährigen Verfahren',
-      'zuverlässige Prozessbegleitung',
-    ],
-  },
-]
+const LEISTUNGEN = texte.leistungen
+const ARBEITSWEISE = texte.arbeitsweise
 
 function BulletList({ items, isMobile }) {
   return (
@@ -364,19 +238,8 @@ function BulletList({ items, isMobile }) {
   )
 }
 
-// Bureaux partenaires récurrents (≥ 2 projets), extraits & normalisés depuis src/data/projects.js
-const NETZWERK = [
-  { name: 'bgmr Landschaftsarchitekten, Berlin', url: 'https://www.bgmr.de/' },
-  { name: 'Franz Reschke Landschaftsarchitektur, Berlin', url: 'https://www.franzreschke.de/' },
-  { name: 'Fugmann Janotta Partner, Berlin', url: 'https://www.fjp.berlin/' },
-  { name: 'hochC Landschaftsarchitekten, Berlin', url: 'https://www.hochc.de/' },
-  { name: 'Hoffmann-Leichter Ingenieurgesellschaft, Berlin', url: 'https://hoffmann-leichter.de/' },
-  { name: 'L.I.S.T. Stadtentwicklungsgesellschaft, Berlin', url: 'https://www.list-gmbh.de/' },
-  { name: 'POLA Landschaftsarchitekten, Berlin', url: 'https://www.pola-berlin.de/' },
-  { name: 'SHP Verkehrsplanung, Hannover', url: 'https://shp-verkehrsplanung.de/' },
-  { name: 'Stefan Wallmann Landschaftsarchitekten, Berlin', url: 'https://www.buero-wallmann.de/' },
-  { name: 'ums Stadtstrategien, Leipzig', url: 'https://www.um-systems.de/' },
-]
+// Bureaux partenaires récurrents — éditables via le CMS (buero.json)
+const NETZWERK = texte.netzwerk
 
 function NetLink({ entry, isMobile }) {
   const [hover, setHover] = useState(false)
@@ -620,28 +483,17 @@ export default function Buero() {
         gap: 24,
       }}>
         <div style={{ gridColumn: contentCol }}>
-          <p style={{
-            fontSize: isMobile ? 17 : 18,
-            lineHeight: 1.8,
-            color: A.mute,
-            margin: '0 0 20px',
-            maxWidth: 620,
-          }}>
-            Stadt Land Fluss wurde 1993 in Berlin gegründet und verfügt über
-            umfassende Erfahrung in der praxisorientierten Stadtplanung und im
-            kontextuellen Städtebau.
-          </p>
-          <p style={{
-            fontSize: isMobile ? 17 : 18,
-            lineHeight: 1.8,
-            color: A.mute,
-            margin: 0,
-            maxWidth: 620,
-          }}>
-            Wir arbeiten integrativ, komplex, fachübergreifend sowie
-            teamorientiert und engagieren uns für die Sicherung einer
-            menschenwürdigen Umwelt.
-          </p>
+          {texte.introAbsaetze.map((absatz, i) => (
+            <p key={i} style={{
+              fontSize: isMobile ? 17 : 18,
+              lineHeight: 1.8,
+              color: A.mute,
+              margin: i < texte.introAbsaetze.length - 1 ? '0 0 20px' : 0,
+              maxWidth: 620,
+            }}>
+              {absatz}
+            </p>
+          ))}
         </div>
       </div>
 
@@ -694,7 +546,7 @@ export default function Buero() {
               letterSpacing: '-0.015em',
               margin: 0,
             }}>
-              Unsere Arbeitsweise
+              {texte.arbeitsweiseTitel}
             </h2>
           </div>
         </div>
@@ -758,7 +610,7 @@ export default function Buero() {
               letterSpacing: '-0.015em',
               margin: 0,
             }}>
-              Unser Leistungsspektrum
+              {texte.leistungenTitel}
             </h2>
           </div>
         </div>
@@ -784,7 +636,7 @@ export default function Buero() {
                   marginBottom: 12,
                   lineHeight: 0,
                 }}>
-                  {l.icon}
+                  {LEISTUNGEN_ICONS[l.key]}
                 </div>
                 <div style={{
                   fontSize: isMobile ? 17 : 20,
@@ -845,11 +697,10 @@ export default function Buero() {
         <div style={{ display: 'grid', gridTemplateColumns: gridCols, gap: 24 }}>
           <div style={{ gridColumn: contentCol }}>
             <h2 style={{ fontWeight: 600, fontSize: isMobile ? 20 : 30, letterSpacing: '-0.015em', margin: 0 }}>
-              Netzwerk & Kooperationen
+              {texte.netzwerkTitel}
             </h2>
             <p style={{ fontSize: isMobile ? 14 : 16, color: A.mute, lineHeight: 1.6, margin: '16px 0 0', maxWidth: 640 }}>
-              Wir arbeiten projektbezogen mit Landschaftsarchitektur-, Architektur- und
-              Stadtentwicklungsbüros zusammen. Eine Auswahl unserer regelmäßigen Partner:
+              {texte.netzwerkIntro}
             </p>
             <div style={{
               display: 'flex', flexWrap: 'wrap', alignItems: 'center',
