@@ -16,18 +16,22 @@ const SIZE_SUFFIX_RE = /-\d+x\d+(\.[a-zA-Z]+)$/
 const localPath = (rel) => import.meta.env.BASE_URL + 'wp-media/' + rel
 
 // URL d'image unique (champ image, photo d'équipe, …) → copie locale si dispo.
+// Les uploads du CMS (`/uploads/…`, dossier public/uploads/) sont simplement
+// préfixés avec BASE_URL pour fonctionner en sous-dossier.
 export function localMedia(url) {
   if (!url) return url
+  if (url.startsWith('/uploads/')) return import.meta.env.BASE_URL + url.slice(1)
   const m = url.match(UPLOADS_PREFIX_RE)
   return m && mirrored.has(m[1]) ? localPath(m[1]) : url
 }
 
-// Bloc HTML (project.content) : réécrit toutes les URLs WP (src et srcset).
+// Bloc HTML (project.content) : réécrit toutes les URLs WP (src et srcset)
+// et préfixe les uploads CMS (/uploads/…) avec BASE_URL.
 export function localizeMediaHtml(html) {
   if (!html) return html
-  return html.replace(UPLOADS_GLOBAL_RE, (full, rel) =>
-    mirrored.has(rel) ? localPath(rel) : full
-  )
+  return html
+    .replace(UPLOADS_GLOBAL_RE, (full, rel) => (mirrored.has(rel) ? localPath(rel) : full))
+    .replace(/(src|srcset|href)="\/uploads\//g, `$1="${import.meta.env.BASE_URL}uploads/`)
 }
 
 // Version pleine résolution pour la lightbox. Accepte un src déjà localisé

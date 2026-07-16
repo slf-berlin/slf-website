@@ -1,5 +1,3 @@
-import { PROJECT_THEMEN } from './themen.js'
-
 export const PROJEKTE_NAV = [
   { label: 'Alle', key: null },
   { label: 'Stadt- und Quartiersentwicklung', key: 'stadtentwicklung' },
@@ -17,8 +15,8 @@ export const FILTER_FN = {
   projektliste: () => true,
 }
 
-// Themen — second, orthogonal filter dimension. Assignments live in
-// src/data/themen.js (keyed by project id), not in WordPress.
+// Themen — second, orthogonal filter dimension. Assignments live on each
+// project (champ `themen` dans content/projekte/*.yml, édité via le CMS).
 export const THEMEN_NAV = [
   { label: 'Wohnungsbau', key: 'wohnungsbau' },
   { label: 'Gewerbeentwicklung', key: 'gewerbeentwicklung' },
@@ -32,7 +30,7 @@ export const THEMEN_NAV = [
 ]
 
 export function projectThemen(p) {
-  return PROJECT_THEMEN[p.id] || []
+  return p.themen || []
 }
 
 export function themaFilterFn(themaKey) {
