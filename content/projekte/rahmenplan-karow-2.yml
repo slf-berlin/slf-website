@@ -1,0 +1,71 @@
+titel: "Rahmenplan Karow"
+untertitel: "Berlin, Pankow, 2021"
+beschreibung: "SWOT- Analyse Rahmenplan für die Umsetzung von Wohnbaupotenzialen auf drei insgesamt ca. 100 ha großen Potenzialflächen im Ortsteil Karow im Bezirk Pankow: Erfassung und Bewertung der planerischen Rahmenbedingungen und Gebietsanalyse für ganz Karow (gesamtes Untesuchungsgebiet ca. 3,7 km2) Erarbeitung von städtebaulichen Testentwürfen zur Ermittlung möglicher Dichten, Typologien und Angeboten der sozialen Infrastruktur sowie Nahversorgungseinrichtungen Testentwurf"
+ergebnis: null
+jahr: "2018-2021"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen:
+  - "wohnungsbau"
+  - "partizipation"
+datum: "2019-07-19T17:57:36"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-rp-e1750320448129.jpg"
+wpId: 1785
+wpLink: "https://www.slf-berlin.de/rahmenplan-karow-2/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"746\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-swot.jpg\" class=\"attachment-large size-large wp-image-1551\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-swot.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-swot-580x503.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-swot-768x666.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>SWOT- Analyse</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Rahmenplan für die Umsetzung von Wohnbaupotenzialen auf drei insgesamt ca. 100 ha großen Potenzialflächen im Ortsteil Karow im Bezirk Pankow:</p><p>Erfassung und Bewertung der planerischen Rahmenbedingungen und Gebietsanalyse für ganz Karow  (gesamtes Untesuchungsgebiet ca. 3,7 km2)<br /></p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "Erarbeitung von städtebaulichen Testentwürfen zur Ermittlung möglicher Dichten, Typologien und Angeboten der sozialen Infrastruktur sowie Nahversorgungseinrichtungen"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"505\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-test.jpg\" class=\"attachment-large size-large wp-image-1561\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-test.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-test-580x341.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-test-768x451.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Testentwurf Potenzialfläche Am Teichberg</figcaption>
+
+          \ </figure>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"122\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-beteiligungsprozess.jpg\" class=\"attachment-large size-large wp-image-1553\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-beteiligungsprozess.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-beteiligungsprozess-580x82.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-beteiligungsprozess-768x109.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Ablauf Beteiligungsprozess</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Abstimmung Rahmenplan innnerhalb eines umfangreichen Beteiligungsprozess mit der interessierten Öffentlichkeit sowie relevanter Fachämter und sonstiger Akteure</p>"
+  - type: "bild"
+    breite: 860
+    hoehe: 529
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-entwurf.jpg"
+    klass: "attachment-large size-large wp-image-1547"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-entwurf.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-entwurf-580x357.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-entwurf-768x472.jpg 768w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Städtebaulicher Entwurf Variante 1"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Pankow, Buch-Süd"
+      - label: "Auftraggebende"
+        wert: "Bezirk Pankow"
+      - label: "Verfahren"
+        wert: "kooperatives Verfahren"
+      - label: "Zeitraum"
+        wert: "2018-2021"
+      - label: "Plangebietsgröße"
+        wert: "gesamtes Untersuchungsgebiet ca. 3,7 km2, davon ca. 100 ha Wohnbaupotenzialflächen"
+      - label: "Team"
+        wert: "bgmr Landschaftsarchitekten mbH, Berlin<br />Hoffmann Leichter Ingenieurgesellschaft mbH, Berlin"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/verbindliche-bauleitplanung/artikel.757978.php\">https://www.berlin.de/ba-pankow/</a>"

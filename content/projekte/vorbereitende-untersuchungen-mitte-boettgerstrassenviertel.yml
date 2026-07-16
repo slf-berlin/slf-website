@@ -1,0 +1,50 @@
+titel: "Vorbereitende Untersuchungen nach § 141 BauGB für das Gebiet Mitte - Böttgerstraßenviertel"
+untertitel: "Berlin, Mitte, 2021"
+beschreibung: "Luftbild Böttgerstraßenviertel © SenSW, Dirk Laubner 2019 Das Gebiet Mitte – Böttgerstraßenviertel ist durch das Nebeneinander von Wohn- und Gewerbebereichen, großen Gemeinbedarfsstandorten und Verkehrsbarrieren geprägt. In den letzten Jahren konnte eine verstärkte Annahme durch die Kunst- und Kreativszene sowie ein zunehmender Aufwertungsdruck für das Wohnen beobachtet werden. Diese Entwicklungen treffen auf einen hohen gebietlichen Erneuerungsstau."
+ergebnis: null
+jahr: "2019-2021"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen:
+  - "partizipation"
+datum: "2019-08-20T12:10:37"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/vu-rahmenplan-20210617-scaled-e1737557283277.jpg"
+wpId: 1478
+wpLink: "https://www.slf-berlin.de/vorbereitende-untersuchungen-mitte-boettgerstrassenviertel/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"819\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/vu-luftbild2-860x819.jpg\" class=\"attachment-large size-large wp-image-3177\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/vu-luftbild2-860x819.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/vu-luftbild2-580x552.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/vu-luftbild2-768x732.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/vu-luftbild2-1536x1463.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/vu-luftbild2.jpg 2000w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Luftbild Böttgerstraßenviertel © SenSW, Dirk Laubner 2019</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Das Gebiet Mitte – Böttgerstraßenviertel ist durch das Nebeneinander von Wohn- und Gewerbebereichen, großen Gemeinbedarfsstandorten und Verkehrsbarrieren geprägt. In den letzten Jahren konnte eine verstärkte Annahme durch die Kunst- und Kreativszene sowie ein zunehmender Aufwertungsdruck für das Wohnen beobachtet werden. Diese Entwicklungen treffen auf einen hohen gebietlichen Erneuerungsstau. Daher beschloss der Senat von Berlin am 25. Juni 2019 den Beginn von vorbereitenden Untersuchungen. Diese wurden mit umfassender Beteiligung durchgeführt.</p><p>Das Ergebnis zeigt deutlich, dass städtebauliche Missstände vorliegen. Der Senat von Berlin beschloss am 14. Dezember 2021, dass Gebiet als Sanierungs- und Stadtumbaugebiet festzulegen, um den Einsatz besonderer städtebaulicher Regelungen zur Sicherung der Durchführung der Sanierung sowie des Städtebauförderprogramms Lebendige Zentren und Quartiere zu ermöglichen. </p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p>Die vorbereitenden Untersuchungen nach § 141 Baugesetzbuch (BauGB) bilden die Beurteilungsgrundlage, um auf der Basis der städtebaulichen, wirtschaftlichen und sozialen Situation des Untersuchungsgebiets über die Art und den Umfang eines integrierten Stadterneuerungsverfahrens zu entscheiden. Neben der Analyse der Bestandssituation gehört die frühzeitige Beteiligung von Mieter*innen, Eigentümer*innen, Gewerbetreibenden und sonstigen lokalen Akteur*innen gem. § 137 BauGB sowie die Erarbeitung von Handlungsschwerpunkten und mögliche Maßnahmen für die Quartiersentwicklung zu der Erarbeitung der VU. </p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"617\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/vu-leitbild.jpg\" class=\"attachment-large size-large wp-image-1488\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/vu-leitbild.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/vu-leitbild-580x416.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/vu-leitbild-768x551.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Städtebauliches Leitbild</figcaption>
+
+          \ </figure>"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Mitte"
+      - label: "Auftraggebende"
+        wert: "Senatsverwaltung für Stadtentwicklung und Wohnen"
+      - label: "Verfahren"
+        wert: "Vorbereitende Untersuchungen nach § 141 BauGB"
+      - label: "Zeitraum"
+        wert: "2019-2021"
+      - label: "Plangebietsgröße"
+        wert: "56 ha"
+      - label: "Team"
+        wert: "L.I.S.T. Stadtentwicklungsgesellschaft mbH, Berlin"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"https://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadterneuerung/vu/de/mitte-boettgerstrviertel.shtml\">Senatsverwaltung für Stadtentwicklung und Wohnen Berlin</a>"

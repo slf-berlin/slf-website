@@ -1,0 +1,51 @@
+titel: "Städtebauliche Variantenentwicklung Konversionsfläche Schwanebecker Chaussee"
+untertitel: "Brandenburg, Bernau bei Berlin"
+beschreibung: "Vernetzung Lindow Transformation einer militärischen Konversionfläche mit ca. 38 ha in ein Wohnquartier für ca. 3.800 Einwohner mit Standorten für Grundschule und Kindertagesstätten sowie ergänzender Büro-, Einzelhandels- und Dienstleistungsflächen. Gliederung des neuen Quartiers in verschiedene Nachbarschaften mit Bezug zu denkmalgeschützen Gebäudebestand und durch Ausbildung einer grünen Fuge mit Park und Schulstandort. Vernetzung mit Ortsteil Lindow"
+ergebnis: null
+jahr: "2017"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen:
+  - "wohnungsbau"
+  - "transformation"
+datum: "2016-03-04T12:50:14"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/entwurf_bernau-sc-110517_abb-e1737555240132.jpg"
+wpId: 647
+wpLink: "https://www.slf-berlin.de/konversionsflaeche-schwanebecker-chaussee/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"448\" height=\"580\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vernetzung-lindow.jpg\" class=\"attachment-large size-large wp-image-437\" alt=\"\" /> <figcaption>Vernetzung Lindow</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p class=\"Text\">Transformation einer militärischen Konversionfläche mit ca. 38 ha in ein Wohnquartier für ca. 3.800 Einwohner mit Standorten für Grundschule und Kindertagesstätten sowie ergänzender Büro-, Einzelhandels- und Dienstleistungsflächen.</p><p class=\"Text\">Gliederung des neuen Quartiers in verschiedene Nachbarschaften mit Bezug zu denkmalgeschützen Gebäudebestand und durch Ausbildung einer grünen Fuge mit Park und Schulstandort.</p><p>Vernetzung mit Ortsteil Lindow und angrenzenden Siedlungsgebieten sowie der Altstadt von Bernau über differenzierte Wegeverbindungen und Aufnahme baulicher Strukturen.</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p>Ausarbeitung verschiedener Wohntypologien mit dem Schwerpunkt Lärmschutz und sonstiger Schallschutzmaßnahmen aufgrund der stark belasteten Situation zwischen Autobahn, Bahnstrecke und Landesstraße.</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"376\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/piktos-konzeptansaetze18052017.jpg\" class=\"attachment-large size-large wp-image-436\" alt=\"\" /> <figcaption>Piktogramme- Konzeptansätze</figcaption>
+
+          \ </figure>"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Bernau bei Berlin"
+      - label: "Auftraggebende"
+        wert: "Stadtverwaltung Bernau bei Berlin"
+      - label: "Verfahren"
+        wert: "Städtebauliche Machbarkeitsstudie mit Variantenentwicklung"
+      - label: "Zeitraum"
+        wert: "2017"
+      - label: "Plangebietsgröße"
+        wert: "38 ha"
+      - label: "Team"
+        wert: "–"
+      - label: "Mehr Informationen"
+        wert: "–"

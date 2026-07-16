@@ -1,0 +1,56 @@
+titel: "Ehemaliges Straßenbahndepot"
+untertitel: "Bezirk Tempelhof-Schöneberg, 2020"
+beschreibung: "Für das denkmalgeschützte Ensemble, das gegenwärtig als Fahrzeuglager genutzt wird, wurden Entwicklungsvorschläge für ein Kultur- und Quartierszentrum erarbeitet. Auf der Grundlage der Ergebnisse der Öffentlichkeitsbeteiligung 2017 wurden die damals geäußerten Nutzungsvorschläge in einem städtebaulichen Konzept konkretisiert. Gegenwärtig befinden sich die Ergebnisse der Studie noch in Abstimmung mit dem Bezirksamt und den Landeseinrichtungen. Meininger Straße Vorplatz"
+ergebnis: null
+jahr: "2019 – 2020"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen:
+  - "transformation"
+  - "partizipation"
+datum: "2019-06-18T16:10:55"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/situation-e1774615738220.png"
+wpId: 2694
+wpLink: "https://www.slf-berlin.de/ehemaliges-strassenbahndepot/"
+inhalt:
+  - type: "text"
+    html: "<p>Für das denkmalgeschützte Ensemble, das gegenwärtig als Fahrzeuglager genutzt wird, wurden Entwicklungsvorschläge für ein Kultur- und Quartierszentrum erarbeitet. Auf der Grundlage der Ergebnisse der Öffentlichkeitsbeteiligung 2017 wurden die damals geäußerten Nutzungsvorschläge in einem städtebaulichen Konzept konkretisiert. Gegenwärtig befinden sich die Ergebnisse der Studie noch in Abstimmung mit dem Bezirksamt und den Landeseinrichtungen.</p>"
+  - type: "bild"
+    breite: 860
+    hoehe: 613
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/nutzungsideen-e1627051247708-860x613.png"
+    klass: "attachment-large size-large wp-image-3087"
+    alt: ""
+    figur: false
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/nutzungsideen-e1627051247708-860x613.png 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/nutzungsideen-e1627051247708-580x413.png 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/nutzungsideen-e1627051247708-768x547.png 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/nutzungsideen-e1627051247708.png 1370w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"645\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-7741-860x645.jpg\" class=\"attachment-large size-large wp-image-3089\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-7741-860x645.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-7741-580x435.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-7741-768x576.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-7741-1536x1152.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-7741-2048x1536.jpg 2048w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Meininger Straße</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"665\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-6191-scaled-e1627051065342-860x665.jpg\" class=\"attachment-large size-large wp-image-3090\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-6191-scaled-e1627051065342-860x665.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-6191-scaled-e1627051065342-580x448.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-6191-scaled-e1627051065342-768x594.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-6191-scaled-e1627051065342-1536x1188.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/img-6191-scaled-e1627051065342-2048x1584.jpg 2048w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Vorplatz</figcaption>
+
+          \ </figure>"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Tempelhof-Schöneberg"
+      - label: "Auftraggebende"
+        wert: "Bezirk Tempelhof-Schöneberg"
+      - label: "Verfahren"
+        wert: "Städtebauliche Entwicklungsstudie"
+      - label: "Zeitraum"
+        wert: "2019 – 2020"
+      - label: "Plangebietsgröße"
+        wert: "1 ha"
+      - label: "Team"
+        wert: "–"
+      - label: "Mehr Informationen"
+        wert: "–<a href=\"https://cottbuser-ostsee.de\"></a>"

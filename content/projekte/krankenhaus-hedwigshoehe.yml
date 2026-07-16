@@ -1,0 +1,59 @@
+titel: "Erweiterung Krankenhaus Hedwigshöhe"
+untertitel: "Vorhabenbezogener Bebauungsplan XV-37ea-1 VE"
+beschreibung: "Lageplan Fortführung der ortsbezogenen und standortverträglichen Entwicklung des Krankenhausstandortes Hedwigshöhe innerhalb des übergeordneten Siedlungsvorhabens „Neue Gartenstadt Falkenberg“. Schaffung der planungsrechtlichen Voraussetzungen für die Ergänzung eines neuen Klinikgebäudes zur Unterbringung zusätzlicher Funktionsbereiche der psychiatrischen Klinik. Berücksichtigung der sensiblen naturräumlichen Lage im Übergang zur Falkenbergkuppe. Kultivierung der historischen Gartenterrassen des Buntzelschen Landschaftsparks mit Sicherung gärtnerischer Nutzungen für"
+ergebnis: null
+jahr: "2016"
+kategorie:
+  - "Bauleitplanung"
+themen: []
+datum: "2016-03-03T16:01:15"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vep-xv37ea1ve_apr2016-oe.jpg"
+wpId: 589
+wpLink: "https://www.slf-berlin.de/krankenhaus-hedwigshoehe/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"401\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/uebersicht-bausteine-bp.jpg\" class=\"attachment-large size-large wp-image-388\" alt=\"\" /> <figcaption>Lageplan</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p class=\"Text\">Fortführung der ortsbezogenen und standortverträglichen Entwicklung des Krankenhausstandortes Hedwigshöhe innerhalb des übergeordneten Siedlungsvorhabens „Neue Gartenstadt Falkenberg“.</p><p class=\"Text\">Schaffung der planungsrechtlichen Voraussetzungen für die Ergänzung eines neuen Klinikgebäudes zur Unterbringung zusätzlicher Funktionsbereiche der psychiatrischen Klinik. Berücksichtigung der sensiblen naturräumlichen Lage im Übergang zur Falkenbergkuppe. </p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p class=\"Text\">Kultivierung der historischen Gartenterrassen des Buntzelschen Landschaftsparks mit Sicherung gärtnerischer Nutzungen für Therapiezwecke sowie Rückbau und Begrünung der Stellplatzanlage an der Buntzelstraße.</p><p class=\"Text\">Erarbeitung wesentlicher Konzeptbausteine und Entwurfsparameter anhand einer Bebauungsstudie. Abgestimmte Modifizierung des Bebauungskonzepts im Ergebnis eines Architektenauswahlverfahrens. </p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"519\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/4a-02_2015-12.jpg\" class=\"attachment-large size-large wp-image-390\" alt=\"\" /> <figcaption>Ansicht Ost/West</figcaption>
+
+          \ </figure>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"519\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/4a-01_2015-12.jpg\" class=\"attachment-large size-large wp-image-389\" alt=\"\" /> <figcaption>Ansicht Süd/Nord</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Koordinierung und Einbindung  der Fachgutachten Verkehr, Immissionsschutz, Niederschlagsentwässerung und Artenschutz.</p>"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Treptow-Köpenick, Ortsteil Bohnsdorf"
+      - label: "Auftraggebende"
+        wert: "Bezirk Treptow-Köpenick"
+      - label: "Verfahren"
+        wert: "Vorhabenbezogener Bebauungsplan"
+      - label: "Zeitraum"
+        wert: "2016"
+      - label: "Plangebietsgröße"
+        wert: "ca. 1,8 ha"
+      - label: "Team"
+        wert: "Stefan Wallmann Landschaftsarchitekten, Berlin<br />Architekturbüro Dr.-Ing. Karlheinz Wendisch, Berlin <br />Maron Rinne Architekten, Berlin"
+      - label: "Mehr Informationen"
+        wert: "–"

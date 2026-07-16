@@ -1,0 +1,71 @@
+titel: "Gartenstadt Drewitz"
+untertitel: "Werkstattverfahren und Fortschreibung des städtebaulichen Konzepts zum Masterplan, 2010-11"
+beschreibung: "Vogelperspektive Prüfung der Machbarkeit des Konzeptes zur städtebaulichen Transformation aus dem Beitrag zum Bundeswettbewerb 2009 Umfassendes Verfahren mit Beteiligung aller relevanten Akteure in vier Werkstätten und zwei Bürgerversammlungen. Entwicklung eines städtebaulichen Masterplans für den Potsdamer Stadtteil Drewitz (40 ha) mit Integration der Verkehrs- und Freiraumplanungen z.B. für den Umbau der zentralen Erschließungsachse zu einem Stadtteilpark"
+ergebnis: null
+jahr: "2010-2011"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen:
+  - "transformation"
+  - "partizipation"
+datum: "2015-03-04T11:15:41"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2015/03/5-masterplan-final-28-kopie-2-e1774615068729.jpg"
+wpId: 620
+wpLink: "https://www.slf-berlin.de/gartenstadt-drewitz/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"291\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_3d_perspektive-scaled-e1583316857288-860x291.jpg\" class=\"attachment-large size-large wp-image-331\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_3d_perspektive-scaled-e1583316857288-860x291.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_3d_perspektive-scaled-e1583316857288-580x196.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_3d_perspektive-scaled-e1583316857288-768x260.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_3d_perspektive-scaled-e1583316857288-1536x519.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_3d_perspektive-scaled-e1583316857288-2048x692.jpg 2048w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Vogelperspektive</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p class=\"Text\">Prüfung der Machbarkeit des Konzeptes zur städtebaulichen Transformation aus dem Beitrag zum Bundeswettbewerb 2009</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p class=\"Text\">Umfassendes Verfahren mit Beteiligung aller relevanten Akteure in vier Werkstätten und zwei Bürgerversammlungen.</p><p class=\"Text\">Entwicklung eines städtebaulichen Masterplans für den Potsdamer Stadtteil Drewitz (40 ha) mit Integration der Verkehrs- und Freiraumplanungen z.B. für den Umbau der zentralen Erschließungsachse zu einem Stadtteilpark</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"388\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/dsc_0533.jpg\" class=\"attachment-large size-large wp-image-514\" alt=\"\" /> <figcaption>Bürgerwerkstatt</figcaption>
+
+          \ </figure>"
+  - type: "bild"
+    breite: 860
+    hoehe: 616
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_masterplan-860x616.jpg"
+    klass: "attachment-large size-large wp-image-332"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_masterplan-860x616.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_masterplan-580x415.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_masterplan-768x550.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_masterplan-1536x1100.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_masterplan-2048x1466.jpg 2048w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Masterplan"
+  - type: "bild"
+    breite: 860
+    hoehe: 293
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_werkstattverfahren-e1583317168471-860x293.jpg"
+    klass: "attachment-large size-large wp-image-333"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_werkstattverfahren-e1583317168471-860x293.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_werkstattverfahren-e1583317168471-580x198.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_werkstattverfahren-e1583317168471-768x262.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_werkstattverfahren-e1583317168471-1536x524.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/gartenstadt-drewitz_werkstattverfahren-e1583317168471-2048x698.jpg 2048w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Werkstattverfahren"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Landeshauptstadt Potsdam"
+      - label: "Auftraggebende"
+        wert: "Landeshauptstadt Potsdam, Stadtkontor Behutsame Stadtentwicklung mbH"
+      - label: "Verfahren"
+        wert: "Fortschreibung eines städtebaulichen Konzeptes mit Werkstattverfahren"
+      - label: "Zeitraum"
+        wert: "2010-2011"
+      - label: "Plangebietsgröße"
+        wert: "ca. 40 ha"
+      - label: "Team"
+        wert: "Thies Schröder Planungskommunikation, Berlin <br />Pia von Zadow Landschaftsarchitekten, Potsdam"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"http://gartenstadt-drewitz.blogspot.com\">www.gartenstadt-drewitz.de</a>"

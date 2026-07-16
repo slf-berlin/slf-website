@@ -1,0 +1,62 @@
+titel: "Städtebauliche Studie Friedhof St. Jacobi"
+untertitel: "Konkurrierendes Gutachterverfahren, 2018"
+beschreibung: "Lageplan Transformation eines Friedhofes zu einem gemischt genutzten urbanen Wohn- und Stadtquartier als weiterer Baustein des Gefüges der historischen Siedlung Schillerpark unter Beachtung des städtebaulichen Kontextes und Schaffung neuer Vernetzungen zwischen und mit den angrenzenden Quartieren. Gliederung in zwei Teilabschnitte für kurz- und langfristige Umsetzung mit zwei unterschiedlichen Typologien: dichtere Randbebauung mit Hofbildung und klarer"
+ergebnis: null
+jahr: "2018"
+kategorie:
+  - "Städtebau"
+themen:
+  - "wohnungsbau"
+  - "transformation"
+  - "wettbewerbe"
+datum: "2017-12-03T15:12:17"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/perspektive-scaled.jpg"
+wpId: 574
+wpLink: "https://www.slf-berlin.de/friedhof-jacobi-neukoelln/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"1047\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/lageplan-860x1047.jpg\" class=\"attachment-large size-large wp-image-472\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/lageplan-860x1047.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/lageplan-580x706.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/lageplan-768x935.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/lageplan-1261x1536.jpg 1261w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/lageplan-1682x2048.jpg 1682w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Lageplan</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p class=\"Text\">Transformation eines Friedhofes zu einem gemischt genutzten urbanen Wohn- und Stadtquartier als weiterer Baustein des Gefüges der historischen Siedlung Schillerpark unter Beachtung des städtebaulichen Kontextes und Schaffung neuer Vernetzungen zwischen und mit den angrenzenden Quartieren.</p><p class=\"Text\">Gliederung in zwei Teilabschnitte für kurz- und langfristige Umsetzung mit zwei unterschiedlichen Typologien: dichtere Randbebauung mit Hofbildung und klarer Fassung der Außenräume im Süden, Zeilenbebauung in Anlehnung an die offenen Gebäudestrukturen an der Oxforder Straße bzw. Corker Straße und fließenden Freiräumen im Norden.</p><p class=\"Text\">Identitätsstiftende Grundelemente des freiräumlichen Gerüstes: existierende Mittelallee des Friedhofs, prägender Baumbestand sowie neuangelegter Quartiersplatz.</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p class=\"Text\">Neuinterpretation eines sozial orientierten Wohnungsbaus mit unterschiedlichen Bewohnergruppen durch differenzierte Wohn-typologien/Grundrissgrößen; Integration flexibler Raumeinheiten für die Nachbarschaft sowie als  Kombinationsmodul für Wohngrundrisse.</p><p class=\"Text\">2019 wurde eine Bebauungsstudie mit Werkstattverfahren zur Überprüfung der Integration von Einrichtungen der sozialen Infrastruktur (Grundschule, Kindergarten) und Abstimmung von Entwicklungsabschnitten durchgeführt.</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"748\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vernetzung-860x748.jpg\" class=\"attachment-large size-large wp-image-475\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vernetzung-860x748.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vernetzung-580x505.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vernetzung-768x668.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vernetzung-1536x1337.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vernetzung.jpg 1948w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Vernetzung</figcaption>
+
+          \ </figure>"
+  - type: "bild"
+    breite: 860
+    hoehe: 1553
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/typologien-860x1553.jpg"
+    klass: "attachment-large size-large wp-image-474"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/typologien-860x1553.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/typologien-580x1047.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/typologien-768x1387.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/typologien-851x1536.jpg 851w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/typologien-1134x2048.jpg 1134w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/typologien-scaled.jpg 1418w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Typologien"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Neukölln"
+      - label: "Auftraggebende"
+        wert: "Friedhofsverband Berlin"
+      - label: "Verfahren"
+        wert: "Konkurrierendes Gutachterverfahren"
+      - label: "Zeitraum"
+        wert: "2018"
+      - label: "Plangebietsgröße"
+        wert: "1 ha"
+      - label: "Team"
+        wert: "Franz Reschke Landschaftsarchitekten, Berlin"
+      - label: "Mehr Informationen"
+        wert: "–"

@@ -1,0 +1,40 @@
+titel: "Wohngebiet Schönfelder Weg, Bernau bei Berlin"
+untertitel: "Bebauungsplan- und FNP-Änderungsverfahren, 2016-18"
+beschreibung: "FNP Änderung Planungsrechtliche Sicherung einer ergänzenden Wohnbebauung am Panke-Park. Grundlage bildet das architektonische Konzept von Keintzel Architekten, Berlin Durchführung Bebauungsplanverfahren und Verfahren zur FNP-Änderung mit Koordinierung der Fachgutachten zu Verkehr, Immissionsschutz und Besonderem Artenschutz Projektdaten Ort Brandenburg, Bernau bei Berlin Auftraggeber Keintzel Architekten, Berlin Verfahren Bebauungsplan- und FNP-Änderungsverfahren Zeitraum 2016-2018 Plangebietsgröße ca. 2 ha Team"
+ergebnis: null
+jahr: "2016-2018"
+kategorie:
+  - "Bauleitplanung"
+themen:
+  - "wohnungsbau"
+datum: "2016-10-02T15:22:05"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/2018-12-07-bp-schonfelder-weg-bernau-e1737551676791.jpg"
+wpId: 2585
+wpLink: "https://www.slf-berlin.de/bebauungsplan-wohngebiet-schoenfelder-weg/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"683\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/schonfelder-weg-planzeichnung-860x683.png\" class=\"attachment-large size-large wp-image-2669\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/schonfelder-weg-planzeichnung-860x683.png 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/schonfelder-weg-planzeichnung-580x460.png 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/schonfelder-weg-planzeichnung-768x610.png 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/schonfelder-weg-planzeichnung.png 1189w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>FNP Änderung</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Planungsrechtliche Sicherung einer ergänzenden Wohnbebauung am Panke-Park. Grundlage bildet das architektonische Konzept von Keintzel Architekten, Berlin</p><p>Durchführung Bebauungsplanverfahren und Verfahren zur FNP-Änderung mit Koordinierung der Fachgutachten zu Verkehr, Immissionsschutz und Besonderem Artenschutz</p>"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Bernau bei Berlin<br />"
+      - label: "Auftraggebende"
+        wert: "Keintzel Architekten, Berlin"
+      - label: "Verfahren"
+        wert: "Bebauungsplan- und FNP-Änderungsverfahren"
+      - label: "Zeitraum"
+        wert: "2016-2018"
+      - label: "Plangebietsgröße"
+        wert: "ca. 2 ha"
+      - label: "Team"
+        wert: "Stefan Wallmann Landschaftsarchitekten, Berlin<br />Keintzel Architekten, Berlin"
+      - label: "Mehr Informationen"
+        wert: "–"

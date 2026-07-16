@@ -1,0 +1,69 @@
+titel: "Explorative Studie für ein räumliches Leitbild Tourismus Berlin"
+untertitel: "Berlin, 2019"
+beschreibung: "Leitbild Analyse der aktuellen Situation bzw. der räumlichen Struktur und Ausprägung des Tourismus in Berlin auf drei Maßstabsebenen mit entsprechend differenzierten Darstellungen: Gesamtstadt, Innere Stadt sowie auszuwählende Teilräume Auswertung der relevanten vorliegenden Erhebungen, Konzepte und Planungen insbesondere des aktuell in Aufstellung befindlichen Tourismuskonzeptes Berlin Erfassung und Übernahme in GIS von bestehenden touristischen Zielorten, Services und beanspruchten öffentlichen Räumen. Ableitung von"
+ergebnis: null
+jahr: "2017-2019"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen: []
+datum: "2018-03-03T10:41:56"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2017/05/bildschirmfoto-2025-01-22-um-154046.png"
+wpId: 1521
+wpLink: "https://www.slf-berlin.de/explorative-studie-fuer-ein-raeumliches-leitbild-tourismus-berlin/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"704\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/tourismus-leitbild.jpg\" class=\"attachment-large size-large wp-image-1525\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/tourismus-leitbild.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/tourismus-leitbild-580x475.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/tourismus-leitbild-768x629.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Leitbild</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Analyse der aktuellen Situation bzw. der räumlichen Struktur und Ausprägung des Tourismus in Berlin auf drei Maßstabsebenen mit entsprechend differenzierten Darstellungen: Gesamtstadt, Innere Stadt sowie auszuwählende Teilräume</p><p>Auswertung der relevanten vorliegenden Erhebungen, Konzepte und Planungen insbesondere des aktuell in Aufstellung befindlichen Tourismuskonzeptes Berlin</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p>Erfassung und Übernahme in GIS von bestehenden touristischen Zielorten, Services und beanspruchten öffentlichen Räumen.</p><p>Ableitung von konkretisierten Handlungsansätzen  für die einzelnen Raumtypen insbesondere in der Verantwortung öffentlicher Akteure.</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"713\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/bildschirmfoto-2021-05-31-um-1351.jpg\" class=\"attachment-large size-large wp-image-1527\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/bildschirmfoto-2021-05-31-um-1351.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/bildschirmfoto-2021-05-31-um-1351-580x481.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/bildschirmfoto-2021-05-31-um-1351-768x637.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Raumtyp A High Culture- Innere Stadt</figcaption>
+
+          \ </figure>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"734\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/bildschirmfoto-2021-05-31-um-1352.jpg\" class=\"attachment-large size-large wp-image-1528\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/bildschirmfoto-2021-05-31-um-1352.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/bildschirmfoto-2021-05-31-um-1352-580x495.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/bildschirmfoto-2021-05-31-um-1352-768x655.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Raumtyp C Nachtleben- Teilraum</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Erarbeitung eines Testentwurfs  als Grundlage für die weitere Entwicklung des räumlichen Leitbildes Tourismus inklusive Setzung von strategischen Schwerpunkträumen unter Berücksichtigung der besonderen Erfordernisse der unter</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"686\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/admi-860x686.jpg\" class=\"attachment-large size-large wp-image-3182\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/admi-860x686.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/admi-580x463.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/admi-768x613.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/admi-1536x1226.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/admi.jpg 2000w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Raumtyp C Nachtleben- Teilraum</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Erarbeitung eines Testentwurfs  als Grundlage für die weitere Entwicklung des räumlichen Leitbildes Tourismus inklusive Setzung von strategischen Schwerpunkträumen unter Berücksichtigung der besonderen Erfordernisse der unter</p>"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin"
+      - label: "Auftraggebende"
+        wert: "Senatsverwaltung für Stadtentwicklung und Umwelt"
+      - label: "Verfahren"
+        wert: "stadtplanerische Untersuchung"
+      - label: "Zeitraum"
+        wert: "2017-2019"
+      - label: "Plangebietsgröße"
+        wert: "Gesamtstadt Berlin"
+      - label: "Team"
+        wert: "–"
+      - label: "Mehr Informationen"
+        wert: "–"

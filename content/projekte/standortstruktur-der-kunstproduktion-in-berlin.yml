@@ -1,0 +1,60 @@
+titel: "Standortstruktur der Kunstproduktion in Berlin"
+untertitel: "Berlin"
+beschreibung: "Standorte der Kunstproduktion- Gesamtstadt Identifizierung der Kunstsparten der freien Szene und ihrer spezifischen Anforderungen an Produktionsstandorte sowie besondere Arbeitsbedingungen; Erfassung, Klassifizierung und Verortung von ca. 440 eingestreuten Kunstproduktionsstandorten auf gesamtstädtischer Ebene Darstellung der Verdrängungsrisiken insbesondere durch konkurrierende Gewerbesparten sowie Wohnnutzungen; Überprüfung und Bewertung der planungsrechtlichen Instrumente zur Sicherung von Standorten der Kunstproduktion; Durchführung eines Planspiels"
+ergebnis: null
+jahr: "2015-2016"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen:
+  - "gewerbeentwicklung"
+datum: "2015-05-31T15:34:05"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-produktion-abbildungen-1.jpg"
+wpId: 1566
+wpLink: "https://www.slf-berlin.de/standortstruktur-der-kunstproduktion-in-berlin/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"706\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-karten-standorte-alle-alter.jpg\" class=\"attachment-large size-large wp-image-1568\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-karten-standorte-alle-alter.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-karten-standorte-alle-alter-580x476.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-karten-standorte-alle-alter-768x630.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Standorte der Kunstproduktion- Gesamtstadt</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Identifizierung der Kunstsparten der freien Szene und ihrer spezifischen Anforderungen an Produktionsstandorte sowie besondere Arbeitsbedingungen; Erfassung, Klassifizierung und Verortung von ca. 440 eingestreuten Kunstproduktionsstandorten auf gesamtstädtischer Ebene</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p>Darstellung der Verdrängungsrisiken insbesondere durch konkurrierende Gewerbesparten sowie Wohnnutzungen; Überprüfung und Bewertung der planungsrechtlichen Instrumente zur Sicherung von Standorten der Kunstproduktion; </p><p>Durchführung eines Planspiels an drei typisierten Standorten in Anlehnung an Gebiete innerhalb des Bezirks Friedrichshain- Kreuzberg zur Überprüfung der planungs-rechtlichen Möglichkeiten und Konflikte bei der Sicherung der Produktionsstandorte</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"663\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-produktion-abbildungen-miete.jpg\" class=\"attachment-large size-large wp-image-1572\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-produktion-abbildungen-miete.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-produktion-abbildungen-miete-580x447.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-produktion-abbildungen-miete-768x592.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Standorte der Kunstproduktion Innenstadt, Überlagerung mit Mietpreisentwicklung</figcaption>
+
+          \ </figure>"
+  - type: "bild"
+    breite: 860
+    hoehe: 321
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-arten-860x321.jpg"
+    klass: "attachment-large size-large wp-image-1567"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-arten-860x321.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-arten-580x217.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-arten-768x287.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-arten-1536x573.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-arten-2048x765.jpg 2048w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Standorte der Kunstproduktion nach Sparten"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin"
+      - label: "Auftraggebende"
+        wert: "Senatsverwaltung für Stadtentwicklung und Umwelt Berlin in Kooperation mit der Senatskanzlei- kulturelle Angelegenheiten"
+      - label: "Verfahren"
+        wert: "Stadtplanerische Untersuchung"
+      - label: "Zeitraum"
+        wert: "2015-2016"
+      - label: "Plangebietsgröße"
+        wert: "Gesamtstadt Berlin"
+      - label: "Team"
+        wert: "–"
+      - label: "Mehr Informationen"
+        wert: "–"

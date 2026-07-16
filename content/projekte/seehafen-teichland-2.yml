@@ -1,0 +1,52 @@
+titel: "Seehafen Teichland"
+untertitel: "1. Änderung Bebauungsplan, 2020-2024"
+beschreibung: "Überarbeiteter Entwurf 2014 Auf Grundlage des Wettbewerbsergebnisses von 2013 planungsrechtliche Umsetzung der überarbeiteten Entwicklungskonzeption für die Errichtung eines neuen Hafens mit touristischer Infrastruktur am südlichen Ortsrand von Neuendorf und zukünftigen Uferbereich des Cottbusser Ostsees Abstimmung und Berücksichtigung der Fachgutachten aus den Bereichen Bergbau, Hydrolgie, Artenschutz Überarbeiteter Entwurf 2019 Projektdaten Ort Brandenburg, Peitz, Teichland, Neuendorf Auftraggeber Gemeinde"
+ergebnis: null
+jahr: "2014 – 2015, Wiederaufnahme Planverfahren 2020 – 2024"
+kategorie:
+  - "Bauleitplanung"
+themen:
+  - "transformation"
+datum: "2020-12-15T11:07:32"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/20201130-bp-seehafen-2020-komplett.gif"
+wpId: 1059
+wpLink: "https://www.slf-berlin.de/seehafen-teichland-2/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"434\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/20140811-prasi-ve-amt-peitz-vorabzug-ii-seite-1.jpg\" class=\"attachment-large size-large wp-image-1062\" alt=\"\" /> <figcaption>Überarbeiteter Entwurf 2014</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Auf Grundlage des Wettbewerbsergebnisses von 2013 planungsrechtliche Umsetzung der überarbeiteten Entwicklungskonzeption für die Errichtung eines neuen Hafens mit touristischer Infrastruktur am südlichen Ortsrand von Neuendorf und zukünftigen Uferbereich des Cottbusser Ostsees</p>"
+  - type: "text"
+    html: "<p>Abstimmung und Berücksichtigung der Fachgutachten aus den Bereichen Bergbau, Hydrolgie, Artenschutz</p>"
+  - type: "bild"
+    breite: 860
+    hoehe: 597
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/sht-strukturkonzept-entwurf-2020-860x597.jpg"
+    klass: "attachment-large size-large wp-image-1244"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/sht-strukturkonzept-entwurf-2020-860x597.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/sht-strukturkonzept-entwurf-2020-580x403.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/sht-strukturkonzept-entwurf-2020-768x533.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/sht-strukturkonzept-entwurf-2020-1536x1067.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/sht-strukturkonzept-entwurf-2020.jpg 2000w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Überarbeiteter Entwurf 2019"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Peitz, Teichland, Neuendorf"
+      - label: "Auftraggebende"
+        wert: "Gemeinde Teichland / Amt Peitz"
+      - label: "Verfahren"
+        wert: "Städtebauliches Konzept und Bebauungsplanverfahren"
+      - label: "Zeitraum"
+        wert: "2014 – 2015, Wiederaufnahme Planverfahren 2020 – 2024"
+      - label: "Plangebietsgröße"
+        wert: "ca. 20 ha"
+      - label: "Team"
+        wert: "Franz Reschke Landschaftsarchitektur, Berlin<br />Subatzus & Bringmann GbR (Umweltbericht)"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"https://www.peitz.de/node/345\">www.peitz.de</a>"

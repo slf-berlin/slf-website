@@ -1,0 +1,74 @@
+titel: "Ausbau Südschnellweg / B3 Hannover"
+untertitel: "Nichtoffener verkehrs-, stadt- und freiraumplanerischer Ideenwettbewerb 2016"
+beschreibung: "Konzept für einen 3,8 km langen Abschnitt des Südschnellwegs durch den Landschaftsraum der Leine-Niederung und den Stadtraum des Stadtteils Döhren in Hannover Das Konzept sieht eine minimalinvasive Erneuerung der Schnellstraße in Dammlage im Westen; Verlegung der Schnellstraße in einen Tunnel und somit Einleitung einer Transformation des Stadtraums zur Gewinnung von Bau- und Freiflächen in Döhren"
+ergebnis: "1. Preis"
+jahr: "2016"
+kategorie:
+  - "Städtebau"
+themen:
+  - "transformation"
+  - "wettbewerbe"
+datum: "2016-03-03T12:42:05"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2016/03/titelbild-kombi.png"
+wpId: 542
+wpLink: "https://www.slf-berlin.de/hannover-suedschnellweg/"
+inhalt:
+  - type: "bild"
+    breite: 860
+    hoehe: 263
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/lageplan-gesamt.jpg"
+    klass: "attachment-large size-large wp-image-524"
+    alt: ""
+    figur: false
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/lageplan-gesamt.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/lageplan-gesamt-580x177.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/lageplan-gesamt-768x235.jpg 768w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p> Konzept für einen 3,8 km langen Abschnitt des Südschnellwegs durch den Landschaftsraum der Leine-Niederung und den Stadtraum des Stadtteils Döhren in Hannover</p><p>Das Konzept sieht eine minimalinvasive Erneuerung der Schnellstraße in Dammlage im Westen; Verlegung der Schnellstraße in einen Tunnel und somit Einleitung einer Transformation des Stadtraums zur Gewinnung von Bau- und Freiflächen in Döhren (Osten) vor.</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"478\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park1-860x478.jpg\" class=\"attachment-large size-large wp-image-1159\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park1-860x478.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park1-580x322.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park1-768x427.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park1.jpg 1080w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Stadtstraße wird zum Stadtpark</figcaption>
+
+          \ </figure>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"283\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/lageplan-pikto-e1583236283159.jpg\" class=\"attachment-large size-large wp-image-545\" alt=\"\" /> <figcaption>Pikto Entwurfskonzepte</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"478\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park2-860x478.jpg\" class=\"attachment-large size-large wp-image-1160\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park2-860x478.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park2-580x322.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park2-768x427.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/persi-park2.jpg 1080w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Stadtstraße wird zum Stadtpark</figcaption>
+
+          \ </figure>"
+  - type: "bild"
+    breite: 860
+    hoehe: 300
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/hannover-lageplan-500.jpg"
+    klass: "attachment-full size-full wp-image-523"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/hannover-lageplan-500.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/hannover-lageplan-500-580x202.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/hannover-lageplan-500-768x268.jpg 768w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Lageplan"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Niedersachsen, Hannover, Stadtteil Döhren"
+      - label: "Auftraggebende"
+        wert: "Landeshauptstadt Hannover"
+      - label: "Verfahren"
+        wert: "Nichtoffener verkehrs-, stadt- und freiraumplanerischer Ideenwettbewerb – 1. Preis"
+      - label: "Zeitraum"
+        wert: "2016"
+      - label: "Plangebietsgröße"
+        wert: "3,8 km Streckenabschnitt, insgesamt ca. 60 ha"
+      - label: "Team"
+        wert: "Hoffmann-Leichter Ingenieurgesellschaft mbH, Berlin<br /> Franz Reschke Landschaftsarchitektur, Berlin"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"https://www.competitionline.com/de/ergebnisse/204825\">www.competitionline.com</a>"

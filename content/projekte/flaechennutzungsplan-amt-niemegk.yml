@@ -1,0 +1,54 @@
+titel: "Flächennutzungsplan Amt Niemegk"
+untertitel: "Neuaufstellung des Flächennutzungs- und Landschaftsplans für das Amt Niemegk, seit 2022"
+beschreibung: "Das Amt Niemegk, bestehend aus den Gemeinden Planetal, Mühlenfließ, Rabenstein/Fläming sowie der Stadt Niemegk, plant die Neuaufstellung eines gemeinsamen Flächennutzungs-plans (FNP) und eines Landschaftsplans. Ziel ist die Berücksichtigung aktueller städtebaulicher Entwicklungen in den Bereichen Wohnen, Wirtschaft, Umwelt, Energie und Verkehr. Gemeindeteile Niemegk Mit der Planung wird eine nachhaltige und zukunftsorientierte Entwicklung des Amtsgebiets gefördert. Der"
+ergebnis: null
+jahr: "seit 2022"
+kategorie:
+  - "Bauleitplanung"
+themen:
+  - "partizipation"
+datum: "2025-01-20T16:32:43"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/fnp-entwurf-19012026-kom.png"
+wpId: 4375
+wpLink: "https://www.slf-berlin.de/flaechennutzungsplan-amt-niemegk/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 33
+        html: "<p>Das Amt Niemegk, bestehend aus den Gemeinden Planetal, Mühlenfließ, Rabenstein/Fläming sowie der Stadt Niemegk, plant die Neuaufstellung eines gemeinsamen Flächennutzungs-plans (FNP) und eines Landschaftsplans. Ziel ist die Berücksichtigung aktueller städtebaulicher Entwicklungen in den Bereichen Wohnen, Wirtschaft, Umwelt, Energie und Verkehr.</p>"
+      - breite: 66
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"567\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/gemeindeteile-niemegk-scaled-e1737370498140-580x567.jpg\" class=\"attachment-medium size-medium wp-image-4386\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/gemeindeteile-niemegk-scaled-e1737370498140-580x567.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/gemeindeteile-niemegk-scaled-e1737370498140-860x841.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/gemeindeteile-niemegk-scaled-e1737370498140-768x751.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/gemeindeteile-niemegk-scaled-e1737370498140-1536x1502.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/gemeindeteile-niemegk-scaled-e1737370498140.jpg 1737w\" sizes=\"(max-width: 580px) 100vw, 580px\" /> <figcaption>Gemeindeteile Niemegk</figcaption>
+
+          \ </figure>"
+  - type: "text"
+    html: "<p>Mit der Planung wird eine nachhaltige und zukunftsorientierte Entwicklung des Amtsgebiets gefördert. Der Flächennutzungsplan umfasst eine Fläche von rund 22.500 Hektar und bildet die Grundlage für die koordinierte Nutzung und Gestaltung der Bodennutzung im Einklang mit aktuellen gesetzlichen und regionalen Anforderungen. Parallel dazu wird der Landschaftsplan und der Umweltbericht durch FUGMANN JANOTTA PARTNER, Berlin erstellt, um die Belange von Naturschutz und Landschaftspflege umfassend in die Planung einzubinden.</p><p>Die Bürgerbeteiligung sowie die Zusammenarbeit mit Behörden und Fachexperten stehen im Mittelpunkt dieses mehrjährigen Planungsprozesses, um eine breite Akzeptanz und fachliche Qualität zu gewährleisten.</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 33
+        html: "<img width=\"473\" height=\"630\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/niemegk-7-ortsteile-fotos-komp-25032024.jpg\" class=\"attachment-large size-large wp-image-4384\" alt=\"\" />"
+      - breite: 33
+        html: "<img width=\"567\" height=\"426\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/niemegk-7-ortsteile-fotos-komp-250320.jpg\" class=\"attachment-large size-large wp-image-4382\" alt=\"\" />
+
+          <img width=\"567\" height=\"425\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/niemegk-7-ortsteile-fotos-komp.jpg\" class=\"attachment-large size-large wp-image-4379\" alt=\"\" />"
+      - breite: 33
+        html: "<img width=\"567\" height=\"425\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/niemegk-7-ortsteile-fotos-komp-2503.jpg\" class=\"attachment-large size-large wp-image-4381\" alt=\"\" />
+
+          <img width=\"567\" height=\"425\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/niemegk-7-ortsteile-fotos-komp-250.jpg\" class=\"attachment-large size-large wp-image-4380\" alt=\"\" />"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Niemegk"
+      - label: "Auftraggebende"
+        wert: "Amt Niemegk"
+      - label: "Verfahren"
+        wert: "Bauleitplanung"
+      - label: "Zeitraum"
+        wert: "seit 2022<br />"
+      - label: "Plangebietsgröße"
+        wert: "ca. 225 qkm"
+      - label: "Team"
+        wert: "Fugmann Janotta Partner, Berlin"
+  - type: "mehr_info"
+    html: ""

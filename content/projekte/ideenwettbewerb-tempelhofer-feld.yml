@@ -1,0 +1,54 @@
+titel: "Ideenwettbewerb Tempelhofer Feld, Berlin"
+untertitel: "offener zweiphasiger Ideenwettbewerb 2024"
+beschreibung: "Das Projekt verfolgt eine behutsame Weiterentwicklung des Tempelhofer Feldes unter Erhalt seiner offenen Landschafts- und Parkstruktur gemäß Tempelhofgesetz und dem Entwicklungs- und Pflegeplan (EPP). Eine großflächige Wohnbebauung wird abgelehnt; stattdessen sollen punktuelle Eingriffe am Randbereich („in between“) das Feld besser mit der Umgebung verknüpfen und neue öffentliche Angebote schaffen. Leitbild Hauptziele: Erhalt des Freiraumsals Ort"
+ergebnis: null
+jahr: "2024"
+kategorie:
+  - "Städtebau"
+themen:
+  - "klimaanpassung"
+  - "partizipation"
+  - "wettbewerbe"
+datum: "2025-06-03T15:34:35"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-153058-e1774613704915.png"
+wpId: 4598
+wpLink: "https://www.slf-berlin.de/ideenwettbewerb-tempelhofer-feld/"
+inhalt:
+  - type: "text"
+    html: "<p>Das Projekt verfolgt eine behutsame Weiterentwicklung des Tempelhofer Feldes unter Erhalt seiner offenen Landschafts- und Parkstruktur gemäß Tempelhofgesetz und dem Entwicklungs- und Pflegeplan (EPP). Eine großflächige Wohnbebauung wird abgelehnt; stattdessen sollen punktuelle Eingriffe am Randbereich („in between“) das Feld besser mit der Umgebung verknüpfen und neue öffentliche Angebote schaffen.</p>"
+  - type: "bild"
+    breite: 860
+    hoehe: 279
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-114800-860x279.png"
+    klass: "attachment-large size-large wp-image-4587"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-114800-860x279.png 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-114800-580x188.png 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-114800-768x249.png 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-114800-1536x498.png 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-114800-2048x664.png 2048w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Leitbild"
+  - type: "text"
+    html: "<h3>Hauptziele:<br /><br /></h3><ul><li>Erhalt des Freiraumsals Ort für Klima- und Naturschutz, Freizeit und Gemeinschaft.</li><li>Keine Bebauung zur kurzfristigen Wohnraumschaffung, da eine Realisierung realistischerweise erst <br />nach 2031 möglich wäre.</li><li>Stärkung des partizipativen Entwicklungsprozessesmit bereits bewährter Struktur.</li></ul>"
+  - type: "bild"
+    breite: 860
+    hoehe: 777
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-115202-860x777.png"
+    klass: "attachment-large size-large wp-image-4588"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-115202-860x777.png 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-115202-580x524.png 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-115202-768x694.png 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-115202-1536x1388.png 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-115202-2048x1850.png 2048w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Querschnitt Quartiersentreé"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Neukölln und Tempelhof"
+      - label: "Auftraggebende"
+        wert: "Land Berlin vertreten durch die Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen"
+      - label: "Verfahren"
+        wert: "offener zweiphasiger Ideenwettbewerb"
+      - label: "Zeitraum"
+        wert: "2024"
+      - label: "Plangebietsgröße"
+        wert: "ca. 330 ha gesamt, davon ca. 100 ha Wettbewerbsgebiet"
+  - type: "mehr_info"
+    html: ""

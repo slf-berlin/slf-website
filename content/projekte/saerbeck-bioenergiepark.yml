@@ -1,0 +1,45 @@
+titel: "Bioenergiepark Saerbeck"
+untertitel: "Bebauungsplan"
+beschreibung: "Erarbeitung eines Strukturkonzeptes und eines Bebau-ungsplanes für das 90 ha umfassende Munitionsdepot Saerbeck, dessen militärische Nutzung 2011 aufgegeben werden soll Anpassung des FNP und des Regionalplans Umnutzung zum Bioenergiepark Gesamtstrategie mit Maßnahmenschritten zu einer klima-neutralen Kommune (ca. 7.500 Einwohner) im Münsterland Erarbeitung von sieben Handlungsfeldern von Bioenergiepark, Bürgermitwirkung und Mobilität"
+ergebnis: null
+jahr: "2011- 2013"
+kategorie:
+  - "Bauleitplanung"
+themen:
+  - "gewerbeentwicklung"
+  - "klimaanpassung"
+  - "transformation"
+  - "partizipation"
+datum: "2010-03-03T15:54:06"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bp39-satzung.jpg"
+wpId: 586
+wpLink: "https://www.slf-berlin.de/saerbeck-bioenergiepark/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<img width=\"860\" height=\"871\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-02-06-um-17-18-860x871.jpg\" class=\"attachment-large size-large wp-image-505\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-02-06-um-17-18-860x871.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-02-06-um-17-18-580x587.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-02-06-um-17-18-768x778.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-02-06-um-17-18.jpg 1187w\" sizes=\"(max-width: 860px) 100vw, 860px\" />"
+      - breite: 50
+        html: "<p>Erarbeitung eines Strukturkonzeptes und eines Bebau-ungsplanes für das 90 ha umfassende Munitionsdepot Saerbeck, dessen militärische Nutzung 2011 aufgegeben werden soll</p><p>Anpassung des FNP und des Regionalplans</p><p>Umnutzung zum Bioenergiepark</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p>Gesamtstrategie mit Maßnahmenschritten zu einer klima-neutralen Kommune (ca. 7.500 Einwohner) im Münsterland</p><p>Erarbeitung von sieben Handlungsfeldern von Bioenergiepark, Bürgermitwirkung und Mobilität bis zu Marketing und Management/Controlling mit entsprechenden Leitprojekten </p>"
+      - breite: 50
+        html: "<img width=\"800\" height=\"616\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/netzplansaerbeck.jpg\" class=\"attachment-large size-large wp-image-508\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/netzplansaerbeck.jpg 800w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/netzplansaerbeck-580x447.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/netzplansaerbeck-768x591.jpg 768w\" sizes=\"(max-width: 800px) 100vw, 800px\" />"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Nordrhein- Westfalen, Saerbeck"
+      - label: "Auftraggebende"
+        wert: "Gemeinde Saerbeck"
+      - label: "Verfahren"
+        wert: "Bebauungsplanverfahren"
+      - label: "Zeitraum"
+        wert: "2011- 2013"
+      - label: "Plangebietsgröße"
+        wert: "90 ha"
+      - label: "Team"
+        wert: "Stefan Wallmann Landschaftsarchitekten, Berlin"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"https://www.klimakommune-saerbeck.de/Bioenergiepark.htm?waid=317\">www.klimakommune-saerbeck.de</a>"

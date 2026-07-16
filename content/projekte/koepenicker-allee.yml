@@ -1,0 +1,73 @@
+titel: "Ideenwerkstatt zur Entwicklung eines städtebaulichen Masterplans, Karlshorst"
+untertitel: "Karlshorst, Köpenicker Allee 146-162, 2019"
+beschreibung: "Erschließungskonzept Zweiphasiges, konkurrierendes Verfahren zur Entwicklung eines Wohnquartiers mit der Leitidee „Erweiterung der Gartenstadt Karlshorst“. Entwicklung von Geschosswohnungsbau mit Kita, wohnungsnahen Grünflächen und Spielplatz auf einem ehemaligen Gewerbegrundstück im Umfeld von Wohnquartieren, Kleingärten und Forschungseinrichtungen. Ziel: Erreichen einer hohen städtebaulichen räumlichen Qualität mit eindeutig zugeordneten Räumen und kleinteiligen Nachbarschaften, vielfältigen Wohnungsangebot für alle Bevölkerungsgruppen in"
+ergebnis: null
+jahr: "2019"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+  - "Städtebau"
+themen:
+  - "wohnungsbau"
+  - "transformation"
+  - "wettbewerbe"
+datum: "2019-10-04T15:01:08"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/03/entwurf-1000-e1774616264989.jpg"
+wpId: 685
+wpLink: "https://www.slf-berlin.de/koepenicker-allee/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"417\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/entwurf-1000-verkehr.jpg\" class=\"attachment-large size-large wp-image-447\" alt=\"\" /> <figcaption>Erschließungskonzept</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p class=\"Text\">Zweiphasiges, konkurrierendes Verfahren zur Entwicklung eines Wohnquartiers mit der Leitidee „Erweiterung der Gartenstadt Karlshorst“.</p><p>Entwicklung von Geschosswohnungsbau mit Kita, wohnungsnahen Grünflächen und Spielplatz auf einem ehemaligen Gewerbegrundstück im Umfeld von Wohnquartieren, Kleingärten und Forschungseinrichtungen.</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p class=\"Text\">Ziel: Erreichen einer hohen städtebaulichen räumlichen Qualität mit eindeutig zugeordneten Räumen und kleinteiligen Nachbarschaften, vielfältigen Wohnungsangebot für alle Bevölkerungsgruppen in wirtschaftlicher und kostenoptimierter Bauweise und Erhalt schützenwerter Bäume.</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"413\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/entwurf-1000-freiraum.jpg\" class=\"attachment-large size-large wp-image-446\" alt=\"\" /> <figcaption>Freiraumkonzept</figcaption>
+
+          \ </figure>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"365\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/typologieverteilung-860x365.jpg\" class=\"attachment-large size-large wp-image-522\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/typologieverteilung-860x365.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/typologieverteilung-580x246.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/typologieverteilung-768x326.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/typologieverteilung-1536x652.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/typologieverteilung-2048x869.jpg 2048w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Verteilung Typologien</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Städtebauliche Figur aus der Kombination von Zeilenbauten und Punkthäusern, Integration eines großzügigen Parks unter Erhalt zahlreicher Bestandsbäume als Herzstück und identitätsprägender Treffpunkt.</p>"
+  - type: "bild"
+    breite: 860
+    hoehe: 111
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-03-04-um-15-00-55-860x111.png"
+    klass: "attachment-large size-large wp-image-688"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-03-04-um-15-00-55-860x111.png 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-03-04-um-15-00-55-580x75.png 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-03-04-um-15-00-55-768x99.png 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-03-04-um-15-00-55-1536x199.png 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-03-04-um-15-00-55-2048x265.png 2048w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Geländeschnitt"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Lichtenberg, Karlshorst"
+      - label: "Auftraggebende"
+        wert: "Gewobag KA GmbH & Co. KG"
+      - label: "Verfahren"
+        wert: "zweiphasige Ideenwerkstatt"
+      - label: "Zeitraum"
+        wert: "2019"
+      - label: "Plangebietsgröße"
+        wert: "ca. 6 ha"
+      - label: "Team"
+        wert: "–"
+      - label: "Mehr Informationen"
+        wert: "–"

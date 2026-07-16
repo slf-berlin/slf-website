@@ -1,0 +1,62 @@
+titel: "Neuendorfer Hafen am zukünftigen Cottbuser Ostsee (Seehafen Teichland)"
+untertitel: "Nichtoffener Wettbewerb nach RPW, 2012"
+beschreibung: "Strukturplan Konzept zur Schaffung eines neuen Ortszentrums der Gemeinde Teichland und eines Hafens am künftigen Cottbusser Ostsee (Lausitz) Abwechslungsreiche Ufergestaltung und Wegeführung mit Promenade, Hafenplatz und Weiterentwicklung der „Seeachse“ Grüne Promenade Nutzungs- und Gestaltungskonzept Projektdaten Ort Brandenburg, Amt Peitz, Gemeinde Teichland, Ortsteil Neuendorf Auftraggeber Gemeinde Teichland / Amt Peitz Verfahren Interdisziplinärer Wettbewerb – 1. Preis Zeitraum"
+ergebnis: "1. Preis"
+jahr: "2012 – 2014"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+  - "Städtebau"
+themen:
+  - "transformation"
+  - "wettbewerbe"
+datum: "2012-09-18T11:05:26"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/lagunenhafen_vogelflugperspektive.jpg"
+wpId: 227
+wpLink: "https://www.slf-berlin.de/seehafen-teichland/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"767\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/strukturplan_2500-e1570022739498-860x767.jpg\" class=\"attachment-large size-large wp-image-273\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/strukturplan_2500-e1570022739498-860x767.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/strukturplan_2500-e1570022739498-580x517.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/strukturplan_2500-e1570022739498-768x685.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/strukturplan_2500-e1570022739498.jpg 1000w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Strukturplan</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Konzept zur Schaffung eines neuen Ortszentrums der Gemeinde Teichland und eines Hafens am künftigen Cottbusser Ostsee (Lausitz)</p><p>Abwechslungsreiche Ufergestaltung und Wegeführung mit Promenade, Hafenplatz und Weiterentwicklung der „Seeachse“</p>"
+  - type: "bild"
+    breite: 860
+    hoehe: 735
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/gruene-promenade-860x735.jpg"
+    klass: "attachment-large size-large wp-image-265"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/gruene-promenade-860x735.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/gruene-promenade-580x496.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/gruene-promenade-768x657.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/gruene-promenade.jpg 1000w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Grüne Promenade"
+  - type: "bild"
+    breite: 860
+    hoehe: 660
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/nutzung-und-gestaltungskonzept_500-860x660.jpg"
+    klass: "attachment-large size-large wp-image-267"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/nutzung-und-gestaltungskonzept_500-860x660.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/nutzung-und-gestaltungskonzept_500-580x445.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/nutzung-und-gestaltungskonzept_500-768x590.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/nutzung-und-gestaltungskonzept_500.jpg 1000w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Nutzungs- und Gestaltungskonzept "
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Amt Peitz, Gemeinde Teichland, Ortsteil Neuendorf"
+      - label: "Auftraggebende"
+        wert: "Gemeinde Teichland / Amt Peitz"
+      - label: "Verfahren"
+        wert: "Interdisziplinärer Wettbewerb – 1. Preis"
+      - label: "Zeitraum"
+        wert: "2012 – 2014"
+      - label: "Plangebietsgröße"
+        wert: "31 ha"
+      - label: "Team"
+        wert: "hoch C Landschaftsarchitektur, Berlin <br />Franz Reschke Landschaftsarchitekten, Berlin"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"https://cottbuser-ostsee.de\">www.cottbuser-ostsee.de</a>"

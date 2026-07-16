@@ -1,0 +1,52 @@
+titel: "PV-Anlage Rietz-Neuendorf"
+untertitel: "Vorhabenbezogener Bebauungsplan \"Photovoltaik-Freiflächenanlage im Ortsteil Herzberg\", Gemeinde Rietz-Neuendorf, seit 2024"
+beschreibung: "Die Gemeinde Rietz-Neuendorf hat auf Antrag des Vorhaben-trägers Green FOX Energy GmbH, als unabhängiger Projekt-entwickler und Bestandshalter von Anlagen zur Gewinnung/ Erzeugung erneuerbarer Energien, das Verfahren zur Aufstellung eines vorhaben-bezogenen Bebauungsplans für die Errichtung einer Photovoltaik-anlage im Ortsteil Herzberg nördlich der Ortslage Hartensdorf eingeleitet. Luftbild Lageplan (Geoportal Brandenburg) Durch das Planverfahren wird eine landwirtschaftlich genutzte"
+ergebnis: null
+jahr: "seit 2024"
+kategorie:
+  - "Bauleitplanung"
+themen:
+  - "klimaanpassung"
+datum: "2025-01-17T11:41:48"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104846.png"
+wpId: 4214
+wpLink: "https://www.slf-berlin.de/pv-anlage-rietz-neuendorf/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 33
+        html: "<p>Die Gemeinde Rietz-Neuendorf hat auf Antrag des Vorhaben-trägers Green FOX Energy GmbH, als unabhängiger Projekt-entwickler und Bestandshalter von Anlagen zur Gewinnung/ Erzeugung erneuerbarer Energien, das Verfahren zur Aufstellung eines vorhaben-bezogenen Bebauungsplans für die Errichtung einer Photovoltaik-anlage im Ortsteil Herzberg nördlich der Ortslage Hartensdorf eingeleitet.</p>"
+      - breite: 66
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"410\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104942-580x410.png\" class=\"attachment-medium size-medium wp-image-4317\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104942-580x410.png 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104942-860x608.png 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104942-768x543.png 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104942-1536x1085.png 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104942-2048x1447.png 2048w\" sizes=\"(max-width: 580px) 100vw, 580px\" /> <figcaption>Luftbild Lageplan (Geoportal Brandenburg)</figcaption>
+
+          \ </figure>"
+  - type: "text"
+    html: "<p>Durch das Planverfahren wird eine landwirtschaftlich genutzte Flächen im Umfang von rund 21,3 ha für die Nutzung durch Anlagen zur Gewinnung solarer Strahlungsenergie qualifiziert. Die Vorhabenplanung sieht die Errichtung einer Photovoltaik-Freiflächenanlage (PV-FFA) mit einer potenziellen Leistung von rund 25 MWp (Megawatt Peak) vor. Die erzeugte Energie soll in das öffentliche Stromnetz eingespeist werden. Um auf Schwankungen der Netzauslastung reagieren zu können sind auf einer Teilfläche Batteriespeicheranlagen geplant. </p><p>Die Erstellung des Umweltberichts erfolgt durch  Stadt Land Brehm, Planungsbüro für Stadt und Landschaft in Königs Wusterhausen.</p>"
+  - type: "bild"
+    breite: 860
+    hoehe: 778
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104832-860x778.png"
+    klass: "attachment-large size-large wp-image-4315"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104832-860x778.png 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104832-580x525.png 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104832-768x695.png 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104832-1536x1390.png 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104832-2048x1853.png 2048w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Projektplan"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Rietz-Neuendorf, Herzberg nördlich der Ortslage Hartensdorf"
+      - label: "Auftraggebende"
+        wert: "Vorhabenträger Green FOX Energie 3 GmbH, Hamburg"
+      - label: "Verfahren"
+        wert: "Vorhabenbezogener Bebauungsplan"
+      - label: "Zeitraum"
+        wert: "seit 2024 <br />"
+      - label: "Plangebietsgröße"
+        wert: "ca. 21,3 ha"
+      - label: "Team"
+        wert: "Stadt Land Brehm, Planungsbüro für Stadt und Landschaft, Königs Wusterhausen"
+  - type: "mehr_info"
+    html: ""

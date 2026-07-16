@@ -1,0 +1,61 @@
+titel: "Quartiersentwicklung Weiße Stadt"
+untertitel: "Bebauungsplan Nr. 100"
+beschreibung: "Luftbild Nachhaltige Entwicklung eines Stadtquartiers mit rund 500 WE auf dem ca. 14 ha großen, ehemals industriell und militärisch genutzten Areal nördlich der Wohnsiedlung „Weiße Stadt“ Umsetzung des städtebaulichen Konzepts des Architekturbüros Superblock, Siegerentwurf Wettbewerb 2013; Detaillierung von Planungsinhalten im Rahmen des Bebauungsplanverfahrens Detailansicht Planzeichnung Projektdaten Ort Brandenburg, Stadt Oranienburg Auftraggeber Stadt Oranienburg Verfahren Bebauungsplanverfahren"
+ergebnis: null
+jahr: "2014 – 2016"
+kategorie:
+  - "Bauleitplanung"
+themen:
+  - "wohnungsbau"
+  - "transformation"
+datum: "2016-09-03T16:25:37"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan-100_satzung_august-2018-scaled-e1607947505922.jpg"
+wpId: 596
+wpLink: "https://www.slf-berlin.de/weisse-stadt-oranienburg/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"570\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild-860x570.jpg\" class=\"attachment-large size-large wp-image-394\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild-860x570.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild-580x385.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild-768x509.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild-1536x1019.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild.jpg 1821w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Luftbild</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p class=\"Text\">Nachhaltige Entwicklung eines Stadtquartiers mit rund 500 WE auf dem ca. 14 ha großen, ehemals industriell und militärisch genutzten Areal nördlich der Wohnsiedlung „Weiße Stadt“</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p class=\"Text\">Umsetzung des städtebaulichen Konzepts des Architekturbüros Superblock, Siegerentwurf Wettbewerb 2013; Detaillierung von Planungsinhalten im Rahmen des Bebauungsplanverfahrens</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"365\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/wettbewerb.jpg\" class=\"attachment-large size-large wp-image-396\" alt=\"\" /> <figcaption>Detailansicht</figcaption>
+
+          \ </figure>"
+  - type: "bild"
+    breite: 860
+    hoehe: 668
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan-100_satzung_august-2018-scaled-e1607947505922-860x668.jpg"
+    klass: "attachment-large size-large wp-image-391"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan-100_satzung_august-2018-scaled-e1607947505922-860x668.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan-100_satzung_august-2018-scaled-e1607947505922-580x451.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan-100_satzung_august-2018-scaled-e1607947505922-768x597.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan-100_satzung_august-2018-scaled-e1607947505922-1536x1194.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan-100_satzung_august-2018-scaled-e1607947505922.jpg 1984w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Planzeichnung"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Stadt Oranienburg"
+      - label: "Auftraggebende"
+        wert: "Stadt Oranienburg"
+      - label: "Verfahren"
+        wert: "Bebauungsplanverfahren"
+      - label: "Zeitraum"
+        wert: "2014 – 2016"
+      - label: "Plangebietsgröße"
+        wert: "ca. 14 ha"
+      - label: "Team"
+        wert: "Superblock ZT GmbH, Wien <br />Stefan Wallmann Landschaftsarchitekten, Berlin"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"https://oranienburg.de/Städtebau-Wirtschaft/Stadtentwicklung/Projekte/Weiße-Stadt\">www.oranienburg.de</a>"

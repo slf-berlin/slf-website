@@ -1,0 +1,58 @@
+titel: "Waldowplatz Treptow-Köpenick"
+untertitel: "Städtebaulich - freiraumplanerische Konzeptstudie, 2019"
+beschreibung: "Konsensvariante Erstellung vier verschiedener Varianten und zwei Vorzugsvarianten eines Konzeptes für die stufenweise Entwicklung eines Schulstandortes in Berlin-Oberschöneweide. Ergänzung um weitere sozialer Infrastruktur – eine Kindertagesstätte und eine Jugendfreizeiteinrichtung. Etablierung einer gemischten Nutzungsstruktur mit dem Schwerpunkt Wohnen und Förderung gemischter Wohntypologien in allen Varianten zur sozialen Mischung der Bewohnerschaft und zur Attraktivität des Quartiers. Schaffung"
+ergebnis: null
+jahr: "2018 – 2019"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen:
+  - "wohnungsbau"
+datum: "2019-06-19T14:03:39"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/190110-wal-collage-nutzungen-va-1b.jpg"
+wpId: 667
+wpLink: "https://www.slf-berlin.de/waldowplatz/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"696\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/konsensvariante-860x696.jpg\" class=\"attachment-large size-large wp-image-503\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/konsensvariante-860x696.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/konsensvariante-580x470.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/konsensvariante-768x622.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/konsensvariante-1536x1244.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/konsensvariante-2048x1658.jpg 2048w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Konsensvariante</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p>Erstellung vier verschiedener Varianten und zwei Vorzugsvarianten eines Konzeptes für die stufenweise Entwicklung eines Schulstandortes in Berlin-Oberschöneweide.</p><p>Ergänzung um weitere sozialer Infrastruktur – eine Kindertagesstätte und eine Jugendfreizeiteinrichtung.</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p>Etablierung einer gemischten Nutzungsstruktur mit dem Schwerpunkt Wohnen und Förderung gemischter Wohntypologien in allen Varianten zur sozialen Mischung der Bewohnerschaft und zur Attraktivität des Quartiers.   </p><p>Schaffung attraktiver öffentlich nutzbarer Freiräume (u.a. Spielplätze, Quartiersplatz, Grünflächen) und einer nachhaltigen Quartiersentwicklung.</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"442\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/plan-11_jfe-typologien_2019-04-09.jpg\" class=\"attachment-large size-large wp-image-500\" alt=\"\" /> <figcaption>Typologienentwicklung Sporthalle/JFE</figcaption>
+
+          \ </figure>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"580\" height=\"580\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/schematische-darstellungen.jpg\" class=\"attachment-large size-large wp-image-502\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/schematische-darstellungen.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/schematische-darstellungen-150x150.jpg 150w\" sizes=\"(max-width: 580px) 100vw, 580px\" /> <figcaption>Schematische Darstellungen verschiedener Varianten</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<img width=\"580\" height=\"579\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/schematische-darstellungen_2018-11-20.jpg\" class=\"attachment-large size-large wp-image-501\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/schematische-darstellungen_2018-11-20.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/schematische-darstellungen_2018-11-20-150x150.jpg 150w\" sizes=\"(max-width: 580px) 100vw, 580px\" />"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Treptow-Köpenick, Oberschöneweide"
+      - label: "Auftraggebende"
+        wert: "Bezirk Treptow-Köpenick"
+      - label: "Verfahren"
+        wert: "Städtebaulich – freiraumplanerische Konzeptstudie"
+      - label: "Zeitraum"
+        wert: "2018 – 2019"
+      - label: "Plangebietsgröße"
+        wert: "ca. 5 ha"
+      - label: "Team"
+        wert: "hoch c Landschaftsarchitekten, Berlin"

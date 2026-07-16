@@ -1,7 +1,7 @@
-// ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT depuis WordPress.
-// Ne pas éditer à la main — modifier dans WordPress puis lancer `npm run sync`.
-// Dernière synchro : 2026-07-14T10:33:09.668Z
-// Source : https://www.slf-berlin.de/wp-json/wp/v2/posts
+// ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT depuis content/projekte/.
+// Ne pas éditer à la main — éditer via le CMS (/admin) ou les fichiers .yml,
+// puis lancer `npm run inhalt` (automatique avec `npm run dev` et `npm run build`).
+// Dernière génération : 2026-07-16T14:46:22.382Z
 
 const projects = [
   {
@@ -22,7 +22,8 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2026/03/bildschirmfoto-2026-03-27-um-141255.png",
     "wpId": 4818,
     "wpDate": "2026-07-14T09:53:34",
-    "wpLink": "https://www.slf-berlin.de/s-bahn-quartier-stahnsdorf/"
+    "wpLink": "https://www.slf-berlin.de/s-bahn-quartier-stahnsdorf/",
+    "themen": []
   },
   {
     "id": "umgestaltung-innenstadt-von-burloer-strasse-bis-rathausplatz-in-rhede",
@@ -42,7 +43,13 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2026/06/unbenannt-1.png",
     "wpId": 4815,
     "wpDate": "2026-06-03T17:44:09",
-    "wpLink": "https://www.slf-berlin.de/umgestaltung-innenstadt-von-burloer-strasse-bis-rathausplatz-in-rhede/"
+    "wpLink": "https://www.slf-berlin.de/umgestaltung-innenstadt-von-burloer-strasse-bis-rathausplatz-in-rhede/",
+    "themen": [
+      "wohnungsbau",
+      "nachverdichtung",
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "quartiersentwicklung-maximilianstrasse-in-nuernberg",
@@ -62,7 +69,14 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2026/03/plaene-wb-nuerenberg-111575-s2-scaled-e1774613263332.jpg",
     "wpId": 4696,
     "wpDate": "2026-03-27T10:53:59",
-    "wpLink": "https://www.slf-berlin.de/quartiersentwicklung-maximilianstrasse-in-nuernberg/"
+    "wpLink": "https://www.slf-berlin.de/quartiersentwicklung-maximilianstrasse-in-nuernberg/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "transformation",
+      "autoarmes-quartier",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "wettbewerb-hafenareal-kassel",
@@ -82,7 +96,14 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/250401-lageplan-1000-e1774613643522.png",
     "wpId": 4606,
     "wpDate": "2026-03-27T10:33:54",
-    "wpLink": "https://www.slf-berlin.de/wettbewerb-hafenareal-kassel/"
+    "wpLink": "https://www.slf-berlin.de/wettbewerb-hafenareal-kassel/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "transformation",
+      "partizipation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "innenentwicklungskonzepte-iek-berlin",
@@ -102,7 +123,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2026/03/uebersicht-iek.png",
     "wpId": 3067,
     "wpDate": "2026-03-26T14:07:19",
-    "wpLink": "https://www.slf-berlin.de/innenentwicklungskonzepte-iek-berlin/"
+    "wpLink": "https://www.slf-berlin.de/innenentwicklungskonzepte-iek-berlin/",
+    "themen": [
+      "wohnungsbau",
+      "nachverdichtung"
+    ]
   },
   {
     "id": "zu-den-binnenhoefen-gransee-gutachterverfahren-neues-bahnhofsquartier-2025-26",
@@ -123,7 +148,13 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2026/03/260115-wb-gransee-500-kopie-2-scaled.jpg",
     "wpId": 4785,
     "wpDate": "2026-03-26T09:00:15",
-    "wpLink": "https://www.slf-berlin.de/zu-den-binnenhoefen-gransee-gutachterverfahren-neues-bahnhofsquartier-2025-26/"
+    "wpLink": "https://www.slf-berlin.de/zu-den-binnenhoefen-gransee-gutachterverfahren-neues-bahnhofsquartier-2025-26/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "autoarmes-quartier",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "wettbewerbs-koordination-blankenburger-sueden-teilflaeche-sued",
@@ -144,7 +175,13 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2026/01/a1-raumliche-bindungen-scaled-e1774605464698.jpg",
     "wpId": 4525,
     "wpDate": "2026-01-26T18:53:06",
-    "wpLink": "https://www.slf-berlin.de/wettbewerbs-koordination-blankenburger-sueden-teilflaeche-sued/"
+    "wpLink": "https://www.slf-berlin.de/wettbewerbs-koordination-blankenburger-sueden-teilflaeche-sued/",
+    "themen": [
+      "wohnungsbau",
+      "gewerbeentwicklung",
+      "klimaanpassung",
+      "partizipation"
+    ]
   },
   {
     "id": "ideenwettbewerb-tempelhofer-feld",
@@ -164,7 +201,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/06/bildschirmfoto-2025-06-03-um-153058-e1774613704915.png",
     "wpId": 4598,
     "wpDate": "2025-06-03T15:34:35",
-    "wpLink": "https://www.slf-berlin.de/ideenwettbewerb-tempelhofer-feld/"
+    "wpLink": "https://www.slf-berlin.de/ideenwettbewerb-tempelhofer-feld/",
+    "themen": [
+      "klimaanpassung",
+      "partizipation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "fnp-michendorf",
@@ -184,7 +226,8 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/fnp-08-scaled-e1737452884166.jpg",
     "wpId": 4394,
     "wpDate": "2025-01-22T14:51:24",
-    "wpLink": "https://www.slf-berlin.de/fnp-michendorf/"
+    "wpLink": "https://www.slf-berlin.de/fnp-michendorf/",
+    "themen": []
   },
   {
     "id": "flaechennutzungsplan-amt-niemegk",
@@ -204,7 +247,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/fnp-entwurf-19012026-kom.png",
     "wpId": 4375,
     "wpDate": "2025-01-20T16:32:43",
-    "wpLink": "https://www.slf-berlin.de/flaechennutzungsplan-amt-niemegk/"
+    "wpLink": "https://www.slf-berlin.de/flaechennutzungsplan-amt-niemegk/",
+    "themen": [
+      "partizipation"
+    ]
   },
   {
     "id": "pv-anlage-rietz-neuendorf",
@@ -224,7 +270,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-104846.png",
     "wpId": 4214,
     "wpDate": "2025-01-17T11:41:48",
-    "wpLink": "https://www.slf-berlin.de/pv-anlage-rietz-neuendorf/"
+    "wpLink": "https://www.slf-berlin.de/pv-anlage-rietz-neuendorf/",
+    "themen": [
+      "klimaanpassung"
+    ]
   },
   {
     "id": "wettbewerb-leipzig",
@@ -244,7 +293,14 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2024/11/am-quartiersentree.jpg",
     "wpId": 4215,
     "wpDate": "2024-11-10T12:28:03",
-    "wpLink": "https://www.slf-berlin.de/wettbewerb-leipzig/"
+    "wpLink": "https://www.slf-berlin.de/wettbewerb-leipzig/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "transformation",
+      "autoarmes-quartier",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "wettbewerb-gladbeck",
@@ -264,7 +320,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/11/370823-plaene-1-a3-1-e1774614053105.jpg",
     "wpId": 4019,
     "wpDate": "2024-11-09T16:44:07",
-    "wpLink": "https://www.slf-berlin.de/wettbewerb-gladbeck/"
+    "wpLink": "https://www.slf-berlin.de/wettbewerb-gladbeck/",
+    "themen": [
+      "wettbewerbe"
+    ]
   },
   {
     "id": "vorhabenbezogener-bebauungsplan-9-74-ve",
@@ -284,7 +343,8 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/08/bildschirmfoto-2024-02-21-um-152340-e1737552471538.png",
     "wpId": 3920,
     "wpDate": "2024-02-21T15:24:23",
-    "wpLink": "https://www.slf-berlin.de/vorhabenbezogener-bebauungsplan-9-74-ve/"
+    "wpLink": "https://www.slf-berlin.de/vorhabenbezogener-bebauungsplan-9-74-ve/",
+    "themen": []
   },
   {
     "id": "staedtebaulichen-entwicklungskonzeptes-reislingen-suedlich-der-sandkrugstrasse-in-wolfsburg",
@@ -304,7 +364,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/05/1-1000-mit-kegel-scaled-e1737561879384.jpg",
     "wpId": 3874,
     "wpDate": "2023-05-31T10:13:54",
-    "wpLink": "https://www.slf-berlin.de/staedtebaulichen-entwicklungskonzeptes-reislingen-suedlich-der-sandkrugstrasse-in-wolfsburg/"
+    "wpLink": "https://www.slf-berlin.de/staedtebaulichen-entwicklungskonzeptes-reislingen-suedlich-der-sandkrugstrasse-in-wolfsburg/",
+    "themen": [
+      "wohnungsbau",
+      "gewerbeentwicklung",
+      "transformation"
+    ]
   },
   {
     "id": "forkenbeckstr",
@@ -324,7 +389,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-17-um-173316.png",
     "wpId": 4365,
     "wpDate": "2023-04-22T14:48:47",
-    "wpLink": "https://www.slf-berlin.de/forkenbeckstr/"
+    "wpLink": "https://www.slf-berlin.de/forkenbeckstr/",
+    "themen": [
+      "klimaanpassung",
+      "transformation"
+    ]
   },
   {
     "id": "bebauungsplan-nr-66-maedchenviertel",
@@ -344,7 +413,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/04/20222118-bp66-beschlfass-nov-2022-scaled-e1681822928426.jpg",
     "wpId": 3787,
     "wpDate": "2023-04-18T13:53:21",
-    "wpLink": "https://www.slf-berlin.de/bebauungsplan-nr-66-maedchenviertel/"
+    "wpLink": "https://www.slf-berlin.de/bebauungsplan-nr-66-maedchenviertel/",
+    "themen": [
+      "nachverdichtung"
+    ]
   },
   {
     "id": "koenigspark",
@@ -364,7 +436,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/12/5-strukturkonzept.png",
     "wpId": 4040,
     "wpDate": "2023-01-20T17:07:37",
-    "wpLink": "https://www.slf-berlin.de/koenigspark/"
+    "wpLink": "https://www.slf-berlin.de/koenigspark/",
+    "themen": [
+      "wohnungsbau",
+      "gewerbeentwicklung"
+    ]
   },
   {
     "id": "karl-bonhoeffer-nervenklinik-berlin-reinickendorf",
@@ -385,7 +461,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/08/1000er-plangrundlage-kbn-221131-scaled-e1737550641651.jpg",
     "wpId": 3949,
     "wpDate": "2022-12-06T12:54:03",
-    "wpLink": "https://www.slf-berlin.de/karl-bonhoeffer-nervenklinik-berlin-reinickendorf/"
+    "wpLink": "https://www.slf-berlin.de/karl-bonhoeffer-nervenklinik-berlin-reinickendorf/",
+    "themen": [
+      "wohnungsbau",
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "campus_fuerstenwalde",
@@ -406,7 +487,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2022/09/lageplan-1000-neu-scaled-e1737550688617.jpg",
     "wpId": 3742,
     "wpDate": "2022-12-05T11:01:41",
-    "wpLink": "https://www.slf-berlin.de/campus_fuerstenwalde/"
+    "wpLink": "https://www.slf-berlin.de/campus_fuerstenwalde/",
+    "themen": [
+      "wohnungsbau",
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "wb-schoenefeld-nord",
@@ -427,7 +513,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2022/03/schonefeld-bindungen-e1750343640482.png",
     "wpId": 3069,
     "wpDate": "2022-10-19T17:15:06",
-    "wpLink": "https://www.slf-berlin.de/wb-schoenefeld-nord/"
+    "wpLink": "https://www.slf-berlin.de/wb-schoenefeld-nord/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "autoarmes-quartier"
+    ]
   },
   {
     "id": "igek-panketal-2030",
@@ -447,7 +538,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2022/03/igek-panketal-scaled.jpg",
     "wpId": 3070,
     "wpDate": "2021-03-18T16:05:31",
-    "wpLink": "https://www.slf-berlin.de/igek-panketal-2030/"
+    "wpLink": "https://www.slf-berlin.de/igek-panketal-2030/",
+    "themen": [
+      "nachverdichtung",
+      "partizipation"
+    ]
   },
   {
     "id": "duesseldorf-metro-campus",
@@ -467,7 +562,14 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/wb-metro-campus-perspektive-e1737550388806.jpg",
     "wpId": 2711,
     "wpDate": "2021-02-05T15:35:35",
-    "wpLink": "https://www.slf-berlin.de/duesseldorf-metro-campus/"
+    "wpLink": "https://www.slf-berlin.de/duesseldorf-metro-campus/",
+    "themen": [
+      "wohnungsbau",
+      "gewerbeentwicklung",
+      "klimaanpassung",
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "kassel-wettbewerb-2",
@@ -487,7 +589,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2022/02/2preis-1-gross-1-e1737550466834.jpg",
     "wpId": 3511,
     "wpDate": "2021-02-04T17:47:40",
-    "wpLink": "https://www.slf-berlin.de/kassel-wettbewerb-2/"
+    "wpLink": "https://www.slf-berlin.de/kassel-wettbewerb-2/",
+    "themen": [
+      "wohnungsbau",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "seehafen-teichland-2",
@@ -507,7 +613,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/20201130-bp-seehafen-2020-komplett.gif",
     "wpId": 1059,
     "wpDate": "2020-12-15T11:07:32",
-    "wpLink": "https://www.slf-berlin.de/seehafen-teichland-2/"
+    "wpLink": "https://www.slf-berlin.de/seehafen-teichland-2/",
+    "themen": [
+      "transformation"
+    ]
   },
   {
     "id": "flaechennutzungsplan-fnp-gemeinde-schorfheide",
@@ -527,7 +636,8 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/08/bildschirmfoto-2024-02-21-um-150521.png",
     "wpId": 3907,
     "wpDate": "2020-07-21T15:16:46",
-    "wpLink": "https://www.slf-berlin.de/flaechennutzungsplan-fnp-gemeinde-schorfheide/"
+    "wpLink": "https://www.slf-berlin.de/flaechennutzungsplan-fnp-gemeinde-schorfheide/",
+    "themen": []
   },
   {
     "id": "spielplatzentwicklungsplanung-lichtenberg",
@@ -547,7 +657,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/k6-scaled-e1737559084804.jpg",
     "wpId": 1495,
     "wpDate": "2020-07-05T13:12:40",
-    "wpLink": "https://www.slf-berlin.de/spielplatzentwicklungsplanung-lichtenberg/"
+    "wpLink": "https://www.slf-berlin.de/spielplatzentwicklungsplanung-lichtenberg/",
+    "themen": [
+      "spielplaetze"
+    ]
   },
   {
     "id": "rahmenplan-buch-am-sandhaus",
@@ -568,7 +681,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/rahmenplan-20230110-landschaft-2-din-a3-e1774616046792.jpg",
     "wpId": 1467,
     "wpDate": "2020-06-28T11:50:30",
-    "wpLink": "https://www.slf-berlin.de/rahmenplan-buch-am-sandhaus/"
+    "wpLink": "https://www.slf-berlin.de/rahmenplan-buch-am-sandhaus/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "transformation"
+    ]
   },
   {
     "id": "dragonerareal",
@@ -589,7 +707,14 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/lageplan-freiraum.jpg",
     "wpId": 693,
     "wpDate": "2020-03-04T15:55:57",
-    "wpLink": "https://www.slf-berlin.de/dragonerareal/"
+    "wpLink": "https://www.slf-berlin.de/dragonerareal/",
+    "themen": [
+      "wohnungsbau",
+      "gewerbeentwicklung",
+      "transformation",
+      "partizipation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "gwerbegebiet-pankow-nord",
@@ -609,7 +734,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/planzeichnung-bp-xix-53_2017-09-29-e1737552596496.jpg",
     "wpId": 608,
     "wpDate": "2020-03-04T10:26:52",
-    "wpLink": "https://www.slf-berlin.de/gwerbegebiet-pankow-nord/"
+    "wpLink": "https://www.slf-berlin.de/gwerbegebiet-pankow-nord/",
+    "themen": [
+      "gewerbeentwicklung",
+      "transformation"
+    ]
   },
   {
     "id": "ortsteilentwicklungskonzept-leipzig",
@@ -629,7 +758,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/20221024-rahmenplan-kk-2-scaled.jpg",
     "wpId": 1751,
     "wpDate": "2020-03-03T17:23:06",
-    "wpLink": "https://www.slf-berlin.de/ortsteilentwicklungskonzept-leipzig/"
+    "wpLink": "https://www.slf-berlin.de/ortsteilentwicklungskonzept-leipzig/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "partizipation"
+    ]
   },
   {
     "id": "wohnen-und-arbeiten-am-bahnhof-soest",
@@ -649,7 +783,13 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/wohnhof-scaled.jpg",
     "wpId": 2617,
     "wpDate": "2020-03-03T16:50:19",
-    "wpLink": "https://www.slf-berlin.de/wohnen-und-arbeiten-am-bahnhof-soest/"
+    "wpLink": "https://www.slf-berlin.de/wohnen-und-arbeiten-am-bahnhof-soest/",
+    "themen": [
+      "wohnungsbau",
+      "transformation",
+      "autoarmes-quartier",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "wohnen-an-der-michelangelostr",
@@ -669,7 +809,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2025/01/bildschirmfoto-2025-01-16-um-164021-e1750343790875.png",
     "wpId": 3905,
     "wpDate": "2020-01-16T17:35:36",
-    "wpLink": "https://www.slf-berlin.de/wohnen-an-der-michelangelostr/"
+    "wpLink": "https://www.slf-berlin.de/wohnen-an-der-michelangelostr/",
+    "themen": [
+      "wohnungsbau",
+      "nachverdichtung"
+    ]
   },
   {
     "id": "geras-neue-mitte",
@@ -689,7 +833,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan.jpg",
     "wpId": 601,
     "wpDate": "2020-01-04T10:06:41",
-    "wpLink": "https://www.slf-berlin.de/geras-neue-mitte/"
+    "wpLink": "https://www.slf-berlin.de/geras-neue-mitte/",
+    "themen": [
+      "nachverdichtung",
+      "partizipation"
+    ]
   },
   {
     "id": "machbarkeitsstudie-treseburger-strasse",
@@ -709,7 +857,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/bildschirmfoto-2021-07-26-um-090900.jpg",
     "wpId": 1845,
     "wpDate": "2020-01-02T13:31:03",
-    "wpLink": "https://www.slf-berlin.de/machbarkeitsstudie-treseburger-strasse/"
+    "wpLink": "https://www.slf-berlin.de/machbarkeitsstudie-treseburger-strasse/",
+    "themen": [
+      "gewerbeentwicklung"
+    ]
   },
   {
     "id": "vertiefende-staedtebauliche-studie-buch-sued",
@@ -729,7 +880,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/04/luftbild-schraeg-2-e1774616125443.gif",
     "wpId": 1752,
     "wpDate": "2020-01-01T17:32:37",
-    "wpLink": "https://www.slf-berlin.de/vertiefende-staedtebauliche-studie-buch-sued/"
+    "wpLink": "https://www.slf-berlin.de/vertiefende-staedtebauliche-studie-buch-sued/",
+    "themen": [
+      "wohnungsbau",
+      "gewerbeentwicklung"
+    ]
   },
   {
     "id": "breitenguessbach",
@@ -749,7 +904,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/bach-scaled.jpg",
     "wpId": 1264,
     "wpDate": "2019-10-16T14:00:12",
-    "wpLink": "https://www.slf-berlin.de/breitenguessbach/"
+    "wpLink": "https://www.slf-berlin.de/breitenguessbach/",
+    "themen": [
+      "wettbewerbe"
+    ]
   },
   {
     "id": "koepenicker-allee",
@@ -770,7 +928,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/03/entwurf-1000-e1774616264989.jpg",
     "wpId": 685,
     "wpDate": "2019-10-04T15:01:08",
-    "wpLink": "https://www.slf-berlin.de/koepenicker-allee/"
+    "wpLink": "https://www.slf-berlin.de/koepenicker-allee/",
+    "themen": [
+      "wohnungsbau",
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "vorbereitende-untersuchungen-mitte-boettgerstrassenviertel",
@@ -790,7 +953,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/vu-rahmenplan-20210617-scaled-e1737557283277.jpg",
     "wpId": 1478,
     "wpDate": "2019-08-20T12:10:37",
-    "wpLink": "https://www.slf-berlin.de/vorbereitende-untersuchungen-mitte-boettgerstrassenviertel/"
+    "wpLink": "https://www.slf-berlin.de/vorbereitende-untersuchungen-mitte-boettgerstrassenviertel/",
+    "themen": [
+      "partizipation"
+    ]
   },
   {
     "id": "rahmenplan-karow-2",
@@ -810,7 +976,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/karow-rp-e1750320448129.jpg",
     "wpId": 1785,
     "wpDate": "2019-07-19T17:57:36",
-    "wpLink": "https://www.slf-berlin.de/rahmenplan-karow-2/"
+    "wpLink": "https://www.slf-berlin.de/rahmenplan-karow-2/",
+    "themen": [
+      "wohnungsbau",
+      "partizipation"
+    ]
   },
   {
     "id": "wohnquartier-am-muehlenbecker-weg",
@@ -831,7 +1001,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/entwicklungskonzept-860-e1737551918141.jpg",
     "wpId": 1994,
     "wpDate": "2019-07-07T15:35:52",
-    "wpLink": "https://www.slf-berlin.de/wohnquartier-am-muehlenbecker-weg/"
+    "wpLink": "https://www.slf-berlin.de/wohnquartier-am-muehlenbecker-weg/",
+    "themen": [
+      "wohnungsbau",
+      "transformation"
+    ]
   },
   {
     "id": "waldowplatz",
@@ -851,7 +1025,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/02/190110-wal-collage-nutzungen-va-1b.jpg",
     "wpId": 667,
     "wpDate": "2019-06-19T14:03:39",
-    "wpLink": "https://www.slf-berlin.de/waldowplatz/"
+    "wpLink": "https://www.slf-berlin.de/waldowplatz/",
+    "themen": [
+      "wohnungsbau"
+    ]
   },
   {
     "id": "ehemaliges-strassenbahndepot",
@@ -871,7 +1048,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/situation-e1774615738220.png",
     "wpId": 2694,
     "wpDate": "2019-06-18T16:10:55",
-    "wpLink": "https://www.slf-berlin.de/ehemaliges-strassenbahndepot/"
+    "wpLink": "https://www.slf-berlin.de/ehemaliges-strassenbahndepot/",
+    "themen": [
+      "transformation",
+      "partizipation"
+    ]
   },
   {
     "id": "friedhof-st-johannes-evangelist",
@@ -892,7 +1073,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/fsj_lageplan_500-e1774614800604.jpg",
     "wpId": 558,
     "wpDate": "2018-03-03T14:08:05",
-    "wpLink": "https://www.slf-berlin.de/friedhof-st-johannes-evangelist/"
+    "wpLink": "https://www.slf-berlin.de/friedhof-st-johannes-evangelist/",
+    "themen": [
+      "wohnungsbau",
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "explorative-studie-fuer-ein-raeumliches-leitbild-tourismus-berlin",
@@ -912,7 +1098,8 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2017/05/bildschirmfoto-2025-01-22-um-154046.png",
     "wpId": 1521,
     "wpDate": "2018-03-03T10:41:56",
-    "wpLink": "https://www.slf-berlin.de/explorative-studie-fuer-ein-raeumliches-leitbild-tourismus-berlin/"
+    "wpLink": "https://www.slf-berlin.de/explorative-studie-fuer-ein-raeumliches-leitbild-tourismus-berlin/",
+    "themen": []
   },
   {
     "id": "henningsdorfer-strasse",
@@ -933,7 +1120,13 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/12/entwurf-500er.jpg",
     "wpId": 577,
     "wpDate": "2018-03-02T15:27:53",
-    "wpLink": "https://www.slf-berlin.de/henningsdorfer-strasse/"
+    "wpLink": "https://www.slf-berlin.de/henningsdorfer-strasse/",
+    "themen": [
+      "wohnungsbau",
+      "transformation",
+      "autoarmes-quartier",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "spielplatzplanung",
@@ -953,7 +1146,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/spielplaetze_pankow_betrachtungsraum-e1737130633874.jpg",
     "wpId": 657,
     "wpDate": "2018-02-09T13:35:17",
-    "wpLink": "https://www.slf-berlin.de/spielplatzplanung/"
+    "wpLink": "https://www.slf-berlin.de/spielplatzplanung/",
+    "themen": [
+      "spielplaetze"
+    ]
   },
   {
     "id": "friedhof-jacobi-neukoelln",
@@ -973,7 +1169,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/perspektive-scaled.jpg",
     "wpId": 574,
     "wpDate": "2017-12-03T15:12:17",
-    "wpLink": "https://www.slf-berlin.de/friedhof-jacobi-neukoelln/"
+    "wpLink": "https://www.slf-berlin.de/friedhof-jacobi-neukoelln/",
+    "themen": [
+      "wohnungsbau",
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "schloss-tuernich",
@@ -993,7 +1194,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2018/03/strukturplan.jpg",
     "wpId": 568,
     "wpDate": "2017-10-20T14:52:47",
-    "wpLink": "https://www.slf-berlin.de/schloss-tuernich/"
+    "wpLink": "https://www.slf-berlin.de/schloss-tuernich/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "duesseldorf-hildener-strasse",
@@ -1013,7 +1219,15 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/entwicklungskonzept.jpg",
     "wpId": 549,
     "wpDate": "2017-09-03T13:37:35",
-    "wpLink": "https://www.slf-berlin.de/duesseldorf-hildener-strasse/"
+    "wpLink": "https://www.slf-berlin.de/duesseldorf-hildener-strasse/",
+    "themen": [
+      "wohnungsbau",
+      "gewerbeentwicklung",
+      "klimaanpassung",
+      "transformation",
+      "autoarmes-quartier",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "schumacher_quartier",
@@ -1034,7 +1248,14 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/schumacher-quartier_masterplan-e1608284766580.jpg",
     "wpId": 71,
     "wpDate": "2017-08-26T01:49:26",
-    "wpLink": "https://www.slf-berlin.de/schumacher_quartier/"
+    "wpLink": "https://www.slf-berlin.de/schumacher_quartier/",
+    "themen": [
+      "wohnungsbau",
+      "klimaanpassung",
+      "transformation",
+      "autoarmes-quartier",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "exwost-innenentwicklungsmanagement",
@@ -1054,7 +1275,12 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bildschirmfoto-2020-03-04-um-14-17-47-e1737556643259.png",
     "wpId": 671,
     "wpDate": "2017-04-04T14:28:52",
-    "wpLink": "https://www.slf-berlin.de/exwost-innenentwicklungsmanagement/"
+    "wpLink": "https://www.slf-berlin.de/exwost-innenentwicklungsmanagement/",
+    "themen": [
+      "wohnungsbau",
+      "nachverdichtung",
+      "partizipation"
+    ]
   },
   {
     "id": "leitbild-pankower-tor",
@@ -1074,7 +1300,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/12/pankower-tor_leitbild.jpg",
     "wpId": 651,
     "wpDate": "2017-03-04T13:10:31",
-    "wpLink": "https://www.slf-berlin.de/leitbild-pankower-tor/"
+    "wpLink": "https://www.slf-berlin.de/leitbild-pankower-tor/",
+    "themen": [
+      "wohnungsbau",
+      "transformation"
+    ]
   },
   {
     "id": "marienpark-berlin",
@@ -1094,7 +1324,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/b-plan_entwurf_2016-10-04-scaled.jpg",
     "wpId": 612,
     "wpDate": "2016-10-04T10:39:47",
-    "wpLink": "https://www.slf-berlin.de/marienpark-berlin/"
+    "wpLink": "https://www.slf-berlin.de/marienpark-berlin/",
+    "themen": [
+      "gewerbeentwicklung",
+      "transformation"
+    ]
   },
   {
     "id": "bebauungsplan-wohngebiet-schoenfelder-weg",
@@ -1114,7 +1348,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/07/2018-12-07-bp-schonfelder-weg-bernau-e1737551676791.jpg",
     "wpId": 2585,
     "wpDate": "2016-10-02T15:22:05",
-    "wpLink": "https://www.slf-berlin.de/bebauungsplan-wohngebiet-schoenfelder-weg/"
+    "wpLink": "https://www.slf-berlin.de/bebauungsplan-wohngebiet-schoenfelder-weg/",
+    "themen": [
+      "wohnungsbau"
+    ]
   },
   {
     "id": "weisse-stadt-oranienburg",
@@ -1134,7 +1371,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/bplan-100_satzung_august-2018-scaled-e1607947505922.jpg",
     "wpId": 596,
     "wpDate": "2016-09-03T16:25:37",
-    "wpLink": "https://www.slf-berlin.de/weisse-stadt-oranienburg/"
+    "wpLink": "https://www.slf-berlin.de/weisse-stadt-oranienburg/",
+    "themen": [
+      "wohnungsbau",
+      "transformation"
+    ]
   },
   {
     "id": "ortolfstrasse",
@@ -1154,7 +1395,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/xv-29b-ve-bebauungsplan-2017-04-25_abzeichnung.jpg",
     "wpId": 593,
     "wpDate": "2016-05-03T16:14:07",
-    "wpLink": "https://www.slf-berlin.de/ortolfstrasse/"
+    "wpLink": "https://www.slf-berlin.de/ortolfstrasse/",
+    "themen": [
+      "wohnungsbau",
+      "nachverdichtung"
+    ]
   },
   {
     "id": "konversionsflaeche-schwanebecker-chaussee",
@@ -1174,7 +1419,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/entwurf_bernau-sc-110517_abb-e1737555240132.jpg",
     "wpId": 647,
     "wpDate": "2016-03-04T12:50:14",
-    "wpLink": "https://www.slf-berlin.de/konversionsflaeche-schwanebecker-chaussee/"
+    "wpLink": "https://www.slf-berlin.de/konversionsflaeche-schwanebecker-chaussee/",
+    "themen": [
+      "wohnungsbau",
+      "transformation"
+    ]
   },
   {
     "id": "krankenhaus-hedwigshoehe",
@@ -1194,7 +1443,8 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vep-xv37ea1ve_apr2016-oe.jpg",
     "wpId": 589,
     "wpDate": "2016-03-03T16:01:15",
-    "wpLink": "https://www.slf-berlin.de/krankenhaus-hedwigshoehe/"
+    "wpLink": "https://www.slf-berlin.de/krankenhaus-hedwigshoehe/",
+    "themen": []
   },
   {
     "id": "hannover-suedschnellweg",
@@ -1214,7 +1464,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2016/03/titelbild-kombi.png",
     "wpId": 542,
     "wpDate": "2016-03-03T12:42:05",
-    "wpLink": "https://www.slf-berlin.de/hannover-suedschnellweg/"
+    "wpLink": "https://www.slf-berlin.de/hannover-suedschnellweg/",
+    "themen": [
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "entwicklungsstudie-marienpark-berlin",
@@ -1234,7 +1488,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/plan-7_entwicklungskonzept_2018-11-13-scaled.jpg",
     "wpId": 1255,
     "wpDate": "2015-12-16T13:32:33",
-    "wpLink": "https://www.slf-berlin.de/entwicklungsstudie-marienpark-berlin/"
+    "wpLink": "https://www.slf-berlin.de/entwicklungsstudie-marienpark-berlin/",
+    "themen": [
+      "gewerbeentwicklung",
+      "transformation"
+    ]
   },
   {
     "id": "standortstruktur-der-kunstproduktion-in-berlin",
@@ -1254,7 +1512,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/05/kunst-produktion-abbildungen-1.jpg",
     "wpId": 1566,
     "wpDate": "2015-05-31T15:34:05",
-    "wpLink": "https://www.slf-berlin.de/standortstruktur-der-kunstproduktion-in-berlin/"
+    "wpLink": "https://www.slf-berlin.de/standortstruktur-der-kunstproduktion-in-berlin/",
+    "themen": [
+      "gewerbeentwicklung"
+    ]
   },
   {
     "id": "laendlicher-raum-prignitz",
@@ -1274,7 +1535,8 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/2016_bestandsaufnahme_untersuchungsraum_a3-scaled-e1774615252238.jpg",
     "wpId": 642,
     "wpDate": "2015-03-04T12:37:43",
-    "wpLink": "https://www.slf-berlin.de/laendlicher-raum-prignitz/"
+    "wpLink": "https://www.slf-berlin.de/laendlicher-raum-prignitz/",
+    "themen": []
   },
   {
     "id": "gartenstadt-drewitz",
@@ -1294,7 +1556,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2015/03/5-masterplan-final-28-kopie-2-e1774615068729.jpg",
     "wpId": 620,
     "wpDate": "2015-03-04T11:15:41",
-    "wpLink": "https://www.slf-berlin.de/gartenstadt-drewitz/"
+    "wpLink": "https://www.slf-berlin.de/gartenstadt-drewitz/",
+    "themen": [
+      "transformation",
+      "partizipation"
+    ]
   },
   {
     "id": "seehafen-teichland",
@@ -1315,7 +1581,11 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2019/10/lagunenhafen_vogelflugperspektive.jpg",
     "wpId": 227,
     "wpDate": "2012-09-18T11:05:26",
-    "wpLink": "https://www.slf-berlin.de/seehafen-teichland/"
+    "wpLink": "https://www.slf-berlin.de/seehafen-teichland/",
+    "themen": [
+      "transformation",
+      "wettbewerbe"
+    ]
   },
   {
     "id": "hannover-annastift",
@@ -1335,7 +1605,10 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2023/08/bildschirmfoto-2023-08-30-um-123701.png",
     "wpId": 632,
     "wpDate": "2012-08-04T11:52:34",
-    "wpLink": "https://www.slf-berlin.de/hannover-annastift/"
+    "wpLink": "https://www.slf-berlin.de/hannover-annastift/",
+    "themen": [
+      "wohnungsbau"
+    ]
   },
   {
     "id": "saerbeck-bioenergiepark",
@@ -1355,7 +1628,13 @@ const projects = [
     "image": "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/03/bp39-satzung.jpg",
     "wpId": 586,
     "wpDate": "2010-03-03T15:54:06",
-    "wpLink": "https://www.slf-berlin.de/saerbeck-bioenergiepark/"
+    "wpLink": "https://www.slf-berlin.de/saerbeck-bioenergiepark/",
+    "themen": [
+      "gewerbeentwicklung",
+      "klimaanpassung",
+      "transformation",
+      "partizipation"
+    ]
   }
 ];
 

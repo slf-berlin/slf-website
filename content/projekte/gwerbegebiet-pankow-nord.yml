@@ -1,0 +1,47 @@
+titel: "Gewerbegebiet Pankow Nord"
+untertitel: "Bebauungsplan XIX-53b"
+beschreibung: "Plangebiet Planungsrechtliche Sicherung einer gewerblichen Entwicklung (Logistikzentrum) im Gewerbestandort Pankow-Nord (im Verfahren), Umnutzung einer ca. 29 ha großen Rieselfeldfläche unter besonderen artenschutzrechtlichen Anforderungen. Projektdaten Ort Berlin, Pankow, Ortsteil Buch und Französisch Buchholz Auftraggeber Bezirk Pankow Verfahren Bebauungsplan Zeitraum seit 2018 im Verfahren Plangebietsgröße ca. 29 ha Team Stefan Wallmann Landschaftsarchitekten, Berlin Mehr Informationen –"
+ergebnis: null
+jahr: "seit 2018 im Verfahren"
+kategorie:
+  - "Bauleitplanung"
+themen:
+  - "gewerbeentwicklung"
+  - "transformation"
+datum: "2020-03-04T10:26:52"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/planzeichnung-bp-xix-53_2017-09-29-e1737552596496.jpg"
+wpId: 608
+wpLink: "https://www.slf-berlin.de/gwerbegebiet-pankow-nord/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"779\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild_2-860x779.jpg\" class=\"attachment-large size-large wp-image-404\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild_2-860x779.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild_2-580x525.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild_2-768x695.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild_2-1536x1390.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/luftbild_2.jpg 1657w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Plangebiet</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"860\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/foto-3-860x860.jpg\" class=\"attachment-large size-large wp-image-403\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/foto-3-860x860.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/foto-3-580x580.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/foto-3-150x150.jpg 150w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/foto-3-768x768.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/foto-3-1536x1536.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/foto-3.jpg 2000w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption></figcaption>
+
+          \ </figure>"
+  - type: "text"
+    html: "<p class=\"Text\">Planungsrechtliche Sicherung einer gewerblichen Entwicklung (Logistikzentrum) im Gewerbestandort Pankow-Nord (im Verfahren), Umnutzung einer ca. 29 ha großen Rieselfeldfläche unter besonderen artenschutzrechtlichen Anforderungen.</p>"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Berlin, Pankow, Ortsteil Buch und Französisch Buchholz"
+      - label: "Auftraggebende"
+        wert: "Bezirk Pankow"
+      - label: "Verfahren"
+        wert: "Bebauungsplan"
+      - label: "Zeitraum"
+        wert: "seit 2018 im Verfahren"
+      - label: "Plangebietsgröße"
+        wert: "ca. 29 ha"
+      - label: "Team"
+        wert: "Stefan Wallmann Landschaftsarchitekten, Berlin"
+      - label: "Mehr Informationen"
+        wert: "–"

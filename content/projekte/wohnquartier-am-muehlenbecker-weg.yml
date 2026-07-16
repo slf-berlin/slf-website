@@ -1,0 +1,62 @@
+titel: "Wohnquartier am Mühlenbecker Weg (ehemalige Kaserne Lehnitz)"
+untertitel: "Entwicklungskonzept Bebauungsplan Nr. 133, 2021"
+beschreibung: "B-Plan Nr. 133 Nachhaltige Entwicklung eines Stadtquartiers mit rund 350 geplanten WE und rund 140 bestehenden WE auf einem ehemals militärisch genutzten Areal im Ortsteil Lehnitz auf Grundlage des Bebauungsplan Nr.133. Planung der sozialen Infrastruktur und Verbesserung der Wegeverbindung zum S-Bahnhof Lehnitz. Die Planung erfolgt durch die Oberhavel Holding, Besitz- und Verwaltungsgesellschaft mbH. Umsetzung des"
+ergebnis: null
+jahr: "2019 – 2021"
+kategorie:
+  - "Bauleitplanung"
+  - "Stadt- und Quartiersentwicklung"
+themen:
+  - "wohnungsbau"
+  - "transformation"
+datum: "2019-07-07T15:35:52"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/entwicklungskonzept-860-e1737551918141.jpg"
+wpId: 1994
+wpLink: "https://www.slf-berlin.de/wohnquartier-am-muehlenbecker-weg/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"893\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/bp-133-vorentwurf-860.jpg\" class=\"attachment-large size-large wp-image-2405\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/bp-133-vorentwurf-860.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/bp-133-vorentwurf-860-580x602.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/bp-133-vorentwurf-860-768x797.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>B-Plan Nr. 133</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p class=\"Text\">Nachhaltige Entwicklung eines Stadtquartiers mit rund 350 geplanten WE und rund 140 bestehenden WE auf einem ehemals militärisch genutzten Areal im Ortsteil Lehnitz auf Grundlage des Bebauungsplan Nr.133. </p><p class=\"Text\">Planung der sozialen Infrastruktur und Verbesserung der Wegeverbindung zum S-Bahnhof Lehnitz. Die Planung erfolgt durch die Oberhavel Holding, Besitz- und Verwaltungsgesellschaft mbH.</p><p>Umsetzung des städtebaulichen Konzepts von Stadt Land Fluss.</p><p>In Zusammenarbeit mit Stefan Wallmann Landschafts-architekten, Berlin.</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"645\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/img-4231-860.jpg\" class=\"attachment-large size-large wp-image-2407\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/img-4231-860.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/img-4231-860-580x435.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/img-4231-860-768x576.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Kasernengelände Lehnitz</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<img width=\"860\" height=\"645\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/img-4263-860.jpg\" class=\"attachment-large size-large wp-image-2408\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/img-4263-860.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/img-4263-860-580x435.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/img-4263-860-768x576.jpg 768w\" sizes=\"(max-width: 860px) 100vw, 860px\" />"
+  - type: "bild"
+    breite: 860
+    hoehe: 588
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/luftbild-860.jpg"
+    klass: "attachment-large size-large wp-image-2409"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/luftbild-860.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/luftbild-860-580x397.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2021/06/luftbild-860-768x525.jpg 768w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Luftbild der ehemaligen Kaserne Lehnitz zwischen Oranienburg und Hohen Neuendorf"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Stadt Oranienburg, Brandenburg"
+      - label: "Auftraggebende"
+        wert: "Oberhavel Holding Besitz und Verwaltungsgesellschaft mbH"
+      - label: "Verfahren"
+        wert: "Bebauungsplan- und FNP-Änderungsverfahren"
+      - label: "Zeitraum"
+        wert: "2019 – 2021"
+      - label: "Plangebietsgröße"
+        wert: "circa 9,2 ha"
+      - label: "Team"
+        wert: "Stefan Wallmann Landschaftsarchitekten, Berlin"
+      - label: "Mehr Informationen"
+        wert: "<a href=\"https://www.peitz.de/node/345\">–</a>"

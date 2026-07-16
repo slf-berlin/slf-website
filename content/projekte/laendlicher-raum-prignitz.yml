@@ -1,0 +1,59 @@
+titel: "Generationengerechtes Leben im ländlichen Raum (Barrierefreiheit)"
+untertitel: "Brandenburg, Prignitz und Ost-Prignitz Ruppin, 2015"
+beschreibung: "Analysekarte Wittstock-Dosse Analyse und Konzeptentwicklung zum Thema „Generationsgerechtes Leben im ländlichen Raum (Barrierefreiheit)“ für das Untersuchungsgebiet, das zwei Landkreise übergreift und insgesamt 49 Ortsteile umfasst. Detaillierte Vertiefungen für 8 Ortslagen der Städte und Gemeinden mit prioritären Maßnahmen und Einzelempfehlungen. Maßnahmenkarte mit Handlungsfelder Heiligengrabe Vorhabenübersichtplan Projekte und Realisierungen Projektdaten Ort Brandenburg, Prignitz und Ost-Prignitz Ruppin Auftraggeber"
+ergebnis: null
+jahr: "2015"
+kategorie:
+  - "Stadt- und Quartiersentwicklung"
+themen: []
+datum: "2015-03-04T12:37:43"
+image: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/2016_bestandsaufnahme_untersuchungsraum_a3-scaled-e1774615252238.jpg"
+wpId: 642
+wpLink: "https://www.slf-berlin.de/laendlicher-raum-prignitz/"
+inhalt:
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"772\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vtb-wittstock-dosse_5000_a3-860x772.jpg\" class=\"attachment-large size-large wp-image-434\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vtb-wittstock-dosse_5000_a3-860x772.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vtb-wittstock-dosse_5000_a3-580x520.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vtb-wittstock-dosse_5000_a3-768x689.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vtb-wittstock-dosse_5000_a3-1536x1378.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/vtb-wittstock-dosse_5000_a3-2048x1838.jpg 2048w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Analysekarte Wittstock-Dosse</figcaption>
+
+          \ </figure>"
+      - breite: 50
+        html: "<p class=\"Text\">Analyse und Konzeptentwicklung zum Thema „Generationsgerechtes Leben im ländlichen Raum (Barrierefreiheit)“ für das Untersuchungsgebiet, das zwei Landkreise übergreift und insgesamt 49 Ortsteile umfasst.</p>"
+  - type: "spalten"
+    spalten:
+      - breite: 50
+        html: "<p class=\"Text\">Detaillierte Vertiefungen für 8 Ortslagen der Städte und Gemeinden mit prioritären Maßnahmen und Einzelempfehlungen.</p>"
+      - breite: 50
+        html: "<figure>
+
+          \ <img width=\"860\" height=\"612\" src=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/heiligengrabe-massnahmen_a3-860x612.jpg\" class=\"attachment-large size-large wp-image-433\" alt=\"\" srcset=\"https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/heiligengrabe-massnahmen_a3-860x612.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/heiligengrabe-massnahmen_a3-580x413.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/heiligengrabe-massnahmen_a3-768x546.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/heiligengrabe-massnahmen_a3-1536x1093.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/heiligengrabe-massnahmen_a3-2048x1457.jpg 2048w\" sizes=\"(max-width: 860px) 100vw, 860px\" /> <figcaption>Maßnahmenkarte mit Handlungsfelder Heiligengrabe </figcaption>
+
+          \ </figure>"
+  - type: "bild"
+    breite: 860
+    hoehe: 649
+    src: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/2016_vorhaben_realisierungen_a3-860x649.jpg"
+    klass: "attachment-large size-large wp-image-430"
+    alt: ""
+    figur: true
+    srcset: "https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/2016_vorhaben_realisierungen_a3-860x649.jpg 860w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/2016_vorhaben_realisierungen_a3-580x438.jpg 580w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/2016_vorhaben_realisierungen_a3-768x580.jpg 768w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/2016_vorhaben_realisierungen_a3-1536x1159.jpg 1536w, https://www.slf-berlin.de/wordpress/wp-content/uploads/2020/01/2016_vorhaben_realisierungen_a3-2048x1546.jpg 2048w"
+    sizes: "(max-width: 860px) 100vw, 860px"
+    caption: "Vorhabenübersichtplan Projekte und Realisierungen"
+  - type: "projektdaten"
+    eintraege:
+      - label: "Ort"
+        wert: "Brandenburg, Prignitz und Ost-Prignitz Ruppin"
+      - label: "Auftraggebende"
+        wert: "Kommunale Arbeitsgemeinschaft Wachstumskern Autobahndreieck Wittstock/Dosse mit den Städten Wittstock/Dosse und Pritzwalk, der Gemeinde Heiligengrabe und dem Amt Meyenburg<br />"
+      - label: "Verfahren"
+        wert: "Studie"
+      - label: "Zeitraum"
+        wert: "2015"
+      - label: "Plangebietsgröße"
+        wert: "Landkreise Prignitz und Ost-Prignitz Ruppin"
+      - label: "Team"
+        wert: "–"
+      - label: "Mehr Informationen"
+        wert: "–"
