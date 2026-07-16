@@ -53,13 +53,17 @@ for (const p of projects) {
   }
 }
 
-const now = new Date().toISOString();
+// Sortie déterministe (pas de timestamp) : le fichier ne change en git que si
+// le contenu change réellement — pas de bruit à chaque `npm run dev`/`build`.
 const output =
   `// ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT depuis content/projekte/.\n` +
   `// Ne pas éditer à la main — éditer via le CMS (/admin) ou les fichiers .yml,\n` +
-  `// puis lancer \`npm run inhalt\` (automatique avec \`npm run dev\` et \`npm run build\`).\n` +
-  `// Dernière génération : ${now}\n\n` +
+  `// puis lancer \`npm run inhalt\` (automatique avec \`npm run dev\` et \`npm run build\`).\n\n` +
   `const projects = ${JSON.stringify(projects, null, 2)};\n\nexport default projects;\n`;
 
-writeFileSync(OUTPUT_PATH, output, 'utf8');
-console.log(`✅  ${projects.length} projets → src/data/projects.js (depuis content/projekte/)`);
+let unchanged = false;
+try {
+  unchanged = readFileSync(OUTPUT_PATH, 'utf8') === output;
+} catch { /* premier build */ }
+if (!unchanged) writeFileSync(OUTPUT_PATH, output, 'utf8');
+console.log(`✅  ${projects.length} projets → src/data/projects.js${unchanged ? ' (inchangé)' : ''}`);

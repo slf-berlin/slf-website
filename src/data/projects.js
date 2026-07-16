@@ -1,7 +1,6 @@
 // ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT depuis content/projekte/.
 // Ne pas éditer à la main — éditer via le CMS (/admin) ou les fichiers .yml,
 // puis lancer `npm run inhalt` (automatique avec `npm run dev` et `npm run build`).
-// Dernière génération : 2026-07-16T14:46:22.382Z
 
 const projects = [
   {
