@@ -92,8 +92,8 @@ collections:
               - { name: alt, label: Alt-Text, widget: string, required: false, default: '' }
               - { name: breite, label: Breite (px), widget: number, required: false }
               - { name: hoehe, label: Höhe (px), widget: number, required: false }
-              - { name: srcset, label: srcset (automatisch, nicht anfassen), widget: text, required: false }
-              - { name: sizes, label: sizes (automatisch, nicht anfassen), widget: string, required: false }
+              - { name: srcset, label: 'srcset (automatisch, nicht anfassen)', widget: text, required: false }
+              - { name: sizes, label: 'sizes (automatisch, nicht anfassen)', widget: string, required: false }
               - { name: klass, label: CSS-Klasse (automatisch), widget: string, required: false }
               - { name: figur, label: Mit Bildunterschrift (figure), widget: boolean, default: false, required: false }
               - { name: caption, label: Bildunterschrift, widget: string, required: false }
@@ -223,5 +223,5 @@ collections:
             widget: list
             field: { name: zeile, label: Zeile, widget: string }
           - { name: telefon, label: Telefon (Anzeige), widget: string }
-          - { name: telefonHref, label: Telefon (Link, tel:…), widget: string }
+          - { name: telefonHref, label: 'Telefon (Link, Format tel:…)', widget: string }
           - { name: email, label: E-Mail, widget: string }
