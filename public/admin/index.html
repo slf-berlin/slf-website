@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <link rel="cms-config-url" href="./config.yml" />
+  <!-- L'attribut type est OBLIGATOIRE : sans lui, Sveltia rejette la config
+       avec « could not be parsed » sans même la télécharger. -->
+  <link rel="cms-config-url" href="./config.yml" type="application/yaml" />
   <title>SLF Redaktion</title>
 </head>
 <body>
@@ -14,6 +16,6 @@
     → « Work with Local Repository » (Chrome ou Edge requis).
     Voir docs/redaktion-anleitung.md pour le guide complet.
   -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 </body>
 </html>
