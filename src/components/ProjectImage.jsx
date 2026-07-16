@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { tokens as A } from '../tokens'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 import { ensureImageStyles } from './SmartImage'
+import { localMedia } from '../lib/wpMedia'
 
 ensureImageStyles()
 
@@ -36,7 +37,7 @@ export default function ProjectImage({ proj, ratio = '4/3', title, subtitle, erg
       {proj?.image && !loaded && <div className="slf-img-skeleton" />}
       {proj?.image && (
         <img
-          src={proj.image}
+          src={localMedia(proj.image)}
           alt={proj.titel}
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(true)}

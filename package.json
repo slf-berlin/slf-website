@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "sync": "node scripts/sync-from-wordpress.mjs",
-    "prebuild": "node scripts/sync-from-wordpress.mjs && node scripts/generate-sitemap.mjs",
+    "mirror": "node scripts/mirror-wp-media.mjs",
+    "backup": "npm run sync && npm run mirror",
+    "prebuild": "node scripts/sync-from-wordpress.mjs && node scripts/mirror-wp-media.mjs && node scripts/generate-sitemap.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",

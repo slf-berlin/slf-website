@@ -13,7 +13,9 @@ Design direction: **Bold Editorial** (merged from `style/bold-archi`). Reference
 ```bash
 npm run dev      # dev server → http://localhost:5173/slf-website/
 npm run sync     # fetch projects from WordPress → src/data/projects.js
-npm run build    # sync + production build → dist/
+npm run mirror   # download all WP media → public/wp-media/ + manifest + backup/wp-posts-raw.json
+npm run backup   # sync + mirror (full local backup of WordPress data)
+npm run build    # sync + mirror + production build → dist/
 npm run preview  # preview production build
 npm run deploy   # build + publish dist/ to GitHub Pages (gh-pages)
 ```
@@ -178,6 +180,16 @@ Filtering on `/projekte` reads `?filter=` and `?thema=` from `useSearchParams()`
 **`src/data/themen.js`** — hand-maintained `PROJECT_THEMEN` map (`slug → [theme keys]`) covering all projects. **Not** touched by `npm run sync`; new WP projects appear without themes until added here. A project with no themes is valid (it just matches no theme filter). Theme tags are also rendered on `ProjectDetail` as clickable links to `/projekte?thema=<key>`.
 
 The `projektliste` key is special: it passes all projects through (`() => true`) and renders a **sortable table view** instead of the tile grid. Columns are sortable by Jahr, Auftraggeber, Ort, and Kategorie. `ort` and `auftraggeber` are extracted from the `<dl class="slf-daten">` block inside `project.content` at render time.
+
+### Local media mirror (WordPress backup)
+
+The site is **fully self-hosted**: all WordPress images are mirrored locally and served from `public/wp-media/`, so the site displays without any request to the WP CDN.
+
+- **`scripts/mirror-wp-media.mjs`** (`npm run mirror`, also part of `prebuild`) — scans `src/` for `wp-content/uploads/` URLs (incl. srcset variants and full-size originals used by the lightbox), downloads them to `../wp-media/<year>/<month>/<file>` (incremental — existing files are skipped), writes `src/data/wp-media-manifest.json` (list of files actually present locally), and dumps the raw WP posts JSON to `backup/wp-posts-raw.json` (disaster-recovery backup, non-fatal on failure). If WP is unreachable, existing files are kept and the build proceeds.
+- **`src/lib/wpMedia.js`** — runtime substitution helpers backed by the manifest: `localMedia(url)` (single image URL → local copy), `localizeMediaHtml(html)` (rewrites all WP URLs in `project.content`, src + srcset), `fullSizeMedia(src)` (lightbox: strips the `-WxH` size suffix and returns the local full-size original). URLs not in the manifest fall back to the WP CDN unchanged.
+- Wired up in: `ProjectImage.jsx`, `ProjectDetail.jsx` (hero, content, lightbox), `Team.jsx`, `Buero.jsx` (`ImgWithSkeleton` + TeamCard). Any new component rendering a WP URL must wrap it in `localMedia()` / `localizeMediaHtml()`.
+- The media files (~1.2 GB, largest ~33 MB) live **outside the repo** at `../wp-media/` (i.e. `SLF WEBSITE/wp-media/`, NOT committed). `public/wp-media` is only a **symlink** to it (gitignored, recreated automatically by `npm run mirror`). Vite follows the symlink in dev and copies the files into `dist/` at build time, so deploys remain self-contained. `backup/` (raw WP JSON, small) IS committed.
+- `src/data/projects.js` still stores the original WP URLs (sync is unchanged); substitution happens at render time only.
 
 **`scripts/sync-from-wordpress.mjs`** — Node ESM script. Paginates WP posts, maps each to a project object, writes `src/data/projects.js`. WordPress category slugs → React `kategorie` label:
 

@@ -8,6 +8,7 @@ import projects from '../data/projects'
 import { projectThemen, themaLabel, filterHref } from '../data/filters'
 import { useWindowWidth } from '../hooks/useWindowWidth'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { localMedia, localizeMediaHtml, fullSizeMedia } from '../lib/wpMedia'
 
 const PROSE_STYLES = `
 .slf-prose p { margin: 0 0 1.2em; line-height: 1.8; }
@@ -55,12 +56,6 @@ const PROSE_STYLES = `
 .slf-prose .slf-daten dd { font-size: 16px; color: #0e0e10; padding: 14px 0; margin: 0; line-height: 1.4; overflow-wrap: break-word; }
 @media (max-width: 640px) { .slf-prose .slf-daten { grid-template-columns: 1fr; } .slf-prose .slf-daten dt { padding: 14px 0 2px; } .slf-prose .slf-daten dd { font-size: 17px; padding: 0 0 14px; } }
 `
-
-// WordPress CDN images often embed a size suffix (e.g. -1024x683.jpg).
-// Strip it to load the full-resolution original in the lightbox.
-function wpFullSize(src) {
-  return src.replace(/-\d+x\d+(\.[a-zA-Z]+)$/, '$1')
-}
 
 // Remove dt/dd pairs where the dd value is empty or whitespace-only.
 // Merge "Mehr Informationen" slf-rows into the preceding Projektdaten <dl>, auto-linking bare URLs.
@@ -195,10 +190,10 @@ export default function ProjectDetail() {
             <div style={{ position: 'relative', minHeight: heroLoaded ? 0 : 220 }}>
               {!heroLoaded && <div className="slf-img-skeleton" />}
               <img
-                src={project.image}
+                src={localMedia(project.image)}
                 alt={project.titel}
                 className="slf-zoom-img"
-                onClick={() => setLightbox({ src: project.image, caption: null })}
+                onClick={() => setLightbox({ src: localMedia(project.image), caption: null })}
                 onLoad={() => setHeroLoaded(true)}
                 onError={() => setHeroLoaded(true)}
                 style={{ width: '100%', display: 'block', position: 'relative', opacity: heroLoaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
@@ -213,10 +208,10 @@ export default function ProjectDetail() {
               <div style={{ gridColumn: '3 / span 8', position: 'relative', minHeight: heroLoaded ? 0 : 360 }}>
                 {!heroLoaded && <div className="slf-img-skeleton" />}
                 <img
-                  src={project.image}
+                  src={localMedia(project.image)}
                   alt={project.titel}
                   className="slf-zoom-img"
-                  onClick={() => setLightbox({ src: project.image, caption: null })}
+                  onClick={() => setLightbox({ src: localMedia(project.image), caption: null })}
                   onLoad={() => setHeroLoaded(true)}
                   onError={() => setHeroLoaded(true)}
                   style={{ width: '100%', display: 'block', position: 'relative', opacity: heroLoaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
@@ -371,10 +366,10 @@ export default function ProjectDetail() {
               onClick={(e) => {
                 if (e.target.tagName === 'IMG') {
                   const caption = e.target.closest('figure')?.querySelector('figcaption')?.textContent || null
-                  setLightbox({ src: wpFullSize(e.target.src), caption })
+                  setLightbox({ src: fullSizeMedia(e.target.src), caption })
                 }
               }}
-              dangerouslySetInnerHTML={{ __html: processContent(project.content) }}
+              dangerouslySetInnerHTML={{ __html: localizeMediaHtml(processContent(project.content)) }}
             />
           ) : (
             <p style={{ fontSize: 17, color: A.ink, lineHeight: 1.8, marginTop: 24 }}>

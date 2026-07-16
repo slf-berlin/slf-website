@@ -7,6 +7,7 @@ import { useWindowWidth } from '../hooks/useWindowWidth'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { ensureImageStyles } from '../components/SmartImage'
 import { TEAM } from '../data/team'
+import { localMedia } from '../lib/wpMedia'
 
 ensureImageStyles()
 
@@ -18,7 +19,7 @@ function ImgWithSkeleton({ src, alt, style }) {
     <>
       {!loaded && <div className="slf-img-skeleton" />}
       <img
-        src={src}
+        src={localMedia(src)}
         alt={alt}
         onLoad={() => setLoaded(true)}
         onError={() => setLoaded(true)}
@@ -540,7 +541,7 @@ function TeamCard({ member, onClick }) {
       <div style={{ position: 'relative', overflow: 'hidden' }}>
         {!loaded && <div className="slf-img-skeleton" />}
         <img
-          src={member.photo}
+          src={localMedia(member.photo)}
           alt={member.name}
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(true)}

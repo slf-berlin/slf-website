@@ -2,3 +2,8 @@ node_modules/
 dist/
 .DS_Store
 *.local
+
+# Miroir local des médias WordPress — le vrai dossier vit un cran au-dessus du
+# repo (../wp-media, ~1,2 Go) ; public/wp-media n'est qu'un symlink recréé par
+# `npm run mirror`. Ni l'un ni l'autre ne doit être commité.
+public/wp-media

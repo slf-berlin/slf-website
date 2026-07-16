@@ -7,6 +7,7 @@ import { useWindowWidth } from '../hooks/useWindowWidth'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { ensureImageStyles } from '../components/SmartImage'
 import { TEAM } from '../data/team'
+import { localMedia } from '../lib/wpMedia'
 
 ensureImageStyles()
 
@@ -88,7 +89,7 @@ function Modal({ member, onClose }) {
         }}>
           <div style={{ flexShrink: 0, width: isMobile ? '55%' : 200, position: 'relative' }}>
             <ImgWithSkeleton
-              src={member.photo}
+              src={localMedia(member.photo)}
               alt={member.name}
               style={{
                 display: 'block',
@@ -183,7 +184,7 @@ function TeamCard({ member, onClick }) {
       <div style={{ position: 'relative', overflow: 'hidden' }}>
         {!loaded && <div className="slf-img-skeleton" />}
         <img
-          src={member.photo}
+          src={localMedia(member.photo)}
           alt={member.name}
           onLoad={() => setLoaded(true)}
           onError={() => setLoaded(true)}
