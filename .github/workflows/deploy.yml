@@ -30,6 +30,10 @@ jobs:
 
       - run: npm ci
 
+      # Le contenu vient de content/ (repo) ; seuls les médias historiques sont
+      # encore téléchargés depuis WordPress par le mirror (prebuild) car les
+      # ~1,2 Go ne sont pas commités. Disparaîtra avec le déploiement IONOS
+      # (build local + SFTP, cf. CLAUDE.md).
       - run: npm run build
 
       - uses: actions/configure-pages@v4

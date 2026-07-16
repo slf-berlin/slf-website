@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 // ⚠️ NE PAS ÉDITER — généré automatiquement, lancé via `npm run sync` ou `npm run build`.
 
-import { writeFileSync, existsSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const WP_BASE = 'https://www.slf-berlin.de/wp-json/wp/v2';
-const OUTPUT_PATH = join(__dirname, '../src/data/projects.js');
+// ⚠️ DEPUIS LA MIGRATION CMS : src/data/projects.js est généré depuis
+// content/projekte/ (build-projects-from-content.mjs). Ce script ne sert plus
+// que de snapshot de secours de WordPress — il écrit dans backup/, jamais dans
+// src/data/, et ne peut donc pas écraser le contenu édité via le CMS.
+const OUTPUT_PATH = join(__dirname, '../backup/projects-wp-snapshot.js');
 
 const KNOWN_SLUGS = new Set([
   'entwicklungskonzepte',
@@ -404,7 +408,8 @@ function mapPost(post, pageData = null) {
 }
 
 async function main() {
-  console.log('🔄  Syncing projects from WordPress…');
+  console.log('🔄  Snapshot WordPress (secours uniquement)…');
+  console.log('    ℹ️  Le site est généré depuis content/projekte/ — ce script n\'écrit QUE dans backup/.');
   console.log(`    Source: ${WP_BASE}/posts`);
 
   let posts;
@@ -412,12 +417,8 @@ async function main() {
     posts = await fetchAllPosts();
   } catch (err) {
     console.error(`\n❌  Failed to fetch from WordPress: ${err.message}`);
-    if (existsSync(OUTPUT_PATH)) {
-      console.warn('⚠️   Keeping existing src/data/projects.js as fallback — build will use stale data.');
-      process.exit(0);
-    }
-    console.error('    No fallback file found. Aborting build.');
-    process.exit(1);
+    console.warn('⚠️   WordPress injoignable — snapshot non mis à jour (sans conséquence pour le site).');
+    process.exit(0);
   }
 
   console.log(`    Fetched ${posts.length} published posts`);
@@ -470,14 +471,14 @@ async function main() {
 
   const now = new Date().toISOString();
   const output =
-    `// ⚠️ FICHIER GÉNÉRÉ AUTOMATIQUEMENT depuis WordPress.\n` +
-    `// Ne pas éditer à la main — modifier dans WordPress puis lancer \`npm run sync\`.\n` +
+    `// ⚠️ SNAPSHOT DE SECOURS de WordPress — n'est PAS utilisé par le site.\n` +
+    `// Le site est généré depuis content/projekte/ (voir build-projects-from-content.mjs).\n` +
     `// Dernière synchro : ${now}\n` +
     `// Source : ${WP_BASE}/posts\n\n` +
     `const projects = ${JSON.stringify(projects, null, 2)};\n\nexport default projects;\n`;
 
   writeFileSync(OUTPUT_PATH, output, 'utf8');
-  console.log(`\n✅  Wrote ${projects.length} projects to src/data/projects.js`);
+  console.log(`\n✅  Wrote ${projects.length} projects to backup/projects-wp-snapshot.js`);
 }
 
 main().catch(err => {

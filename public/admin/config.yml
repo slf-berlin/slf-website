@@ -1,0 +1,227 @@
+# Configuration Sveltia CMS (compatible Decap).
+# En mode local (« Work with Local Repository »), le backend GitHub est inerte —
+# il ne servira que si un accès /admin en ligne est mis en place plus tard
+# (nécessite alors un proxy OAuth et des comptes GitHub pour les éditeurs).
+
+backend:
+  name: github
+  repo: slf-berlin/slf-website
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ── Projets ────────────────────────────────────────────────────────────────
+  - name: projekte
+    label: Projekte
+    label_singular: Projekt
+    folder: content/projekte
+    extension: yml
+    format: yml
+    create: true
+    identifier_field: titel
+    summary: '{{titel}} — {{jahr}}'
+    sortable_fields: [datum, titel, jahr]
+    fields:
+      - { name: titel, label: Titel, widget: string }
+      - { name: untertitel, label: Untertitel, widget: string, required: false, default: '' }
+      - name: beschreibung
+        label: Kurzbeschreibung
+        widget: text
+        required: false
+        hint: Kurzer Text für Suche und Projektübersicht (kein HTML).
+      - name: ergebnis
+        label: Ergebnis
+        widget: string
+        required: false
+        hint: z. B. „1. Preis“, „Anerkennung“ — erscheint als Badge auf der Projektseite.
+      - { name: jahr, label: Jahr, widget: string, required: false, hint: 'z. B. „2026“ oder „2019 – 2024“' }
+      - name: kategorie
+        label: Kategorie
+        widget: select
+        multiple: true
+        options:
+          - Stadt- und Quartiersentwicklung
+          - Städtebau
+          - Bauleitplanung
+          - Verfahrensbetreuung
+      - name: themen
+        label: Themen
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Wohnungsbau, value: wohnungsbau }
+          - { label: Gewerbeentwicklung, value: gewerbeentwicklung }
+          - { label: Klimaanpassung, value: klimaanpassung }
+          - { label: Spielplatzentwicklung, value: spielplaetze }
+          - { label: Nachverdichtung / Innenentwicklung, value: nachverdichtung }
+          - { label: Transformation, value: transformation }
+          - { label: Autoarmes Quartier, value: autoarmes-quartier }
+          - { label: Partizipation, value: partizipation }
+          - { label: Wettbewerbe, value: wettbewerbe }
+      - name: datum
+        label: Datum
+        widget: datetime
+        format: 'YYYY-MM-DDTHH:mm:ss'
+        hint: Bestimmt die Sortierung (neueste zuerst).
+      - { name: image, label: Titelbild, widget: image, required: false }
+      - { name: wpId, widget: hidden, required: false }
+      - { name: wpLink, widget: hidden, required: false }
+      - name: inhalt
+        label: Inhalt
+        widget: list
+        required: false
+        types:
+          - name: text
+            label: Text
+            fields:
+              - name: html
+                label: Text
+                widget: text
+                hint: HTML erlaubt (<p>, <strong>, <a> …). Reiner Text wird automatisch als Absatz formatiert.
+          - name: bild
+            label: Bild
+            fields:
+              - { name: src, label: Bild, widget: image }
+              - { name: alt, label: Alt-Text, widget: string, required: false, default: '' }
+              - { name: breite, label: Breite (px), widget: number, required: false }
+              - { name: hoehe, label: Höhe (px), widget: number, required: false }
+              - { name: srcset, label: srcset (automatisch, nicht anfassen), widget: text, required: false }
+              - { name: sizes, label: sizes (automatisch, nicht anfassen), widget: string, required: false }
+              - { name: klass, label: CSS-Klasse (automatisch), widget: string, required: false }
+              - { name: figur, label: Mit Bildunterschrift (figure), widget: boolean, default: false, required: false }
+              - { name: caption, label: Bildunterschrift, widget: string, required: false }
+          - name: spalten
+            label: Spalten
+            fields:
+              - name: spalten
+                label: Spalten
+                widget: list
+                fields:
+                  - name: breite
+                    label: Breite (%)
+                    widget: select
+                    options: ['25', '33', '50', '66', '100']
+                  - { name: html, label: Inhalt (HTML), widget: text }
+          - name: projektdaten
+            label: Projektdaten
+            fields:
+              - name: eintraege
+                label: Einträge
+                widget: list
+                fields:
+                  - name: label
+                    label: Bezeichnung
+                    widget: string
+                    hint: 'Üblich: Ort, Auftraggebende, Verfahren, Zeitraum, Plangebietsgröße, Team'
+                  - { name: wert, label: Wert, widget: text }
+          - name: mehr_info
+            label: Mehr Informationen
+            fields:
+              - name: html
+                label: Links (HTML)
+                widget: text
+                required: false
+                hint: Inhalt der rechten Spalte, z. B. Links. Leer lassen ist ok.
+          - name: html
+            label: HTML (roh)
+            fields:
+              - { name: html, label: HTML, widget: text }
+
+  # ── Textes des pages ──────────────────────────────────────────────────────
+  - name: seiten
+    label: Seitentexte
+    files:
+      - name: home
+        label: Startseite
+        file: content/pages/home.json
+        fields:
+          - { name: willkommenTitel, label: Überschrift, widget: string }
+          - { name: willkommenUntertitel, label: Unterzeile, widget: string }
+          - name: introAbsaetze
+            label: Einleitung (Absätze)
+            widget: list
+            field: { name: absatz, label: Absatz, widget: text }
+          - name: featuredIds
+            label: Ausgewählte Projekte
+            widget: list
+            field:
+              name: projekt
+              label: Projekt
+              widget: relation
+              collection: projekte
+              search_fields: [titel]
+              value_field: '{{slug}}'
+              display_fields: ['{{titel}}']
+      - name: buero
+        label: Büro
+        file: content/pages/buero.json
+        fields:
+          - name: introAbsaetze
+            label: Einleitung (Absätze)
+            widget: list
+            field: { name: absatz, label: Absatz, widget: text }
+          - { name: arbeitsweiseTitel, label: Überschrift Arbeitsweise, widget: string }
+          - name: arbeitsweise
+            label: Arbeitsweise
+            widget: list
+            summary: '{{fields.titel}}'
+            fields:
+              - { name: key, label: 'Schlüssel (technisch, nicht ändern)', widget: string }
+              - { name: titel, label: Titel, widget: string }
+              - { name: text, label: Text, widget: text }
+              - name: punkte
+                label: Punkte
+                widget: list
+                field: { name: punkt, label: Punkt, widget: text }
+          - { name: leistungenTitel, label: Überschrift Leistungen, widget: string }
+          - name: leistungen
+            label: Leistungen
+            widget: list
+            summary: '{{fields.titel}}'
+            fields:
+              - name: key
+                label: Icon
+                widget: select
+                options:
+                  - stadtentwicklung
+                  - raumanalyse
+                  - rahmenplanung
+                  - bauleitplanung
+                  - quartier
+                  - qualitaet
+                  - partizipation
+                  - koordinierung
+                hint: Bestimmt das Symbol (fest im Code hinterlegt).
+              - { name: titel, label: Titel, widget: string }
+              - name: punkte
+                label: Punkte
+                widget: list
+                field: { name: punkt, label: Punkt, widget: text }
+          - { name: netzwerkTitel, label: Überschrift Netzwerk, widget: string }
+          - { name: netzwerkIntro, label: Einleitung Netzwerk, widget: text }
+          - name: netzwerk
+            label: Partnerbüros
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: url, label: Website, widget: string }
+      - name: kontakt
+        label: Kontakt
+        file: content/pages/kontakt.json
+        fields:
+          - { name: intro, label: Einleitung, widget: text }
+          - name: adresse
+            label: Adresse (Zeilen)
+            widget: list
+            field: { name: zeile, label: Zeile, widget: string }
+          - { name: telefon, label: Telefon (Anzeige), widget: string }
+          - { name: telefonHref, label: Telefon (Link, tel:…), widget: string }
+          - { name: email, label: E-Mail, widget: string }
