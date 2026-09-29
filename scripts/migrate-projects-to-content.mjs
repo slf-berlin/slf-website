@@ -9,7 +9,8 @@ import { writeFileSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { stringify } from 'yaml';
-import { parseContent, serializeBlocks } from './lib/projekt-blocks.mjs';
+import { parseContent, serializeLegacyBlocks } from './lib/projekt-blocks.mjs';
+import { modernizeBlocks } from './lib/html-to-blocks.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = join(__dirname, '../content/projekte');
@@ -23,13 +24,15 @@ const stats = {};
 let fallbackBlocks = 0;
 
 for (const p of projects) {
-  const inhalt = parseContent(p.content);
+  const legacy = parseContent(p.content);
 
   // Garantie absolue : la re-sérialisation doit être identique à l'octet près.
-  const roundTrip = serializeBlocks(inhalt);
+  const roundTrip = serializeLegacyBlocks(legacy);
   if ((roundTrip ?? null) !== (p.content ?? null)) {
     throw new Error(`Round-trip non identique pour "${p.id}" — migration interrompue.`);
   }
+  // Puis format CMS actuel (Markdown, champs image, colonnes typées).
+  const inhalt = modernizeBlocks(legacy);
 
   for (const b of inhalt) {
     stats[b.type] = (stats[b.type] ?? 0) + 1;

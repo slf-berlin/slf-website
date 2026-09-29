@@ -167,16 +167,20 @@ ort (null), jahr (string|null), kategorie, flaeche (null), auftraggeber (null),
 tone ('photo'|'plan', calculé), image, wpId, wpDate (= datum), wpLink, themen
 ```
 
-**Blocs typés (`inhalt`)** — définis dans `scripts/lib/projekt-blocks.mjs` (`parseContent`/`serializeBlocks`, partagé par migration et build). La sérialisation reproduit exactement le HTML maison historique :
+**Blocs typés (`inhalt`)** — sérialisés par `serializeBlocks()` dans `scripts/lib/projekt-blocks.mjs` (au build). Le texte est stocké en **Markdown** (widget `markdown` du CMS = éditeur visuel), converti en HTML par `marked` (`gfm`, `breaks: true`) ; les liens `http(s)` reçoivent `target="_blank" rel="noopener"`.
 
 | Type | Champs | HTML produit |
 |---|---|---|
-| `text` | `html` | verbatim (texte nu → wrap `<p style="font-weight: 400;">`) |
-| `bild` | `src, alt, breite, hoehe, srcset, sizes, klass, figur, caption` | `<img … />` (ordre d'attributs WP) ; si `figur` → `<figure>… <figcaption>` |
-| `spalten` | liste `{ breite: 25\|33\|50\|66\|100, html }` | `<div class="slf-row"><div class="slf-col-NN">…</div>…</div>` |
-| `projektdaten` | `eintraege: [{ label, wert }]` | `<p class="slf-daten-heading">…</p><dl class="slf-daten">` |
-| `mehr_info` | `html` | la slf-row « Mehr Informationen » |
+| `text` | `text` (Markdown) | HTML Markdown (`<p>`, `<strong>`, `<ul>`, `<h3>`, liens) |
+| `bild` | `src, caption, alt` + cachés `wpSrc, bildBreite, bildHoehe, srcset, sizes, klass` | `<img … />` ; si `caption` non vide → `<figure>…<figcaption>` |
+| `spalten` | `spalten`: liste typée de colonnes, chacune avec `breite` (**string** `'25'\|'33'\|'50'\|'66'\|'100'`) : `text` (`text`), `bild` (champs image), `bilder` (`bilder`: liste d'images empilées), `html` (`html`, fallback) | `<div class="slf-row"><div class="slf-col-NN">…</div>…</div>` |
+| `projektdaten` | `eintraege: [{ label, wert }]` — Markdown inline, un saut de ligne = `<br />` | `<p class="slf-daten-heading">…</p><dl class="slf-daten">` |
+| `mehr_info` | `links` (Markdown) | la slf-row « Mehr Informationen » |
 | `html` | `html` | verbatim (fallback pour cas non modélisés) |
+
+Les attributs techniques WordPress d'une image (dimensions, `srcset`, classe) ne sont émis que si `src === wpSrc`, c'est-à-dire tant que l'image n'a pas été remplacée dans le CMS (sinon le srcset pointerait vers l'ancienne image).
+
+Historique : la migration WordPress (`parseContent`) produit des blocs « legacy » à HTML brut (round-trip octet par octet via `serializeLegacyBlocks`), convertis ensuite au format actuel par `modernizeBlocks()` (`scripts/lib/html-to-blocks.mjs`, turndown). La conversion HTML→Markdown a été appliquée une fois à tout `content/projekte/` par `scripts/migrate-blocks-to-markdown.mjs` (idempotent) : le HTML généré n'est plus identique à l'octet près à celui de WordPress (textes, images, légendes et liens vérifiés équivalents ; les `<figure>` à légende vide sont devenues de simples `<img>`), donc `verify-content-roundtrip.mjs` montrera désormais des diffs vs `main`.
 
 `ort`, `flaeche`, `auftraggeber` restent `null` au niveau objet — la Projektliste les extrait du `<dl class="slf-daten">` au rendu (inchangé).
 
@@ -211,7 +215,9 @@ Les classes `slf-row` / `slf-col-NN` / `slf-daten` du `content` sont stylées da
 
 **Scripts CMS** :
 - `scripts/build-projects-from-content.mjs` (`npm run inhalt`) — content/ → projects.js ; tri par `datum` desc ; `tone` calculé.
-- `scripts/lib/projekt-blocks.mjs` — parse/serialize des blocs (source de vérité du format HTML).
+- `scripts/lib/projekt-blocks.mjs` — sérialisation des blocs → HTML (source de vérité du format HTML) + parsing legacy.
+- `scripts/lib/html-to-blocks.mjs` — conversion blocs legacy HTML → Markdown / champs image (migrations uniquement).
+- `scripts/migrate-blocks-to-markdown.mjs` — migration one-shot (déjà appliquée) des fichiers legacy vers le format Markdown.
 - `scripts/migrate-projects-to-content.mjs` — migration one-shot WordPress → content/ (historique ; écrase content/projekte/ si relancé).
 - `scripts/verify-content-roundtrip.mjs [ref]` — vérifie que le projects.js régénéré est identique à celui d'une ref git (utilisé pour valider la migration : 0 diff vs `main`).
 - En dev, le plugin `slf-content-rebuild` (vite.config.js) regénère projects.js à chaque modification de `content/projekte/` (sauvegarde CMS → rechargement auto).

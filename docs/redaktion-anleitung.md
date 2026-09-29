@@ -29,8 +29,19 @@ Die Inhalte der Website (Projekte, Texte der Seiten Start / Büro / Kontakt) wer
 
 4. Links **„Projekte“** oder **„Seitentexte“** wählen und bearbeiten:
    - **Projekte** — jedes Projekt hat Felder (Titel, Kategorie, Themen, Ergebnis,
-     Titelbild, Datum …) und eine **Inhalts-Liste aus Blöcken**: Text, Bild,
-     Spalten (mehrspaltige Zeilen), Projektdaten, „Mehr Informationen“.
+     Titelbild, Datum …) und eine **Inhalts-Liste aus Blöcken**:
+     - **Text** — normaler Texteditor mit Werkzeugleiste (fett, kursiv, Link,
+       Zwischenüberschrift, Aufzählung). Kein HTML nötig.
+     - **Bild** — Bild auswählen oder hochladen, optional Bildunterschrift.
+     - **Spalten (nebeneinander)** — eine Zeile mit mehreren Spalten. Jede Spalte
+       ist eine *Text-Spalte*, eine *Bild-Spalte* oder *Mehrere Bilder
+       (untereinander)*, mit einer Breite in % (die Breiten einer Zeile ergeben
+       zusammen ca. 100 %, z. B. 33 + 66).
+     - **Projektdaten** — Tabelle „Bezeichnung / Wert“ (Ort, Auftraggebende …).
+       Ein Zeilenumbruch im Wert erscheint auch auf der Website als neue Zeile.
+     - **Mehr Informationen** — z. B. ein Link zur Projektseite der Gemeinde.
+
+     Blöcke lassen sich über den Griff (≡) verschieben, über ⋮ duplizieren oder löschen.
      Neue Projekte: oben rechts **„Neuer Projekt“** / „Create“.
    - **Seitentexte** — die Texte der Startseite (inkl. Auswahl der
      „Ausgewählten Projekte“), der Büro-Seite und der Kontakt-Seite.
@@ -53,9 +64,13 @@ Die Inhalte der Website (Projekte, Texte der Seiten Start / Büro / Kontakt) wer
   Projekten nicht vergessen.
 - Bilder, die über das CMS hochgeladen werden, landen in `public/uploads/`
   und werden mitversioniert.
-- Die Felder `srcset` / `sizes` / `CSS-Klasse` bei alten Bildern **nicht ändern** —
-  sie stammen aus WordPress und steuern das responsive Laden.
-- Ein Block „HTML (roh)“ ist ein Auffangbecken für Sonderfälle — im Zweifel
-  nicht anfassen und Jan fragen.
+- Alte Bilder aus WordPress können einfach ersetzt werden (neues Bild wählen) —
+  die technischen Angaben dazu werden automatisch angepasst.
+- Die **Vorschau rechts** im CMS zeigt nur die Felder, nicht das echte Layout.
+  Das tatsächliche Ergebnis sieht man auf der lokalen Website
+  (`http://localhost:5173/slf-website/projekte/…`), die sich beim Speichern
+  automatisch aktualisiert — am besten beide Fenster nebeneinander öffnen.
+- Blöcke „HTML (roh)“ / „HTML-Spalte“ sind Auffangbecken für Sonderfälle —
+  im Zweifel nicht anfassen und Jan fragen.
 - WordPress läuft nur noch als Archiv weiter und wird für die Website nicht
   mehr benötigt.

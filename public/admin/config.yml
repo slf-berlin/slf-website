@@ -75,62 +75,112 @@ collections:
       - { name: wpLink, widget: hidden, required: false }
       - name: inhalt
         label: Inhalt
+        label_singular: Block
         widget: list
         required: false
+        hint: Blöcke per Ziehen (≡) umsortieren. „Hinzufügen“ fügt einen neuen Block am Ende ein.
         types:
           - name: text
             label: Text
+            summary: '{{fields.text | truncate(80)}}'
             fields:
-              - name: html
+              - &textfeld
+                name: text
                 label: Text
-                widget: text
-                hint: HTML erlaubt (<p>, <strong>, <a> …). Reiner Text wird automatisch als Absatz formatiert.
+                widget: markdown
+                modes: [rich_text, raw]
+                buttons: [bold, italic, link, heading-three, bulleted-list, numbered-list]
+                editor_components: []
+                required: false
           - name: bild
             label: Bild
+            summary: 'Bild: {{fields.caption}}'
             fields:
-              - { name: src, label: Bild, widget: image }
-              - { name: alt, label: Alt-Text, widget: string, required: false, default: '' }
-              - { name: breite, label: Breite (px), widget: number, required: false }
-              - { name: hoehe, label: Höhe (px), widget: number, required: false }
-              - { name: srcset, label: 'srcset (automatisch, nicht anfassen)', widget: text, required: false }
-              - { name: sizes, label: 'sizes (automatisch, nicht anfassen)', widget: string, required: false }
-              - { name: klass, label: CSS-Klasse (automatisch), widget: string, required: false }
-              - { name: figur, label: Mit Bildunterschrift (figure), widget: boolean, default: false, required: false }
-              - { name: caption, label: Bildunterschrift, widget: string, required: false }
+              - &bild { name: src, label: Bild, widget: image }
+              - &caption { name: caption, label: Bildunterschrift, widget: string, required: false, default: '', hint: Leer lassen = keine Bildunterschrift. }
+              - &alt { name: alt, label: Alt-Text (Beschreibung für Screenreader), widget: string, required: false, default: '' }
+              # Technische Angaben aus WordPress — unsichtbar, gelten nur solange das Bild nicht ersetzt wird.
+              - &wpSrc { name: wpSrc, widget: hidden, required: false }
+              - &bildBreite { name: bildBreite, widget: hidden, required: false }
+              - &bildHoehe { name: bildHoehe, widget: hidden, required: false }
+              - &srcset { name: srcset, widget: hidden, required: false }
+              - &sizes { name: sizes, widget: hidden, required: false }
+              - &klass { name: klass, widget: hidden, required: false }
           - name: spalten
-            label: Spalten
+            label: Spalten (nebeneinander)
+            summary: 'Spalten'
             fields:
               - name: spalten
                 label: Spalten
+                label_singular: Spalte
                 widget: list
-                fields:
-                  - name: breite
-                    label: Breite (%)
-                    widget: select
-                    options: ['25', '33', '50', '66', '100']
-                  - { name: html, label: Inhalt (HTML), widget: text }
+                hint: 'Breiten einer Zeile sollten zusammen ca. 100 % ergeben (z. B. 50 + 50, 33 + 66, 33 + 33 + 33).'
+                types:
+                  - name: text
+                    label: Text-Spalte
+                    summary: 'Text ({{fields.breite}} %): {{fields.text | truncate(60)}}'
+                    fields:
+                      - &breite
+                        name: breite
+                        label: Breite (%)
+                        widget: select
+                        options: ['25', '33', '50', '66', '100']
+                        default: '50'
+                      - *textfeld
+                  - name: bild
+                    label: Bild-Spalte
+                    summary: 'Bild ({{fields.breite}} %) {{fields.caption}}'
+                    fields: [*breite, *bild, *caption, *alt, *wpSrc, *bildBreite, *bildHoehe, *srcset, *sizes, *klass]
+                  - name: bilder
+                    label: Mehrere Bilder (untereinander)
+                    summary: 'Bilder ({{fields.breite}} %)'
+                    fields:
+                      - *breite
+                      - name: bilder
+                        label: Bilder
+                        label_singular: Bild
+                        widget: list
+                        summary: '{{fields.caption}}'
+                        fields: [*bild, *caption, *alt, *wpSrc, *bildBreite, *bildHoehe, *srcset, *sizes, *klass]
+                  - name: html
+                    label: HTML-Spalte (Sonderfall)
+                    summary: 'HTML ({{fields.breite}} %)'
+                    fields:
+                      - *breite
+                      - { name: html, label: HTML, widget: text }
           - name: projektdaten
             label: Projektdaten
+            summary: 'Projektdaten'
             fields:
               - name: eintraege
                 label: Einträge
+                label_singular: Eintrag
                 widget: list
+                summary: '{{fields.label}}: {{fields.wert}}'
                 fields:
                   - name: label
                     label: Bezeichnung
                     widget: string
                     hint: 'Üblich: Ort, Auftraggebende, Verfahren, Zeitraum, Plangebietsgröße, Team'
-                  - { name: wert, label: Wert, widget: text }
+                  - name: wert
+                    label: Wert
+                    widget: text
+                    hint: 'Zeilenumbruch = neue Zeile auf der Website. Link: [Anzeigetext](https://…)'
           - name: mehr_info
             label: Mehr Informationen
+            summary: 'Mehr Informationen'
             fields:
-              - name: html
-                label: Links (HTML)
-                widget: text
+              - name: links
+                label: Links
+                widget: markdown
+                modes: [rich_text, raw]
+                buttons: [link]
+                editor_components: []
                 required: false
-                hint: Inhalt der rechten Spalte, z. B. Links. Leer lassen ist ok.
+                hint: Z. B. ein Link zur Projektseite der Gemeinde. Leer lassen ist ok.
           - name: html
-            label: HTML (roh)
+            label: HTML (roh, Sonderfall)
+            summary: 'HTML'
             fields:
               - { name: html, label: HTML, widget: text }
 
